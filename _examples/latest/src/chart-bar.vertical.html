@@ -1,0 +1,46 @@
+---
+title:  Bar (Vertical)
+date:   2018-05-17
+categories: ["latest","chart"]
+order: 103
+---
+<p>막대 차트 가로 예제입니다.</p>
+
+<!-- bindto -->
+<h4>Example</h4>
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var conf = {
+	global : {
+		size : { width: 800, height: 320 }
+	},
+	data : {
+		type: "bar",
+		columns: [
+		["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67]
+		]
+	},
+	legend: {show: false},
+	axes: {rotated: true}
+};
+SBChart.render("#chartWrap", conf);
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+	var conf = {
+		global : {
+			size : { width: 800, height: 320 }
+		},
+		data : {
+			type: "bar",
+			columns: [
+				["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67]
+			]
+		},
+		legend: {show: false},
+		axes: {rotated: true}
+	};
+	SBChart.render("#chartWrap", conf);
+</script>

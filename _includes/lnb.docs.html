@@ -1,0 +1,11 @@
+<ul class="nav nav-list">
+	{% assign version = page.categories[0] %}
+	{% assign cates = site.release[version] %}
+	{% for cate in cates %}
+		<li class="nav-header">{{ cate.name }}</li>
+		{% assign pages = site.docs | where: "categories", version | where: "categories", cate.name | sort: "order" %}
+		{% for item in pages %}
+			<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+		{% endfor %}
+	{% endfor %}
+</ul>

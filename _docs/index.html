@@ -1,0 +1,25 @@
+---
+date:   2018-05-17
+permalink: /:collection/:path:output_ext
+layout: default
+---
+<div class="container">
+	<div class="row">
+		<h2>API</h2>
+		<h3>Latest</h3>
+		<ul>
+		{% assign cates = site.release["latest"] %}
+		{% for cate in cates %}
+			<li class="nav-header">{{ cate.name }}</li>
+			{% assign pages = site.docs | where: "categories", version | where: "categories", cate.name | sort: "order" %}
+			<ul>
+			{% for item in pages %}
+				<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+			{% endfor %}
+			</ul>
+		{% endfor %}
+		</ul>
+
+	</div>
+</div>
+

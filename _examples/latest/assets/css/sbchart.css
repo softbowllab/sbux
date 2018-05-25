@@ -1,0 +1,16 @@
+.sb-legend-background {
+  opacity: .75;
+  fill: #fff;
+  stroke: #d3d3d3;
+  stroke-width: 1; }
+
+.sb-legend-arc {
+  fill: #fff; }
+
+.sb-legend-item {
+  font-size: 10px; }
+
+.sb-title {
+  font: 14px sans-serif; }
+
+/*# sourceMappingURL=sbchart.bundle.map*/

@@ -1,0 +1,23 @@
+---
+date:   2018-05-17
+permalink: /:collection/:path:output_ext
+layout: default
+---
+<div class="container">
+	<div class="row">
+		<h2>Examples</h2>
+		<h3>Latest</h3>
+		<ul>
+			{% assign version = "latest" %}
+			{% assign pages = site.examples | where: "categories", version | sort: "order"%}
+			{% assign cate = "" %}
+			{% for item in pages %}
+				{% if item.categories[1] != cate %}
+				<li>{{ item.categories[1] | upcase }}</li>	
+					{% assign cate = item.categories[1] %}
+				{% endif %}
+				<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

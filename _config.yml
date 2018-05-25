@@ -1,0 +1,62 @@
+title: SBChart
+subtitle: 
+email: escho@softbowl.co.kr
+description: >-
+baseurl: "/sbchart"
+url: ""
+highlighter: rouge
+
+
+# 제외 파일
+exclude: ['Gemfile', 'Gemfile.lock', '.idea/','.gitignore','README.md']
+markdown: kramdown
+
+
+collections:
+  docs:
+    output: true
+  examples:
+    output: true
+
+defaults:
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    permalink: /:collection/release/:path:output_ext
+- scope:
+    path: _examples
+    type: examples
+  values:
+    layout: examples
+    permalink: /:collection/release/:categories/:name:output_ext
+- scope:
+    path: "_examples/latest/assets"
+  values:
+    permalink: release/:path:output_ext
+
+# 변수 (release 카테고리)
+release:
+  latest: 
+    - {name: "global"}
+    - {name: "data"}
+    - {name: "grid"}
+    - {name: "title"}
+    - {name: "legend"}
+    - {name: "axes"}
+  "2.0.0": 
+    - {name: "axes"}
+
+# favicon: /assets/favicon.ico
+# feed:
+#   path: atom.xml
+# css: assets/css
+# js: assets/js
+# images: assets/images
+
+disqus_shortname: "softbowllab"
+# 변수
+codeurl: 'https://github.com/softbowllab/sbchart'
+twitter_username: softbowl
+github_username:  softbowllab 

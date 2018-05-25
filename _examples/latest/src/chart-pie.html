@@ -1,0 +1,46 @@
+---
+title:  Pie
+date:   2018-05-17
+categories: ["latest","chart"]
+order: 109
+---
+<p>원 차트 기본 예제입니다.</p>
+
+<!-- bindto -->
+<h4>Example</h4>
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var conf = {
+	global : {
+		size : { width: 800, height: 320 }
+	},
+	data : {
+		type: "pie",
+		columns: [
+			["2015",3.51],
+			["2016",0.71],
+			["2017",1.48]
+		]
+	}
+};
+SBChart.render("#chartWrap", conf);
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+	var conf = {
+		global : {
+			size : { width: 800, height: 320 }
+		},
+		data : {
+			type: "pie",
+			columns: [
+				["2015",3.51],
+				["2016",0.71],
+				["2017",1.48]
+			]
+		}
+	};
+	SBChart.render("#chartWrap", conf);
+</script>
