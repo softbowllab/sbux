@@ -1,8 +1,8 @@
-title: SBChart
+title: SBUx
 subtitle: 
-email: escho@softbowl.co.kr
+email: a10j22s@softbowl.co.kr
 description: >-
-baseurl: "/sbchart"
+baseurl: "/sbux"
 url: ""
 highlighter: rouge
 
@@ -57,6 +57,6 @@ release:
 
 disqus_shortname: "softbowllab"
 # 변수
-codeurl: 'https://github.com/softbowllab/sbchart'
+codeurl: 'https://github.com/softbowllab/sbux'
 twitter_username: softbowl
 github_username:  softbowllab 
