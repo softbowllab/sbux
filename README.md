@@ -7,5 +7,10 @@
 
 ## 진행 상황
 
+## 릴리즈 방법
+PS C:\Product_Bali\softbowllab.github.io.sbux> git add *
+PS C:\Product_Bali\softbowllab.github.io.sbux> git commit -m 'log 용 말...'
+PS C:\Product_Bali\softbowllab.github.io.sbux> git push origin gh-pages
+
 ### 2018.05.25, 2.5.276
 
