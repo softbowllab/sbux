@@ -5,15 +5,15 @@ title: "SBUx v2.6"
 <div class="header-container jumbotron">
 	<div class="container">
 		<h1>SBUx v2.6</h1>
-		<p> HTML 만 알고 있으면 쉽게 개발할 수 있는 JavaScript UI/UX 컴포넌트</p>
+		<p> HTML 만 알고 있으면 쉽게 개발할 수 있는 UI/UX 컴포넌트</p>
 		<p><a class="btn btn-primary btn-lg" href="{{ "/docs/release/latest" | prepend: site.baseurl }}" role="button">Get Documents</a></p>
 	</div>
 </div>
 	
 <div class="container">
 	<div class="row">
-		<h2>SBChart v2.0, "chart" Library</h2>
-			<p>SBChart v2.0, HTML5 기반 웹차트 컴포넌트 라이브러리입니다.</p>
+		<h2>SBUx v2.6 Components</h2>
+			<p>SBUx v2.6 는 SI 및 Application 개발자들이 퀄리티 있는 화면을 만들기 위해 필요한 다양한 기능등을 쉽게 사용할 수 있도록 지원하는 UI/UX 컴포넌트입니다.</p>
 			<p>IE, 크롬, 파이어폭스, 사파리등의 PC 브라우저와 HTML5가 지원되는 최신의 모바일 환경(스마트폰, 태블릿PC)에서 사용이 가능합니다.</p>
 
 		<h3>Browser Support</h3>
@@ -24,12 +24,48 @@ title: "SBUx v2.6"
 		
 		<ul>
 			<li>
-					<h4>JS, CSS 파일 링크</h4>
-					<p>SBChart의 CSS와 JavaScript를 링크합니다.</p>
-<p>{% highlight html %}
-<link rel="stylesheet" href="/sbchart/examples/latest/assets/css/sbchart.css"/>
-<script type="text/javascript" src="/sbchart/examples/latest/assets/js/sbchart.bundle.js"></script>
-{% endhighlight %}</p>
+				<h4>설정</h4>
+				<p>SBUx 구동을 위한 초기값 설정을 합니다.</p>
+				<p>
+					{% highlight html %}
+					var SBUxConfig = {
+						License : "SUE20-2095-17644-316",
+						Path : "/resources/SBUx/",
+						Locale : "ko", // { ko | en | ja }
+				
+						Theme : "bootstrap", // { none | bootstrap }
+						CustomCSS : "SBUxCustom_Demo.css",
+						DefaultSetFile : "SBUxDefault.js",
+						Components : "input,button", // 사용하는 컴포넌트만
+						DownloadType : "manual", // manual, pttgc,
+						ScopeType : "manual", // angularJS 의 apply() 를 마지막에 수동으로 실행하기 위한 부분인데. 필요없다.
+				
+						Debug : true,
+						DeveloperTipType : "none", // { console | alert | storage | none }
+						SystemLogType : "console", { console | storage | none}
+				
+						Animation : true,
+						Design : true, // css 를 호출, false 시 css 호출하지 않음.
+						SupportVersion : "2.0", // "2.0" : SBUx2.0 버전 형태 , (default) "2.5" : SBUx 2.5 버전형태
+						LoadingType : "holding",  // none | holding | progress (default) "holding"
+						LoadIncludeClass 또는 LoadClass : 'lazyLoadClass',  // 선언한 Class 가 있는 컴포넌트만 우선 로드
+						LoadExcludeClass : 'notLoadClass', // 선언한 Class 를 제외한 컴포넌트 로드
+						CustomAttrs : ['custom-attr1','custom-attr2'],  // 받아들이는 custom 속성에 대한 정의
+						// UsingMemory : true,
+						SBGrid : {
+							Theme : 'default',
+							DefaultSetFile : 'SBGridDefault.js',
+							// { default | skyblue |  oceanblue | bluishgreen | lightgreen |
+							//   graypurple | pinkgray | darkgray | blackgray | claret |  charcoalgray }
+							Version2_1 : true,
+							Version2_5 : false
+						},
+						SBChart : {
+							Version2_0 : true
+						}
+					};
+					{% endhighlight %}
+				</p>
 			</li>
 			<li>
 				<h4>SBChart 생성될 Element 추가</h4>
