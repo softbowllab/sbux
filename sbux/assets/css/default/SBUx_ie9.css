@@ -1,0 +1,27 @@
+
+/*!
+ * Client browser IE9
+ * 2016.04
+ */
+
+
+/* picker */
+div.datepickerMode button[disabled="disabled"] { filter: alpha(opacity=35);}
+div.datepickerMode button[disabled="disabled"] span { /*text-decoration: line-through;*/}
+div.datepickerMode .text-muted {display:inline-block; filter: alpha(opacity=50); }
+
+.sb-check-wrap input {
+	display: inline;
+    vertical-align: middle;
+    zoom : 1
+}
+
+.sbux-sel-chk-btn {
+	padding: 4px 4px 4px 5px;
+	background : none
+}
+select.sbux-sel {background:none;}
+select[disabled].sbux-sel,select.disabled.sbux-sel,select[readonly].sbux-sel,select.readonly.sbux-sel {background: #efefef}
+.sbux-sel option:checked, .sbux-sel option:active {
+    color: #000 !important;
+    background: none;}
