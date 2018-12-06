@@ -25,14 +25,40 @@ Component의 고유 ID를 지정합니다.
 * Default : X
 
 ---
+## Example (Tag)
 
-
-## Example
 {% highlight html %}
-<sbux-input id="inputIdx" name="inputIdx" uitype="text"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
 {% endhighlight %}
 
+## Preview
+
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
 ---
-## Demo
-<sbux-input id="inputIdx" name="inputIdx" uitype="text"></sbux-input>
+## Example (Script)
+
+{% highlight html %}
+<div id="sbArea"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea').sbInput({
+            name : 'sbScriptNm',
+            uitype : 'text'
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+## Preview 
+
+<div id="sbArea"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea').sbInput({
+            name : 'sbScriptNm',
+            uitype : 'text'
+        });
+    }); 
+</script>
+
 
