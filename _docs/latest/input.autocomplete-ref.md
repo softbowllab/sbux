@@ -5,29 +5,79 @@ categories: ["latest","input"]
 order: 2
 ---
 
-## autocomplete-ref
+
+autocomplete-ref
+===
 ---
 
-Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.
-
-`#2.0.0`
-
-* Value Type : string
-* Default : X
-
+### Description
+<style>
+    .tdTitle {font-weight:bold}
+    .tdCenter {text-align: center;}
+    .tdRed {color:#dd2200}
+    .tdBlue {color:#3366b2}
+</style>
+<table style="width:100%">
+    <colgroup>
+        <col width="15%"/>
+        <col width="35%"/>
+        <col width="15%"/>
+        <col width="35%"/>
+    </colgroup>
+    <tr>
+        <td class="tdTitle">설명</td>
+        <td colspan="3">Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">적용버전</td>
+        <td>2.6.0</td>
+        <td class="tdTitle">필수여부</td>
+        <td >선택</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">기본값</td>
+        <td>없음(미입력시)</td>
+        <td class="tdTitle">선결조건</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="tdTitle">연관자료</td>
+        <td colspan="3"></td>
+    </tr>
+</table>
+<table style="width:100%">
+    <colgroup>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+    </colgroup>
+    <tr>
+        <td class="tdTitle" colspan="5">사용제한</td>
+    </tr>
+    <tr>
+        <td>uitype</td>
+        <td class="tdCenter">text</td>
+        <td class="tdCenter">password</td>
+        <td class="tdCenter">search</td>
+        <td class="tdCenter">hidden</td>
+    </tr>
+    <tr>
+        <td>가능여부</td>
+        <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
+        <td class="tdCenter">X</td>
+        <td class="tdCenter">X</td>
+    </tr>
+</table>
 ---
-### Support Type
 
-|text|password|search|hidden|
-|:-:|:-:|:-:|:-:|
-|O|X|X|X|
-
----
 ### Example
 {% highlight html %}
 <sbux-input id="inputIdx" name="inputIdx" uitype="text" autocomplete-ref="autocomplete_data"></sbux-input>
 {% endhighlight %}
 
 ---
-### Demo
+### Preview
 <sbux-input id="inputIdx" name="inputIdx" uitype="text" autocomplete-ref="autocomplete_data"></sbux-input>
