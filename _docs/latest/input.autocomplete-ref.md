@@ -11,13 +11,7 @@ autocomplete-ref
 ---
 
 ### Description
-<style>
-    .tdTitle {font-weight:bold}
-    .tdCenter {text-align: center;}
-    .tdBg {background-color:#efefef}
-    .tdRed {color:#dd2200}
-    .tdBlue {color:#3366b2}
-</style>
+
 <table style="width:100%">
     <colgroup>
         <col width="15%"/>
@@ -55,18 +49,12 @@ autocomplete-ref
     <tr>
         <td class="tdTitle">기본값</td>
         <td>해당없음</td>
-        <td class="tdTitle">데이터 유형</td>
-        <td>JSON Object 변수</td>
+        <td class="tdTitle">자료형</td>
+        <td>string</td>
     </tr>
     <tr>
-        <td class="tdTitle">속성유형</td>
-        <td colspan="3"> v 선택형 | 자유형</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선택형</td>
-        <td> A | B | C | D 중 택 1</td>
-        <td class="tdTitle">자유형</td>
-        <td>해당없음</td>
+        <td class="tdTitle">값형태</td>
+        <td colspan="3"> A | B | C | D 중 택 1  ,  JSON Object 변수</td>
     </tr>
 </table>
 <table style="width:100%">

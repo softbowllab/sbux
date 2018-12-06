@@ -9,7 +9,7 @@ popover-title
 ===
 ---
 
-## Discription
+## Description
 Component에 표시될 popover의 Title 문구를 지정합니다.
 
 `#2.0.0`

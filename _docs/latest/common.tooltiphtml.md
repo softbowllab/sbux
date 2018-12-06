@@ -7,44 +7,111 @@ order: 12
 
 tooltip-html
 ===
----
-
-## Discription
-Component에 표시될 Tooltip의 내용에 HTML Tag 사용 여부를 지정합니다.
-
-`#2.0.0`
 
 ---
 
-`Tooltip 속성이 필수로 사용되어야 합니다.`
+## Description
 
-`html 구문을 입력할 때 작은 따움표와 큰 따움표 표시에 주의하시기 바랍니다.`
-
-`tooltip 에 대한 구문을 DB 에서 받아올 시 XSS(크로스 사이트 스크립트)에 영향을 받을 수 있습니다.`
-`반드시 변환하여 처리하시기 바랍니다.`
+<table style="width:100%">
+    <colgroup>
+        <col width="15%"/>
+        <col width="35%"/>
+        <col width="15%"/>
+        <col width="35%"/>
+    </colgroup>
+    <tr>
+        <td class="tdTitle">설명</td>
+        <td colspan="3">Component에 표시될 Tooltip의 내용에 HTML Tag 사용 여부를 지정합니다.</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">적용버전</td>
+        <td>2.6.0</td>
+        <td class="tdTitle">필수여부</td>
+        <td>선택</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">선결조건</td>
+        <td>tooltip</td>
+        <td class="tdTitle">연관자료</td>
+        <td>해당없음</td>
+    </tr>
+</table>
+<table style="width:100%">
+    <colgroup>
+        <col width="15%"/>
+        <col width="35%"/>
+        <col width="15%"/>
+        <col width="35%"/>
+    </colgroup>
+    <tr>
+        <td class="tdTitle tdBg" colspan="4">속성값</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">기본값</td>
+        <td>false</td>
+        <td class="tdTitle">자료형</td>
+        <td>boolean</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">값형태</td>
+        <td colspan="3">true | false</td>
+    </tr>
+</table>
+<table style="width:100%">
+    <colgroup>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+        <col width="20%"/>
+    </colgroup>
+    <tr>
+        <td class="tdTitle tdBg" colspan="5">사용제한</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">지원 컴포넌트</td>
+        <td class="tdCenter" colspan="4">input, textarea, listbox, select, checkbox, radio, button</td>
+    </tr>
+</table>
 
 ---
+### Example (Tag)
 
-## Value
-
-### tooltip-html="tooltipHTML"
-
-* tooltipHTML : Tooltip 내용 HTML Tag 사용여부
-* Value Type : boolean
-* Default : false
-* Value List : `true` `false`
-
----
-## Support Component
-
-`input` `textarea` `listbox` `select` `checkbox` `radio` `button`
-
----
-## Example
 {% highlight html %}
-<sbux-input id="inputIdx" name="inputIdx" uitype="text" tooltip="SBUx <font color='red'>Tooltip</font>" tooltip-html="true"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" tooltip="SBUx <font color='red'>Tooltip</font>" tooltip-html="true"></sbux-input>
 {% endhighlight %}
 
+### Preview
+
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" tooltip="SBUx <font color='red'>Tooltip</font>" tooltip-html="true"></sbux-input>
+
 ---
-## Demo
-<sbux-input id="inputIdx" name="inputIdx" uitype="text" tooltip="SBUx <font color='red'>Tooltip</font>" tooltip-html="true"></sbux-input>
+### Example (Script)
+
+{% highlight html %}
+<div id="sbArea"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea').sbInput({
+            name : 'sbScriptNm',
+            uitype : 'text',
+            tooltip : 'SBUx <font color="red">Tooltip</font>',
+            tooltipHtml : true
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+### Preview 
+
+<div id="sbArea"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea').sbInput({
+            name : 'sbScriptNm',
+            uitype : 'text',
+            tooltip : 'SBUx <font color="red">Tooltip</font>',
+            tooltipHtml : true
+        });
+    }); 
+</script>

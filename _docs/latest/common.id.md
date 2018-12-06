@@ -7,13 +7,11 @@ order: 1
 
 id
 ===
+
 ---
 
 ### Description
-<style>
-    .tdTitle {font-weight:bold}
-    .tdRed {color:red}
-</style>
+
 <table style="width:100%">
     <colgroup>
         <col width="15%"/>
@@ -32,16 +30,34 @@ id
         <td class="tdRed">필수</td>
     </tr>
     <tr>
-        <td class="tdTitle">기본값</td>
-        <td>없음(미입력시)</td>
-        <td class="tdTitle"></td>
-        <td></td>
-    </tr>
-    <tr>
+        <td class="tdTitle">선결조건</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
-        <td colspan="3"></td>
+        <td>해당없음</td>
     </tr>
 </table>
+<table style="width:100%">
+    <colgroup>
+        <col width="15%"/>
+        <col width="35%"/>
+        <col width="15%"/>
+        <col width="35%"/>
+    </colgroup>
+    <tr>
+        <td class="tdTitle tdBg" colspan="4">속성값</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">기본값</td>
+        <td>해당없음</td>
+        <td class="tdTitle">자료형</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td class="tdTitle">값형태</td>
+        <td colspan="3">Component 고유 ID</td>
+    </tr>
+</table>
+
 ---
 ### Example (Tag)
 
@@ -52,6 +68,7 @@ id
 ### Preview
 
 <sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+
 ---
 ### Example (Script)
 

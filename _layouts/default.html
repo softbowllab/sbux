@@ -7,14 +7,18 @@
 
 	<title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
 	<meta name="description" content="{{ site.subtitle }}">
-
+	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+	
+	<style>
+		.custmClass{width:100px;}
+	</style>
+	
 </head>
 <body>
 	{% include header.html %}
