@@ -39,14 +39,12 @@ defaults:
 # 변수 (release 카테고리)
 release:
   latest: 
-    - {name: "global"}
-    - {name: "data"}
-    - {name: "grid"}
-    - {name: "title"}
-    - {name: "legend"}
-    - {name: "axes"}
-  "2.0.0": 
-    - {name: "axes"}
+    - {name: "common"}
+    - {name: "input"}
+    - {name: "picker"}
+
+tutorial:
+  - {name: ""}
 
 # favicon: /assets/favicon.ico
 # feed:
