@@ -1,16 +1,49 @@
+# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+# paginate: 10
+language : 'ko-KR'
+
+url: "https://softbowllab.github.io/"
+baseurl: "/sbux"
+
+
+# Website info
 title: SBUx
 subtitle: 
 email: a10j22s@softbowl.co.kr
-description: >-
-baseurl: "/sbux"
-url: ""
-highlighter: rouge
+description: Technical Training Site
+
+# cover : img/bg.jpg
+# blog home에 표시될 blog cover image.
+#favicon: assets/built/images/favicon.jpg
 
 
-# 제외 파일
-exclude: ['Gemfile', 'Gemfile.lock', '.idea/','.gitignore','README.md']
-markdown: kramdown
+# Social info
+navigation: True
+# Navigation bar link를 보여줄건지 여부
 
+# twitter :
+# twitter_username: softbowl
+github_username:  softbowllab 
+
+# Disqus
+disqus: True
+disqus_shortname: "softbowllab"
+# disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해
+# disqus를 이용할 것인지 여부와 만약 사용하면
+# disqus shortname을 입력 ( disqus username이 아님 )
+
+# 변수
+codeurl: 'https://github.com/softbowllab/sbux'
+
+# gems and other configs
+# plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
+exclude: ['Gemfile', 'Gemfile.lock', .gitignore','README.md']
+#feed:
+#   path: feed.xml
+
+branch : gh-pages
 
 collections:
   docs:
@@ -52,9 +85,3 @@ tutorial:
 # css: assets/css
 # js: assets/js
 # images: assets/images
-
-disqus_shortname: "softbowllab"
-# 변수
-codeurl: 'https://github.com/softbowllab/sbux'
-twitter_username: softbowl
-github_username:  softbowllab 
