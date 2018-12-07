@@ -10,13 +10,13 @@ baseurl: "/sbux"
 
 # Website info
 title: SBUx
-subtitle: 
+subtitle: SBUx 2.6 Technical Training Site 
 email: a10j22s@softbowl.co.kr
 description: Technical Training Site
 
 # cover : img/bg.jpg
 # blog home에 표시될 blog cover image.
-#favicon: assets/built/images/favicon.jpg
+favicon: img/favicon.ico
 
 
 # Social info
@@ -39,6 +39,7 @@ codeurl: 'https://github.com/softbowllab/sbux'
 
 # gems and other configs
 # plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
+plugins: [jekyll-sitemap]
 exclude: ['Gemfile', 'Gemfile.lock', .gitignore','README.md']
 #feed:
 #   path: feed.xml
