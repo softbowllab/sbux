@@ -1,0 +1,20 @@
+---
+date:   2018-05-17
+permalink: /:collection/:path
+layout: setup
+---
+<div class="container">
+	<div class="row">
+		<h2>API</h2>
+		<h3>Latest</h3>
+		<ul>
+		{% assign cates = site.setup["esse"] %}
+		{% for cate in cates %}
+			<li class="nav-header">{{ cate.name }}</li>
+			</ul>
+		{% endfor %}
+		</ul>
+
+	</div>
+</div>
+

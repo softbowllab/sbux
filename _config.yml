@@ -4,8 +4,8 @@ highlighter: rouge
 # paginate: 10
 language : 'ko-KR'
 
-url: "https://softbowllab.github.io/"
-baseurl: "/sbux"
+url: 'https://softbowllab.github.io/'
+baseurl: '/sbux'
 
 
 # Website info
@@ -29,7 +29,7 @@ github_username:  softbowllab
 
 # Disqus
 disqus: True
-disqus_shortname: "softbowllab"
+disqus_shortname: 'softbowllab'
 # disqus는 온라인 댓글 시스템. 댓글 기능을 사용하기 위해
 # disqus를 이용할 것인지 여부와 만약 사용하면
 # disqus shortname을 입력 ( disqus username이 아님 )
@@ -38,47 +38,148 @@ disqus_shortname: "softbowllab"
 codeurl: 'https://github.com/softbowllab/sbux'
 
 # gems and other configs
-# plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
-plugins: [jekyll-sitemap]
+# plugins: [jekyll-paginate, jekyll-feed, jekyll-gist, jekyll-sitemap]
 exclude: ['Gemfile', 'Gemfile.lock', .gitignore','README.md']
 #feed:
 #   path: feed.xml
 
 branch : gh-pages
 
+# https://jekyllrb-ko.github.io/docs/collections/ 참고
 collections:
-  docs:
+  tutorial:
     output: true
-  examples:
+  setup:
+    output: true
+  attribute:
+    output: true
+  method:
+    output: true
+  design:
+    output: true
+  history:
     output: true
 
 defaults:
 - scope:
-    path: _docs
-    type: docs
+    path: _tutorial
+    type: tutorial
   values:
-    layout: docs
-    permalink: /:collection/release/:path:output_ext
+    layout: tutorial    
+    permalink: /:collection/:path    
 - scope:
-    path: _examples
-    type: examples
+    path: _setup
+    type: setup
   values:
-    layout: examples
-    permalink: /:collection/release/:categories/:name:output_ext
+    layout: setup    
+    permalink: /:collection/:path
 - scope:
-    path: "_examples/latest/assets"
+    path: _attribute
+    type: attribute
   values:
-    permalink: release/:path:output_ext
+    layout: attribute    
+    permalink: /:collection/:path
+- scope:
+    path: _method
+    type: method
+  values:
+    layout: method    
+    permalink: /:collection/:path
+- scope:
+    path: _design
+    type: design
+  values:
+    layout: design    
+    permalink: /:collection/:path
+- scope:
+    path: _history
+    type: history
+  values:
+    layout: history    
+    permalink: /:collection/:path      
 
-# 변수 (release 카테고리)
-release:
+
+
+# 변수
+# tutorial 변수
+cate_tutorial:
   latest: 
-    - {name: "common"}
-    - {name: "input"}
-    - {name: "picker"}
+    - {name: 'basic'   , title : '기초편'}
+    - {name: 'adv'     , title : '확장편'}
+    - {name: 'css'     , title : 'CSS편'}
 
-tutorial:
-  - {name: ""}
+# setup 변수
+cate_setup:
+  latest: 
+    - {name: 'esse'      , title : '필수'}
+    - {name: 'opt'       , title : '선택'}
+
+# attribute 변수
+cate_attribute:
+  latest: 
+    - {name: 'common'       , title : '공통'}
+    - {name: 'input'        , title : 'Input'}
+    - {name: 'picker'       , title : 'Picker'}
+    - {name: 'radio'        , title : 'Radio'}
+    - {name: 'checkbox'     , title : 'Checkbox'}
+    - {name: 'label'        , title : 'Label'}
+    - {name: 'select'       , title : 'Select'}
+    - {name: 'button'       , title : 'Button'}
+    - {name: 'textarea'     , title : 'Textarea'}
+    - {name: 'listBox'      , title : 'ListBox'}
+    - {name: 'dropdown'     , title : 'Dropdown'}
+    - {name: 'alert'        , title : 'Alert'}
+    - {name: 'modal'        , title : 'Modal'}
+    - {name: 'progress'     , title : 'Progress'}
+    - {name: 'tabs'         , title : 'Tabs'}
+    - {name: 'menu'         , title : 'Menu'}
+    - {name: 'tree'         , title : 'Tree'}
+    - {name: 'accordion'    , title : 'Accordion'}
+    - {name: 'carousel'     , title : 'Carousel'}
+    - {name: 'sidemenu'     , title : 'Sidemenu'}
+    - {name: 'tooltip'      , title : 'Tooltip'}
+    - {name: 'popover'      , title : 'Popover'}
+    - {name: 'contextmenu'  , title : 'Contextmenu'}
+    - {name: 'datastore'    , title : 'Datastore'}
+
+# method 변수
+cate_method:
+  latest: 
+    - {name: 'each'    , title : '개별 set/get'}
+    - {name: 'all'     , title : '전체 set/get'}
+
+# design 변수
+cate_design:
+  latest: 
+    - {name: 'common'       , title : '공통'}
+    - {name: 'input'        , title : 'Input'}
+    - {name: 'autocomplete' , title : 'Autocomplete'}
+    - {name: 'picker'       , title : 'Picker'}
+    - {name: 'radio'        , title : 'Radio'}
+    - {name: 'checkbox'     , title : 'Checkbox'}
+    - {name: 'label'        , title : 'Label'}
+    - {name: 'select'       , title : 'Select'}
+    - {name: 'button'       , title : 'Button'}
+    - {name: 'textarea'     , title : 'Textarea'}
+    - {name: 'listBox'      , title : 'ListBox'}
+    - {name: 'dropdown'     , title : 'Dropdown'}
+    - {name: 'alert'        , title : 'Alert'}
+    - {name: 'modal'        , title : 'Modal'}
+    - {name: 'progress'     , title : 'Progress'}
+    - {name: 'loadingbar'   , title : 'Page Loading'}
+    - {name: 'tabs'         , title : 'Tabs'}
+    - {name: 'scroll'       , title : 'Scroll'}
+    - {name: 'webacc'       , title : '웹접근성 Tab'}
+    - {name: 'window'       , title : 'Window 창'}
+    - {name: 'menu'         , title : 'Menu'}
+    - {name: 'tree'         , title : 'Tree'}
+    - {name: 'accordion'    , title : 'Accordion'}
+    - {name: 'carousel'     , title : 'Carousel'}
+    - {name: 'sidemenu'     , title : 'Sidemenu'}
+    - {name: 'tooltip'      , title : 'Tooltip'}
+    - {name: 'popover'      , title : 'Popover'}
+    - {name: 'contextmenu'  , title : 'Contextmenu'}
+
 
 # favicon: /assets/favicon.ico
 # feed:
