@@ -1,16 +1,17 @@
 ---
-title:  popover-html
+title:  button-front-color
 date:   2018-12-04
-categories: ["latest","common"]
-order: 17
+categories: ["latest","input"]
+order: 21
 ---
 
-popover-html
+
+button-front-color
 ===
 
 ---
 
-## Description
+### Description
 
 <table style="width:100%">
     <colgroup>
@@ -21,7 +22,7 @@ popover-html
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component에 표시될 popover의 내용에 HTML Tag 사용 여부를 지정합니다.</td>
+        <td colspan="3">Component 입력란 앞에 붙는 버튼의 색상을 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -31,7 +32,7 @@ popover-html
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>popover</td>
+        <td>button-front-text</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,13 +49,13 @@ popover-html
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>false</td>
+        <td>default</td>
         <td class="tdTitle">자료형</td>
-        <td>boolean</td>
+        <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">default(흰색) | blue | green | sky | orange | red</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -69,21 +70,31 @@ popover-html
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td class="tdTitle">지원 컴포넌트</td>
-        <td class="tdCenter" colspan="4">input, textarea, listbox, select, checkbox, radio, button</td>
+        <td>uitype</td>
+        <td class="tdCenter">text</td>
+        <td class="tdCenter">password</td>
+        <td class="tdCenter">search</td>
+        <td class="tdCenter">hidden</td>
+    </tr>
+    <tr>
+        <td>가능여부</td>
+        <td class="tdCenter">X</td>
+        <td class="tdCenter">X</td>
+        <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
     </tr>
 </table>
-
 ---
+
 ### Example (Tag)
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" popover="SBUx <font color='red'>Tooltip</font>" popover-html="true"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" button-front-color="sky"></sbux-input>
 {% endhighlight %}
 
 ### Preview
 
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" popover="SBUx <font color='red'>Tooltip" popover-html="true"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" button-front-color="sky"></sbux-input>
 
 ---
 ### Example (Script)
@@ -94,9 +105,9 @@ popover-html
     $(document).ready(function(){
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
-            uitype : 'text',
-            popover : 'SBUx <font color="red">Tooltip</font>',
-            popoverHtml : true
+            uitype : 'search',
+            buttonFrontText : '검색',
+            buttonFrontColor : 'sky'
         });
     }); 
 </script>
@@ -109,9 +120,9 @@ popover-html
     $(document).ready(function(){
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
-            uitype : 'text',
-            popover : 'SBUx <font color="red">Tooltip</font>',
-            popoverHtml : true
+            uitype : 'search',
+            buttonFrontText : '검색',
+            buttonFrontColor : 'sky'
         });
     }); 
 </script>

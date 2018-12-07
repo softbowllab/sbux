@@ -1,16 +1,17 @@
 ---
-title:  popover-html
+title:  event-ignore-readonly
 date:   2018-12-04
-categories: ["latest","common"]
-order: 17
+categories: ["latest","input"]
+order: 26
 ---
 
-popover-html
+
+event-ignore-readonly
 ===
 
 ---
 
-## Description
+### Description
 
 <table style="width:100%">
     <colgroup>
@@ -21,7 +22,7 @@ popover-html
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component에 표시될 popover의 내용에 HTML Tag 사용 여부를 지정합니다.</td>
+        <td colspan="3">readonly 속성 사용시 button만 readonly 속성을 해제 하도록 설정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -31,7 +32,7 @@ popover-html
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>popover</td>
+        <td>button-front-text | button-back-text, readonly</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -69,21 +70,31 @@ popover-html
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td class="tdTitle">지원 컴포넌트</td>
-        <td class="tdCenter" colspan="4">input, textarea, listbox, select, checkbox, radio, button</td>
+        <td>uitype</td>
+        <td class="tdCenter">text</td>
+        <td class="tdCenter">password</td>
+        <td class="tdCenter">search</td>
+        <td class="tdCenter">hidden</td>
+    </tr>
+    <tr>
+        <td>가능여부</td>
+        <td class="tdCenter">X</td>
+        <td class="tdCenter">X</td>
+        <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
     </tr>
 </table>
-
 ---
+
 ### Example (Tag)
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" popover="SBUx <font color='red'>Tooltip</font>" popover-html="true"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-back-text="검색" event-ignore-readonly="true" readonly></sbux-input>
 {% endhighlight %}
 
 ### Preview
 
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" popover="SBUx <font color='red'>Tooltip" popover-html="true"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-back-text="검색" event-ignore-readonly="true" readonly></sbux-input>
 
 ---
 ### Example (Script)
@@ -94,9 +105,10 @@ popover-html
     $(document).ready(function(){
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
-            uitype : 'text',
-            popover : 'SBUx <font color="red">Tooltip</font>',
-            popoverHtml : true
+            uitype : 'search',
+            buttonBackText : '검색',
+            eventIgnoreReadonly : true,
+            readonly : true
         });
     }); 
 </script>
@@ -109,9 +121,10 @@ popover-html
     $(document).ready(function(){
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
-            uitype : 'text',
-            popover : 'SBUx <font color="red">Tooltip</font>',
-            popoverHtml : true
+            uitype : 'search',
+            buttonBackText : '검색',
+            eventIgnoreReadonly : true,
+            readonly : true
         });
     }); 
 </script>

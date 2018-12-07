@@ -31,7 +31,7 @@ popover
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>tooltip</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>

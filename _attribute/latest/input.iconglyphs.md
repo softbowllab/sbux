@@ -1,16 +1,16 @@
 ---
-title:  autocomplete-ref
+title:  icon-glyphs
 date:   2018-12-04
 categories: ["latest","input"]
-order: 2
+order: 7
 ---
 
-
-autocomplete-ref
+icon-glyphs
 ===
+
 ---
 
-### Description
+## Description
 
 <table style="width:100%">
     <colgroup>
@@ -21,7 +21,7 @@ autocomplete-ref
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.</td>
+        <td colspan="3">Component의 안쪽 우측에 위치하는 아이콘 모양을 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -54,9 +54,10 @@ autocomplete-ref
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3"> A | B | C | D 중 택 1  ,  JSON Object 변수</td>
+        <td colspan="3"><a href="https://getbootstrap.com/docs/3.3/components/#glyphicons" target="_blank">bootstrap glyphicons 참고</a></td>
     </tr>
 </table>
+
 <table style="width:100%">
     <colgroup>
         <col width="20%"/>
@@ -78,18 +79,48 @@ autocomplete-ref
     <tr>
         <td>가능여부</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
+        <td class="tdBlue tdCenter">O</td>
+        <td class="tdBlue tdCenter">O</td>
         <td class="tdCenter">X</td>
     </tr>
 </table>
----
 
-### Example
+---
+### Example (Tag)
+
 {% highlight html %}
-<sbux-input id="inputIdx" name="inputIdx" uitype="text" autocomplete-ref="autocomplete_data"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" icon-glyphs="glyphicon-star"></sbux-input>
 {% endhighlight %}
 
----
 ### Preview
-<sbux-input id="inputIdx" name="inputIdx" uitype="text" autocomplete-ref="autocomplete_data"></sbux-input>
+
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" icon-glyphs="glyphicon-star"></sbux-input>
+
+---
+### Example (Script)
+
+{% highlight html %}
+<div id="sbArea"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea').sbInput({
+            name : 'sbScriptNm',
+            uitype : 'text',
+            iconGlyphs : 'glyphicon-star'
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+### Preview 
+
+<div id="sbArea"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea').sbInput({
+            name : 'sbScriptNm',
+            uitype : 'text',
+            iconGlyphs : 'glyphicon-star'
+        });
+    }); 
+</script>

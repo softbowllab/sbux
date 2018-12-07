@@ -1,16 +1,17 @@
 ---
-title:  uitype
+title:  autocomplete-select-callback
 date:   2018-12-04
 categories: ["latest","input"]
-order: 1
+order: 12
 ---
 
-uitype
+
+autocomplete-select-callback
 ===
 
 ---
 
-## Description
+### Description
 
 <table style="width:100%">
     <colgroup>
@@ -21,17 +22,20 @@ uitype
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 type을 지정합니다.</td>
+        <td colspan="3">
+            자동 완성 선택시 호출되는 callback 함수를 지정합니다.<br>
+            * 함수의 첫번째 parameter로 선택된 값을 반환합니다.
+        </td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
         <td>2.6.0</td>
         <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
+        <td>선택</td>
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
+        <td>autocomplete-ref</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -54,7 +58,7 @@ uitype
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">text | password | search | hidden</td>
+        <td colspan="3">호출 할 callback 함수명</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -78,22 +82,56 @@ uitype
     <tr>
         <td>가능여부</td>
         <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdBlue tdCenter">O</td>
-        <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
     </tr>
 </table>
-
 ---
+
 ### Example (Tag)
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<script>
+    var autocompData = [
+        "Asp",
+        "Asp.Net",
+        "BASIC",
+        "C",
+        "C++",
+        "COBOL",
+        "Fortran",
+        "Java",
+        "JavaScript",
+        "Pascal"
+    ];
+
+    function selectcallback(arg){
+        alert(arg+' 선택됨');
+    }
+</script>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-select-callback="selectcallback"></sbux-input>
 {% endhighlight %}
 
 ### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<script>
+    var autocompData = [
+        "Asp",
+        "Asp.Net",
+        "BASIC",
+        "C",
+        "C++",
+        "COBOL",
+        "Fortran",
+        "Java",
+        "JavaScript",
+        "Pascal"
+    ];
+    function selectcallback(arg){
+        alert(arg+' 선택됨');
+    }
+</script>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-select-callback="selectcallback"></sbux-input>
 
 ---
 ### Example (Script)
@@ -101,10 +139,29 @@ uitype
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
+    var autocompData = [
+        "Asp",
+        "Asp.Net",
+        "BASIC",
+        "C",
+        "C++",
+        "COBOL",
+        "Fortran",
+        "Java",
+        "JavaScript",
+        "Pascal"
+    ];
+
+    function selectcallback(arg){
+        alert(arg+' 선택됨');
+    }
+
     $(document).ready(function(){
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
-            uitype : 'text'
+            uitype : 'text',
+            autocompleteRef : 'autocompData',
+            autocompleteSelectCallback : 'selectcallback'
         });
     }); 
 </script>
@@ -117,7 +174,9 @@ uitype
     $(document).ready(function(){
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
-            uitype : 'text'
+            uitype : 'text',
+            autocompleteRef : 'autocompData',
+            autocompleteSelectCallback : 'selectcallback'
         });
     }); 
 </script>
