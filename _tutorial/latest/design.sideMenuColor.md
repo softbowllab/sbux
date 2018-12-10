@@ -1,11 +1,11 @@
 ---
-title:  선별하여 로딩하기
-date:   2018-12-07
-categories: ["latest","basic"]
-order: 2
+title:  사이드 메뉴의 색성조정하기
+date:   2018-12-10
+categories: ["latest","design"]
+order: 13
 ---
 
-선별하여 로딩하기
+사이드 메뉴의 색성조정하기
 ===
 
 ---

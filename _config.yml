@@ -106,7 +106,7 @@ cate_tutorial:
   latest: 
     - {name: 'basic'   , title : '기초편'}
     - {name: 'adv'     , title : '확장편'}
-    - {name: 'css'     , title : 'CSS편'}
+    - {name: 'design'  , title : '디자인편'}
 
 # setup 변수
 cate_setup:
