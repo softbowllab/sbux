@@ -110,7 +110,7 @@ div.sbux-form-group {
 }
 div.sbux-form-group > input {
   width: 100%;
-  height: 34px;
+  height: 30px;
   padding: 6px 42px 6px 12px;
   font-size: 1em;
   color: #222;
@@ -167,9 +167,9 @@ div.sbux-form-group > span {
   right: 0;
   z-index: 2;
   display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   pointer-events: none;
 }
@@ -202,7 +202,7 @@ div.sbux-form-group > span button.readonly {
 }
 .sbux-inp-input {
   width: 100%;
-  height: 34px;
+  height: 30px;
   padding: 6px 12px;
   background-color: #fff;
   font-size: 12px;
@@ -297,7 +297,7 @@ input.sbux-rdo-input {
 }
 .sbux-inp-btn-group .sbux-inp-fr-span > button,
 .sbux-inp-btn-group .sbux-inp-bk-span > button {
-  height: 34px;
+  height: 30px;
   /* background:#fff;*/
   border-radius: 0 5px 5px 0;
   /*border:1px solid #d4d4d5;*/
@@ -372,9 +372,9 @@ input.sbux-rdo-input {
   right: 0;
   z-index: 2;
   display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   pointer-events: none;
 }
@@ -537,7 +537,7 @@ ul.sbux-ato {
 }
 .sbux-ato-input {
   width: 100%;
-  height: 34px;
+  height: 30px;
   padding: 6px 12px;
   font-size: 13px;
   background-color: #fff;
@@ -586,7 +586,7 @@ ul.sbux-ato {
   position: relative;
   display: table-cell;
   width: 100%;
-  height: 34px;
+  height: 30px;
   padding: 6px 12px;
   font-size: 1em;
   color: #222;
@@ -686,7 +686,7 @@ ul.sbux-ato {
 }
 .sbux-pik-icon-span button.sbux-pik-icon-btn {
   display: inline-block;
-  height: 34px;
+  height: 30px;
   padding: 7px 12px;
   margin-bottom: 0;
   background-color: #fff;
@@ -831,6 +831,10 @@ div.sbux-pik-pop-body td.sbux-pik-saturday .sbux-btn:active {
 .sbux-pik-popwrap .sbux-pik-pop-body .sbux-pik-today,
 .sbux-pik-popwrap .sbux-pik-pop-body .sbux-pik-now {
   color: #fff;
+}
+table.sbux-pik-pop-day {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 table.sbux-pik-pop-day thead {
   font-size: 12px;
@@ -1034,6 +1038,8 @@ table.sbux-pik-pop-month {
   margin: 0;
   text-align: center;
   z-index: 4;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 table.sbux-pik-pop-month thead th {
   vertical-align: middle;
@@ -1116,6 +1122,8 @@ table.sbux-pik-pop-year {
   margin: 0;
   text-align: center;
   z-index: 4;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 table.sbux-pik-pop-year thead th {
   vertical-align: middle;

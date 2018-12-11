@@ -1246,13 +1246,6 @@ ul.sbux-acc-meu-list li.sbux-acc-meu .sbux-acc-submeu a {
   text-decoration: none;
   color: #666;
 }
-ul.sbux-acc-meu-list li.sbux-acc-meu .sbux-acc-pane ul {
-  list-style: circle;
-  list-style-position: inside;
-}
-ul.sbux-acc-meu-list li.sbux-acc-meu .sbux-acc-pane ul li {
-  padding-left: 15px;
-}
 ul.sbux-acc-meu-list li.sbux-acc-meu.open > a,
 ul.sbux-acc-meu-list li.sbux-acc-meu.open > a:hover,
 ul.sbux-acc-meu-list li.sbux-acc-meu.open > a:focus {

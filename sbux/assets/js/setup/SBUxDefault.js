@@ -180,6 +180,7 @@
 	};
 
 	SBUxG.DEF.SET_TABS     = {
+		highlightColor : '#ff7f4d',
 		placement     : 'top',   // top, bottom, left, inbox
 		//tabsPlacement     : 'top',   // top, bottom, left, inbox
 
