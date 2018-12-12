@@ -1,3 +1,18 @@
+<script type="text/javascript">
+	var menuJson = [
+		{ "id" : "1", "pid" : "0", "text" : "Tutorials", "link" : "{{ site.baseurl }}/tutorial/latest/"},
+		{ "id" : "2", "pid" : "0", "text" : "Attributes", "link" : "{{ site.baseurl }}/attribute/latest/"},
+		{ "id" : "3", "pid" : "0", "text" : "Methods", "link" : "{{ site.baseurl }}/method/latest/"},
+		{ "id" : "4", "pid" : "0", "text" : "Design", "link" : "{{ site.baseurl }}/design/latest/"},
+		{ "id" : "5", "pid" : "0", "text" : "Release history", "link" : "{{ site.baseurl }}/history/index.html"}
+	];
+</script>
+
+<sbux-menu id="topMenu" name="topMenu" uitype="normal" jsondata-ref="menuJson">
+	<brand-item text="SBUx 2.6" link="{{ site.baseurl }}/"></brand-item>
+</sbux-menu>
+
+<!--
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container navbar-container">
 		<div class="navbar-header">
@@ -8,7 +23,7 @@
 		<span class="icon-bar"></span>
 		</button>
 			<a class="navbar-brand" href="{{ site.baseurl }}/">
-				<!-- <span><img src="/img/logonav.png"></span> --> SBUx v2.6
+				SBUx v2.6
 			</a>
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
@@ -28,3 +43,4 @@
 		</div>
 	</div>
 </nav>
+-->
