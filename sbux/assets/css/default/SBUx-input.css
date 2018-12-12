@@ -563,6 +563,7 @@ ul.sbux-ato {
   cursor: default;
   overflow-y: auto;
   overflow-x: hidden;
+  border-radius: 0 0 2px 2px;
 }
 .sbux-ato li.sbux-ui-menu-item {
   padding: 3px 1em 3px .4em;
@@ -656,24 +657,20 @@ ul.sbux-ato {
   border-color: #d9d9d9;
 }
 .sbux-pik-input:focus {
-  border-color: #1a709b;
+  border-color: #307ea5;
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .sbux-pik-input:hover {
-  border-color: #1a709b;
+  border-color: #307ea5;
 }
 .sbux-pik-input:focus + .sbux-pik-icon-span button {
-  border: 1px solid #1a709b;
+  border: 1px solid #307ea5;
   border-left: none;
 }
 .sbux-pik-input:hover + .sbux-pik-icon-span button {
-  border: 1px solid #1a709b;
-  border-left: none;
-}
-.sbux-pik-input:hover + .sbux-pik-icon-span button {
-  border: 1px solid #1a709b;
+  border: 1px solid #307ea5;
   border-left: none;
 }
 .sbux-pik-input.active {
@@ -697,6 +694,8 @@ ul.sbux-ato {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   border-left: none;
+  transform: none;
+  transition: none;
 }
 .sbux-pik-icon-span button.sbux-pik-icon-btn i.sbux-pik-icon.glyphicon-calendar:before {
   content: "\e109";
