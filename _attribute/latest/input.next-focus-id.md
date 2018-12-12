@@ -86,55 +86,203 @@ next-focus-id
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2^exTab1_3" title-text-array="text^password^search">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-input id="sbIdx1" name="sbTagNm1" uitype="text" next-focus-id="sbIdx2"></sbux-input>
-<sbux-input id="sbIdx2" name="sbTagNm2" uitype="text" next-focus-id="sbIdx1"></sbux-input>
+<sbux-input id="sbIdx1_1" name="sbTagNm1_1" uitype="text" next-focus-id="sbIdx1_2"></sbux-input>
+<sbux-input id="sbIdx1_2" name="sbTagNm1_2" uitype="text" next-focus-id="sbIdx1_1"></sbux-input>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-input id="sbIdx1" name="sbTagNm1" uitype="text" next-focus-id="sbIdx2"></sbux-input>
-<sbux-input id="sbIdx2" name="sbTagNm2" uitype="text" next-focus-id="sbIdx1"></sbux-input>
+▶ Preview
+
+<sbux-input id="sbIdx1_1" name="sbTagNm1_1" uitype="text" next-focus-id="sbIdx1_2"></sbux-input>
+<sbux-input id="sbIdx1_2" name="sbTagNm1_2" uitype="text" next-focus-id="sbIdx1_1"></sbux-input>
+
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
+
+{% highlight html %}
+<sbux-input id="sbIdx2_1" name="sbTagNm2_1" uitype="password" next-focus-id="sbIdx2_2"></sbux-input>
+<sbux-input id="sbIdx2_2" name="sbTagNm2_2" uitype="password" next-focus-id="sbIdx2_1"></sbux-input>
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<sbux-input id="sbIdx2_1" name="sbTagNm2_1" uitype="password" next-focus-id="sbIdx2_2"></sbux-input>
+<sbux-input id="sbIdx2_2" name="sbTagNm2_2" uitype="password" next-focus-id="sbIdx2_1"></sbux-input>
+
+    </div>
+    <div id="exTab1_3">
+
+▶ Example
+
+{% highlight html %}
+<sbux-input id="sbIdx3_1" name="sbTagNm3_1" uitype="search" next-focus-id="sbIdx3_2"></sbux-input>
+<sbux-input id="sbIdx3_2" name="sbTagNm3_2" uitype="search" next-focus-id="sbIdx3_1"></sbux-input>
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<sbux-input id="sbIdx3_1" name="sbTagNm3_1" uitype="search" next-focus-id="sbIdx3_2"></sbux-input>
+<sbux-input id="sbIdx3_2" name="sbTagNm3_2" uitype="search" next-focus-id="sbIdx3_1"></sbux-input>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2^exTab2_3" title-text-array="text^password^search">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
+<div id="sbArea1_1"></div>
+<div id="sbArea1_2"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbInput({
-            name : 'sbScriptNm',
+        $('#sbArea1_1').sbInput({
+            name : 'sbScriptNm1_1',
             uitype : 'text',
-            nextFocusId : 'sbArea2'
+			nextFocusId : 'sbArea1_2'
         });
-        $('#sbArea2').sbInput({
-            name : 'sbScriptNm',
+        $('#sbArea1_2').sbInput({
+            name : 'sbScriptNm1_2',
             uitype : 'text',
-            nextFocusId : 'sbArea1'
+			nextFocusId : 'sbArea1_1'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
+▶ Preview 
+
+<div id="sbArea1_1"></div>
+<div id="sbArea1_2"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbInput({
-            name : 'sbScriptNm',
+        $('#sbArea1_1').sbInput({
+            name : 'sbScriptNm1_1',
             uitype : 'text',
-            nextFocusId : 'sbArea2'
+			nextFocusId : 'sbArea1_2'
         });
-        $('#sbArea2').sbInput({
-            name : 'sbScriptNm',
+        $('#sbArea1_2').sbInput({
+            name : 'sbScriptNm1_2',
             uitype : 'text',
-            nextFocusId : 'sbArea1'
+			nextFocusId : 'sbArea1_1'
         });
     }); 
 </script>
+
+    </div>
+    <div id="exTab2_2">
+
+▶ Example
+
+{% highlight html %}
+<div id="sbArea2_1"></div>
+<div id="sbArea2_2"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea2_1').sbInput({
+            name : 'sbScriptNm2_1',
+            uitype : 'text',
+			nextFocusId : 'sbArea2_2'
+        });
+        $('#sbArea2_2').sbInput({
+            name : 'sbScriptNm2_2',
+            uitype : 'text',
+			nextFocusId : 'sbArea2_1'
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<div id="sbArea2_1"></div>
+<div id="sbArea2_2"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea2_1').sbInput({
+            name : 'sbScriptNm2_1',
+            uitype : 'text',
+			nextFocusId : 'sbArea2_2'
+        });
+        $('#sbArea2_2').sbInput({
+            name : 'sbScriptNm2_2',
+            uitype : 'text',
+			nextFocusId : 'sbArea2_1'
+        });
+    }); 
+</script>
+
+    </div>
+    <div id="exTab2_3">
+
+▶ Example
+
+{% highlight html %}
+<div id="sbArea3_1"></div>
+<div id="sbArea3_2"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea3_1').sbInput({
+            name : 'sbScriptNm3_1',
+            uitype : 'text',
+			nextFocusId : 'sbArea3_2'
+        });
+        $('#sbArea3_2').sbInput({
+            name : 'sbScriptNm3_2',
+            uitype : 'text',
+			nextFocusId : 'sbArea3_1'
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<div id="sbArea3_1"></div>
+<div id="sbArea3_2"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea3_1').sbInput({
+            name : 'sbScriptNm3_1',
+            uitype : 'text',
+			nextFocusId : 'sbArea3_2'
+        });
+        $('#sbArea3_2').sbInput({
+            name : 'sbScriptNm3_2',
+            uitype : 'text',
+			nextFocusId : 'sbArea3_1'
+        });
+    }); 
+</script>
+
+    </div>
+</div>

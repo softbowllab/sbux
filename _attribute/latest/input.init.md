@@ -87,7 +87,7 @@ init
 ---
 ### Example & Preview (Tag)
 
-<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2^exTab1_3" title-text-array="normal^password^search">
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2^exTab1_3" title-text-array="text^password^search">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab1_1">
@@ -140,7 +140,7 @@ init
 ---
 ### Example & Preview (Script)
 
-<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2^exTab2_3" title-text-array="normal^password^search">
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2^exTab2_3" title-text-array="text^password^search">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab2_1">

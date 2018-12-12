@@ -84,9 +84,20 @@ button-back-class
         <td class="tdCenter">X</td>
     </tr>
 </table>
----
 
-### Example (Tag)
+---
+### Example & Preview (Tag)
+
+<style>
+	.customClass{color:red;}
+</style>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="serach">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <style>
@@ -95,14 +106,24 @@ button-back-class
 <sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-back-text="검색" button-back-class="customClass"></sbux-input>
 {% endhighlight %}
 
-### Preview
-<style>
-	.customClass{color:red;}
-</style>
+<br>
+
+▶ Preview 
+
 <sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-back-text="검색" button-back-class="customClass"></sbux-input>
 
+    </div>
+</div>
+
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="serach">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <style>
@@ -121,7 +142,9 @@ button-back-class
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea"></div>
 <script>
@@ -134,3 +157,6 @@ button-back-class
         });
     }); 
 </script>
+
+    </div>
+</div>

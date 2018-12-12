@@ -84,9 +84,31 @@ autocomplete-suffix
         <td class="tdCenter">X</td>
     </tr>
 </table>
----
 
-### Example (Tag)
+---
+### Example & Preview (Tag)
+
+<script>
+    var autocompData = [
+        "Asp",
+        "Asp.Net",
+        "BASIC",
+        "C",
+        "C++",
+        "COBOL",
+        "Fortran",
+        "Java",
+        "JavaScript",
+        "Pascal"
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2" title-text-array="text^search">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <script>
@@ -103,31 +125,21 @@ autocomplete-suffix
         "Pascal"
     ];
 </script>
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-suffix="SBUx"></sbux-input>
+<sbux-input id="sbIdx1" name="sbTagNm1" uitype="text" autocomplete-ref="autocompData" autocomplete-suffix="SBUx"></sbux-input>
 {% endhighlight %}
 
-### Preview
-<script>
-    var autocompData = [
-        "Asp",
-        "Asp.Net",
-        "BASIC",
-        "C",
-        "C++",
-        "COBOL",
-        "Fortran",
-        "Java",
-        "JavaScript",
-        "Pascal"
-    ];
-</script>
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-suffix="SBUx"></sbux-input>
+<br>
 
----
-### Example (Script)
+▶ Preview
+
+<sbux-input id="sbIdx1" name="sbTagNm1" uitype="text" autocomplete-ref="autocompData" autocomplete-suffix="SBUx"></sbux-input>
+
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
 
 {% highlight html %}
-<div id="sbArea"></div>
 <script>
     var autocompData = [
         "Asp",
@@ -141,28 +153,117 @@ autocomplete-suffix
         "JavaScript",
         "Pascal"
     ];
+</script>
+<sbux-input id="sbIdx2" name="sbTagNm2" uitype="search" autocomplete-ref="autocompData" autocomplete-suffix="SBUx"></sbux-input>
+{% endhighlight %}
 
+<br>
+
+▶ Preview
+
+<sbux-input id="sbIdx2" name="sbTagNm2" uitype="search" autocomplete-ref="autocompData" autocomplete-suffix="SBUx"></sbux-input>
+
+    </div>
+</div>
+
+---
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2" title-text-array="text^search">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
+
+{% highlight html %}
+<div id="sbArea1"></div>
+<script>
+    var autocompData = [
+        "Asp",
+        "Asp.Net",
+        "BASIC",
+        "C",
+        "C++",
+        "COBOL",
+        "Fortran",
+        "Java",
+        "JavaScript",
+        "Pascal"
+    ];
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
+        $('#sbArea1').sbInput({
+            name : 'sbScriptNm1',
             uitype : 'text',
-            autocompleteRef : 'autocompData',
+			autocompleteRef : 'autocompData',
             autocompleteSuffix : 'SBUx'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<div id="sbArea"></div>
+▶ Preview 
+
+<div id="sbArea1"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
+        $('#sbArea1').sbInput({
+            name : 'sbScriptNm1',
             uitype : 'text',
-            autocompleteRef : 'autocompData',
+			autocompleteRef : 'autocompData',
             autocompleteSuffix : 'SBUx'
         });
     }); 
 </script>
+
+    </div>
+    <div id="exTab2_2">
+
+▶ Example
+
+{% highlight html %}
+<div id="sbArea2"></div>
+<script>
+    var autocompData = [
+        "Asp",
+        "Asp.Net",
+        "BASIC",
+        "C",
+        "C++",
+        "COBOL",
+        "Fortran",
+        "Java",
+        "JavaScript",
+        "Pascal"
+    ];
+    $(document).ready(function(){
+        $('#sbArea2').sbInput({
+            name : 'sbScriptNm2',
+            uitype : 'search',
+			autocompleteRef : 'autocompData',
+            autocompleteSuffix : 'SBUx'
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<div id="sbArea2"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea2').sbInput({
+            name : 'sbScriptNm2',
+            uitype : 'search',
+			autocompleteRef : 'autocompData',
+            autocompleteSuffix : 'SBUx'
+        });
+    }); 
+</script>
+
+    </div>
+</div>
