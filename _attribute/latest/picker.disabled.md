@@ -1,11 +1,11 @@
 ---
-title:  clear-text
+title:  disabled
 date:   2018-12-04
 categories: ["latest","picker"]
-order: 11
+order: 26
 ---
 
-clear-text
+disabled
 ===
 
 ---
@@ -21,7 +21,7 @@ clear-text
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">show-button-bar 지움 버튼의 text를 지정합니다.</td>
+        <td colspan="3">Component를 비활성화 합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -31,7 +31,7 @@ clear-text
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>show-button-bar</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,13 +48,13 @@ clear-text
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>지움</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">지움 버튼에 지정할 문구</td>
+        <td colspan="3">disabled</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -77,7 +77,7 @@ clear-text
     </tr>
     <tr>
         <td>가능여부</td>
-        <td class="tdCenter">X</td>
+        <td class="tdBlue tdCenter">O</td>
         <td class="tdBlue tdCenter">O</td>
         <td></td>
         <td></td>
@@ -88,12 +88,12 @@ clear-text
 ### Example (Tag)
 
 {% highlight html %}
-<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" show-button-bar="true" clear-text="삭제"></sbux-datepicker>
+<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" disabled="disabled"></sbux-picker>
 {% endhighlight %}
 
 ### Preview
 
-<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" show-button-bar="true" clear-text="삭제"></sbux-datepicker>
+<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" disabled="disabled"></sbux-picker>
 
 ---
 ### Example (Script)
@@ -106,8 +106,7 @@ clear-text
             name : 'sbScriptNm',
             uitype : 'date',
 			mode : 'popup',
-            showButtonBar : true,
-            clearText : '삭제'
+            disabled : 'disabled'
         });
     }); 
 </script>
@@ -122,8 +121,7 @@ clear-text
             name : 'sbScriptNm',
             uitype : 'date',
 			mode : 'popup',
-            showButtonBar : true,
-            clearText : '삭제'
+            disabled : 'disabled'
         });
-    });  
+    }); 
 </script>

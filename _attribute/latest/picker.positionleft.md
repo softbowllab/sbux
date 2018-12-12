@@ -106,7 +106,7 @@ position-left
             name : 'sbScriptNm',
             uitype : 'date',
 			mode : 'popup',
-            positionLeft : 30
+            positionLeft : -300
         });
     }); 
 </script>
@@ -121,7 +121,7 @@ position-left
             name : 'sbScriptNm',
             uitype : 'date',
 			mode : 'popup',
-            positionLeft : 30
+            positionLeft : -300
         });
     }); 
 </script>

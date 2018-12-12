@@ -1,17 +1,16 @@
 ---
-title:  autocomplete-filter-starts-with
+title:  disabled
 date:   2018-12-04
 categories: ["latest","input"]
-order: 13
+order: 28
 ---
 
-
-autocomplete-filter-starts-with
+disabled
 ===
 
 ---
 
-### Description
+## Description
 
 <table style="width:100%">
     <colgroup>
@@ -22,7 +21,7 @@ autocomplete-filter-starts-with
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">자동 완성 검색 대상을 문장의 첫글자 부터 시작하도록 설정합니다.</td>
+        <td colspan="3">Component를 비활성화 합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -32,7 +31,7 @@ autocomplete-filter-starts-with
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>autocomplete-ref</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -49,13 +48,13 @@ autocomplete-filter-starts-with
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>false</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
-        <td>boolean</td>
+        <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">disabled</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -79,49 +78,23 @@ autocomplete-filter-starts-with
     <tr>
         <td>가능여부</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
+        <td class="tdBlue tdCenter">O</td>
         <td class="tdBlue tdCenter">O</td>
         <td class="tdCenter">X</td>
     </tr>
 </table>
----
 
+---
 ### Example (Tag)
 
 {% highlight html %}
-<script>
-    var autocompData = [
-        "Asp",
-        "Asp.Net",
-        "BASIC",
-        "C",
-        "C++",
-        "COBOL",
-        "Fortran",
-        "Java",
-        "JavaScript",
-        "Pascal"
-    ];
-</script>
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-filter-starts-with="true"></sbux-input>
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" disabled="disabled"></sbux-input>
 {% endhighlight %}
 
 ### Preview
-<script>
-    var autocompData = [
-        "Asp",
-        "Asp.Net",
-        "BASIC",
-        "C",
-        "C++",
-        "COBOL",
-        "Fortran",
-        "Java",
-        "JavaScript",
-        "Pascal"
-    ];
-</script>
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-filter-starts-with="true"></sbux-input>
+
+<sbux-input id="sbIdx" name="sbTagNm" uitype="text" disabled="disabled"></sbux-input>
+
 
 ---
 ### Example (Script)
@@ -129,24 +102,11 @@ autocomplete-filter-starts-with
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
-    var autocompData = [
-        "Asp",
-        "Asp.Net",
-        "BASIC",
-        "C",
-        "C++",
-        "COBOL",
-        "Fortran",
-        "Java",
-        "JavaScript",
-        "Pascal"
-    ];
     $(document).ready(function(){
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
             uitype : 'text',
-            autocompleteRef : 'autocompData',
-            autocompleteFilterStartsWith : true
+            disabled : 'disabled'
         });
     }); 
 </script>
@@ -160,8 +120,7 @@ autocomplete-filter-starts-with
         $('#sbArea').sbInput({
             name : 'sbScriptNm',
             uitype : 'text',
-            autocompleteRef : 'autocompData',
-            autocompleteFilterStartsWith : true
+            disabled : 'disabled'
         });
     }); 
 </script>

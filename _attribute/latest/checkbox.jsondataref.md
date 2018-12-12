@@ -1,11 +1,11 @@
 ---
-title:  clear-text
-date:   2018-12-04
-categories: ["latest","picker"]
-order: 11
+title:  jsondata-ref
+date:   2018-05-14
+categories: ["latest","checkbox"]
+order: 8
 ---
 
-clear-text
+jsondata-ref
 ===
 
 ---
@@ -21,17 +21,20 @@ clear-text
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">show-button-bar 지움 버튼의 text를 지정합니다.</td>
+        <td colspan="3">
+            Component 구성에 필요한 json data를 호출합니다.<br>
+            * 변동형으로 컴포넌트를 구성할때 사용합니다.
+        </td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
         <td>2.6.0</td>
         <td class="tdTitle">필수여부</td>
-        <td>선택</td>
+        <td class="tdRed">필수 (변동형일때만)</td>
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>show-button-bar</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,13 +51,13 @@ clear-text
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>지움</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">지움 버튼에 지정할 문구</td>
+        <td colspan="3">호출할 json data 변수명</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -69,16 +72,16 @@ clear-text
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
-        <td class="tdCenter">inline</td>
-        <td class="tdCenter">popup</td>
+        <td>uitype</td>
+        <td class="tdCenter">normal</td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>가능여부</td>
-        <td class="tdCenter">X</td>
         <td class="tdBlue tdCenter">O</td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
@@ -88,12 +91,26 @@ clear-text
 ### Example (Tag)
 
 {% highlight html %}
-<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" show-button-bar="true" clear-text="삭제"></sbux-datepicker>
+<script>
+    var SBUxData = [
+        { text : "빨강" },
+        { text : "초록" },
+        { text : "파랑" }
+    ];
+</script>
+<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData"></sbux-checkbox>
 {% endhighlight %}
 
 ### Preview
 
-<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" show-button-bar="true" clear-text="삭제"></sbux-datepicker>
+<script>
+    var SBUxData = [
+        { text : "빨강" },
+        { text : "초록" },
+        { text : "파랑" }
+    ];
+</script>
+<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData"></sbux-checkbox>
 
 ---
 ### Example (Script)
@@ -101,13 +118,16 @@ clear-text
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
+    var SBUxData = [
+        { text : "빨강" },
+        { text : "초록" },
+        { text : "파랑" }
+    ];
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbCheckbox({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            showButtonBar : true,
-            clearText : '삭제'
+            uitype : 'normal',
+            jsondataRef : 'SBUxData'
         });
     }); 
 </script>
@@ -118,12 +138,10 @@ clear-text
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbCheckbox({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            showButtonBar : true,
-            clearText : '삭제'
+            uitype : 'normal',
+            jsondataRef : 'SBUxData'
         });
     });  
 </script>

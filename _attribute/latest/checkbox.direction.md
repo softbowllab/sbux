@@ -1,17 +1,16 @@
 ---
-title:  autocomplete-filter-starts-with
-date:   2018-12-04
-categories: ["latest","input"]
-order: 13
+title:  direction
+date:   2018-05-14
+categories: ["latest","checkbox"]
+order: 12
 ---
 
-
-autocomplete-filter-starts-with
+direction
 ===
 
 ---
 
-### Description
+## Description
 
 <table style="width:100%">
     <colgroup>
@@ -22,7 +21,10 @@ autocomplete-filter-starts-with
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">자동 완성 검색 대상을 문장의 첫글자 부터 시작하도록 설정합니다.</td>
+        <td colspan="3">
+            Component가 나열되는 방향을 지정합니다.<br>
+            * 변동형으로 컴포넌트를 구성할때 사용합니다.
+        </td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -32,7 +34,7 @@ autocomplete-filter-starts-with
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>autocomplete-ref</td>
+        <td>jsondata-ref</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -49,13 +51,13 @@ autocomplete-filter-starts-with
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>false</td>
+        <td>horizontal</td>
         <td class="tdTitle">자료형</td>
-        <td>boolean</td>
+        <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">horizontal | vertical</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -71,57 +73,44 @@ autocomplete-filter-starts-with
     </tr>
     <tr>
         <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
+        <td class="tdCenter">normal</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>가능여부</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
-        <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
----
 
+---
 ### Example (Tag)
 
 {% highlight html %}
 <script>
-    var autocompData = [
-        "Asp",
-        "Asp.Net",
-        "BASIC",
-        "C",
-        "C++",
-        "COBOL",
-        "Fortran",
-        "Java",
-        "JavaScript",
-        "Pascal"
+    var SBUxData = [
+        { text : "빨강" },
+        { text : "초록" },
+        { text : "파랑" }
     ];
 </script>
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-filter-starts-with="true"></sbux-input>
+<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData" direction="vertical"></sbux-checkbox>
 {% endhighlight %}
 
 ### Preview
+
 <script>
-    var autocompData = [
-        "Asp",
-        "Asp.Net",
-        "BASIC",
-        "C",
-        "C++",
-        "COBOL",
-        "Fortran",
-        "Java",
-        "JavaScript",
-        "Pascal"
+    var SBUxData = [
+        { text : "빨강" },
+        { text : "초록" },
+        { text : "파랑" }
     ];
 </script>
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" autocomplete-ref="autocompData" autocomplete-filter-starts-with="true"></sbux-input>
+<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData" direction="vertical"></sbux-checkbox>
 
 ---
 ### Example (Script)
@@ -129,24 +118,17 @@ autocomplete-filter-starts-with
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
-    var autocompData = [
-        "Asp",
-        "Asp.Net",
-        "BASIC",
-        "C",
-        "C++",
-        "COBOL",
-        "Fortran",
-        "Java",
-        "JavaScript",
-        "Pascal"
+    var SBUxData = [
+        { text : "빨강" },
+        { text : "초록" },
+        { text : "파랑" }
     ];
     $(document).ready(function(){
-        $('#sbArea').sbInput({
+        $('#sbArea').sbCheckbox({
             name : 'sbScriptNm',
-            uitype : 'text',
-            autocompleteRef : 'autocompData',
-            autocompleteFilterStartsWith : true
+            uitype : 'normal',
+            jsondataRef : 'SBUxData',
+            direction : 'vertical'
         });
     }); 
 </script>
@@ -156,12 +138,17 @@ autocomplete-filter-starts-with
 
 <div id="sbArea"></div>
 <script>
+    var SBUxData = [
+        { text : "빨강" },
+        { text : "초록" },
+        { text : "파랑" }
+    ];
     $(document).ready(function(){
-        $('#sbArea').sbInput({
+        $('#sbArea').sbCheckbox({
             name : 'sbScriptNm',
-            uitype : 'text',
-            autocompleteRef : 'autocompData',
-            autocompleteFilterStartsWith : true
+            uitype : 'normal',
+            jsondataRef : 'SBUxData',
+            direction : 'vertical'
         });
     }); 
 </script>

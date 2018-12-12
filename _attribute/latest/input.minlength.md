@@ -85,42 +85,197 @@ minlength
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2^exTab1_3" title-text-array="normal^password^search">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text" minlength="3"></sbux-input>
-<input type="submit" value="submit 버튼">
+<form>
+    <sbux-input id="sbIdx1" name="sbTagNm1" uitype="text" minlength="3"></sbux-input>
+    <input type="submit" value="submit">
+</form>
 {% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<form>
+    <sbux-input id="sbIdx1" name="sbTagNm1" uitype="text" minlength="3"></sbux-input>
+    <input type="submit" value="submit">
+</form>
+
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
+
+{% highlight html %}
+<form>
+    <sbux-input id="sbIdx2" name="sbTagNm2" uitype="password" minlength="3"></sbux-input>
+    <input type="submit" value="submit">
+</form>
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<form>
+    <sbux-input id="sbIdx2" name="sbTagNm2" uitype="password" minlength="3"></sbux-input>
+    <input type="submit" value="submit">
+</form>
+
+    </div>
+    <div id="exTab1_3">
+
+▶ Example
+
+{% highlight html %}
+<form>
+    <sbux-input id="sbIdx3" name="sbTagNm3" uitype="search" minlength="3"></sbux-input>
+    <input type="submit" value="submit">
+</form>
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<form>
+    <sbux-input id="sbIdx3" name="sbTagNm3" uitype="search" minlength="3"></sbux-input>
+    <input type="submit" value="submit">
+</form>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2^exTab2_3" title-text-array="normal^password^search">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text',
-            minlength : 3
-        });
-    }); 
-</script>
-{% endhighlight %}
-
-### Preview 
 <form>
-    <sbux-input id="sbIdx" name="sbTagNm" uitype="text" minlength="3"></sbux-input>
-    <div id="sbArea"></div>
-    <input type="text" name="ddd" minlength="3">
-    <input type="submit" value="submit 버튼">
+    <div id="sbArea1"></div>
+    <input type="submit" value="submit">
 </form>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
+        $('#sbArea1').sbInput({
+            name : 'sbScriptNm1',
             uitype : 'text',
-            minlength : 3
+			minlength : 3
         });
     }); 
 </script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<form>
+    <div id="sbArea1"></div>
+    <input type="submit" value="submit">
+</form>
+<script>
+    $(document).ready(function(){
+        $('#sbArea1').sbInput({
+            name : 'sbScriptNm1',
+            uitype : 'text',
+			minlength : 3
+        });
+    }); 
+</script>
+
+    </div>
+    <div id="exTab2_2">
+
+▶ Example
+
+{% highlight html %}
+<form>
+    <div id="sbArea2"></div>
+    <input type="submit" value="submit">
+</form>
+<script>
+    $(document).ready(function(){
+        $('#sbArea2').sbInput({
+            name : 'sbScriptNm2',
+            uitype : 'password',
+			minlength : 3
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<form>
+    <div id="sbArea2"></div>
+    <input type="submit" value="submit">
+</form>
+<script>
+    $(document).ready(function(){
+        $('#sbArea2').sbInput({
+            name : 'sbScriptNm2',
+            uitype : 'password',
+			minlength : 3
+        });
+    }); 
+</script>
+
+    </div>
+    <div id="exTab2_3">
+
+▶ Example
+
+{% highlight html %}
+<form>
+    <div id="sbArea3"></div>
+    <input type="submit" value="submit">
+</form>
+<script>
+    $(document).ready(function(){
+        $('#sbArea3').sbInput({
+            name : 'sbScriptNm3',
+            uitype : 'search',
+			minlength : 3
+        });
+    }); 
+</script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<form>
+    <div id="sbArea3"></div>
+    <input type="submit" value="submit">
+</form>
+<script>
+    $(document).ready(function(){
+        $('#sbArea3').sbInput({
+            name : 'sbScriptNm3',
+            uitype : 'search',
+			minlength : 3
+        });
+    }); 
+</script>
+
+    </div>
+</div>
