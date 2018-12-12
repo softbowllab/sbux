@@ -23,6 +23,13 @@
 		.tdRed {color:#dd2200}
 		.tdBlue {color:#3366b2}
 	</style>
+
+	<script>
+		$(document).ready(function(){
+			var openNode = location.hash.substring(1);
+			SBUxMethod.expandTreeNodes('lnbList', openNode, 1);
+		});
+	</script>
 </head>
 <body>
 	{% include header.html %}
@@ -32,21 +39,21 @@
 		<div class="row">
 			{% assign post_count = site.attribute|size %}
 			{% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
-				<div id="navigation" class="col-sm-2">
+				<div id="navigation" class="col-sm-2 col-md-3 col-lg-3">
 					{% include lnb.attribute.html %}
 				</div>
 
-				<div id="content" class="col-sm-10">
+				<div id="content" class="col-sm-10 col-md-9 col-lg-9">
 					{{ content }}
 				</div>
 			{% else %}
-				<div id="content" class="col-sm-12">
+				<div id="content" class="col-sm-12 col-md-12 col-lg-12">
 					{{ content }}
 				</div>
 			{% endif %}
 		</div>
 		<div class="row">
-			<div id="footer" class="col-sm-12">
+			<div id="footer" class="col-sm-12 col-md-12 col-lg-12">
 				{% include footer.html %}
 			</div>
 		</div>
