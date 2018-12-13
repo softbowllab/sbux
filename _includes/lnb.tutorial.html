@@ -1,3 +1,4 @@
+<!--
 <ul class="nav nav-list">
 	{% assign version = page.categories[0] %}
 	{% assign cates = site.cate_tutorial[version] %}
@@ -9,3 +10,18 @@
 		{% endfor %}
 	{% endfor %}
 </ul>
+-->
+
+
+<sbux-sidemenu id="lnbList" name="lnbList" uitype="normal" is-expand-only-select="true" show-slide-button="true">
+	{% assign version = page.categories[0] %}
+	{% assign cates = site.cate_tutorial[version] %}
+	{% for cate in cates %}
+		<menu-item id="{{ cate.name }}" text="{{ cate.title }}">
+		{% assign pages = site.tutorial | where: "categories", version | where: "categories", cate.name | sort: "order" %}
+		{% for item in pages %}
+			<menu-item text="{{ item.title }}" link="{{ site.baseurl }}{{site.path}}{{ item.url }}#{{ cate.name }}"></menu-item>
+		{% endfor %}
+		</menu-item>
+	{% endfor %}
+</sbux-sidemenu>
