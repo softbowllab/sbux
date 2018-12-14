@@ -27,17 +27,10 @@ body {
 }
 /********************font-size********************/
 .smallfont {
-  font-size: 0.9em;
+  font-size: 11px;
 }
 .basefont {
-  font-size: 1em;
-}
-.largefont {
-  font-size: 1.5em;
-}
-.bigfont {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 12px;
 }
 .btn-red {
   background: red;
@@ -112,7 +105,7 @@ div.sbux-form-group > input {
   width: 100%;
   height: 30px;
   padding: 6px 42px 6px 12px;
-  font-size: 1em;
+  font-size: 12px;
   color: #222;
   /*background-color:#fff;*/
   border-radius: 5px;
@@ -450,7 +443,7 @@ input.sbux-rdo-input {
   padding: 5px 12px;
   color: #fff;
   text-align: center;
-  /* background-color: #307ea5;*/
+  /* background-color: @default-main;*/
   background-color: #307ea5;
   border-radius: 0;
   border-radius: 5px;
@@ -469,7 +462,7 @@ input.sbux-rdo-input {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  /*border-top-color: #307ea5;*/
+  /*border-top-color: @default-main;*/
   border-top-color: #307ea5;
 }
 .sbux-tol.sbux-tol-top {
@@ -494,7 +487,7 @@ input.sbux-rdo-input {
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  /*border-bottom-color: #307ea5;*/
+  /*border-bottom-color: @default-main;*/
   border-bottom-color: #307ea5;
 }
 .sbux-tol.sbux-tol-right {
@@ -507,7 +500,7 @@ input.sbux-rdo-input {
   margin-top: -5px;
   margin-left: -5px;
   border-width: 5px 5px 5px 0;
-  /*border-right-color: #307ea5;*/
+  /*border-right-color: @default-main;*/
   border-right-color: #307ea5;
 }
 .sbux-tol.sbux-tol-left {
@@ -589,7 +582,7 @@ ul.sbux-ato {
   width: 100%;
   height: 30px;
   padding: 6px 12px;
-  font-size: 1em;
+  font-size: 12px;
   color: #222;
   background-color: #fff;
   border-radius: 5px 0 0 5px;
@@ -822,6 +815,9 @@ div.sbux-pik-pop-body td.sbux-pik-saturday .sbux-btn:active {
   background: #307ea5;
   content: '';
 }
+.sbux-pik-popwrap .sbux-pik-pop-body .sbux-pik-dow {
+  color: #fff;
+}
 .sbux-pik-popwrap .sbux-pik-pop-body .sbux-pik-cw {
   color: #d5d16d;
   font-size: 11px;
@@ -869,12 +865,12 @@ table.sbux-pik-pop-day thead th i.glyphicon-menu-right {
 }
 table.sbux-pik-pop-day thead th strong {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 11px;
 }
 table.sbux-pik-pop-day thead th small {
   display: inline-block;
   margin: 10px 0 5px;
-  font-size: 0.9em;
+  font-size: 11px;
 }
 table.sbux-pik-pop-day tbody td {
   border-radius: 5px;
@@ -884,7 +880,7 @@ table.sbux-pik-pop-day tbody td button {
   background: none;
   border: 0;
   color: #adaeb6;
-  font-size: 0.9em;
+  font-size: 11px;
   border-radius: 5px;
 }
 table.sbux-pik-pop-day tbody td button:hover,
@@ -987,8 +983,11 @@ table.sbux-pik-pop-day tbody td button.sbux-pik-now.active {
 table.sbux-pik-pop-day tbody td button.sbux-btn-secondary.active {
   background: #307ea5;
 }
+table.sbux-pik-pop-day tbody td button.sbux-btn.sbux-btn-secondary:hover {
+  background: #307ea5 !important;
+}
 table.sbux-pik-pop-day tbody td .sbux-pik-text-muted {
-  color: #616474;
+  color: #666;
 }
 table.sbux-pik-pop-day tbody td.sbux-pik-saturday span {
   color: #146894;
@@ -1019,10 +1018,10 @@ div.sbux-pik-pop-body td.sbux-pik-sunday .sbux-btn.disabled:hover span {
   color: #af2921;
 }
 div.sbux-pik-pop-body td.sbux-pik-regularday .sbux-pik-text-muted.disabled:hover span {
-  color: #616474;
+  color: #666;
 }
 div.sbux-pik-pop-body td.sbux-pik-regularday .sbux-pik-text-muted.disabled:focus span {
-  color: #616474;
+  color: #666;
 }
 div.sbux-pik-pop-body td.sbux-pik-regularday .sbux-pik-now.disabled:hover span {
   color: #fff;
@@ -1071,13 +1070,13 @@ table.sbux-pik-pop-month thead th i.glyphicon-menu-right {
 }
 table.sbux-pik-pop-month thead th strong {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 11px;
 }
 table.sbux-pik-pop-month tbody > tr > td {
   border: 0;
 }
 table.sbux-pik-pop-month tbody td {
-  border: 1px solid #464a5f;
+  /*border: 1px solid #464a5f;*/
   border-bottom: 0;
   border-top: 0;
   box-sizing: border-box;
@@ -1085,7 +1084,7 @@ table.sbux-pik-pop-month tbody td {
 table.sbux-pik-pop-month tbody td button {
   padding: 7px 12px;
   border: 0;
-  font-size: 1em;
+  font-size: 12px;
   background: none;
 }
 table.sbux-pik-pop-month tbody td button:hover {
@@ -1106,6 +1105,9 @@ table.sbux-pik-pop-month tbody td button.sbux-pik-now.active {
 }
 table.sbux-pik-pop-month tbody td button.sbux-btn-secondary.active {
   background: #307ea5;
+}
+table.sbux-pik-pop-month tbody td button.sbux-btn.sbux-btn-secondary:hover {
+  background: #307ea5 !important;
 }
 table.sbux-pik-pop-month tbody td button.active {
   background: #307ea5;
@@ -1155,25 +1157,25 @@ table.sbux-pik-pop-year thead th i.glyphicon-menu-right {
 }
 table.sbux-pik-pop-year thead th strong {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 11px;
 }
 table.sbux-pik-pop-year thead th small {
   display: inline-block;
   margin: 7px 0 5px;
-  font-size: 0.9em;
+  font-size: 11px;
 }
 table.sbux-pik-pop-year tbody > tr > td {
   border: 0;
 }
 table.sbux-pik-pop-year tbody td {
-  border: 1px solid #464a5f;
+  /*border: 1px solid #464a5f;*/
   border-top: 0;
   border-bottom: 0;
   box-sizing: border-box;
 }
 table.sbux-pik-pop-year tbody td button {
   padding: 7px 7px;
-  font-size: 1em;
+  font-size: 12px;
   background: none;
   border: 0;
 }
@@ -1189,12 +1191,12 @@ table.sbux-pik-pop-year tbody td button:focus {
 }
 table.sbux-pik-pop-year tbody td button span {
   color: #adaeb6;
-  font-size: 1em;
+  font-size: 12px;
 }
 table.sbux-pik-pop-year tbody td button.active {
   padding: 7px;
   background: #307ea5;
-  font-size: 1em;
+  font-size: 12px;
 }
 table.sbux-pik-pop-year tbody td button.active span {
   color: #fff;
@@ -1205,10 +1207,13 @@ table.sbux-pik-pop-year tbody td button.sbux-pik-now.active {
 table.sbux-pik-pop-year tbody td button.sbux-btn-secondary.active {
   background: #307ea5;
 }
+table.sbux-pik-pop-year tbody td button.sbux-btn.sbux-btn-secondary:hover {
+  background: #307ea5 !important;
+}
 .sbux-pik-pop-showbar {
   padding: 10px 12px !important;
   border-top: 1px solid #181a23;
-  font-size: 0.9em;
+  font-size: 11px;
   /*button {border:0;padding:3px 5px 5px 3px;color:#fff; border-radius:2px;.basefont; cursor:pointer;
 		&.btn-info {background:#69b300;}
 		&.btn-danger {background-color: #ff6e00; margin-left: 5px;}
@@ -1221,7 +1226,7 @@ table.sbux-pik-pop-year tbody td button.sbux-btn-secondary.active {
   padding: 3px 5px 5px 3px;
   color: #fff;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 12px;
   cursor: pointer;
 }
 .sbux-pik-pop-showbar .sbux-pik-btn-today {
