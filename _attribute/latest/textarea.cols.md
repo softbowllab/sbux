@@ -1,17 +1,16 @@
 ---
-title:  event-ignore-readonly
+title:  cols
 date:   2018-12-04
-categories: ["latest","input"]
-order: 26
+categories: ["latest","textarea"]
+order: 6
 ---
 
-
-event-ignore-readonly
+cols
 ===
 
 ---
 
-### Description
+## Description
 
 <table style="width:100%">
     <colgroup>
@@ -22,7 +21,7 @@ event-ignore-readonly
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">readonly 속성 사용시 button만 readonly 속성을 해제 하도록 설정합니다.</td>
+        <td colspan="3">Component의 열 개수를 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -32,7 +31,7 @@ event-ignore-readonly
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>button-front-text | button-back-text, readonly</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -49,13 +48,13 @@ event-ignore-readonly
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>false</td>
+        <td>20</td>
         <td class="tdTitle">자료형</td>
-        <td>boolean</td>
+        <td>number</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">지정할 열 개수</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -71,24 +70,24 @@ event-ignore-readonly
     </tr>
     <tr>
         <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
+        <td class="tdCenter">normal</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>가능여부</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 
 ---
 ### Example & Preview (Tag)
 
-<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="serach">
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab1_1">
@@ -96,14 +95,14 @@ event-ignore-readonly
 ▶ Example
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" event-ignore-readonly="true" readonly></sbux-input>
+<sbux-textarea id="sbIdx1" name="sbTagNm1" uitype="normal" cols="50"></sbux-textarea>
 {% endhighlight %}
 
 <br>
 
-▶ Preview 
+▶ Preview
 
-<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" event-ignore-readonly="true" readonly></sbux-input>
+<sbux-textarea id="sbIdx1" name="sbTagNm1" uitype="normal" cols="50"></sbux-textarea>
 
     </div>
 </div>
@@ -111,7 +110,7 @@ event-ignore-readonly
 ---
 ### Example & Preview (Script)
 
-<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="serach">
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab2_1">
@@ -119,15 +118,13 @@ event-ignore-readonly
 ▶ Example
 
 {% highlight html %}
-<div id="sbArea"></div>
+<div id="sbArea1"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'search',
-            buttonFrontText : '검색',
-            eventIgnoreReadonly : true,
-            readonly : 'readonly'
+        $('#sbArea1').sbTextarea({
+            name : 'sbScriptNm1',
+            uitype : 'normal',
+			cols : 50
         });
     }); 
 </script>
@@ -137,15 +134,13 @@ event-ignore-readonly
 
 ▶ Preview 
 
-<div id="sbArea"></div>
+<div id="sbArea1"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'search',
-            buttonFrontText : '검색',
-            eventIgnoreReadonly : true,
-            readonly : 'readonly'
+        $('#sbArea1').sbTextarea({
+            name : 'sbScriptNm1',
+            uitype : 'normal',
+			cols : 50
         });
     }); 
 </script>

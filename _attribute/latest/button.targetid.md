@@ -1,17 +1,16 @@
 ---
-title:  event-ignore-readonly
-date:   2018-12-04
-categories: ["latest","input"]
-order: 26
+title:  target-id
+date:   2018-05-14
+categories: ["latest","button"]
+order: 5
 ---
 
-
-event-ignore-readonly
+target-id
 ===
 
 ---
 
-### Description
+## Description
 
 <table style="width:100%">
     <colgroup>
@@ -22,7 +21,7 @@ event-ignore-readonly
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">readonly 속성 사용시 button만 readonly 속성을 해제 하도록 설정합니다.</td>
+        <td colspan="3">modal 창을 띄울 modal의 ID를 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -32,7 +31,7 @@ event-ignore-readonly
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>button-front-text | button-back-text, readonly</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -49,13 +48,13 @@ event-ignore-readonly
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>false</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
-        <td>boolean</td>
+        <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">띄울 modal 창의 ID</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -71,16 +70,16 @@ event-ignore-readonly
     </tr>
     <tr>
         <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
+        <td class="tdCenter">normal</td>
+        <td class="tdCenter">modal</td>
+        <td class="tdCenter">submit</td>
+        <td class="tdCenter">send</td>
     </tr>
     <tr>
         <td>가능여부</td>
         <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
         <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
         <td class="tdCenter">X</td>
     </tr>
 </table>
@@ -88,7 +87,9 @@ event-ignore-readonly
 ---
 ### Example & Preview (Tag)
 
-<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="serach">
+<sbux-modal id="idxModal_small" name="modal_samll" uitype="small" is-fade="true" header-title="Modal" body-html=""></sbux-modal>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="modal" is-scrollable="false">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab1_1">
@@ -96,14 +97,15 @@ event-ignore-readonly
 ▶ Example
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" event-ignore-readonly="true" readonly></sbux-input>
+<sbux-modal id="idxModal_small" name="modal_samll" uitype="small" is-fade="true" header-title="Modal" body-html=""></sbux-modal>
+<sbux-button id="sbIdx1_1" name="sbTagNm1_1" uitype="modal" text="SBUx modal open" target-id="idxModal_small"></sbux-button>
 {% endhighlight %}
 
 <br>
 
 ▶ Preview 
 
-<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" event-ignore-readonly="true" readonly></sbux-input>
+<sbux-button id="sbIdx1_1" name="sbTagNm1_1" uitype="modal" text="SBUx modal open" target-id="idxModal_small"></sbux-button>
 
     </div>
 </div>
@@ -111,7 +113,7 @@ event-ignore-readonly
 ---
 ### Example & Preview (Script)
 
-<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="serach">
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="modal" is-scrollable="false">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab2_1">
@@ -119,15 +121,15 @@ event-ignore-readonly
 ▶ Example
 
 {% highlight html %}
-<div id="sbArea"></div>
+<sbux-modal id="idxModal_small" name="modal_samll" uitype="small" is-fade="true" header-title="Modal" body-html=""></sbux-modal>
+<div id="sbArea2_1"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'search',
-            buttonFrontText : '검색',
-            eventIgnoreReadonly : true,
-            readonly : 'readonly'
+        $('#sbArea2_1').sbButton({
+            name : 'sbScriptNm2_1',
+            uitype : 'modal',
+            text : 'SBUx normal open',
+            targetId : 'idxModal_small'
         });
     }); 
 </script>
@@ -137,15 +139,14 @@ event-ignore-readonly
 
 ▶ Preview 
 
-<div id="sbArea"></div>
+<div id="sbArea2_1"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'search',
-            buttonFrontText : '검색',
-            eventIgnoreReadonly : true,
-            readonly : 'readonly'
+        $('#sbArea2_1').sbButton({
+            name : 'sbScriptNm2_1',
+            uitype : 'modal',
+            text : 'SBUx normal open',
+            targetId : 'idxModal_small'
         });
     }); 
 </script>

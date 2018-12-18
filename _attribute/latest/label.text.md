@@ -1,17 +1,16 @@
 ---
-title:  event-ignore-readonly
-date:   2018-12-04
-categories: ["latest","input"]
-order: 26
+title:  text
+date:   2018-05-14
+categories: ["latest","label"]
+order: 1
 ---
 
-
-event-ignore-readonly
+text
 ===
 
 ---
 
-### Description
+## Description
 
 <table style="width:100%">
     <colgroup>
@@ -22,7 +21,7 @@ event-ignore-readonly
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">readonly 속성 사용시 button만 readonly 속성을 해제 하도록 설정합니다.</td>
+        <td colspan="3">항목명으로 나타나는 문구를 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -32,7 +31,7 @@ event-ignore-readonly
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>button-front-text | button-back-text, readonly</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -49,13 +48,13 @@ event-ignore-readonly
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>false</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
-        <td>boolean</td>
+        <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">항목명으로 지정할 문구</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -71,24 +70,24 @@ event-ignore-readonly
     </tr>
     <tr>
         <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
+        <td class="tdCenter">normal</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>가능여부</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 
 ---
 ### Example & Preview (Tag)
 
-<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="serach">
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab1_1">
@@ -96,14 +95,14 @@ event-ignore-readonly
 ▶ Example
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" event-ignore-readonly="true" readonly></sbux-input>
+<sbux-label id="sbIdx" name="sbTagNm" uitype="normal" text="SBUx Label"></sbux-label>
 {% endhighlight %}
 
 <br>
 
 ▶ Preview 
 
-<sbux-input id="sbIdx" name="sbTagNm" uitype="search" button-front-text="검색" event-ignore-readonly="true" readonly></sbux-input>
+<sbux-label id="sbIdx" name="sbTagNm" uitype="normal" text="SBUx Label"></sbux-label>
 
     </div>
 </div>
@@ -111,7 +110,7 @@ event-ignore-readonly
 ---
 ### Example & Preview (Script)
 
-<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="serach">
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab2_1">
@@ -122,12 +121,10 @@ event-ignore-readonly
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
+        $('#sbArea').sbLabel({
             name : 'sbScriptNm',
-            uitype : 'search',
-            buttonFrontText : '검색',
-            eventIgnoreReadonly : true,
-            readonly : 'readonly'
+            uitype : 'normal',
+            text : 'SBUx Label'
         });
     }); 
 </script>
@@ -140,12 +137,10 @@ event-ignore-readonly
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
+        $('#sbArea').sbLabel({
             name : 'sbScriptNm',
-            uitype : 'search',
-            buttonFrontText : '검색',
-            eventIgnoreReadonly : true,
-            readonly : 'readonly'
+            uitype : 'normal',
+            text : 'SBUx Label'
         });
     }); 
 </script>
