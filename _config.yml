@@ -126,7 +126,7 @@ cate_attribute:
     - {name: 'select'       , title : 'Select'}
     - {name: 'button'       , title : 'Button'}
     - {name: 'textarea'     , title : 'Textarea'}
-    - {name: 'listBox'      , title : 'ListBox'}
+    - {name: 'listbox'      , title : 'Listbox'}
     - {name: 'dropdown'     , title : 'Dropdown'}
     - {name: 'alert'        , title : 'Alert'}
     - {name: 'modal'        , title : 'Modal'}
@@ -161,7 +161,7 @@ cate_design:
     - {name: 'select'       , title : 'Select'}
     - {name: 'button'       , title : 'Button'}
     - {name: 'textarea'     , title : 'Textarea'}
-    - {name: 'listBox'      , title : 'ListBox'}
+    - {name: 'listbox'      , title : 'Listbox'}
     - {name: 'dropdown'     , title : 'Dropdown'}
     - {name: 'alert'        , title : 'Alert'}
     - {name: 'modal'        , title : 'Modal'}
