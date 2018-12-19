@@ -26,17 +26,10 @@ body {
 }
 /********************font-size********************/
 .smallfont {
-  font-size: 0.9em;
+  font-size: 11px;
 }
 .basefont {
-  font-size: 1em;
-}
-.largefont {
-  font-size: 1.5em;
-}
-.bigfont {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 12px;
 }
 .btn-red {
   background: red;
@@ -116,7 +109,6 @@ body {
   display: inline-block;
   padding: 5px 10px;
   margin: 0;
-  font-size: 100%;
   background: #fff;
   vertical-align: middle;
   color: #333;
@@ -130,6 +122,7 @@ body {
   outline-width: 0;
   /*텍스트*/
   /*사이즈*/
+  font-size: 100%;
 }
 .sbux-btn:hover {
   background: #eff2f3;
@@ -163,15 +156,19 @@ body {
 }
 .sbux-btn.sbux-btn-xsmall {
   font-size: 75%;
+  padding: 2px 5px;
 }
 .sbux-btn.sbux-btn-small {
-  font-size: 85%;
+  font-size: 90%;
+  padding: 3px 7px;
 }
 .sbux-btn.sbux-btn-large {
   font-size: 130%;
+  padding: 8px 12px;
 }
 .sbux-btn.sbux-btn-xlarge {
   font-size: 150%;
+  padding: 11px 15px;
 }
 .sbux-btn.sbux-btn-primary {
   background: #307ea5;
@@ -221,6 +218,27 @@ body {
   background-color: #f26500 !important;
   transition: 0.15s;
   color: #fff !important;
+}
+.sbux-btn.sbux-btn-black {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000000;
+}
+.sbux-btn.sbux-btn-black:hover {
+  background-color: #404040 !important;
+  transition: 0.15s;
+  color: #fff !important;
+}
+.sbux-btn.sbux-btn-white {
+  background: #fff;
+  color: #333;
+  border: 1px solid #cccccc;
+}
+.sbux-btn.sbux-btn-white:hover {
+  background-color: #f7f7f7 !important;
+  transition: 0.15s;
+  color: #888 !important;
+  border: 1px solid #e8e8e8;
 }
 .sbux-btn.readonly,
 .sbux-btn[readonly] {
@@ -1118,7 +1136,7 @@ div.sbux-ddl-spbtn-down-wrap {
   height: 30px;
   padding: 6px 12px;
   margin: 0;
-  font-size: 1em;
+  font-size: 12px;
   background: #fff;
   vertical-align: middle;
   color: #333;
