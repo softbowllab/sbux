@@ -21,7 +21,7 @@ input 관련 CSS
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.</td>
+        <td colspan="3">Component 입력에 대한 </td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
