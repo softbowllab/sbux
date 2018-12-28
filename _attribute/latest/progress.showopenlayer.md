@@ -1,11 +1,11 @@
 ---
-title:  uitype
+title:  show-openlayer
 date:   2018-05-14
 categories: ["latest","progress"]
-order: 0
+order: 5
 ---
 
-uitype
+show-openlayer
 ===
 
 ---
@@ -21,13 +21,13 @@ uitype
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 type을 지정합니다.</td>
+        <td colspan="3">Component를 layerpopup으로 띄웁니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
         <td>2.6.0</td>
         <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
+        <td class="tdRed">필수(loading type일 경우에만)</td>
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
@@ -48,13 +48,13 @@ uitype
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
+        <td>false</td>
         <td class="tdTitle">자료형</td>
-        <td>string</td>
+        <td>boolean</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">bar | loading</td>
+        <td colspan="3">true | false</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -95,7 +95,8 @@ uitype
 ▶ Example
 
 {% highlight html %}
-<sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar">
+<input type="button" value="progress open" onclick="SBUxMethod.openProgress('sbTagNm1_1')">
+<sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar" show-openlayer="true">
     <progress-bar>
        <bar valuenow="0"></bar>
     </progress-bar>
@@ -106,7 +107,8 @@ uitype
 
 ▶ Preview 
 
-<sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar">
+<input type="button" value="progress open" onclick="SBUxMethod.openProgress('sbTagNm1_1')">
+<sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar" show-openlayer="true">
     <progress-bar>
        <bar valuenow="0"></bar>
     </progress-bar>
