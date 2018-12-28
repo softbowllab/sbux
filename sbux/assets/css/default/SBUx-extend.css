@@ -898,6 +898,7 @@ body {
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item .sbux-tabs-content,
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item .sbux-tabs-content {
   position: absolute;
+  width: 100%;
   left: 0;
   display: none;
 }
@@ -910,6 +911,7 @@ body {
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd .sbux-tabs-content,
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd .sbux-tabs-content {
   position: relative;
+  width: 100%;
   padding: 16px 12px;
   overflow: auto;
   border: 1px solid #bdbfc5;
@@ -923,6 +925,7 @@ body {
   /*padding-top:100px*/
 }
 .sbux-tabs-wrap.sbux-tabs-webacc .sbux-tabs-bottom li.sbux-tabs-item .sbux-tabs-content {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -939,6 +942,7 @@ body {
   width: 134px;
 }
 .sbux-tabs-wrap.sbux-tabs-webacc > .sbux-tabs-left li.sbux-tabs-item .sbux-tabs-content {
+  width: 100%;
   position: absolute;
   top: 0;
   /*left:134px;//inline-style
@@ -958,6 +962,7 @@ body {
   width: 134px;
 }
 .sbux-tabs-wrap.sbux-tabs-webacc > .sbux-tabs-right li.sbux-tabs-item .sbux-tabs-content {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;

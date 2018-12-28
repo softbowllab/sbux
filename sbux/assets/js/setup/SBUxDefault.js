@@ -115,6 +115,7 @@
 		autoTrimText : false,
 		autoTrimValue : false,
 		emptyValueType    : null, // null , undefined
+		notFoundText      : SBUxG.DEF.MSG.NOT_FOUND_TEXT,
 
 		storageData       : 'value'
 	};
