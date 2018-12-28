@@ -1,11 +1,11 @@
 ---
-title:  mode
-date:   2018-12-04
-categories: ["latest","picker"]
-order: 1
+title:  uitype
+date:   2018-05-14
+categories: ["latest","radio"]
+order: 0
 ---
 
-mode
+uitype
 ===
 
 ---
@@ -21,7 +21,7 @@ mode
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 mode을 지정합니다.</td>
+        <td colspan="3">Component의 type을 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -54,7 +54,7 @@ mode
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">inline | popup</td>
+        <td colspan="3">normal</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -69,16 +69,16 @@ mode
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
-        <td class="tdCenter">inline</td>
-        <td class="tdCenter">popup</td>
+        <td>uitype</td>
+        <td class="tdCenter">normal</td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>가능여부</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdBlue tdCenter">O</td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
@@ -88,14 +88,16 @@ mode
 ### Example (Tag)
 
 {% highlight html %}
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup"></sbux-picker>
+<sbux-radio id="sbIdx1" name="sbTagNm" uitype="normal" text="SBUx Radio1"></sbux-radio>
+<sbux-radio id="sbIdx2" name="sbTagNm" uitype="normal" text="SBUx Radio2"></sbux-radio>
+<sbux-radio id="sbIdx3" name="sbTagNm" uitype="normal" text="SBUx Radio3"></sbux-radio>
 {% endhighlight %}
 
 ### Preview
 
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup"></sbux-picker>
+<sbux-radio id="sbIdx1" name="sbTagNm" uitype="normal" text="SBUx Radio1"></sbux-radio>
+<sbux-radio id="sbIdx2" name="sbTagNm" uitype="normal" text="SBUx Radio2"></sbux-radio>
+<sbux-radio id="sbIdx3" name="sbTagNm" uitype="normal" text="SBUx Radio3"></sbux-radio>
 
 ---
 ### Example (Script)
@@ -103,17 +105,23 @@ mode
 {% highlight html %}
 <div id="sbArea1"></div>
 <div id="sbArea2"></div>
+<div id="sbArea3"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
-            name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline'
+        $('#sbArea1').sbRadio({
+            name : 'sbScriptNm',
+            uitype : 'normal',
+            text : 'SBUx Radio1'
         });
-		$('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup'
+		$('#sbArea2').sbRadio({
+            name : 'sbScriptNm',
+            uitype : 'normal',
+            text : 'SBUx Radio2'
+        });
+		$('#sbArea3').sbRadio({
+            name : 'sbScriptNm',
+            uitype : 'normal',
+            text : 'SBUx Radio3'
         });
     }); 
 </script>
@@ -123,17 +131,23 @@ mode
 
 <div id="sbArea1"></div>
 <div id="sbArea2"></div>
+<div id="sbArea3"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
-            name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline'
+        $('#sbArea1').sbRadio({
+            name : 'sbScriptNm',
+            uitype : 'normal',
+            text : 'SBUx Radio1'
         });
-		$('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup'
+		$('#sbArea2').sbRadio({
+            name : 'sbScriptNm',
+            uitype : 'normal',
+            text : 'SBUx Radio2'
         });
-    }); 
+		$('#sbArea3').sbRadio({
+            name : 'sbScriptNm',
+            uitype : 'normal',
+            text : 'SBUx Radio3'
+        });
+    });   
 </script>
