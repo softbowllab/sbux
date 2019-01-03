@@ -1,11 +1,11 @@
 ---
-title:  placement
+title:  jsondata-ref
 date:   2018-05-14
 categories: ["latest","menu"]
-order: 1
+order: 6
 ---
 
-placement
+jsondata-ref
 ===
 
 ---
@@ -21,13 +21,16 @@ placement
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 위치를 지정합니다.</td>
+        <td colspan="3">
+            Component 구성에 필요한 json data를 호출합니다.<br>
+            * 변동형으로 컴포넌트를 구성할때 사용합니다.
+        </td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
         <td>2.6.0</td>
         <td class="tdTitle">필수여부</td>
-        <td>선택</td>
+        <td class="tdRed">필수 (변동형일때만)</td>
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
@@ -48,13 +51,13 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>true</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">호출할 json data 변수명</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -99,47 +102,10 @@ placement
    ];  
 </script>
 
-<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="{exTab1_1,exTab1_2}" title-text-array="normal{고정형,변동형}" is-scrollable="false">
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal(변동형)" is-scrollable="false">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab1_1">
-
-▶ Example
-
-{% highlight html %}
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
-   <brand-item text="SoftBowl"></brand-item>
-   <menu-item text="SBUx">
-       <menu-item text="input"></menu-item>
-       <menu-item text="select"></menu-item>
-   </menu-item>
-   <menu-item text="SBChart"></menu-item>
-   <menu-item text="SBGrid">
-        <menu-item text="SBGrid 2.1"></menu-item>
-        <menu-item text="SBGrid 2.5"></menu-item>
-   </menu-item>
-</sbux-menu>
-{% endhighlight %}
-
-<br>
-
-▶ Preview 
-
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
-   <brand-item text="SoftBowl"></brand-item>
-   <menu-item text="SBUx">
-       <menu-item text="input"></menu-item>
-       <menu-item text="select"></menu-item>
-   </menu-item>
-   <menu-item text="SBChart"></menu-item>
-   <menu-item text="SBGrid">
-        <menu-item text="SBGrid 2.1"></menu-item>
-        <menu-item text="SBGrid 2.5"></menu-item>
-   </menu-item>
-</sbux-menu>
-
-    </div>
-    <div id="exTab1_2">
 
 ▶ Example
 
@@ -155,7 +121,7 @@ placement
         { "id" : "3_2", "pid" : "3", "order" : "2", "text" : "SBGrid 2.5" }
    ];  
 </script>
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 {% endhighlight %}
@@ -165,7 +131,7 @@ placement
 
 ▶ Preview 
 
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 

@@ -1,11 +1,11 @@
 ---
-title:  placement
+title:  target
 date:   2018-05-14
 categories: ["latest","menu"]
-order: 1
+order: 17
 ---
 
-placement
+target
 ===
 
 ---
@@ -21,7 +21,7 @@ placement
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 위치를 지정합니다.</td>
+        <td colspan="3">menu click시 이동할 target을 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -48,13 +48,13 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>true</td>
+        <td>_self</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">_blank | _window | _top | _self | _parent</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -90,7 +90,7 @@ placement
 <script>
     var jsonData = [                
         { "id" : "1", "pid" : "-1", "order" : "1", "text" : "SBUx" },
-        { "id" : "1_1", "pid" : "1", "order" : "1", "text" : "input" },
+        { "id" : "1_1", "pid" : "1", "order" : "1", "text" : "input", "link" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input" },
         { "id" : "1_2", "pid" : "1", "order" : "2", "text" : "select" },
         { "id" : "2", "pid" : "-1", "order" : "2", "text" : "SBChart" },
         { "id" : "3", "pid" : "-1", "order" : "3", "text" : "SBGrid" },
@@ -107,10 +107,10 @@ placement
 ▶ Example
 
 {% highlight html %}
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false" target="_blank">
    <brand-item text="SoftBowl"></brand-item>
    <menu-item text="SBUx">
-       <menu-item text="input"></menu-item>
+       <menu-item text="input" link="https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input"></menu-item>
        <menu-item text="select"></menu-item>
    </menu-item>
    <menu-item text="SBChart"></menu-item>
@@ -125,10 +125,10 @@ placement
 
 ▶ Preview 
 
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false" target="_blank">
    <brand-item text="SoftBowl"></brand-item>
    <menu-item text="SBUx">
-       <menu-item text="input"></menu-item>
+       <menu-item text="input" link="https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input"></menu-item>
        <menu-item text="select"></menu-item>
    </menu-item>
    <menu-item text="SBChart"></menu-item>
@@ -147,7 +147,7 @@ placement
 <script>
     var jsonData = [                
         { "id" : "1", "pid" : "-1", "order" : "1", "text" : "SBUx" },
-        { "id" : "1_1", "pid" : "1", "order" : "1", "text" : "input" },
+        { "id" : "1_1", "pid" : "1", "order" : "1", "text" : "input", "link" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input" },
         { "id" : "1_2", "pid" : "1", "order" : "2", "text" : "select" },
         { "id" : "2", "pid" : "-1", "order" : "2", "text" : "SBChart" },
         { "id" : "3", "pid" : "-1", "order" : "3", "text" : "SBGrid" },
@@ -155,7 +155,7 @@ placement
         { "id" : "3_2", "pid" : "3", "order" : "2", "text" : "SBGrid 2.5" }
    ];  
 </script>
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false" target="_blank">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 {% endhighlight %}
@@ -165,7 +165,7 @@ placement
 
 ▶ Preview 
 
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false" target="_blank">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 
@@ -187,7 +187,7 @@ placement
 <script>
     var jsonData = [                
         { "id" : "1", "pid" : "-1", "order" : "1", "text" : "SBUx" },
-        { "id" : "1_1", "pid" : "1", "order" : "1", "text" : "input" },
+        { "id" : "1_1", "pid" : "1", "order" : "1", "text" : "input", "link" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input" },
         { "id" : "1_2", "pid" : "1", "order" : "2", "text" : "select" },
         { "id" : "2", "pid" : "-1", "order" : "2", "text" : "SBChart" },
         { "id" : "3", "pid" : "-1", "order" : "3", "text" : "SBGrid" },
@@ -199,7 +199,8 @@ placement
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'jsonData',
-            isFixed : false
+            isFixed : false,
+            target : '_blank'
         });
     }); 
 </script>
@@ -216,7 +217,8 @@ placement
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'jsonData',
-            isFixed : false
+            isFixed : false,
+            target : '_blank'
         });
     });
 </script>
