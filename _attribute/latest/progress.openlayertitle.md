@@ -48,7 +48,7 @@ openlayer-title
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
+        <td>loading(loading type에서만)</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
@@ -154,7 +154,7 @@ openlayer-title
             name : 'sbScriptNm2_1',
             uitype : 'loading',
             showOpenlayer : true,
-            openlayerTtile : 'SBUx Progress'
+            openlayerTitle : 'SBUx Progress'
         });
     }); 
 </script>
@@ -172,7 +172,7 @@ openlayer-title
             name : 'sbScriptNm2_1',
             uitype : 'loading',
             showOpenlayer : true,
-            openlayerTtile : 'SBUx Progress'
+            openlayerTitle : 'SBUx Progress'
         });
     }); 
 </script>
