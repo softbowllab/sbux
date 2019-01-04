@@ -7,10 +7,29 @@
 
 	<title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
 	<meta name="description" content="{{ site.subtitle }}">
+
+	<!--
+	<script>
+		var SBUxConfig = {
+			// Path : "{{site.baseurl}}/sbux/"
+			Path : "http://127.0.0.1:8088/"
+		};
+	</script>
+	<script src="http://127.0.0.1:8088/SBUx.js" type="text/javascript"></script>
+	-->
+
+	<script>
+		var SBUxConfig = {
+			Path : "{{site.baseurl}}/sbux/"
+		};
+	</script>
+	<script src="{{ site.baseurl }}/sbux/SBUx.js" type="text/javascript"></script>
 	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+	
 	<style>
 		.tdTitle {font-weight:bold}
 		.tdCenter {text-align: center;}
@@ -20,25 +39,27 @@
 	</style>
 
 	<script>
-		var SBUxConfig = {
-			Path : "{{site.baseurl}}/sbux/"
-		};
+		$(document).ready(function(){
+			var openNode = location.hash.substring(1);
+			// 선택한 페이지에 대한 좌측 메뉴를 확장시킨다.
+			SBUxMethod.setSideMenu('lnbList', openNode);
+		});
 	</script>
-	<script src="{{ site.baseurl }}/sbux/SBUx.js" type="text/javascript"></script>
 </head>
 <body>
 	{% include header.html %}
 
-<div class="page-content" style="padding-top:15px;">
-	<div class="container">
+<!--<div class="page-content" style="padding-top:63px;">-->
+<div class="page-content">
+	<div class="container" style="padding:12px 15px 0 0;margin:0 auto 0 0">
 		<div class="row">
 			{% assign post_count = site.tutorial|size %}
 			{% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
-				<div id="navigation" class="col-sm-2 col-md-3 col-lg-3">
-						{% include lnb.tutorial.html %}
+				<div id="navigation" class="col-sm-2 col-md-4 col-lg-4">
+					{% include lnb.tutorial.html %}
 				</div>
 
-				<div id="content" class="col-sm-10 col-md-9 col-lg-9">
+				<div id="content" class="col-sm-10 col-md-8 col-lg-8">
 					{{ content }}
 				</div>
 			{% else %}

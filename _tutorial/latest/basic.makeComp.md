@@ -1,126 +1,123 @@
 ---
-title:  컴포넌트 화면에 나타나기
+title:  컴포넌트 환경 설정하기
 date:   2018-12-04
 categories: ["latest","basic"]
 order: 1
 ---
 
-컴포넌트 화면에 나타나기
+컴포넌트 환경 설정하기
 ===
 
 ---
 
-### Description
-
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td>선택</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3"> A | B | C | D 중 택 1  ,  JSON Object 변수</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="5">사용제한</td>
-    </tr>
-    <tr>
-        <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
-    </tr>
-    <tr>
-        <td>가능여부</td>
-        <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
+### STEP 1. Javascript 구문, 환경변수 추가
+<div>1. 아래와 같이 제품 구동을 위한 환경변수를 추가합니다.</div>
 
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-{% endhighlight %}
+<script type="text/javascript">
+        var SBUxConfig = {
+            License : "SUE26-XXXX-XXXXX-XXX",
+            Path : "/resources/sbux/",
+            Locale : "ko", // { ko | en | ja }
+            LocaleFile : "LocalTest.js",
 
-### Preview
+            Theme : "bootstrap", // { none | bootstrap }
+            CustomCSS : "SBUxCustom_Demo.css",
+            DefaultSetFile : "SBUxDefault.js",
 
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+            Debug : true,
+            DeveloperTipType : "none", // { console | alert | storage | none }
+            SystemLogType : "console", // { console | storage | none}
 
----
-### Example (Script)
+            Design : true, // css 를 호출, false 시 css 호출하지 않음.
+            LoadingType : "holding",  // none | holding(default) | progress
+            LoadIncludeClass : 'lazyLoadClass',  // 선언한 Class 가 있는 컴포넌트만 우선 로드
+            LoadExcludeClass : 'notLoadClass', // 선언한 Class 를 제외한 컴포넌트 로드
+            CustomAttrs : ['custom-attr1','custom-attr2'],  // 받아들이는 custom 속성에 대한 정의
 
-{% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+            SBGrid : {
+                Theme : 'default',
+                DefaultSetFile : 'SBGridDefault.js',
+                Version2_5 : true
+            },
+            SBChart : {
+                Version2_0 : true
+            }
+        };
 </script>
 {% endhighlight %}
 
-### Preview 
+### STEP 2. Javascript 파일, 제품 추가
+<div>2. 아래와 같이 제품을 추가합니다.</div>
 
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+{% highlight html %}
+<script src="/resources/sbux/SBUx.js" type="text/javascript"></script>
+{% endhighlight %}
 
+<div>3. 설명</div>
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1^exTab2^exTab3" 
+           title-text-array="설명^개발시 설정^운영시 설정">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        <div>입력 가능한 설정들 (* : 필수 입력사항)</div>
+        <table style="width:100%">
+            <colgroup>
+                <col width="15%"/>
+                <col width="85%"/>
+            </colgroup>
+            <tr>
+                <td class="tdTitle">환경 변수명</td>
+                <td >var SBUxConfig - 변수명은 변경할 수 없습니다.</td>
+            </tr>
+            <tr>
+                <td class="tdTitle">환경 변수명</td>
+                <td >var SBUxConfig - 변수명은 변경할 수 없습니다.</td>
+            </tr>
+            <tr>
+                <td class="tdTitle">Path<span style="color:#dd2200">(*)</span></td>
+                <td >SBUx.js 파일의 위치 전까지 경로를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td class="tdTitle">선결조건</td>
+                <td>해당없음</td>
+            </tr>
+        </table>
+    </div>
+    <div id="exTab2">
+        <div>개발시 설정</div>        
+        {% highlight html %}
+        <script type="text/javascript">
+                var SBUxConfig = {
+                    Path : "/resources/SBUx/", 
+                    Debug : true,
+                    DeveloperTipType : "console", // { console | alert | storage | none }
+                    SystemLogType : "none", // { console | storage | none}
+                    SBGrid : {
+                        Version2_5 : true
+                    },
+                    SBChart : {
+                        Version2_0 : true
+                    }
+                };
+        </script>
+        {% endhighlight %}
+    </div>
+    <div id="exTab3">
+        <div>운영시 설정</div>
+        {% highlight html %}
+        <script type="text/javascript">
+                var SBUxConfig = {
+                    Path : "/resources/SBUx/",  
+                    SBGrid : {
+                        Version2_5 : true
+                    },
+                    SBChart : {
+                        Version2_0 : true
+                    }
+                };
+        </script>
+        {% endhighlight %}
+    </div>
 
+</div>
