@@ -298,7 +298,21 @@ uitype
 
 ▶ Preview 
 
-
+<script>
+    var tabJsonData6 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_6_1" },                        
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_6_2" }
+    ];  
+</script>
+<sbux-tabs id="sbIdx1_6" name="sbTagNm1_6" uitype="webacc" jsondata-ref="tabJsonData6" is-scrollable="false"></sbux-tabs>
+<div class="tab-content">
+    <div id="tab1_6_1">
+        tab1 content
+    </div>
+    <div id="tab1_6_2">
+        tab2 content
+    </div>
+</div>
 
     </div>
 </div>

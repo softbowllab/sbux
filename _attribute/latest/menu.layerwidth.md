@@ -1,11 +1,11 @@
 ---
-title:  placement
+title:  layer-width
 date:   2018-05-14
 categories: ["latest","menu"]
-order: 1
+order: 5
 ---
 
-placement
+layer-width
 ===
 
 ---
@@ -21,7 +21,7 @@ placement
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 위치를 지정합니다.</td>
+        <td colspan="3">전체 menu의 width를 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -31,7 +31,7 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
+        <td>trigger, show-all-menu | show-sub-all-menu</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,13 +48,13 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>true</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">지정할 menu의 width(단위 : px)</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -107,7 +107,7 @@ placement
 ▶ Example
 
 {% highlight html %}
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false" trigger="hover" show-all-menu="true" layer-width="600">
    <brand-item text="SoftBowl"></brand-item>
    <menu-item text="SBUx">
        <menu-item text="input"></menu-item>
@@ -125,7 +125,7 @@ placement
 
 ▶ Preview 
 
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false" trigger="hover" show-all-menu="true" layer-width="600">
    <brand-item text="SoftBowl"></brand-item>
    <menu-item text="SBUx">
        <menu-item text="input"></menu-item>
@@ -155,7 +155,7 @@ placement
         { "id" : "3_2", "pid" : "3", "order" : "2", "text" : "SBGrid 2.5" }
    ];  
 </script>
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false" trigger="hover" show-all-menu="true" layer-width="600">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 {% endhighlight %}
@@ -165,7 +165,7 @@ placement
 
 ▶ Preview 
 
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false" trigger="hover" show-all-menu="true" layer-width="600">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 
@@ -199,7 +199,10 @@ placement
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'jsonData',
-            isFixed : false
+            isFixed : false,
+            trigger : 'hover',
+            showAllMenu : true,
+            layerWidth : '600'
         });
     }); 
 </script>
@@ -216,7 +219,10 @@ placement
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'jsonData',
-            isFixed : false
+            isFixed : false,
+            trigger : 'hover',
+            showAllMenu : true,
+            layerWidth : '600'
         });
     });
 </script>

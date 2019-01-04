@@ -1,11 +1,11 @@
 ---
-title:  placement
+title:  show-sub-all-menu
 date:   2018-05-14
 categories: ["latest","menu"]
-order: 1
+order: 4
 ---
 
-placement
+show-sub-all-menu
 ===
 
 ---
@@ -21,7 +21,7 @@ placement
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 위치를 지정합니다.</td>
+        <td colspan="3">Component의 하위 전체 menu가 표시됩니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -31,7 +31,7 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
+        <td>trigger</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,7 +48,7 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>true</td>
+        <td>false</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
@@ -107,7 +107,7 @@ placement
 ▶ Example
 
 {% highlight html %}
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false" trigger="hover" show-sub-all-menu="true">
    <brand-item text="SoftBowl"></brand-item>
    <menu-item text="SBUx">
        <menu-item text="input"></menu-item>
@@ -125,7 +125,7 @@ placement
 
 ▶ Preview 
 
-<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false">
+<sbux-menu id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" is-fixed="false" trigger="hover" show-sub-all-menu="true">
    <brand-item text="SoftBowl"></brand-item>
    <menu-item text="SBUx">
        <menu-item text="input"></menu-item>
@@ -155,7 +155,7 @@ placement
         { "id" : "3_2", "pid" : "3", "order" : "2", "text" : "SBGrid 2.5" }
    ];  
 </script>
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false" trigger="hover" show-sub-all-menu="true">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 {% endhighlight %}
@@ -165,7 +165,7 @@ placement
 
 ▶ Preview 
 
-<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false">
+<sbux-menu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="jsonData" is-fixed="false" trigger="hover" show-sub-all-menu="true">
    <brand-item text="SoftBowl"></brand-item>
 </sbux-menu>
 
@@ -199,7 +199,9 @@ placement
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'jsonData',
-            isFixed : false
+            isFixed : false,
+            trigger : 'hover',
+            showSubAllMenu : true
         });
     }); 
 </script>
@@ -216,7 +218,9 @@ placement
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'jsonData',
-            isFixed : false
+            isFixed : false,
+            trigger : 'hover',
+            showSubAllMenu : true
         });
     });
 </script>

@@ -95,24 +95,24 @@ openlayer-title
 ▶ Example
 
 {% highlight html %}
-<input type="button" value="progress open" onclick="SBUxMethod.openProgress('sbTagNm1_1')">
 <sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar" show-openlayer="true" openlayer-title="SBUx Progress">
     <progress-bar>
        <bar valuenow="0"></bar>
     </progress-bar>
 </sbux-progress>
+<input type="button" value="progress open" onclick="SBUxMethod.openProgress('sbTagNm1_1')">
 {% endhighlight %}
 
 <br>
 
 ▶ Preview 
 
-<input type="button" value="progress open" onclick="SBUxMethod.openProgress('sbTagNm1_1')">
 <sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar" show-openlayer="true" openlayer-title="SBUx Progress">
     <progress-bar>
        <bar valuenow="0"></bar>
     </progress-bar>
 </sbux-progress>
+<input type="button" value="progress open" onclick="SBUxMethod.openProgress('sbTagNm1_1')">
 
     </div>
     <div id="exTab1_2">
