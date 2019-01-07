@@ -14,7 +14,7 @@ order: 1
 <div>1. 아래와 같이 제품 구동을 위한 환경변수를 추가합니다.</div>
 
 {% highlight html %}
-<script type="text/javascript">
+<script >
         var SBUxConfig = {
             License : "SUE26-XXXX-XXXXX-XXX",
             Path : "/resources/sbux/",
@@ -63,8 +63,8 @@ order: 1
         <div>입력 가능한 설정들 (* : 필수 입력사항)</div>
         <table style="width:100%">
             <colgroup>
-                <col width="15%"/>
-                <col width="85%"/>
+                <col style="width:15%"/>
+                <col style="width:85%"/>
             </colgroup>
             <tr>
                 <td class="tdTitle">환경 변수명</td>
