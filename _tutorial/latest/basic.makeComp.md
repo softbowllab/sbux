@@ -87,7 +87,7 @@ order: 1
     <div id="exTab2">
         <div>개발시 설정</div>        
         {% highlight html %}
-        <script type="text/javascript">
+        <script>
                 var SBUxConfig = {
                     Path : "/resources/SBUx/", 
                     Debug : true,
@@ -106,7 +106,7 @@ order: 1
     <div id="exTab3">
         <div>운영시 설정</div>
         {% highlight html %}
-        <script type="text/javascript">
+        <script>
                 var SBUxConfig = {
                     Path : "/resources/SBUx/",  
                     SBGrid : {
