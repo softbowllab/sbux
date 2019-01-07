@@ -51,7 +51,7 @@ order: 1
 <div>2. 아래와 같이 제품을 추가합니다.</div>
 
 {% highlight html %}
-<script src="/resources/sbux/SBUx.js" type="text/javascript"></script>
+<script src="/resources/sbux/SBUx.js"></script>
 {% endhighlight %}
 
 <div>3. 설명</div>
