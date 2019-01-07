@@ -14,10 +14,10 @@ uitype
 
 <table style="width:100%">
     <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
+        <col style="width:15%"/>
+        <col style="width:35%"/>
+        <col style="width:15%"/>
+        <col style="width:35%"/>
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
@@ -38,10 +38,10 @@ uitype
 </table>
 <table style="width:100%">
     <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
+        <col style="width:15%"/>
+        <col style="width:35%"/>
+        <col style="width:15%"/>
+        <col style="width:35%"/>
     </colgroup>
     <tr>
         <td class="tdTitle tdBg" colspan="4">속성값</td>
@@ -59,11 +59,11 @@ uitype
 </table>
 <table style="width:100%">
     <colgroup>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
+        <col style="width:20%"/>
+        <col style="width:20%"/>
+        <col style="width:20%"/>
+        <col style="width:20%"/>
+        <col style="width:20%"/>
     </colgroup>
     <tr>
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
