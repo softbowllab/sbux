@@ -1,12 +1,11 @@
 ---
-title:  jsondata-css-style
+title:  jsondata-content-link
 date:   2018-05-14
 categories: ["latest","tabs"]
-order: 19
+order: 23
 ---
 
-jsondata-css-style
-===
+jsondata-content-link
 
 ---
 
@@ -22,7 +21,7 @@ jsondata-css-style
     <tr>
         <td class="tdTitle">설명</td>
         <td colspan="3">
-            호출한 json data에서 css style에 해당하는 key값을 지정합니다.<br>
+            호출한 json data에서 content link에 해당하는 key값을 지정합니다.<br>
             * 변동형으로 컴포넌트를 구성할때 사용합니다.
         </td>
     </tr>
@@ -51,13 +50,13 @@ jsondata-css-style
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>cssstyle</td>
+        <td>contentlink</td>
         <td class="tdTitle">자료형</td>
         <td>stirng</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">호출한 json data에서 css style에 해당하는 key값</td>
+        <td colspan="3">호출한 json data에서 content link에 해당하는 key값</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -100,11 +99,11 @@ jsondata-css-style
 {% highlight html %}
 <script>
     var tabJsonData1 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-css-style="cssstyleKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-close-icon="contentlinkKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_1_1">
         tab1 content
@@ -122,11 +121,11 @@ jsondata-css-style
 
 <script>
     var tabJsonData1 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "contentlinkKey" : "./../htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-css-style="cssstyleKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-close-icon="contentlinkKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_1_1">
         tab1 content
@@ -144,11 +143,11 @@ jsondata-css-style
 {% highlight html %}
 <script>
     var tabJsonData2 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2", "closeiconKey" : "true" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-css-style="cssstyleKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_2_1">
         tab1 content
@@ -166,11 +165,11 @@ jsondata-css-style
 
 <script>
     var tabJsonData2 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2", "closeiconKey" : "true" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-css-style="cssstyleKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_2_1">
         tab1 content
@@ -188,11 +187,11 @@ jsondata-css-style
 {% highlight html %}
 <script>
     var tabJsonData3 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2", "closeiconKey" : "true" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-css-style="cssstyleKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_3_1">
         tab1 content
@@ -210,11 +209,11 @@ jsondata-css-style
 
 <script>
     var tabJsonData3 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2", "closeiconKey" : "true" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-css-style="cssstyleKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_3_1">
         tab1 content
@@ -240,24 +239,24 @@ jsondata-css-style
 {% highlight html %}
 <div id="sbArea2_1"></div>
 <div class="tab-content">
-    <div id="tab1_4_1">
+    <div id="tab2_1_1">
         tab1 content
     </div>
-    <div id="tab1_4_2">
+    <div id="tab2_1_2">
         tab2 content
     </div>
 </div>
 <script>
     var tabJsonData4 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_4_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_4_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_1_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_1_2", "closeiconKey" : "true" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_1').sbTabs({
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'tabJsonData4',
-            jsondataCssStyle : 'cssstyleKey',
+            jsondataCloseIcon : 'closeiconKey',
             isScrollable : false
         });
     }); 
@@ -279,15 +278,15 @@ jsondata-css-style
 </div>
 <script>
     var tabJsonData4 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_1_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_1_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_1_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_1_2", "closeiconKey" : "true" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_1').sbTabs({
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'tabJsonData4',
-            jsondataCssStyle : 'cssstyleKey',
+            jsondataCloseIcon : 'closeiconKey',
             isScrollable : false
         });
     }); 
@@ -310,15 +309,15 @@ jsondata-css-style
 </div>
 <script>
     var tabJsonData5 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2", "closeiconKey" : "true" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_2').sbTabs({
             name : 'sbScriptNm2_2',
             uitype : 'inbox',
             jsondataRef : 'tabJsonData5',
-            jsondataCssStyle : 'cssstyleKey',
+            jsondataCloseIcon : 'closeiconKey',
             isScrollable : false
         });
     });  
@@ -340,15 +339,15 @@ jsondata-css-style
 </div>
 <script>
     var tabJsonData5 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2", "closeiconKey" : "true" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_2').sbTabs({
             name : 'sbScriptNm2_2',
             uitype : 'inbox',
             jsondataRef : 'tabJsonData5',
-            jsondataCssStyle : 'cssstyleKey',
+            jsondataCloseIcon : 'closeiconKey',
             isScrollable : false
         });
     });  
@@ -371,15 +370,15 @@ jsondata-css-style
 </div>
 <script>
     var tabJsonData6 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2", "closeiconKey" : "true" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_3').sbTabs({
             name : 'sbScriptNm2_3',
             uitype : 'webacc',
             jsondataRef : 'tabJsonData6',
-            jsondataCssStyle : 'cssstyleKey',
+            jsondataCloseIcon : 'closeiconKey',
             isScrollable : false
         });
     });  
@@ -401,15 +400,15 @@ jsondata-css-style
 </div>
 <script>
     var tabJsonData6 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "cssstyleKey" : "color : red" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2", "cssstyleKey" : "color : blue" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "closeiconKey" : "true" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2", "closeiconKey" : "true" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_3').sbTabs({
             name : 'sbScriptNm2_3',
             uitype : 'webacc',
             jsondataRef : 'tabJsonData6',
-            jsondataCssStyle : 'cssstyleKey',
+            jsondataCloseIcon : 'closeiconKey',
             isScrollable : false
         });
     });  
