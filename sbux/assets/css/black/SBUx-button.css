@@ -1458,8 +1458,8 @@ ul.sbux-tre-bd li.sbux-tre-item-chl-wrap div.sbux-tre-item-chl-hd span.sbux-tre-
   width: 9px;
   height: 9px;
   margin: -2px 0 0 -2px;
-  background: #000;
-  border: 1px solid #000;
+  background: #bbb;
+  border: 1px solid #bbb;
   border-radius: 2px;
 }
 ul.sbux-tre-bd li.sbux-tre-item-chl-wrap div.sbux-tre-item-chl-hd span.sbux-tre-item-chl-nm i.sbux-tre-plus:first-child:before {
@@ -1488,8 +1488,8 @@ ul.sbux-tre-bd li.sbux-tre-item-chl-wrap div.sbux-tre-item-chl-hd span.sbux-tre-
   width: 9px;
   height: 9px;
   margin: -2px 0 0 -2px;
-  background: #ccc;
-  border: 1px solid #ccc;
+  background: #000;
+  border: 1px solid #000;
   border-radius: 2px;
 }
 ul.sbux-tre-bd li.sbux-tre-item-chl-wrap div.sbux-tre-item-chl-hd span.sbux-tre-item-chl-nm i.sbux-tre-minus:first-child:before {

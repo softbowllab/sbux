@@ -601,15 +601,15 @@ body {
 }
 .sbux-tabs-wrap .sbux-tabs-nor-bd > li.open a.sbux-tabs-ddl-tgl,
 .sbux-tabs-wrap .sbux-tabs-nor-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl {
-  background-color: #4f99c6;
-  border-color: #4f99c6;
+  background-color: #777;
+  border-color: #777;
   color: #fff;
   cursor: pointer;
 }
 .sbux-tabs-wrap .sbux-tabs-nor-bd > li.open a.sbux-tabs-ddl-tgl:hover,
 .sbux-tabs-wrap .sbux-tabs-nor-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl:hover {
-  background-color: #4f99c6;
-  border-color: #4f99c6;
+  background-color: #999;
+  border-color: #999;
   color: #fff;
 }
 .sbux-tabs-wrap ul.sbux-tabs-nor-bd.sbux-tabs-left {
@@ -750,28 +750,28 @@ body {
 }
 .sbux-tabs-wrap .sbux-tabs-inbox-bd > li.open a.sbux-tabs-ddl-tgl,
 .sbux-tabs-wrap .sbux-tabs-inbox-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl {
-  background-color: #4f99c6;
-  border-color: #4f99c6;
+  background-color: #999;
+  border-color: #999;
   color: #fff;
   cursor: pointer;
 }
 .sbux-tabs-wrap .sbux-tabs-inbox-bd > li.open a.sbux-tabs-ddl-tgl:hover,
 .sbux-tabs-wrap .sbux-tabs-inbox-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl:hover {
-  background-color: #4f99c6;
-  border-color: #4f99c6;
+  background-color: #777;
+  border-color: #777;
   color: #fff;
 }
 .sbux-tabs-wrap .sbux-sct-wrap > li.open a.sbux-tabs-ddl-tgl,
 .sbux-tabs-wrap .sbux-sct-wrap[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl {
-  background-color: #4f99c6;
-  border-color: #4f99c6;
+  background-color: #999;
+  border-color: #999;
   color: #fff;
   cursor: pointer;
 }
 .sbux-tabs-wrap .sbux-sct-wrap > li.open a.sbux-tabs-ddl-tgl:hover,
 .sbux-tabs-wrap .sbux-sct-wrap[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl:hover {
-  background-color: #4f99c6;
-  border-color: #4f99c6;
+  background-color: #777;
+  border-color: #777;
   color: #fff;
 }
 .sbux-tabs-wrap ul.sbux-tabs-scroll-wrap {
@@ -1002,7 +1002,7 @@ body {
   width: 400px;
 }
 .sbux-prg-layerpop {
-  position: absolute;
+  position: fixed;
   display: none;
   width: 600px;
   height: 100px;

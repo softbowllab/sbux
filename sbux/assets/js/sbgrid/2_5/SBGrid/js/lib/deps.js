@@ -160,7 +160,11 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 									var isThisTotal = (thiscol.getAttribute('sbtotal-cell') == 'sub' || thiscol.getAttribute('sbtotal-cell') == 'grand') ? true : false;
 									var isThatTotal = (that.getAttribute('sbtotal-cell') == 'sub' || that.getAttribute('sbtotal-cell') == 'grand') ? true : false;
 									var isStandCol = colinfo[thiscol.getAttribute("data-colindex")].getTotalStandard();
-									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && ((nColType == 'textarea' && $(thiscol).text() == $(that).text() || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("colspan") == that.getAttribute("colspan")
+									var isTextAreaScroll = (nColType == 'textarea' && colinfo[thiscol.getAttribute("data-colindex")].getTypeInfo().textareascroll) ? true : false;
+									var isThisGroupCell = thiscol.getAttribute('columngroup-cell') ? true : false;
+									var isThatGroupCell = that.getAttribute('columngroup-cell') ? true : false;
+									
+									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisGroupCell && !isThatGroupCell) && (((isTextAreaScroll && $(thiscol).text() == $(that).text()) || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("colspan") == that.getAttribute("colspan")
 										&& (( that.getAttribute('rowspan') == undefined && ((thiscol.getAttribute('merge-colindex') == undefined && that.getAttribute('merge-colindex') == undefined) || that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex'))) ||
 											(that.getAttribute('rowspan') != undefined && that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex') )))){
 										rowspan = that.getAttribute("rowspan") || 1;
@@ -181,7 +185,7 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 									}
 									that = (that == null) ? thiscol : that;
 								}
-								if(nColType == 'textarea' && colinfo[that.getAttribute("data-colindex")].attr('parent')._getTextAreaScroll() && that.firstChild.tagName == 'DIV'){
+								if(isTextAreaScroll){
 									$(that.firstChild).css('height', (colinfo[that.getAttribute("data-colindex")].attr('parent').attr('rowheight') * (that.getAttribute("rowspan") > 1 ? rowspan : 1)) - 3);
 								}
 							}
@@ -275,9 +279,10 @@ jQuery.fn.colspan = function (rowIdx, colinfo, bSpaceSkip) {
 								var isThisTotal = (thiscol.getAttribute('sbtotal-cell') == 'sub' || thiscol.getAttribute('sbtotal-cell') == 'grand') ? true : false;
 								var isThatTotal = (that.getAttribute('sbtotal-cell') == 'sub' || that.getAttribute('sbtotal-cell') == 'grand') ? true : false;
 								var isStandCol = colinfo[thiscol.getAttribute("data-colindex")].getTotalStandard();
+								var isTextAreaScroll = (nColType == 'textarea' && colinfo[thiscol.getAttribute("data-colindex")].getTypeInfo().textareascroll) ? true : false;
 								
 								if(nColType == 'input' || nColType == 'output' || nColType == 'textarea' || nColType == 'image' || nColType == 'radio'|| nColType == 'checkbox' || nColType == 'html'){
-									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && ((nColType == 'textarea' && $(thiscol).text() == $(that).text() || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("rowspan") == that.getAttribute("rowspan") && colinfo[nCol].getMerge() && colinfo[that.getAttribute("data-colindex")].getMerge() 
+									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (((isTextAreaScroll && $(thiscol).text() == $(that).text()) || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("rowspan") == that.getAttribute("rowspan") && colinfo[nCol].getMerge() && colinfo[that.getAttribute("data-colindex")].getMerge() 
 										&& ((that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')) ))){
 										colspan = that.getAttribute("colspan") || 1;
 										colspan = Number(colspan) + 1;
@@ -334,7 +339,7 @@ jQuery.fn.colspan = function (rowIdx, colinfo, bSpaceSkip) {
 								var isThisGroupCell = thiscol.getAttribute('columngroup-cell') ? true : false;
 								var isThatGroupCell = that.getAttribute('columngroup-cell') ? true : false;
 								
-								if (((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisGroupCell && !isThatGroupCell)  && ($(thiscol).html() == $(that).html() && thiscol.getAttribute("rowspan") == that.getAttribute("rowspan")
+								if (((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisGroupCell && !isThatGroupCell) && ($(thiscol).html() == $(that).html() && thiscol.getAttribute("rowspan") == that.getAttribute("rowspan")
 										&& ( ( that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')) ))){
 										colspan = that.getAttribute("colspan") || 1;
 										colspan = Number(colspan) + 1;
@@ -407,7 +412,7 @@ jQuery.fn.byrestriccol = function (colIdx, tds, nRowHeader, bSpaceSkip, bCheckTy
 							that = thiscol;
 						}
 					}
-					if(colinfo[that.getAttribute("data-colindex")].getType() == 'textarea' && colinfo[that.getAttribute("data-colindex")].attr('parent')._getTextAreaScroll() && that.firstChild.tagName == 'DIV'){
+					if((colinfo[that.getAttribute("data-colindex")].getType() == 'textarea' && colinfo[thiscol.getAttribute("data-colindex")].getTypeInfo().textareascroll)){
 						$(that.firstChild).css('height', (colinfo[that.getAttribute("data-colindex")].attr('parent').attr('rowheight') * (that.getAttribute("rowspan") > 1 ? rowspan : 1)) - 3);
 					}
 				}

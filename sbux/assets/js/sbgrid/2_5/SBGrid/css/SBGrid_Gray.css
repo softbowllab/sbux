@@ -89,7 +89,7 @@
 	border-bottom-width:1px !important;
 }
 
-.sbgrid_textarea {									/*SBGrid textarea 영역에 data를 표시하는 <div>에 적용하는 CSS 클래스*/
+.sbgrid_textarea_textareascroll {									/*SBGrid textarea 영역에 textareascroll 설정시 data를 표시하는 <div>에 적용하는 레이아웃 CSS 클래스*/
 	text-overflow: inherit;
 	padding:2px;
 	letter-spacing:normal;
@@ -437,6 +437,17 @@
 }
 
 .sbgrid_CGIA {										/*ColumnGroupIconArea의 레이아웃 클래스*/
+	position: absolute !important;
+	overflow: hidden !important;
+	float:right;
+	cursor:Pointer;
+}
+
+.sbgrid_CHA {										/*ColumnHintArea의 레이아웃 클래스*/
+	position: absolute !important;
+}
+
+.sbgrid_CHIA {										/*ColumnHintIconArea의 레이아웃 클래스*/
 	position: absolute !important;
 	overflow: hidden !important;
 	float:right;

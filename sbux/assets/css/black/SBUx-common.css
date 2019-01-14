@@ -529,7 +529,7 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
   top: auto;
   bottom: 100%;
 }
-/*sidemenu*/
+/*sidemenu - black */
 .sbux-sidemeu {
   position: relative;
   display: inline-table;
@@ -537,7 +537,7 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
   height: 100%;
   background: #fff;
   vertical-align: top;
-  border-color: #4b89d6;
+  border-color: #000;
   border-right-width: 1px;
   border-style: solid;
   box-sizing: border-box;
@@ -558,7 +558,7 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
   width: 20px;
   height: 70px;
   margin-top: -35px;
-  background: #4b89d6;
+  background: #000;
   content: ">";
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -574,18 +574,18 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
 }
 .sbux-sidemeu a {
   text-decoration: none;
+  color: #000;
 }
 .sbux-sidemeu > ul {
   /*disabled, readonly 처리*/
 }
 .sbux-sidemeu > ul > li {
-  border-bottom: 1px solid #454c5a;
+  border-bottom: 1px solid #ddd;
   font-size: 13px;
 }
 .sbux-sidemeu > ul > li a {
   display: block;
   padding: 10px 15px;
-  color: #cecece;
 }
 .sbux-sidemeu > ul > li a i {
   float: right;
@@ -594,17 +594,17 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
   cursor: pointer;
 }
 .sbux-sidemeu > ul > li.active {
-  background: #2d64a8;
+  background: #000;
 }
 .sbux-sidemeu > ul > li.active > a {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub {
   display: none;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub li {
-  background: #485061;
+  background: #d6d6d6;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub li a {
   padding-left: 20px;
@@ -614,41 +614,41 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub li.active > a {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub1 {
   display: none;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub1 li {
   position: relative;
-  background: #525c70;
+  background: #e2e2e2;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub1 li a {
   padding: 10px 15px 10px 28px;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub1 li a:hover {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub1 li a.sbux-sidemeu-link {
   cursor: pointer;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub1 li.active > a {
-  color: #fff /*#63bdff*/;
+  color: #000 /*#63bdff*/;
   font-weight: bold;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub2 {
   display: none;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub2 li {
-  background: #5d687f;
+  background: #efefef;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub2 li a {
   padding: 10px 15px 10px 38px;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub2 li a:hover {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub2 li a.sbux-sidemeu-link {
   cursor: pointer;
@@ -657,11 +657,11 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
   display: none;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub3 li {
-  background: #68758d;
+  background: #fbfbfb;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub3 li.active a {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub .sbux-sidemeu-sub3 li i {
   position: absolute;
@@ -673,7 +673,7 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
 }
 .sbux-sidemeu > ul .sbux-sidemeu-sub > li > a:hover {
   font-weight: bold;
-  color: #fff;
+  color: #000;
 }
 .sbux-sidemeu > ul li.readonly > a,
 .sbux-sidemeu > ul li[readonly] > a {
@@ -717,27 +717,27 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
   transform: none;
   transition: none;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li {
   position: relative;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li div {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li div {
   display: table;
   width: 100%;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li div a {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li div a {
   float: left;
   display: table-cell;
-  color: #cecece;
+  color: #000;
   width: 100%;
   box-sizing: border-box;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li div a span:first-child {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li div a span:first-child {
   padding-right: 3px;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li div a.sbux-sidemeu-link {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li div a.sbux-sidemeu-link {
   cursor: pointer;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li div i {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li div i {
   float: left;
   position: absolute;
   right: 0;
@@ -746,17 +746,17 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
   padding: 10px 15px;
   color: #fff;
   cursor: pointer;
-  color: #cecece;
+  color: #000;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li div i:hover {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li div i:hover {
   transform: scale(1.5);
   transition: transform 0.3s ease-out;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li.active > div > a {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li.active > div > a {
   font-weight: bold;
   color: #fff;
 }
-.sbux-sidemeu.sbux-sidemeu-split ul li.active > div > i {
+.sbux-sidemeu.sbux-sidemeu-split > ul > li.active > div > i {
   color: #fff;
 }
 .sbux-sidemeu.sbux-sidemeu-split > ul > li {

@@ -67,7 +67,7 @@
 	color:#000000;
 }
 
-.sbgrid_textarea_st {									/*SBGrid textarea 영역에 data를 표시하는 <div>에 적용하는 스타일 CSS 클래스*/
+.sbgrid_textarea_textareascroll_st {									/*SBGrid textarea 영역에 textareascroll 설정시 data를 표시하는 <div>에 적용하는 스타일 CSS 클래스*/
 }
 
 .sbgrid_inputdate_button_st {						/*inputdate 영역에 <button>에 적용되는 스타일 CSS 클래스*/
@@ -485,6 +485,18 @@
 
 .sbgrid_CGIA_st{										/*ColumnGroupIconArea의 스타일 CSS 클래스*/
 	background:url(../img/grid/columngroup_navy.png) 50% 50% no-repeat;
+}
+
+.sbgrid_CHA_st {										/*ColumnHintArea의 스타일 클래스*/
+	border: solid #3f4f90 2px;
+	border-radius : 5px;
+	background:white;
+	padding: 3px;
+	z-index: 11100;
+}
+
+.sbgrid_CHIA_st{										/*ColumnHintIconArea의 스타일 CSS 클래스*/
+	background:url(../img/grid/columnhint_navy.png) 50% 50% no-repeat;
 }
 
 .sbgrid_combo_button_st{
