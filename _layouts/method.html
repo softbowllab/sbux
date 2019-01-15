@@ -10,7 +10,8 @@
 	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+	<!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"> -->
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/layout.css">
 	<style>
 		.tdTitle {font-weight:bold}
 		.tdCenter {text-align: center;}
@@ -27,34 +28,32 @@
 	<script src="{{ site.baseurl }}/sbux/SBUx.js" type="text/javascript"></script>
 </head>
 <body>
-	{% include header.html %}
-
-<div class="page-content" style="padding-top:15px;">
-	<div class="container">
-		<div class="row">
-			{% assign post_count = site.method|size %}
-			{% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
-				<div id="navigation" class="col-sm-2 col-md-3 col-lg-3">
-						{% include lnb.method.html %}
+	<div class="wrap">
+			<!--header-->
+			<div class="header">
+				<div class="header-wrap">
+					{% include header.html %}
 				</div>
-
-				<div id="content" class="col-sm-10 col-md-9 col-lg-9">
-					{{ content }}
-				</div>
-			{% else %}
-				<div id="content" class="col-sm-12 col-md-12 col-lg-12">
-					{{ content }}
-				</div>
-			{% endif %}
-		</div>
-		<div class="row">
-			<div id="footer" class="col-sm-12 col-md-12 col-lg-12">
-				{% include footer.html %}
 			</div>
-		</div>
-	</div>
-</div>
-
+			<!--content-->
+			<div class="content">
+				<div class="content-wrap">
+					{% assign post_count = site.method|size %}
+					{% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
+					<div class="left">
+						{% include lnb.method.html %}
+					</div>
+					<div class="sub-content">
+						{{ content }}
+					</div>
+					{% endif %}
+				</div>
+			</div>
+			<!--footer-->
+			<div>
+					{% include footer.html %}
+			</div>
+		<div>
 	{% if site.google_analytics_id != "" %}
 	{% include google_analytics.html %}
 	{% endif %}

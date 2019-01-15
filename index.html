@@ -2,25 +2,28 @@
 layout: default
 title: "SBUx v2.6"
 ---
-<div class="header-container jumbotron">
+<!-- <div class="header-container jumbotron">
 	<div class="container">
 		<h1>SBUx v2.6</h1>
 		<p>진정한 웹 사용을 위한 컴포넌트 기반의 차세대 UI/UX 개발툴</p>
 		<p><a class="btn btn-primary btn-lg" href="{{ '/attribute/latest' | prepend: site.baseurl }}" role="button">Get Documents</a></p>
 	</div>
-</div>
+</div> -->
 	
 <div class="container">
 	<div class="row">
-		<h2>SBUx v2.6 Components</h2>
-			<p>SBUx v2.6 는 SI 및 Application 개발자들이 퀄리티 있는 화면을 만들기 위해 필요한 다양한 기능등을 쉽게 사용할 수 있도록 지원하는 UI/UX 컴포넌트입니다.</p>
-			<p>IE, 크롬, 파이어폭스, 사파리등의 PC 브라우저와 HTML5가 지원되는 최신의 모바일 환경(스마트폰, 태블릿PC)에서 사용이 가능합니다.</p>
-
+		<div class="topmenu">
+			<h2>SBUx v2.6 Components</h2>
+				<p>SBUx v2.6 는 SI 및 Application 개발자들이 퀄리티 있는 화면을 만들기 위해 필요한 다양한 기능등을 쉽게 사용할 수 있도록 지원하는 UI/UX 컴포넌트입니다.</p>
+				<p>IE, 크롬, 파이어폭스, 사파리등의 PC 브라우저와 HTML5가 지원되는 최신의 모바일 환경(스마트폰, 태블릿PC)에서 사용이 가능합니다.</p>
+		</div>
 		<h3>Browser Support</h3>
+		<div class="summary01">
 			<p>크롬, 파이어폭스, 사파리, IE 9 이상을 권장합니다.</p>
+		</div>
 		
 		<h3>Getting Started</h3>
-		
+		<div class="summary01">
 		<ul>
 			<li>
 				<h4>설정</h4>
@@ -55,57 +58,60 @@ title: "SBUx v2.6"
 {% endhighlight %}</p>
 			</li>
 		</ul>
-		
+		</div>
 		<!-- Features -->
 		<h3>Features</h3>
-		<ul>
-			<li>
-				<h4>25개종 41개 유형의 다양한 컴포넌트가 준비되어 있습니다.</h4>
-				<p>Input, DatePicker, Radio, Checkbox, Label,
-				   Select, Button, Textarea, Listbox, Dropdown List,
-				   Alert, Modal, ProgressBar, TabStrip, Menu,
-				   Tree, Accordion Panel, Carousel,
-				   Accordion Menu, Tooltip, Popover,
-				   Contextmenu, Datastore,  SBGrid, SBChart
-				</p>
-			</li>
-			<li>
-				<h4>컴포넌트의 성능 향상을 위한 내부 기능들을 장착 하였습니다.</h4>
-				<p>- 페이지 로딩시 선별적인 컴포넌트 랜더링 기능</p>
-				<p>- Lazy Loading 방식의 컴포넌트 기능</p>
-				<p>- 안정적인 메모리 관리 기능</p>
-			</li>
-			<li>
-				<h4>웹 개발자를 위한 편리 기능을 마련 하였습니다.</h4>
-				<p>- 컴포넌트 내 Custom 속성의 제한이 없어 필요 정보를 마음대로 입력하는 기능</p>
-				<p>- 컴포넌트를 그룹화로 시켜 일괄적으로 처리할 수 있는 기능</p>
-				<p>- HTML Markup 또는 jQuery plug in 로 익숙한 형태를 선택하여 사용할 수 있는 기능</p>
-			</li>
-			<li>
-				<h4>내부 컴포넌트간에는 강력한 연계가 있습니다.</h4>
-				<p>- SBGrid 내 Column Type 과 컴포넌트의 데이터 연계시 get/set 작업 불필요</p>
-				<p>- input/radio button, Master-Detail-.. 의 Combo Box 형태는 속성 추가로 데이터가 연결</p>
-				<p>- Accordion Panel / Carousel 내에 Contents 를 SBUx 의 컴포넌트로 복합적으로 사용 가능</p>
-			</li>
-			<li>
-				<h4>E-Gov 및 Eclipse IDE 개발자를 위한 Plug in 지원</h4>
-				<p>- SBUx Tag 생성 시 코드 자동완성 기능 제공</p>
-				<p>- javascript 이용한 SBUx API 사용 시 자동완성 기능 제공</p>
-			</li>
-		</ul>
-		
+		<div class="summary01">
+			<ul>
+				<li>
+					<h4>25개종 41개 유형의 다양한 컴포넌트가 준비되어 있습니다.</h4>
+					<p>Input, DatePicker, Radio, Checkbox, Label,
+					Select, Button, Textarea, Listbox, Dropdown List,
+					Alert, Modal, ProgressBar, TabStrip, Menu,
+					Tree, Accordion Panel, Carousel,
+					Accordion Menu, Tooltip, Popover,
+					Contextmenu, Datastore,  SBGrid, SBChart
+					</p>
+				</li>
+				<li>
+					<h4>컴포넌트의 성능 향상을 위한 내부 기능들을 장착 하였습니다.</h4>
+					<p>- 페이지 로딩시 선별적인 컴포넌트 랜더링 기능</p>
+					<p>- Lazy Loading 방식의 컴포넌트 기능</p>
+					<p>- 안정적인 메모리 관리 기능</p>
+				</li>
+				<li>
+					<h4>웹 개발자를 위한 편리 기능을 마련 하였습니다.</h4>
+					<p>- 컴포넌트 내 Custom 속성의 제한이 없어 필요 정보를 마음대로 입력하는 기능</p>
+					<p>- 컴포넌트를 그룹화로 시켜 일괄적으로 처리할 수 있는 기능</p>
+					<p>- HTML Markup 또는 jQuery plug in 로 익숙한 형태를 선택하여 사용할 수 있는 기능</p>
+				</li>
+				<li>
+					<h4>내부 컴포넌트간에는 강력한 연계가 있습니다.</h4>
+					<p>- SBGrid 내 Column Type 과 컴포넌트의 데이터 연계시 get/set 작업 불필요</p>
+					<p>- input/radio button, Master-Detail-.. 의 Combo Box 형태는 속성 추가로 데이터가 연결</p>
+					<p>- Accordion Panel / Carousel 내에 Contents 를 SBUx 의 컴포넌트로 복합적으로 사용 가능</p>
+				</li>
+				<li>
+					<h4>E-Gov 및 Eclipse IDE 개발자를 위한 Plug in 지원</h4>
+					<p>- SBUx Tag 생성 시 코드 자동완성 기능 제공</p>
+					<p>- javascript 이용한 SBUx API 사용 시 자동완성 기능 제공</p>
+				</li>
+			</ul>
+		</div>
 		
 		<!-- Getting Started -->
 		<h3>Documents</h3>
-		<ul>
-			<li>
-				<h4>latest (v2.6.789)</h4>
-				<ul>
-					<li><a href="{{ site.baseurl }}/attribute/latest/">attribute</a></li>
-					<li><a href="{{ site.baseurl }}/method/latest/">method</a></li>
-				</ul>
-			</li>
-		</ul>
+		<div class="summary01">
+			<ul class="link-ul">
+				<li>
+					<h4>latest (v2.6.789)</h4>
+					<ul>
+						<li><a href="{{ site.baseurl }}/attribute/latest/">attribute</a></li>
+						<li><a href="{{ site.baseurl }}/method/latest/">method</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
 

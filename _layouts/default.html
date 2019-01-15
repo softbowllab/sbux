@@ -7,11 +7,6 @@
 
 	<title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
 	<meta name="description" content="{{ site.subtitle }}">
-	
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"> 
 
 	<script>
 		var SBUxConfig = {
@@ -20,16 +15,50 @@
 	</script>
 	<script src="{{ site.baseurl }}/sbux/SBUx.js" type="text/javascript"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
+	<!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"> -->
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/layout.css">
 
 </head>
 <body>
-	{% include header.html %}
-    <div class="page-content">
-		{{ content }}
-	</div>
-    {% include footer.html %}
+	<div class="wrap">
+		<!--header-->
+		<div class="header">
+			<div class="header-wrap">
+				{% include header.html %}
+			</div>
+		</div>
+		<!--main-->
+		<div class="main">
+			<div class="main-wrap">
+				<div class="main-text">
+					<p>SBUx v2.6</p>
+					<span>진정한 웹 사용을 위한 컴포넌트 기반의 차세대 UI/UX 개발툴</span>
+					<a href="{{ '/attribute/latest' | prepend: site.baseurl }}" class="main-btn">Get Documents</a>
+				</div>
+			</div>
+		</div>
+		<!--content-->
+		<div class="content">
+			<div class="content-wrap">
+				<div class="main-content">
+					{{ content }}
+				</div> 
+					
+				<!-- <div class="left">
+					레프트
+				</div>
+				<div class="sub-content">
+					서브컨텐츠
+				</div> -->
+			</div>
+		</div>
+		<!--footer-->
+		<div>
+				{% include footer.html %}
+		</div>
+
+	<div>
 	{% if site.google_analytics_id != "" %}
 		{% include google_analytics.html %}
 	{% endif %}
