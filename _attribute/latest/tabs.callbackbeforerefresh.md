@@ -21,7 +21,7 @@ callback-before-refresh
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component가 선택되기 이전에 호출되는 function을 지정합니다.</td>
+        <td colspan="3">Component를 refresh 하기 이전에 호출되는 function을 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
