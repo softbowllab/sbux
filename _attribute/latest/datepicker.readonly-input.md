@@ -1,7 +1,7 @@
 ---
 title:  readonly-input
 date:   2018-12-04
-categories: ["latest","picker"]
+categories: ["latest","datepicker"]
 order: 26
 ---
 
@@ -69,7 +69,7 @@ readonly-input
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -85,43 +85,65 @@ readonly-input
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" readonly-input="true"></sbux-picker>
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" readonly-input="true"></sbux-datepicker>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" readonly-input="true"></sbux-picker>
+▶ Preview
+
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" readonly-input="true"></sbux-datepicker>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
+            uitype : 'popup',
             readonlyInput : true
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
+            uitype : 'popup',
             readonlyInput : true
         });
-    }); 
+    });  
 </script>
+
+    </div>
+</div>

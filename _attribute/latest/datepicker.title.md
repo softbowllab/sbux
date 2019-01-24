@@ -1,11 +1,11 @@
 ---
-title:  format-day-title
+title:  title
 date:   2018-12-04
 categories: ["latest","picker"]
-order: 15
+order: 3
 ---
 
-format-day-title
+title
 ===
 
 ---
@@ -21,7 +21,7 @@ format-day-title
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">캘린더 상단의 title format을 지정합니다.</td>
+        <td colspan="3">Component에 대한 제목이나 특성을 설명하기 위한 title을 input부분에 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -54,7 +54,7 @@ format-day-title
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">지정할 title format</td>
+        <td colspan="3">title로 지정할 문구</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -69,7 +69,7 @@ format-day-title
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -77,7 +77,7 @@ format-day-title
     </tr>
     <tr>
         <td>가능여부</td>
-        <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
         <td class="tdBlue tdCenter">O</td>
         <td></td>
         <td></td>
@@ -85,59 +85,65 @@ format-day-title
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" format-day-title="yyyy 무술년 mm월"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" format-day-title="yyyy 무술년 mm월"></sbux-picker>
+<sbux-picker id="sbIdx" name="sbTagNm" uitype="popup" title="SBUx Title"></sbux-picker>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" format-day-title="yyyy 무술년 mm월"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" format-day-title="yyyy 무술년 mm월"></sbux-picker>
+▶ Preview
+
+<sbux-picker id="sbIdx" name="sbTagNm" uitype="popup" title="SBUx Title"></sbux-picker>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
+<div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
-            name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
-            formatDayTitle : 'yyyy 무술년 mm월'
-        });
-        $('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
-            formatDayTitle : 'yyyy 무술년 mm월'
+        $('#sbArea').sbDatepicker({
+            name : 'sbScriptNm',
+            uitype : 'popup',
+            title : 'SBUx Title'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
+▶ Preview 
+
+<div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
-            name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
-            formatDayTitle : 'yyyy 무술년 mm월'
+        $('#sbArea').sbDatepicker({
+            name : 'sbScriptNm',
+            uitype : 'popup',
+            title : 'SBUx Title'
         });
-        $('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
-            formatDayTitle : 'yyyy 무술년 mm월'
-        });
-    });   
+    }); 
 </script>
+
+    </div>
+</div>

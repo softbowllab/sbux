@@ -1,7 +1,7 @@
 ---
 title:  unmask-format-name
 date:   2018-12-04
-categories: ["latest","picker"]
+categories: ["latest","datepicker"]
 order: 21
 ---
 
@@ -69,7 +69,7 @@ unmask-format-name
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -85,46 +85,75 @@ unmask-format-name
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2" title-text-array="inline^popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <form id="testForm1">
-    <sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" unmask-format-name="unmaskFormatNm1" unmask-format="yyyymmdd"></sbux-picker>
-    <sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" unmask-format-name="unmaskFormatNm2" unmask-format="yyyymmdd"></sbux-picker>
+    <sbux-datepicker id="sbIdx1" name="sbTagNm1" uitype="inline" unmask-format-name="unmaskFormatNm1" unmask-format="yyyymmdd"></sbux-datepicker>
 </form>
 <input type="button" value="serialize()" onclick="alert($('#testForm1').serialize());">
 {% endhighlight %}
 
-### Preview
+<br>
+
+▶ Preview
 
 <form id="testForm1">
-    <sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" unmask-format-name="tagNm1" unmask-format="yyyymmdd"></sbux-picker>
-    <sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" unmask-format-name="tagNm2" unmask-format="yyyymmdd"></sbux-picker>
+    <sbux-datepicker id="sbIdx1" name="sbTagNm1" uitype="inline" unmask-format-name="unmaskFormatNm1" unmask-format="yyyymmdd"></sbux-datepicker>
 </form>
 <input type="button" value="serialize()" onclick="alert($('#testForm1').serialize());">
 
----
-### Example (Script)
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
 
 {% highlight html %}
 <form id="testForm2">
-    <div id="sbArea1"></div>
-    <div id="sbArea2"></div>
+    <sbux-datepicker id="sbIdx2" name="sbTagNm2" uitype="popup" unmask-format-name="unmaskFormatNm2" unmask-format="yyyymmdd"></sbux-datepicker>
 </form>
 <input type="button" value="serialize()" onclick="alert($('#testForm2').serialize());">
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<form id="testForm2">
+    <sbux-datepicker id="sbIdx2" name="sbTagNm2" uitype="popup" unmask-format-name="unmaskFormatNm2" unmask-format="yyyymmdd"></sbux-datepicker>
+</form>
+<input type="button" value="serialize()" onclick="alert($('#testForm2').serialize());">
+
+    </div>
+</div>
+
+---
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2" title-text-array="inline^popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
+
+{% highlight html %}
+<form id="testForm3">
+    <div id="sbArea1"></div>
+</form>
+<input type="button" value="serialize()" onclick="alert($('#testForm3').serialize());">
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
+        $('#sbArea1').sbDatepicker({
             name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
-            unmaskFormatName : 'scriptNm1',
-            unmaskFormat : 'yyyymmdd'
-        });
-        $('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
+            uitype : 'inline',
             unmaskFormatName : 'scriptNm1',
             unmaskFormat : 'yyyymmdd'
         });
@@ -132,28 +161,65 @@ unmask-format-name
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<form id="testForm2">
+▶ Preview 
+
+<form id="testForm3">
     <div id="sbArea1"></div>
-    <div id="sbArea2"></div>
 </form>
-<input type="button" value="serialize()" onclick="alert($('#testForm2').serialize());">
+<input type="button" value="serialize()" onclick="alert($('#testForm3').serialize());">
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
+        $('#sbArea1').sbDatepicker({
             name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
+            uitype : 'inline',
             unmaskFormatName : 'scriptNm1',
             unmaskFormat : 'yyyymmdd'
         });
-        $('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
-            unmaskFormatName : 'scriptNm1',
-            unmaskFormat : 'yyyymmdd'
-        });
-    });
+    });  
 </script>
+
+    </div>
+    <div id="exTab2_2">
+
+▶ Example
+
+{% highlight html %}
+<form id="testForm4">
+    <div id="sbArea2"></div>
+</form>
+<input type="button" value="serialize()" onclick="alert($('#testForm4').serialize());">
+<script>
+    $(document).ready(function(){
+        $('#sbArea2').sbDatepicker({
+            name : 'sbScriptNm2',
+            uitype : 'popup',
+            unmaskFormatName : 'scriptNm1',
+            unmaskFormat : 'yyyymmdd'
+        });
+    });  
+</script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<form id="testForm4">
+    <div id="sbArea2"></div>
+</form>
+<input type="button" value="serialize()" onclick="alert($('#testForm4').serialize());">
+<script>
+    $(document).ready(function(){
+        $('#sbArea2').sbDatepicker({
+            name : 'sbScriptNm2',
+            uitype : 'popup',
+            unmaskFormatName : 'scriptNm1',
+            unmaskFormat : 'yyyymmdd'
+        });
+    });  
+</script>
+
+    </div>
+</div>

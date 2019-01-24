@@ -1,11 +1,11 @@
 ---
-title:  current-text
+title:  close-on-date-selection
 date:   2018-12-04
-categories: ["latest","picker"]
-order: 10
+categories: ["latest","datepicker"]
+order: 13
 ---
 
-current-text
+close-on-date-selection
 ===
 
 ---
@@ -21,7 +21,7 @@ current-text
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">show-button-bar 금일 버튼의 text를 지정합니다.</td>
+        <td colspan="3">날짜 선택시 바로 캘린더가 닫히도록 설정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -31,7 +31,7 @@ current-text
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>show-button-bar</td>
+        <td>해당없음</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,13 +48,13 @@ current-text
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>금일</td>
+        <td>true</td>
         <td class="tdTitle">자료형</td>
-        <td>string</td>
+        <td>boolean</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">금일 버튼에 지정할 문구</td>
+        <td colspan="3">true | false</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -69,7 +69,7 @@ current-text
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -85,45 +85,65 @@ current-text
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" show-button-bar="true" current-text="오늘"></sbux-picker>
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" close-on-date-selection="false"></sbux-datepicker>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" show-button-bar="true" current-text="오늘"></sbux-picker>
+▶ Preview
+
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" close-on-date-selection="false"></sbux-datepicker>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            showButtonBar : true,
-            currentText : '오늘'
+            uitype : 'popup',
+            closeOnDateSelection : false
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            showButtonBar : true,
-            currentText : '오늘'
+            uitype : 'popup',
+            closeOnDateSelection : false
         });
     });  
 </script>
+
+    </div>
+</div>

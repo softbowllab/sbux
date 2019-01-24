@@ -1,11 +1,11 @@
 ---
-title:  close-on-date-selection
+title:  position-top
 date:   2018-12-04
-categories: ["latest","picker"]
-order: 13
+categories: ["latest","datepicker"]
+order: 23
 ---
 
-close-on-date-selection
+position-top
 ===
 
 ---
@@ -21,7 +21,7 @@ close-on-date-selection
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">날짜 선택시 바로 캘린더가 닫히도록 설정합니다.</td>
+        <td colspan="3">캘린더가 나타나는 위치를 상하로 세부 조정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -48,13 +48,13 @@ close-on-date-selection
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>true</td>
+        <td>해당없음</td>
         <td class="tdTitle">자료형</td>
-        <td>boolean</td>
+        <td>number</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">true | false</td>
+        <td colspan="3">상하로 움직일 값 (단위 : px)</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -69,7 +69,7 @@ close-on-date-selection
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -85,43 +85,65 @@ close-on-date-selection
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" close-on-date-selection="false"></sbux-picker>
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" position-top="30"></sbux-datepicker>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" close-on-date-selection="false"></sbux-picker>
+▶ Preview
+
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" position-top="30"></sbux-datepicker>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            closeOnDateSelection : false
+            uitype : 'popup',
+            positionTop : 30
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            closeOnDateSelection : false
+            uitype : 'popup',
+            positionTop : 30
         });
     });  
 </script>
+
+    </div>
+</div>

@@ -1,11 +1,11 @@
 ---
-title:  placement
+title:  clear-text
 date:   2018-12-04
-categories: ["latest","picker"]
-order: 22
+categories: ["latest","datepicker"]
+order: 11
 ---
 
-placement
+clear-text
 ===
 
 ---
@@ -21,7 +21,7 @@ placement
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">캘린더가 나타나는 위치를 지정합니다.</td>
+        <td colspan="3">show-button-bar 지움 버튼의 text를 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
@@ -31,7 +31,7 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
+        <td>show-button-bar</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,13 +48,13 @@ placement
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>bottomLeft</td>
+        <td>지움</td>
         <td class="tdTitle">자료형</td>
         <td>string</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">top(topLeft) | topRight | bottomLeft | bottomRight</td>
+        <td colspan="3">지움 버튼에 지정할 문구</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -69,7 +69,7 @@ placement
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -85,43 +85,67 @@ placement
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" placement="top"></sbux-picker>
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" show-button-bar="true" clear-text="삭제"></sbux-datepicker>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-picker id="sbIdx" name="sbTagNm" uitype="date" mode="popup" placement="top"></sbux-picker>
+▶ Preview
+
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" show-button-bar="true" clear-text="삭제"></sbux-datepicker>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            placement : 'top'
+            uitype : 'popup',
+            showButtonBar : true,
+            clearText : '삭제'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbPicker({
+        $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
-            uitype : 'date',
-			mode : 'popup',
-            placement : 'top'
+            uitype : 'popup',
+            showButtonBar : true,
+            clearText : '삭제'
         });
-    }); 
+    });  
 </script>
+
+    </div>
+</div>

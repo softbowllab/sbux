@@ -1,11 +1,11 @@
 ---
-title:  max-date
+title:  uitype
 date:   2018-12-04
-categories: ["latest","picker"]
-order: 8
+categories: ["latest","datepicker"]
+order: 1
 ---
 
-max-date
+uitype
 ===
 
 ---
@@ -21,13 +21,13 @@ max-date
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">캘린더의 선택 가능한 최대 일자를 지정합니다.</td>
+        <td colspan="3">Component의 type을 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
         <td>2.6.0</td>
         <td class="tdTitle">필수여부</td>
-        <td>선택</td>
+        <td class="tdRed">필수</td>
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
@@ -54,10 +54,7 @@ max-date
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">
-            최대 일자로 지정할 날짜<br>
-            * date-format으로 지정된 형태로 설정해야 합니다.
-        </td>
+        <td colspan="3">inline | popup</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -72,7 +69,7 @@ max-date
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -88,59 +85,109 @@ max-date
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2" title-text-array="inline^popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" max-date="20181208"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" max-date="20181208"></sbux-picker>
+<sbux-datepicker id="sbIdx1" name="sbTagNm1" uitype="inline"></sbux-datepicker>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" max-date="20181208"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" max-date="20181208"></sbux-picker>
+▶ Preview
+
+<sbux-datepicker id="sbIdx1" name="sbTagNm1" uitype="inline"></sbux-datepicker>
+
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
+
+{% highlight html %}
+<sbux-datepicker id="sbIdx2" name="sbTagNm2" uitype="popup"></sbux-datepicker>
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<sbux-datepicker id="sbIdx2" name="sbTagNm2" uitype="popup"></sbux-datepicker>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2" title-text-array="inline^popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea1"></div>
-<div id="sbArea2"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
+        $('#sbArea1').sbDatepicker({
             name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
-            maxDate : '20181208'
-        });
-        $('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
-            maxDate : '20181208'
+            uitype : 'inline'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea1"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea1').sbDatepicker({
+            name : 'sbScriptNm1',
+            uitype : 'inline'
+        });
+    });  
+</script>
+
+    </div>
+    <div id="exTab2_2">
+
+▶ Example
+
+{% highlight html %}
 <div id="sbArea2"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
-            name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
-            maxDate : '20181208'
-        });
-        $('#sbArea2').sbPicker({
+        $('#sbArea2').sbDatepicker({
             name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
-            maxDate : '20181208'
+            uitype : 'popup'
         });
-    }); 
+    });  
 </script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<div id="sbArea2"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea2').sbDatepicker({
+            name : 'sbScriptNm2',
+            uitype : 'popup'
+        });
+    });  
+</script>
+
+    </div>
+</div>

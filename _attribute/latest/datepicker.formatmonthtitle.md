@@ -1,7 +1,7 @@
 ---
 title:  format-month-title
 date:   2018-12-04
-categories: ["latest","picker"]
+categories: ["latest","datepicker"]
 order: 16
 ---
 
@@ -69,7 +69,7 @@ format-month-title
         <td class="tdTitle tdBg" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>mode</td>
+        <td>uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
@@ -85,37 +85,60 @@ format-month-title
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2" title-text-array="inline^popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-picker>
+<sbux-datepicker id="sbIdx1" name="sbTagNm1" uitype="inline" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-datepicker>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-picker id="sbIdx1" name="sbTagNm1" uitype="date" mode="inline" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-picker>
-<sbux-picker id="sbIdx2" name="sbTagNm2" uitype="date" mode="popup" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-picker>
+▶ Preview
+
+<sbux-datepicker id="sbIdx1" name="sbTagNm1" uitype="inline" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-datepicker>
+
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
+
+{% highlight html %}
+<sbux-datepicker id="sbIdx2" name="sbTagNm2" uitype="popup" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-datepicker>
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<sbux-datepicker id="sbIdx2" name="sbTagNm2" uitype="popup" datepicker-mode="month" format-month-title="yyyy 무술년"></sbux-datepicker>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1^exTab2_2" title-text-array="inline^popup">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea1"></div>
-<div id="sbArea2"></div>
 <script>
     $(document).ready(function(){
         $('#sbArea1').sbPicker({
             name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
-            datepickerMode : 'month',
-            formatMonthTitle : 'yyyy 무술년'
-        });
-        $('#sbArea2').sbPicker({
-            name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
+            uitype : 'inline',
             datepickerMode : 'month',
             formatMonthTitle : 'yyyy 무술년'
         });
@@ -123,25 +146,56 @@ format-month-title
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea1"></div>
+<script>
+    $(document).ready(function(){
+       $('#sbArea1').sbPicker({
+            name : 'sbScriptNm1',
+            uitype : 'inline',
+            datepickerMode : 'month',
+            formatMonthTitle : 'yyyy 무술년'
+        });
+    });  
+</script>
+
+    </div>
+    <div id="exTab2_2">
+
+▶ Example
+
+{% highlight html %}
 <div id="sbArea2"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea1').sbPicker({
-            name : 'sbScriptNm1',
-            uitype : 'date',
-			mode : 'inline',
-            datepickerMode : 'month',
-            formatMonthTitle : 'yyyy 무술년'
-        });
         $('#sbArea2').sbPicker({
             name : 'sbScriptNm2',
-            uitype : 'date',
-			mode : 'popup',
+            uitype : 'popup',
             datepickerMode : 'month',
             formatMonthTitle : 'yyyy 무술년'
         });
-    });   
+    });  
 </script>
+{% endhighlight %}
+
+<br>
+
+▶ Preview 
+
+<div id="sbArea2"></div>
+<script>
+    $(document).ready(function(){
+        $('#sbArea2').sbPicker({
+            name : 'sbScriptNm2',
+            uitype : 'popup',
+            datepickerMode : 'month',
+            formatMonthTitle : 'yyyy 무술년'
+        });
+    });  
+</script>
+
+    </div>
+</div>
