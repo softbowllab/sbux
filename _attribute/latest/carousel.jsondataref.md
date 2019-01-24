@@ -1,11 +1,11 @@
 ---
-title:  uitype
+title:  jsondata-ref
 date:   2018-05-14
 categories: ["latest","carousel"]
-order: 0
+order: 12
 ---
 
-uitype
+jsondata-ref
 ===
 
 ---
@@ -21,13 +21,16 @@ uitype
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 type을 지정합니다.</td>
+        <td colspan="3">
+            Component 구성에 필요한 json data를 호출합니다.<br>
+            * 변동형으로 컴포넌트를 구성할때 사용합니다.
+        </td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
         <td>2.6.0</td>
         <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
+        <td class="tdRed">필수 (변동형일때만)</td>
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
@@ -54,7 +57,7 @@ uitype
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">image | tag</td>
+        <td colspan="3">호출할 json data 변수명</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -78,7 +81,7 @@ uitype
     <tr>
         <td>가능여부</td>
         <td class="tdBlue tdCenter">O</td>
-        <td class="tdBlue tdCenter">O</td>
+        <td class="tdCenter">X</td>
         <td></td>
         <td></td>
     </tr>
@@ -95,33 +98,10 @@ uitype
     ];
 </script>
 
-<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="{exTab1_1,exTab1_2}^exTab1_3" title-text-array="image{고정형,변동형}^tag(고정형)" is-scrollable="false">
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="image(변동형)" is-scrollable="false">
 </sbux-tabs>
 <div class="tab-content">
     <div id="exTab1_1">
-
-▶ Example
-
-{% highlight html %}
-<sbux-carousel id="sbIdx1_1" name="sbIdx1_1" uitype="image">
-    <content-item image-src="./../img/image1.jpg"></content-item>
-    <content-item image-src="./../img/image2.jpg"></content-item>
-    <content-item image-src="./../img/image3.jpg"></content-item>
-</sbux-carousel>
-{% endhighlight %}
-
-<br>
-
-▶ Preview 
-
-<sbux-carousel id="sbIdx1_1" name="sbIdx1_1" uitype="image">
-    <content-item image-src="./../img/image1.jpg"></content-item>
-    <content-item image-src="./../img/image2.jpg"></content-item>
-    <content-item image-src="./../img/image3.jpg"></content-item>
-</sbux-carousel>
-
-    </div>
-    <div id="exTab1_2">
 
 ▶ Example
 
@@ -133,7 +113,7 @@ uitype
         {imagesrc:'./../img/image3.jpg'}
     ];
 </script>
-<sbux-carousel id="sbIdx1_2" name="sbTagNm1_2" uitype="image" jsondata-ref="carouselJsonData"></sbux-carousel>
+<sbux-carousel id="sbIdx1_1" name="sbTagNm1_1" uitype="image" jsondata-ref="carouselJsonData"></sbux-carousel>
 {% endhighlight %}
 
 
@@ -141,30 +121,7 @@ uitype
 
 ▶ Preview 
 
-<sbux-carousel id="sbIdx1_2" name="sbTagNm1_2" uitype="image" jsondata-ref="carouselJsonData"></sbux-carousel>
-
-    </div>
-    <div id="exTab1_3">
-
-▶ Example
-
-{% highlight html %}
-<sbux-carousel id="sbIdx1_3" name="sbTagNm1_3" uitype="tag">
-    <content-item><sbux-input id="couinput" name="couinput" uitype="text"></sbux-input></content-item>
-    <content-item><sbux-datepicker id="coupicker" name="coupicker" uitype="inline"></sbux-datepicker></content-item>
-    <content-item><sbux-button id="coubutton" name="coubutton" uitype="normal" text="버튼"></sbux-button></content-item>
-</sbux-carousel>
-{% endhighlight %}
-
-<br>
-
-▶ Preview 
-
-<sbux-carousel id="sbIdx1_3" name="sbTagNm1_3" uitype="tag">
-    <content-item><sbux-input id="couinput" name="couinput" uitype="text"></sbux-input></content-item>
-    <content-item><sbux-datepicker id="coupicker" name="coupicker" uitype="inline"></sbux-datepicker></content-item>
-    <content-item><sbux-button id="coubutton" name="coubutton" uitype="normal" text="버튼"></sbux-button></content-item>
-</sbux-carousel>
+<sbux-carousel id="sbIdx1_1" name="sbTagNm1_1" uitype="image" jsondata-ref="carouselJsonData"></sbux-carousel>
 
     </div>
 </div>

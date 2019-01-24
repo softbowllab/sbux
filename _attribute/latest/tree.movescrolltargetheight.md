@@ -99,7 +99,7 @@ move-scroll-target-height
 
 <style>
     .tab-content{
-        height: 300px;
+        height: 200px;
     }
 </style>
 
@@ -121,7 +121,7 @@ move-scroll-target-height
     ]; 
 </script>
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_1', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-target-height="50px"></sbux-tree>
 {% endhighlight %}
 
 
@@ -130,7 +130,7 @@ move-scroll-target-height
 ▶ Preview 
 
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_1', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-target-height="50px"></sbux-tree>
 
     </div>
     <div id="exTab1_2">
@@ -148,7 +148,7 @@ move-scroll-target-height
     ]; 
 </script>
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_2', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-target-height="50px"></sbux-tree>
 {% endhighlight %}
 
 <br>
@@ -156,7 +156,7 @@ move-scroll-target-height
 ▶ Preview 
 
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_2', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-target-height="50px"></sbux-tree>
 
     </div>
 </div>

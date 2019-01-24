@@ -1,11 +1,11 @@
 ---
-title:  uitype
+title:  auto-stream-interval
 date:   2018-05-14
 categories: ["latest","carousel"]
-order: 0
+order: 5
 ---
 
-uitype
+auto-stream-interval
 ===
 
 ---
@@ -21,17 +21,17 @@ uitype
     </colgroup>
     <tr>
         <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 type을 지정합니다.</td>
+        <td colspan="3">슬라이드가 자동으로 넘어가는 시간을 지정합니다.</td>
     </tr>
     <tr>
         <td class="tdTitle">적용버전</td>
         <td>2.6.0</td>
         <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
+        <td>선택</td>
     </tr>
     <tr>
         <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
+        <td>circulation, auto-stream</td>
         <td class="tdTitle">연관자료</td>
         <td>해당없음</td>
     </tr>
@@ -48,13 +48,13 @@ uitype
     </tr>
     <tr>
         <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
+        <td>600</td>
         <td class="tdTitle">자료형</td>
-        <td>string</td>
+        <td>number</td>
     </tr>
     <tr>
         <td class="tdTitle">값형태</td>
-        <td colspan="3">image | tag</td>
+        <td colspan="3">슬라이드가 자동으로 넘어갈 시간 (밀리초)</td>
     </tr>
 </table>
 <table style="width:100%">
@@ -103,7 +103,7 @@ uitype
 ▶ Example
 
 {% highlight html %}
-<sbux-carousel id="sbIdx1_1" name="sbIdx1_1" uitype="image">
+<sbux-carousel id="sbIdx1_1" name="sbIdx1_1" uitype="image" circulation="true" auto-stream="stream" auto-stream-interval="100">
     <content-item image-src="./../img/image1.jpg"></content-item>
     <content-item image-src="./../img/image2.jpg"></content-item>
     <content-item image-src="./../img/image3.jpg"></content-item>
@@ -114,7 +114,7 @@ uitype
 
 ▶ Preview 
 
-<sbux-carousel id="sbIdx1_1" name="sbIdx1_1" uitype="image">
+<sbux-carousel id="sbIdx1_1" name="sbIdx1_1" uitype="image" circulation="true" auto-stream="stream" auto-stream-interval="100">
     <content-item image-src="./../img/image1.jpg"></content-item>
     <content-item image-src="./../img/image2.jpg"></content-item>
     <content-item image-src="./../img/image3.jpg"></content-item>
@@ -133,7 +133,7 @@ uitype
         {imagesrc:'./../img/image3.jpg'}
     ];
 </script>
-<sbux-carousel id="sbIdx1_2" name="sbTagNm1_2" uitype="image" jsondata-ref="carouselJsonData"></sbux-carousel>
+<sbux-carousel id="sbIdx1_2" name="sbTagNm1_2" uitype="image" jsondata-ref="carouselJsonData" circulation="true" auto-stream="stream" auto-stream-interval="100"></sbux-carousel>
 {% endhighlight %}
 
 
@@ -141,7 +141,7 @@ uitype
 
 ▶ Preview 
 
-<sbux-carousel id="sbIdx1_2" name="sbTagNm1_2" uitype="image" jsondata-ref="carouselJsonData"></sbux-carousel>
+<sbux-carousel id="sbIdx1_2" name="sbTagNm1_2" uitype="image" jsondata-ref="carouselJsonData" circulation="true" auto-stream="stream" auto-stream-interval="100"></sbux-carousel>
 
     </div>
     <div id="exTab1_3">
@@ -149,7 +149,7 @@ uitype
 ▶ Example
 
 {% highlight html %}
-<sbux-carousel id="sbIdx1_3" name="sbTagNm1_3" uitype="tag">
+<sbux-carousel id="sbIdx1_3" name="sbTagNm1_3" uitype="tag" circulation="true" auto-stream="stream" auto-stream-interval="100">
     <content-item><sbux-input id="couinput" name="couinput" uitype="text"></sbux-input></content-item>
     <content-item><sbux-datepicker id="coupicker" name="coupicker" uitype="inline"></sbux-datepicker></content-item>
     <content-item><sbux-button id="coubutton" name="coubutton" uitype="normal" text="버튼"></sbux-button></content-item>
@@ -160,7 +160,7 @@ uitype
 
 ▶ Preview 
 
-<sbux-carousel id="sbIdx1_3" name="sbTagNm1_3" uitype="tag">
+<sbux-carousel id="sbIdx1_3" name="sbTagNm1_3" uitype="tag" circulation="true" auto-stream="stream" auto-stream-interval="100">
     <content-item><sbux-input id="couinput" name="couinput" uitype="text"></sbux-input></content-item>
     <content-item><sbux-datepicker id="coupicker" name="coupicker" uitype="inline"></sbux-datepicker></content-item>
     <content-item><sbux-button id="coubutton" name="coubutton" uitype="normal" text="버튼"></sbux-button></content-item>
@@ -191,7 +191,10 @@ uitype
         $('#sbArea2_1').sbCarousel({
             name : 'sbScriptNm2_1',
             uitype : 'image',
-            jsondataRef : 'carouselJsonData'
+            jsondataRef : 'carouselJsonData',
+            circulation : true,
+            autoStream : 'stream',
+            autoStreamInterval : 100
         });
     }); 
 </script>
@@ -207,7 +210,10 @@ uitype
         $('#sbArea2_1').sbCarousel({
             name : 'sbScriptNm2_1',
             uitype : 'image',
-            jsondataRef : 'carouselJsonData'
+            jsondataRef : 'carouselJsonData',
+            circulation : true,
+            autoStream : 'stream',
+            autoStreamInterval : 100
         });
     }); 
 </script>
