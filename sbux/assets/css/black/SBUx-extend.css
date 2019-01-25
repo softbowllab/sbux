@@ -171,12 +171,27 @@ body {
 .sbux-ale-dark .sbux-ale-item .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
-  display: none;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  right: 5px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #e4e4e4;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-dark .sbux-ale-item .sbux-ale-close:hover {
+  background: #e8e8e8;
+}
+.sbux-ale-dark .sbux-ale-item .sbux-ale-close:hover:before {
+  color: #777;
+}
+.sbux-ale-dark .sbux-ale-item .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #555;
 }
 .sbux-ale-dark .sbux-ale-item img.sbux-ale-img {
   float: left;
@@ -221,12 +236,27 @@ body {
 .sbux-ale-dark.hover .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
+  right: 5px;
   display: block;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  width: 20px;
+  height: 20px;
+  background: #e4e4e4;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-dark.hover .sbux-ale-close:hover {
+  background: #e8e8e8;
+}
+.sbux-ale-dark.hover .sbux-ale-close:hover:before {
+  color: #777;
+}
+.sbux-ale-dark.hover .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #555;
 }
 .sbux-mol-backdrop {
   position: fixed;
@@ -284,12 +314,27 @@ body {
 .sbux-ale-light .sbux-ale-item .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
-  display: none;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  right: 5px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #e4e4e4;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-light .sbux-ale-item .sbux-ale-close:hover {
+  background: #e8e8e8;
+}
+.sbux-ale-light .sbux-ale-item .sbux-ale-close:hover:before {
+  color: #777;
+}
+.sbux-ale-light .sbux-ale-item .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #555;
 }
 .sbux-ale-light .sbux-ale-item img.sbux-ale-img {
   float: left;
@@ -331,12 +376,27 @@ body {
 .sbux-ale-light.hover .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
+  right: 5px;
   display: block;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  width: 20px;
+  height: 20px;
+  background: #e4e4e4;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-light.hover .sbux-ale-close:hover {
+  background: #e8e8e8;
+}
+.sbux-ale-light.hover .sbux-ale-close:hover:before {
+  color: #777;
+}
+.sbux-ale-light.hover .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #555;
 }
 .sbux-badge {
   position: relative;
@@ -1573,7 +1633,7 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
 .sbux-prg-layerpop-loading {
   width: 600px;
   height: 100px;
-  position: absolute;
+  position: fixed;
   padding: 15px 10px 0 10px;
   border: none;
   background: none;

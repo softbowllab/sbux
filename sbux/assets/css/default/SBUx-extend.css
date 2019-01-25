@@ -164,12 +164,27 @@ body {
 .sbux-ale-dark .sbux-ale-item .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
-  display: none;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  right: 5px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #307ea5;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-dark .sbux-ale-item .sbux-ale-close:hover {
+  background: #25607d;
+}
+.sbux-ale-dark .sbux-ale-item .sbux-ale-close:hover:before {
+  color: #fff;
+}
+.sbux-ale-dark .sbux-ale-item .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #fff;
 }
 .sbux-ale-dark .sbux-ale-item img.sbux-ale-img {
   float: left;
@@ -214,12 +229,27 @@ body {
 .sbux-ale-dark.hover .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
+  right: 5px;
   display: block;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  width: 20px;
+  height: 20px;
+  background: #307ea5;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-dark.hover .sbux-ale-close:hover {
+  background: #25607d;
+}
+.sbux-ale-dark.hover .sbux-ale-close:hover:before {
+  color: #fff;
+}
+.sbux-ale-dark.hover .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #fff;
 }
 .sbux-mol-backdrop {
   position: fixed;
@@ -277,12 +307,27 @@ body {
 .sbux-ale-light .sbux-ale-item .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
-  display: none;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  right: 5px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #307ea5;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-light .sbux-ale-item .sbux-ale-close:hover {
+  background: #25607d;
+}
+.sbux-ale-light .sbux-ale-item .sbux-ale-close:hover:before {
+  color: #fff;
+}
+.sbux-ale-light .sbux-ale-item .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #fff;
 }
 .sbux-ale-light .sbux-ale-item img.sbux-ale-img {
   float: left;
@@ -324,12 +369,27 @@ body {
 .sbux-ale-light.hover .sbux-ale-close {
   position: absolute;
   top: 5px;
-  left: 267px;
+  right: 5px;
   display: block;
-  width: 30px;
-  height: 30px;
-  background: url(images/sbuxalert.png) no-repeat left top;
+  width: 20px;
+  height: 20px;
+  background: #307ea5;
+  border-radius: 50%;
   cursor: pointer;
+}
+.sbux-ale-light.hover .sbux-ale-close:hover {
+  background: #25607d;
+}
+.sbux-ale-light.hover .sbux-ale-close:hover:before {
+  color: #fff;
+}
+.sbux-ale-light.hover .sbux-ale-close:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-family: 'Glyphicons Halflings';
+  content: "\e014";
+  color: #fff;
 }
 .sbux-badge {
   position: relative;
@@ -1020,15 +1080,15 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: #e4e4e4;
+  background: #307ea5;
   border-radius: 50%;
   cursor: pointer;
 }
 .sbux-prg-layerpop .sbux-prg-close:hover {
-  background: #e8e8e8;
+  background: #25607d;
 }
 .sbux-prg-layerpop .sbux-prg-close:hover:before {
-  color: #777;
+  color: #fff;
 }
 .sbux-prg-layerpop .sbux-prg-close:before {
   position: absolute;
@@ -1036,7 +1096,7 @@ body {
   left: 4px;
   font-family: 'Glyphicons Halflings';
   content: "\e014";
-  color: #555;
+  color: #fff;
 }
 .sbux-prg-deemed {
   position: fixed;
@@ -1091,9 +1151,6 @@ body {
 div.sbux-prgs-layerpop-wrap {
   height: 80px;
   width: 400px;
-}
-a.sbux-prg-close {
-  left: 92% !important;
 }
 .sbux-prg-loading {
   height: 180px !important;
@@ -1564,7 +1621,7 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
 .sbux-prg-layerpop-loading {
   width: 600px;
   height: 100px;
-  position: absolute;
+  position: fixed;
   padding: 15px 10px 0 10px;
   border: none;
   background: none;

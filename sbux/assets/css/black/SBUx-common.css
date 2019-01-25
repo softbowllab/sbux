@@ -165,13 +165,15 @@ nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap {
   bottom: 0;
   display: block;
   width: auto;
-  height: auto;
+  height: 100%;
+  /*height:auto;*/
   overflow: visible;
   margin-left: 145px;
   padding-bottom: 0;
 }
 nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul {
   display: table;
+  height: 100%;
   /* float:left;*/
   margin: 0;
   padding: 0;
@@ -331,7 +333,9 @@ nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul li.open 
 nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul li.open > .sbux-meu-sub-wrap {
   display: block;
 }
-/*meu fix,static*/
+nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap.sbux-meu-bd-nomargin {
+  margin-left: 0;
+}
 nav.sbux-meu-fixed-bottom,
 .sbux-meu-fixed-top {
   position: fixed;
@@ -355,11 +359,28 @@ nav.sbux-meu-static-top {
   position: static;
   background-color: #245498;
 }
+nav.sbux-meu-static-top .sbux-meu-fluid {
+  position: relative;
+}
 nav.sbux-meu-static-top ul {
   position: static;
 }
 nav.sbux-meu-static-top .sbux-meu-fluid .sbux-meu-bd-wrap {
-  position: static;
+  position: absolute;
+  /*position:relative*/
+}
+nav.sbux-meu-fixed-bottom ul.sbux-meu-sub-wrap {
+  top: auto !important;
+  min-height: auto !important;
+  bottom: 100%;
+}
+nav.sbux-meu-fixed-bottom ul.sbux-meu-sub-wrap .sbux-meu-sub-wrap {
+  top: auto !important;
+  bottom: 0;
+}
+nav.sbux-meu-fixed-bottom .sbux-meu-sub-layer {
+  bottom: 100% !important;
+  top: auto !important;
 }
 .sbux-meu-sub-layer {
   display: block;
@@ -413,11 +434,6 @@ nav.sbux-meu-static-top .sbux-meu-fluid .sbux-meu-bd-wrap {
   cursor: pointer;
   font-weight: bold;
   color: #2980b9;
-}
-.sbux-meu-sub-layer ul.sbux-meu-all-bd-ul li.sbux-meu-all-top-item-wrap > ul.sbux-meu-all-sub-wrap > li a .sbux-meu-all-bullet {
-  display: none;
-  padding: 0 0 0 3px;
-  background: url(images/dot.png) 0 10px no-repeat;
 }
 .sbux-meu-sub-layer ul.sbux-meu-all-bd-ul li.sbux-meu-all-top-item-wrap > ul.sbux-meu-all-sub-wrap > li ul {
   padding: 0;
@@ -484,10 +500,11 @@ nav.sbux-meu-static-top .sbux-meu-fluid .sbux-meu-bd-wrap {
   line-height: 2em;
   color: #666;
 }
-.sbux-meu-sub-layer ul.sbux-meu-suball-bd-ul > li ul.sbux-meu-suball-sub-wrap li a span.sbux-all-meu-bullet {
-  display: inline-block;
-  background: url(images/dot.png) 0 10px no-repeat;
-  padding: 0 0 0 3px;
+.sbux-meu-sub-layer ul.sbux-meu-suball-bd-ul > li ul.sbux-meu-suball-sub-wrap li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  color: #2980b9;
 }
 .sbux-meu-sub-layer ul.sbux-meu-suball-bd-ul > li ul.sbux-meu-suball-sub-wrap li ul {
   padding: 0;
