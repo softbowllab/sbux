@@ -85,7 +85,14 @@ text
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal(고정형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <sbux-checkbox id="sbIdx1" name="sbTagNm.a" uitype="normal" text="SBUx checkbox1"></sbux-checkbox>
@@ -93,61 +100,13 @@ text
 <sbux-checkbox id="sbIdx3" name="sbTagNm.c" uitype="normal" text="SBUx checkbox3"></sbux-checkbox>
 {% endhighlight %}
 
-### Preview
+<br>
+
+▶ Preview
 
 <sbux-checkbox id="sbIdx1" name="sbTagNm.a" uitype="normal" text="SBUx checkbox1"></sbux-checkbox>
 <sbux-checkbox id="sbIdx2" name="sbTagNm.b" uitype="normal" text="SBUx checkbox2"></sbux-checkbox>
 <sbux-checkbox id="sbIdx3" name="sbTagNm.c" uitype="normal" text="SBUx checkbox3"></sbux-checkbox>
 
----
-### Example (Script)
-
-{% highlight html %}
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNm.a',
-            uitype : 'normal',
-            text : 'SBUx Checkbox1'
-        });
-		$('#sbArea2').sbCheckbox({
-            name : 'sbScriptNm.b',
-            uitype : 'normal',
-            text : 'SBUx Checkbox2'
-        });
-		$('#sbArea3').sbCheckbox({
-            name : 'sbScriptNm.c',
-            uitype : 'normal',
-            text : 'SBUx Checkbox3'
-        });
-    }); 
-</script>
-{% endhighlight %}
-
-### Preview 
-
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNm.a',
-            uitype : 'normal',
-            text : 'SBUx Checkbox1'
-        });
-		$('#sbArea2').sbCheckbox({
-            name : 'sbScriptNm.b',
-            uitype : 'normal',
-            text : 'SBUx Checkbox2'
-        });
-		$('#sbArea3').sbCheckbox({
-            name : 'sbScriptNm.c',
-            uitype : 'normal',
-            text : 'SBUx Checkbox3'
-        });
-    });   
-</script>
+    </div>
+</div>

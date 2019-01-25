@@ -85,7 +85,14 @@ false-value
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal(고정형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <sbux-checkbox id="sbIdx1" name="sbTagNm.a" uitype="normal" false-value="FALSE"></sbux-checkbox>
@@ -94,64 +101,14 @@ false-value
 <input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbTagNm')))">
 {% endhighlight %}
 
-### Preview
+<br>
+
+▶ Preview
 
 <sbux-checkbox id="sbIdx1" name="sbTagNm.a" uitype="normal" false-value="FALSE"></sbux-checkbox>
 <sbux-checkbox id="sbIdx2" name="sbTagNm.b" uitype="normal" false-value="거짓"></sbux-checkbox>
 <sbux-checkbox id="sbIdx3" name="sbTagNm.c" uitype="normal" false-value="0"></sbux-checkbox>
 <input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbTagNm')))">
 
----
-### Example (Script)
-
-{% highlight html %}
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbScriptNm')))">
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNm.a',
-            uitype : 'normal',
-            falseValue : 'FALSE'
-        });
-        $('#sbArea2').sbCheckbox({
-            name : 'sbScriptNm.b',
-            uitype : 'normal',
-            falseValue : '거짓'
-        });
-        $('#sbArea3').sbCheckbox({
-            name : 'sbScriptNm.c',
-            uitype : 'normal',
-            falseValue : '0'
-        });
-    }); 
-</script>
-{% endhighlight %}
-
-### Preview 
-
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbScriptNm')))">
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNm.a',
-            uitype : 'normal',
-            falseValue : 'FALSE'
-        });
-        $('#sbArea2').sbCheckbox({
-            name : 'sbScriptNm.b',
-            uitype : 'normal',
-            falseValue : '거짓'
-        });
-        $('#sbArea3').sbCheckbox({
-            name : 'sbScriptNm.c',
-            uitype : 'normal',
-            falseValue : '0'
-        });
-    });  
-</script>
+    </div>
+</div>

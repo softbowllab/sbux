@@ -88,43 +88,63 @@ jsondata-ref
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal(변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <script>
     var SBUxData = [
-        { text : "빨강" },
-        { text : "초록" },
-        { text : "파랑" }
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
     ];
 </script>
-<sbux-radio id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData"></sbux-radio>
+<sbux-radio id="sbIdx1" name="sbTagNm1" uitype="normal" jsondata-ref="SBUxData"></sbux-radio>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<script>
-    var SBUxData = [
-        { text : "빨강" },
-        { text : "초록" },
-        { text : "파랑" }
-    ];
-</script>
-<sbux-radio id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData"></sbux-radio>
+▶ Preview
+
+<sbux-radio id="sbIdx1" name="sbTagNm1" uitype="normal" jsondata-ref="SBUxData"></sbux-radio>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal(변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
-<div id="sbArea"></div>
+<div id="sbArea1"></div>
 <script>
     var SBUxData = [
-        { text : "빨강" },
-        { text : "초록" },
-        { text : "파랑" }
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
     ];
     $(document).ready(function(){
-        $('#sbArea').sbRadio({
+        $('#sbArea1').sbRadio({
             name : 'sbScriptNm',
             uitype : 'normal',
             jsondataRef : 'SBUxData'
@@ -133,15 +153,20 @@ jsondata-ref
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<div id="sbArea"></div>
+▶ Preview 
+
+<div id="sbArea1"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbRadio({
+        $('#sbArea1').sbRadio({
             name : 'sbScriptNm',
             uitype : 'normal',
             jsondataRef : 'SBUxData'
         });
     });  
 </script>
+
+    </div>
+</div>

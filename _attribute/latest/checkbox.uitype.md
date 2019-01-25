@@ -85,69 +85,104 @@ uitype
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { text : "SBUx Checkbox1" },
+        { text : "SBUx Checkbox2" },
+        { text : "SBUx Checkbox3" }
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="{exTab1_1,exTab1_2}" title-text-array="normal{고정형,변동형}">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
-<sbux-checkbox id="sbIdx1" name="sbTagNm.a" uitype="normal" text="SBUx checkbox1"></sbux-checkbox>
-<sbux-checkbox id="sbIdx2" name="sbTagNm.b" uitype="normal" text="SBUx checkbox2"></sbux-checkbox>
-<sbux-checkbox id="sbIdx3" name="sbTagNm.c" uitype="normal" text="SBUx checkbox3"></sbux-checkbox>
+<sbux-checkbox id="sbIdx1" name="sbTagNm" uitype="normal" text="SBUx Checkbox1"></sbux-checkbox>
+<sbux-checkbox id="sbIdx2" name="sbTagNm" uitype="normal" text="SBUx Checkbox2"></sbux-checkbox>
+<sbux-checkbox id="sbIdx3" name="sbTagNm" uitype="normal" text="SBUx Checkbox3"></sbux-checkbox>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<sbux-checkbox id="sbIdx1" name="sbTagNm.a" uitype="normal" text="SBUx checkbox1"></sbux-checkbox>
-<sbux-checkbox id="sbIdx2" name="sbTagNm.b" uitype="normal" text="SBUx checkbox2"></sbux-checkbox>
-<sbux-checkbox id="sbIdx3" name="sbTagNm.c" uitype="normal" text="SBUx checkbox3"></sbux-checkbox>
+▶ Preview
+
+<sbux-checkbox id="sbIdx1" name="sbTagNm" uitype="normal" text="SBUx Checkbox1"></sbux-checkbox>
+<sbux-checkbox id="sbIdx2" name="sbTagNm" uitype="normal" text="SBUx Checkbox2"></sbux-checkbox>
+<sbux-checkbox id="sbIdx3" name="sbTagNm" uitype="normal" text="SBUx Checkbox3"></sbux-checkbox>
+
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
+
+{% highlight html %}
+<script>
+    var SBUxData = [
+        { text : "SBUx Checkbox1" },
+        { text : "SBUx Checkbox2" },
+        { text : "SBUx Checkbox3" }
+    ];
+</script>
+<sbux-checkbox id="sbIdx4" name="sbTagNm4" uitype="normal" jsondata-ref="SBUxData"></sbux-checkbox>
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<sbux-checkbox id="sbIdx4" name="sbTagNm4" uitype="normal" jsondata-ref="SBUxData"></sbux-checkbox>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal(변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
 <script>
+    var SBUxData = [
+        { text : "SBUx Checkbox1" },
+        { text : "SBUx Checkbox2" },
+        { text : "SBUx Checkbox3" }
+    ];
     $(document).ready(function(){
         $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNm.a',
+            name : 'sbScriptNm',
             uitype : 'normal',
-            text : 'SBUx Checkbox1'
-        });
-		$('#sbArea2').sbCheckbox({
-            name : 'sbScriptNm.b',
-            uitype : 'normal',
-            text : 'SBUx Checkbox2'
-        });
-		$('#sbArea3').sbCheckbox({
-            name : 'sbScriptNm.c',
-            uitype : 'normal',
-            text : 'SBUx Checkbox3'
+            jsondataRef : 'SBUxData'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
 <script>
     $(document).ready(function(){
         $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNm.a',
+            name : 'sbScriptNm',
             uitype : 'normal',
-            text : 'SBUx Checkbox1'
+            jsondataRef : 'SBUxData'
         });
-		$('#sbArea2').sbCheckbox({
-            name : 'sbScriptNm.b',
-            uitype : 'normal',
-            text : 'SBUx Checkbox2'
-        });
-		$('#sbArea3').sbCheckbox({
-            name : 'sbScriptNm.c',
-            uitype : 'normal',
-            text : 'SBUx Checkbox3'
-        });
-    });   
+    });  
 </script>
+
+    </div>
+</div>

@@ -85,7 +85,22 @@ submit-name
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { text : "SBUx Checkbox1" },
+        { text : "SBUx Checkbox2" },
+        { text : "SBUx Checkbox3" }
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="{exTab1_1,exTab1_2}" title-text-array="normal{고정형,변동형}">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <form id="testForm1">
@@ -96,7 +111,9 @@ submit-name
 <input type="button" value="serialize()" onclick="alert($('#testForm1').serialize());">
 {% endhighlight %}
 
-### Preview
+<br>
+
+▶ Preview
 
 <form id="testForm1">
     <sbux-checkbox id="sbIdx1" name="sbTagNmA" uitype="normal" submit-name="formKey"></sbux-checkbox>
@@ -105,61 +122,86 @@ submit-name
 </form>
 <input type="button" value="serialize()" onclick="alert($('#testForm1').serialize());">
 
----
-### Example (Script)
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
 
 {% highlight html %}
+<script>
+    var SBUxData = [
+        { text : "SBUx Checkbox1" },
+        { text : "SBUx Checkbox2" },
+        { text : "SBUx Checkbox3" }
+    ];
+</script>
 <form id="testForm2">
-    <div id="sbArea1"></div>
-    <div id="sbArea2"></div>
-    <div id="sbArea3"></div>
+    <sbux-checkbox id="sbIdx4" name="sbTagNm4" uitype="normal" jsondata-ref="SBUxData" submit-name="formKey"></sbux-checkbox>
 </form>
 <input type="button" value="serialize()" onclick="alert($('#testForm2').serialize());">
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<form id="testForm2">
+    <sbux-checkbox id="sbIdx4" name="sbTagNm4" uitype="normal" jsondata-ref="SBUxData" submit-name="formKey"></sbux-checkbox>
+</form>
+<input type="button" value="serialize()" onclick="alert($('#testForm2').serialize());">
+
+    </div>
+</div>
+
+---
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal(변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
+
+{% highlight html %}
+<form id="testForm3">
+    <div id="sbArea1"></div>
+</form>
+<input type="button" value="serialize()" onclick="alert($('#testForm3').serialize());">
 <script>
+    var SBUxData = [
+        { text : "SBUx Checkbox1" },
+        { text : "SBUx Checkbox2" },
+        { text : "SBUx Checkbox3" }
+    ];
     $(document).ready(function(){
         $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNmA',
+            name : 'sbScriptNm',
             uitype : 'normal',
-            submitName : 'formKey'
-        });
-        $('#sbArea2').sbCheckbox({
-            name : 'sbScriptNmB',
-            uitype : 'normal',
-            submitName : 'formKey'
-        });
-        $('#sbArea3').sbCheckbox({
-            name : 'sbScriptNmC',
-            uitype : 'normal',
+            jsondataRef : 'SBUxData',
             submitName : 'formKey'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<form id="testForm2">
+▶ Preview 
+
+<form id="testForm3">
     <div id="sbArea1"></div>
-    <div id="sbArea2"></div>
-    <div id="sbArea3"></div>
 </form>
-<input type="button" value="serialize()" onclick="alert($('#testForm2').serialize());">
+<input type="button" value="serialize()" onclick="alert($('#testForm3').serialize());">
 <script>
     $(document).ready(function(){
         $('#sbArea1').sbCheckbox({
-            name : 'sbScriptNmA',
+            name : 'sbScriptNm',
             uitype : 'normal',
+            jsondataRef : 'SBUxData',
             submitName : 'formKey'
         });
-        $('#sbArea2').sbCheckbox({
-            name : 'sbScriptNmB',
-            uitype : 'normal',
-            submitName : 'formKey'
-        });
-        $('#sbArea3').sbCheckbox({
-            name : 'sbScriptNmC',
-            uitype : 'normal',
-            submitName : 'formKey'
-        });
-    });  
+    }); 
 </script>
+    </div>
+</div>

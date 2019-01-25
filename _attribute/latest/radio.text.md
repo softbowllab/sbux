@@ -85,7 +85,22 @@ text
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal(고정형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <sbux-radio id="sbIdx1" name="sbTagNm" uitype="normal" text="SBUx Radio1"></sbux-radio>
@@ -93,61 +108,13 @@ text
 <sbux-radio id="sbIdx3" name="sbTagNm" uitype="normal" text="SBUx Radio3"></sbux-radio>
 {% endhighlight %}
 
-### Preview
+<br>
+
+▶ Preview
 
 <sbux-radio id="sbIdx1" name="sbTagNm" uitype="normal" text="SBUx Radio1"></sbux-radio>
 <sbux-radio id="sbIdx2" name="sbTagNm" uitype="normal" text="SBUx Radio2"></sbux-radio>
 <sbux-radio id="sbIdx3" name="sbTagNm" uitype="normal" text="SBUx Radio3"></sbux-radio>
 
----
-### Example (Script)
-
-{% highlight html %}
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio1'
-        });
-		$('#sbArea2').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio2'
-        });
-		$('#sbArea3').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio3'
-        });
-    }); 
-</script>
-{% endhighlight %}
-
-### Preview 
-
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio1'
-        });
-		$('#sbArea2').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio2'
-        });
-		$('#sbArea3').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio3'
-        });
-    });   
-</script>
+    </div>
+</div>

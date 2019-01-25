@@ -85,7 +85,22 @@ value
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal(고정형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <sbux-radio id="sbIdx1" name="sbTagNm" uitype="normal" value="radio1"></sbux-radio>
@@ -94,64 +109,14 @@ value
 <input type="button" value="get()" onclick="alert(SBUxMethod.get('sbTagNm'))">
 {% endhighlight %}
 
-### Preview
+<br>
+
+▶ Preview
 
 <sbux-radio id="sbIdx1" name="sbTagNm" uitype="normal" value="radio1"></sbux-radio>
 <sbux-radio id="sbIdx2" name="sbTagNm" uitype="normal" value="radio2"></sbux-radio>
 <sbux-radio id="sbIdx3" name="sbTagNm" uitype="normal" value="radio3"></sbux-radio>
 <input type="button" value="get()" onclick="alert(SBUxMethod.get('sbTagNm'))">
 
----
-### Example (Script)
-
-{% highlight html %}
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<input type="button" value="get()" onclick="alert(SBUxMethod.get('sbScriptNm'))">
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            value : 'radio1'
-        });
-        $('#sbArea2').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            value : 'radio2'
-        });
-        $('#sbArea3').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            value : 'radio3'
-        });
-    }); 
-</script>
-{% endhighlight %}
-
-### Preview 
-
-<div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
-<input type="button" value="get()" onclick="alert(SBUxMethod.get('sbScriptNm'))">
-<script>
-    $(document).ready(function(){
-        $('#sbArea1').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            value : 'radio1'
-        });
-        $('#sbArea2').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            value : 'radio2'
-        });
-        $('#sbArea3').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            value : 'radio3'
-        });
-    });  
-</script>
+    </div>
+</div>

@@ -88,43 +88,63 @@ jsondata-text
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { textKey : "SBUx Checkbox1" },
+        { textKey : "SBUx Checkbox2" },
+        { textKey : "SBUx Checkbox3" }
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal (변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <script>
     var SBUxData = [
-        { textKey : "빨강" },
-        { textKey : "초록" },
-        { textKey : "파랑" }
+        { textKey : "SBUx Checkbox1" },
+        { textKey : "SBUx Checkbox2" },
+        { textKey : "SBUx Checkbox3" }
     ];
 </script>
-<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData" jsondata-text="textKey"></sbux-checkbox>
+<sbux-checkbox id="sbIdx1" name="sbTagNm1" uitype="normal" jsondata-ref="SBUxData" jsondata-text="textKey"></sbux-checkbox>
 {% endhighlight %}
 
-### Preview
+<br>
 
-<script>
-    var SBUxData = [
-        { textKey : "빨강" },
-        { textKey : "초록" },
-        { textKey : "파랑" }
-    ];
-</script>
-<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData" jsondata-text="textKey"></sbux-checkbox>
+▶ Preview
+
+<sbux-checkbox id="sbIdx1" name="sbTagNm1" uitype="normal" jsondata-ref="SBUxData" jsondata-text="textKey"></sbux-checkbox>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal(변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
-<div id="sbArea"></div>
+<div id="sbArea1"></div>
 <script>
     var SBUxData = [
-        { textKey : "빨강" },
-        { textKey : "초록" },
-        { textKey : "파랑" }
+        { textKey : "SBUx Checkbox1" },
+        { textKey : "SBUx Checkbox2" },
+        { textKey : "SBUx Checkbox3" }
     ];
     $(document).ready(function(){
-        $('#sbArea').sbCheckbox({
+        $('#sbArea1').sbCheckbox({
             name : 'sbScriptNm',
             uitype : 'normal',
             jsondataRef : 'SBUxData',
@@ -134,12 +154,14 @@ jsondata-text
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<div id="sbArea"></div>
+▶ Preview 
+
+<div id="sbArea1"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbCheckbox({
+        $('#sbArea1').sbCheckbox({
             name : 'sbScriptNm',
             uitype : 'normal',
             jsondataRef : 'SBUxData',
@@ -147,3 +169,6 @@ jsondata-text
         });
     });  
 </script>
+
+    </div>
+</div>

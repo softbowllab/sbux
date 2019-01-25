@@ -88,7 +88,25 @@ callback-before-refresh
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
+    ];
+    function beforeRefreshfunc(){
+        alert('refresh이전 호출');
+    }
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="{exTab1_1,exTab1_2}" title-text-array="normal{고정형,변동형}">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <script>
@@ -102,74 +120,94 @@ callback-before-refresh
 <input type="button" value="refresh()" onclick="SBUxMethod.refresh('sbTagNm')">
 {% endhighlight %}
 
-### Preview
+<br>
 
-<script>
-    function beforeRefreshfunc(){
-        alert('refresh이전 호출');
-    }
-</script>
+▶ Preview
+
 <sbux-radio id="sbIdx1" name="sbTagNm" uitype="normal" text="SBUx Radio1" callback-before-refresh="beforeRefreshfunc"></sbux-radio>
 <sbux-radio id="sbIdx2" name="sbTagNm" uitype="normal" text="SBUx Radio2"></sbux-radio>
 <sbux-radio id="sbIdx3" name="sbTagNm" uitype="normal" text="SBUx Radio3"></sbux-radio>
 <input type="button" value="refresh()" onclick="SBUxMethod.refresh('sbTagNm')">
 
+    </div>
+    <div id="exTab1_2">
+
+▶ Example
+
+{% highlight html %}
+<script>
+    var SBUxData = [
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
+    ];
+    function beforeRefreshfunc(){
+        alert('refresh이전 호출');
+    }
+</script>
+<sbux-radio id="sbIdx4" name="sbTagNm4" uitype="normal" jsondata-ref="SBUxData" callback-before-refresh="beforeRefreshfunc"></sbux-radio>
+<input type="button" value="refresh()" onclick="SBUxMethod.refresh('sbTagNm4')">
+{% endhighlight %}
+
+<br>
+
+▶ Preview
+
+<sbux-radio id="sbIdx4" name="sbTagNm4" uitype="normal" jsondata-ref="SBUxData" callback-before-refresh="beforeRefreshfunc"></sbux-radio>
+<input type="button" value="refresh()" onclick="SBUxMethod.refresh('sbTagNm4')">
+
+    </div>
+</div>
+
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal(변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
 <input type="button" value="refresh()" onclick="SBUxMethod.refresh('sbScriptNm')">
 <script>
+    var SBUxData = [
+        { text : "SBUx Radio1" },
+        { text : "SBUx Radio2" },
+        { text : "SBUx Radio3" }
+    ];
     function beforeRefreshfunc(){
-        alert('refresh이전 호출');
+        alert('refresh이후 호출');
     }
     $(document).ready(function(){
         $('#sbArea1').sbRadio({
             name : 'sbScriptNm',
             uitype : 'normal',
-            text : 'SBUx Radio1',
+            jsondataRef : 'SBUxData',
             callbackBeforeRefresh : 'beforeRefreshfunc'
-        });
-		$('#sbArea2').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio2'
-        });
-		$('#sbArea3').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio3'
         });
     }); 
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea1"></div>
-<div id="sbArea2"></div>
-<div id="sbArea3"></div>
 <input type="button" value="refresh()" onclick="SBUxMethod.refresh('sbScriptNm')">
 <script>
     $(document).ready(function(){
         $('#sbArea1').sbRadio({
             name : 'sbScriptNm',
             uitype : 'normal',
-            text : 'SBUx Radio1',
+            jsondataRef : 'SBUxData',
             callbackBeforeRefresh : 'beforeRefreshfunc'
         });
-		$('#sbArea2').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio2'
-        });
-		$('#sbArea3').sbRadio({
-            name : 'sbScriptNm',
-            uitype : 'normal',
-            text : 'SBUx Radio3'
-        });
-    });   
+    });  
 </script>
+
+    </div>
+</div>

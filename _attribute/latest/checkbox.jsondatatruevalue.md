@@ -88,46 +88,66 @@ jsondata-true-value
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<script>
+    var SBUxData = [
+        { text : "SBUx Checkbox1", tValueKey : "True" },
+        { text : "SBUx Checkbox2", tValueKey : "참" },
+        { text : "SBUx Checkbox3", tValueKey : "1" }
+    ];
+</script>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="normal (변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <script>
     var SBUxData = [
-        { text : "빨강", tValueKey : "True" },
-        { text : "초록", tValueKey : "참" },
-        { text : "파랑", tValueKey : "1" }
+        { text : "SBUx Checkbox1", tValueKey : "True" },
+        { text : "SBUx Checkbox2", tValueKey : "참" },
+        { text : "SBUx Checkbox3", tValueKey : "1" }
     ];
 </script>
-<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData" jsondata-true-value="tValueKey"></sbux-checkbox>
-<input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbTagNm')))">
+<sbux-checkbox id="sbIdx1" name="sbTagNm1" uitype="normal" jsondata-ref="SBUxData" jsondata-true-value="tValueKey"></sbux-checkbox>
+<input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbTagNm1')))">
 {% endhighlight %}
 
-### Preview
+<br>
 
-<script>
-    var SBUxData = [
-        { text : "빨강", tValueKey : "True" },
-        { text : "초록", tValueKey : "참" },
-        { text : "파랑", tValueKey : "1" }
-    ];
-</script>
-<sbux-checkbox id="sbIdx" name="sbTagNm" uitype="normal" jsondata-ref="SBUxData" jsondata-true-value="tValueKey"></sbux-checkbox>
-<input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbTagNm')))">
+▶ Preview
+
+<sbux-checkbox id="sbIdx1" name="sbTagNm1" uitype="normal" jsondata-ref="SBUxData" jsondata-true-value="tValueKey"></sbux-checkbox>
+<input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbTagNm1')))">
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="normal(변동형)">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
-<div id="sbArea"></div>
+<div id="sbArea1"></div>
 <input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbScriptNm')))">
 <script>
     var SBUxData = [
-        { text : "빨강", tValueKey : "True" },
-        { text : "초록", tValueKey : "참" },
-        { text : "파랑", tValueKey : "1" }
+        { text : "SBUx Checkbox1", tValueKey : "True" },
+        { text : "SBUx Checkbox2", tValueKey : "참" },
+        { text : "SBUx Checkbox3", tValueKey : "1" }
     ];
     $(document).ready(function(){
-        $('#sbArea').sbCheckbox({
+        $('#sbArea1').sbCheckbox({
             name : 'sbScriptNm',
             uitype : 'normal',
             jsondataRef : 'SBUxData',
@@ -137,13 +157,15 @@ jsondata-true-value
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
 
-<div id="sbArea"></div>
+▶ Preview 
+
+<div id="sbArea1"></div>
 <input type="button" value="get()" onclick="alert(JSON.stringify(SBUxMethod.get('sbScriptNm')))">
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbCheckbox({
+        $('#sbArea1').sbCheckbox({
             name : 'sbScriptNm',
             uitype : 'normal',
             jsondataRef : 'SBUxData',
@@ -151,3 +173,6 @@ jsondata-true-value
         });
     });  
 </script>
+
+    </div>
+</div>
