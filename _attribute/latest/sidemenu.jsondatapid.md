@@ -160,7 +160,7 @@ jsondata-pid
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataPid : 'pidKey'
+            jsondataPid : 'pidKey'
         });
     }); 
 </script>
@@ -177,7 +177,7 @@ jsondata-pid
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataPid : 'pidKey'
+            jsondataPid : 'pidKey'
         });
     }); 
 </script>

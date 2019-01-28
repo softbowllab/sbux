@@ -160,7 +160,7 @@ jsondata-style
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataStyle : 'styleKey'
+            jsondataStyle : 'styleKey'
         });
     }); 
 </script>
@@ -177,7 +177,7 @@ jsondata-style
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataStyle : 'styleKey'
+            jsondataStyle : 'styleKey'
         });
     }); 
 </script>

@@ -163,7 +163,7 @@ jsondata-target-name
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataTargetName : 'targetnameKey'
+            jsondataTargetName : 'targetnameKey'
         });
     }); 
 </script>
@@ -181,7 +181,7 @@ jsondata-target-name
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataTargetName : 'targetnameKey'
+            jsondataTargetName : 'targetnameKey'
         });
     }); 
 </script>

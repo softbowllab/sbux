@@ -160,7 +160,7 @@ jsondata-id
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataId : 'idKey'
+            jsondataId : 'idKey'
         });
     }); 
 </script>
@@ -177,7 +177,7 @@ jsondata-id
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataId : 'idKey'
+            jsondataId : 'idKey'
         });
     }); 
 </script>

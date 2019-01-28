@@ -59,32 +59,50 @@ wrap-class
 </table>
 
 ---
-## Example (Tag)
+### Example & Preview (Tag)
+
+<style>
+	.customClass{font-weight:bold;}
+</style>
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="-">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <style>
 	.customClass{font-weight:bold;}
 </style>
-
 <sbux-input id="sbIdx" name="sbTagNm" uitype="text" wrap-class="customClass"></sbux-input>
 {% endhighlight %}
 
-## Preview
-<style>
-	.customClass{font-weight:bold;}
-</style>
+<br>
+
+▶ Preview
+
 <sbux-input id="sbIdx" name="sbTagNm" uitype="text" wrap-class="customClass"></sbux-input>
+
+    </div>
+</div>
 
 ---
-## Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="-">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <style>
 	.customClass{font-weight:bold;}
 </style>
-
 <div id="sbArea"></div>
-
 <script>
     $(document).ready(function(){
         $('#sbArea').sbInput({
@@ -96,13 +114,11 @@ wrap-class
 </script>
 {% endhighlight %}
 
-## Preview 
-<style>
-	.customClass{font-weight:bold;}
-</style>
+<br>
+
+▶ Preview 
 
 <div id="sbArea"></div>
-
 <script>
     $(document).ready(function(){
         $('#sbArea').sbInput({
@@ -112,3 +128,6 @@ wrap-class
         });
     }); 
 </script>
+
+    </div>
+</div>

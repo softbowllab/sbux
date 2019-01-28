@@ -59,18 +59,37 @@ style
 </table>
 
 ---
-### Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="-">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <sbux-input id="sbIdx" name="sbTagNm" uitype="text" style="width:100px;"></sbux-input>
 {% endhighlight %}
 
-### Preview
+<br>
+
+▶ Preview
 
 <sbux-input id="sbIdx" name="sbTagNm" uitype="text" style="width:100px;"></sbux-input>
+
+    </div>
+</div>
 
 ---
-### Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="-">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea"></div>
@@ -85,7 +104,9 @@ style
 </script>
 {% endhighlight %}
 
-### Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea"></div>
 <script>
@@ -97,3 +118,6 @@ style
         });
     }); 
 </script>
+
+    </div>
+</div>

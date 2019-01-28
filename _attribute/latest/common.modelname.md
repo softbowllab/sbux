@@ -59,20 +59,39 @@ model-name
 </table>
 
 ---
-## Example (Tag)
+### Example & Preview (Tag)
+
+<sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1" title-text-array="-">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1_1">
+
+▶ Example
 
 {% highlight html %}
 <sbux-input id="sbIdx1" name="sbTagNm" uitype="text" model-name="sbModelNm1"></sbux-input>
 <sbux-input id="sbIdx2" name="sbTagNm" uitype="text" model-name="sbModelNm2"></sbux-input>
 {% endhighlight %}
 
-## Preview
+<br>
+
+▶ Preview
 
 <sbux-input id="sbIdx1" name="sbTagNm" uitype="text" model-name="sbModelNm1"></sbux-input>
 <sbux-input id="sbIdx2" name="sbTagNm" uitype="text" model-name="sbModelNm2"></sbux-input>
+
+    </div>
+</div>
 
 ---
-## Example (Script)
+### Example & Preview (Script)
+
+<sbux-tabs id="exTab2" name="exTab2" uitype="normal" title-target-id-array="exTab2_1" title-text-array="-">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab2_1">
+
+▶ Example
 
 {% highlight html %}
 <div id="sbArea1"></div>
@@ -93,7 +112,9 @@ model-name
 </script>
 {% endhighlight %}
 
-## Preview 
+<br>
+
+▶ Preview 
 
 <div id="sbArea1"></div>
 <div id="sbArea2"></div>
@@ -111,3 +132,6 @@ model-name
         });
     }); 
 </script>
+
+    </div>
+</div>

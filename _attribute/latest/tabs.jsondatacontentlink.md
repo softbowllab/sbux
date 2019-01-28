@@ -99,11 +99,11 @@ jsondata-content-link
 {% highlight html %}
 <script>
     var tabJsonData1 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input"},
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
         { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-close-icon="contentlinkKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-content-link="contentlinkKey"  is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_1_1">
         tab1 content
@@ -121,11 +121,11 @@ jsondata-content-link
 
 <script>
     var tabJsonData1 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "contentlinkKey" : "./../htmlcontent/aframe.html"},
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
         { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-close-icon="contentlinkKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" jsondata-content-link="contentlinkKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_1_1">
         tab1 content
@@ -143,11 +143,11 @@ jsondata-content-link
 {% highlight html %}
 <script>
     var tabJsonData2 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-content-link="contentlinkKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_2_1">
         tab1 content
@@ -165,11 +165,11 @@ jsondata-content-link
 
 <script>
     var tabJsonData2 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_2_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_2_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_2" name="sbTagNm1_2" uitype="inbox" jsondata-ref="tabJsonData2" jsondata-content-link="contentlinkKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_2_1">
         tab1 content
@@ -187,11 +187,11 @@ jsondata-content-link
 {% highlight html %}
 <script>
     var tabJsonData3 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-content-link="contentlinkKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_3_1">
         tab1 content
@@ -209,11 +209,11 @@ jsondata-content-link
 
 <script>
     var tabJsonData3 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_3_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_3_2" }
     ];  
 </script>
-<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-close-icon="closeiconKey" is-scrollable="false"></sbux-tabs>
+<sbux-tabs id="sbIdx1_3" name="sbTagNm1_3" uitype="webacc" jsondata-ref="tabJsonData3" jsondata-content-link="contentlinkKey" is-scrollable="false"></sbux-tabs>
 <div class="tab-content">
     <div id="tab1_3_1">
         tab1 content
@@ -248,16 +248,16 @@ jsondata-content-link
 </div>
 <script>
     var tabJsonData4 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_1_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_1_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_1_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_1_2" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_1').sbTabs({
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'tabJsonData4',
-            jsondataCloseIcon : 'closeiconKey',
-            isScrollable : false
+            isScrollable : false,
+            jsondataContentLink : 'contentlinkKey'
         });
     }); 
 </script>
@@ -278,16 +278,16 @@ jsondata-content-link
 </div>
 <script>
     var tabJsonData4 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_1_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_1_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_1_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_1_2" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_1').sbTabs({
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'tabJsonData4',
-            jsondataCloseIcon : 'closeiconKey',
-            isScrollable : false
+            isScrollable : false,
+            jsondataContentLink : 'contentlinkKey'
         });
     }); 
 </script>
@@ -309,16 +309,16 @@ jsondata-content-link
 </div>
 <script>
     var tabJsonData5 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_2').sbTabs({
             name : 'sbScriptNm2_2',
             uitype : 'inbox',
             jsondataRef : 'tabJsonData5',
-            jsondataCloseIcon : 'closeiconKey',
-            isScrollable : false
+            isScrollable : false,
+            jsondataContentLink : 'contentlinkKey'
         });
     });  
 </script>
@@ -339,16 +339,16 @@ jsondata-content-link
 </div>
 <script>
     var tabJsonData5 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_2_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_2_2" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_2').sbTabs({
             name : 'sbScriptNm2_2',
             uitype : 'inbox',
             jsondataRef : 'tabJsonData5',
-            jsondataCloseIcon : 'closeiconKey',
-            isScrollable : false
+            isScrollable : false,
+            jsondataContentLink : 'contentlinkKey'
         });
     });  
 </script>
@@ -370,16 +370,16 @@ jsondata-content-link
 </div>
 <script>
     var tabJsonData6 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_3').sbTabs({
             name : 'sbScriptNm2_3',
             uitype : 'webacc',
             jsondataRef : 'tabJsonData6',
-            jsondataCloseIcon : 'closeiconKey',
-            isScrollable : false
+            isScrollable : false,
+            jsondataContentLink : 'contentlinkKey'
         });
     });  
 </script>
@@ -400,16 +400,16 @@ jsondata-content-link
 </div>
 <script>
     var tabJsonData6 = [                
-        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "closeiconKey" : "true" },
-        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2", "closeiconKey" : "true" }
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab2_3_1", "contentlinkKey" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html"},
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab2_3_2" }
     ]; 
     $(document).ready(function(){
         $('#sbArea2_3').sbTabs({
             name : 'sbScriptNm2_3',
             uitype : 'webacc',
             jsondataRef : 'tabJsonData6',
-            jsondataCloseIcon : 'closeiconKey',
-            isScrollable : false
+            isScrollable : false,
+            jsondataContentLink : 'contentlinkKey'
         });
     });  
 </script>

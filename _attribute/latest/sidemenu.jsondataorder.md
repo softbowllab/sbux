@@ -160,7 +160,7 @@ jsondata-order
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataOrder : 'orderKey'
+            jsondataOrder : 'orderKey'
         });
     }); 
 </script>
@@ -177,7 +177,7 @@ jsondata-order
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataOrder : 'orderKey'
+            jsondataOrder : 'orderKey'
         });
     }); 
 </script>

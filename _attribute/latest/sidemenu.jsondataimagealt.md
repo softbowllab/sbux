@@ -160,7 +160,7 @@ jsondata-image-alt
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataImageAlt : 'imagealtKey'
+            jsondataImageAlt : 'imagealtKey'
         });
     }); 
 </script>
@@ -177,7 +177,7 @@ jsondata-image-alt
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataImageAlt : 'imagealtKey'
+            jsondataImageAlt : 'imagealtKey'
         });
     }); 
 </script>

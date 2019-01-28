@@ -98,14 +98,15 @@ move-scroll-target-id
 </script>
 
 <style>
-    .tab-content{
-        height: 300px;
+     .scrollareaCss{
+        height: 50px;
+        overflow: scroll;
     }
 </style>
 
 <sbux-tabs id="exTab1" name="exTab1" uitype="normal" title-target-id-array="exTab1_1^exTab1_2" title-text-array="normal(변동형)^checkbox(변동형)" is-scrollable="false">
 </sbux-tabs>
-<div id="scrollArea" class="tab-content">
+<div class="tab-content">
     <div id="exTab1_1">
 
 ▶ Example
@@ -121,7 +122,9 @@ move-scroll-target-id
     ]; 
 </script>
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_1', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<div id="scrollArea1" class="scrollareaCss">
+    <sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="22px"></sbux-tree>
+</div>
 {% endhighlight %}
 
 
@@ -130,7 +133,9 @@ move-scroll-target-id
 ▶ Preview 
 
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_1', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<div id="scrollArea1" class="scrollareaCss">
+    <sbux-tree id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea1" move-scroll-node-height="22px"></sbux-tree>
+</div>
 
     </div>
     <div id="exTab1_2">
@@ -148,7 +153,9 @@ move-scroll-target-id
     ]; 
 </script>
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_2', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<div id="scrollArea2" class="scrollareaCss">
+    <sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea2" move-scroll-node-height="22px"></sbux-tree>
+</div>
 {% endhighlight %}
 
 <br>
@@ -156,7 +163,9 @@ move-scroll-target-id
 ▶ Preview 
 
 <input type="button" value="set" onclick="SBUxMethod.set('sbTagNm1_2', '1_2_1', 'expandParents')">
-<sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea" move-scroll-node-height="50px"></sbux-tree>
+<div id="scrollArea2" class="scrollareaCss">
+    <sbux-tree id="sbIdx1_2" name="sbTagNm1_2" uitype="checkbox" jsondata-ref="treeJsonData" move-scroll-target-id="scrollArea2" move-scroll-node-height="22px"></sbux-tree>
+</div>
 
     </div>
 </div>
@@ -173,7 +182,9 @@ move-scroll-target-id
 
 {% highlight html %}
 <input type="button" value="set" onclick="SBUxMethod.set('sbScriptNm2_1', '1_2_1', 'expandParents')">
-<div id="sbArea2_1"></div>
+<div id="scrollArea3" class="scrollareaCss">
+    <div id="sbArea2_1"></div>
+</div>
 <script>
     var treeJsonData=[
         { "id":"1",     "pid":"-1",  "order" : "1", "text" : "1" },
@@ -187,8 +198,8 @@ move-scroll-target-id
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'treeJsonData',
-            moveScrollTargetId : 'scrollArea2',
-            moveScrollTargetHeight : '100'
+            moveScrollTargetId : 'scrollArea3',
+            moveScrollNodeHeight : '22'
         });
     }); 
 </script>
@@ -199,15 +210,17 @@ move-scroll-target-id
 ▶ Preview 
 
 <input type="button" value="set" onclick="SBUxMethod.set('sbScriptNm2_1', '1_2_1', 'expandParents')">
-<div id="sbArea2_1"></div>
+<div id="scrollArea3" class="scrollareaCss">
+    <div id="sbArea2_1"></div>
+</div>
 <script>
     $(document).ready(function(){
         $('#sbArea2_1').sbTree({
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'treeJsonData',
-            moveScrollTargetId : 'scrollArea2',
-            moveScrollTargetHeight : '100'
+            moveScrollTargetId : 'scrollArea3',
+            moveScrollNodeHeight : '22'
         });
     }); 
 </script>
@@ -219,7 +232,9 @@ move-scroll-target-id
 
 {% highlight html %}
 <input type="button" value="set" onclick="SBUxMethod.set('sbScriptNm2_2', '1_2_1', 'expandParents')">
-<div id="sbArea2_2"></div>
+<div id="scrollArea4" class="scrollareaCss">
+    <div id="sbArea2_2"></div>
+</div>
 <script>
     var treeJsonData=[
         { "id":"1",     "pid":"-1",  "order" : "1", "text" : "1" },
@@ -233,8 +248,8 @@ move-scroll-target-id
             name : 'sbScriptNm2_2',
             uitype : 'checkbox',
             jsondataRef : 'treeJsonData',
-            moveScrollTargetId : 'scrollArea2',
-            moveScrollTargetHeight : '100'
+            moveScrollTargetId : 'scrollArea4',
+            moveScrollNodeHeight : '22'
         });
     }); 
 </script>
@@ -245,15 +260,17 @@ move-scroll-target-id
 ▶ Preview 
 
 <input type="button" value="set" onclick="SBUxMethod.set('sbScriptNm2_2', '1_2_1', 'expandParents')">
-<div id="sbArea2_2"></div>
+<div id="scrollArea4" class="scrollareaCss">
+    <div id="sbArea2_2"></div>
+</div>
 <script>
     $(document).ready(function(){
         $('#sbArea2_2').sbTree({
             name : 'sbScriptNm2_2',
             uitype : 'checkbox',
             jsondataRef : 'treeJsonData',
-            moveScrollTargetId : 'scrollArea2',
-            moveScrollTargetHeight : '100'
+            moveScrollTargetId : 'scrollArea4',
+            moveScrollNodeHeight : '22'
         });
     }); 
 </script>

@@ -170,7 +170,7 @@ jsondata-class
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataClass : 'classKey'
+            jsondataClass : 'classKey'
         });
     }); 
 </script>
@@ -192,7 +192,7 @@ jsondata-class
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataClass : 'classKey'
+            jsondataClass : 'classKey'
         });
     }); 
 </script>

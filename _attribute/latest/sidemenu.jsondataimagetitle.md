@@ -160,7 +160,7 @@ jsondata-image-title
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataImageTitle : 'imagetitleKey'
+            jsondataImageTitle : 'imagetitleKey'
         });
     }); 
 </script>
@@ -177,7 +177,7 @@ jsondata-image-title
             name : 'sbScriptNm2_1',
             uitype : 'normal',
             jsondataRef : 'sideJsonData',
-            jsodnataImageTitle : 'imagetitleKey'
+            jsondataImageTitle : 'imagetitleKey'
         });
     }); 
 </script>
