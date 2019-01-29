@@ -50,3 +50,24 @@ nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul > li a.s
 .main-content .link-ul>li>ul {display:inline-block; float:right;}
 .main-content .link-ul>li>ul>li {display:inline-block;}
 .main-content .link-ul>li>ul>li>a{display: block;background: #4e4e4e;padding: 5px 15px;color: #fff;border-radius: 5px;text-decoration: none;margin-top: 15px; margin-right: 10px;}
+
+/*sub*/
+.sub-content h1 {padding: 10px 0; font-size: 25px; font-weight: normal; text-shadow: 1px 0;}
+.sub-content h2 {padding: 10px 0; font-size: 20px; font-weight: normal; }
+.sub-content h3 {position: relative; padding: 10px 0 10px 10px; font-size: 15px; color: #333; font-weight: normal; text-shadow: 0.3px 0; }
+.sub-content h3:before {position: absolute; left:0; display:block; width:3px; height:15px;background:#4d8ae0; content:"";}
+
+/*table*/
+.sub-content > table {border:1px solid #ccc; margin-bottom:20px;}
+.sub-content > table>tbody>tr {border-bottom:1px solid #ccc;}
+.sub-content > table>tbody>tr>td {height:20px; border-right:1px solid #ccc; padding-left:10px;}
+.sub-content > table>tbody>tr>td:last-child {border-right:none;}
+.sub-content figure {padding-bottom:30px;}
+
+/***compoent menu**
+.sub-content nav.sbux-meu-wrap .sbux-meu-fluid {width:auto;}
+.sub-content nav.sbux-meu-static-top .sbux-meu-fluid .sbux-meu-bd-wrap {position: absolute}
+.sub-content nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap {left:0; height:100%;}
+.sub-content nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap ul {padding-top:15px;}*/
+.sub-content nav.sbux-meu-wrap .sbux-meu-fluid {width:auto;}
+.sub-content nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-bd-wrap {left:0; }

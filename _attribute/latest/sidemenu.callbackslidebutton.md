@@ -115,7 +115,7 @@ callback-slide-button
         alert('slide button 선택');
     }
 </script>
-<sbux-sidemenu id="sbIdx1_1" name="sbIdx1_1" uitype="normal" show-slide-button="true" callback-silde-button="slideButtonFunc">
+<sbux-sidemenu id="sbIdx1_1" name="sbIdx1_1" uitype="normal" show-slide-button="true" callback-slide-button="slideButtonFunc">
     <menu-item id="1" text="1">
         <menu-item id="1_1" text="1_1">
             <menu-item id="1_1_1" text="1_1_1"></menu-item>
@@ -132,7 +132,7 @@ callback-slide-button
 
 ▶ Preview 
 
-<sbux-sidemenu id="sbIdx1_1" name="sbIdx1_1" uitype="normal" show-slide-button="true" callback-silde-button="slideButtonFunc">
+<sbux-sidemenu id="sbIdx1_1" name="sbIdx1_1" uitype="normal" show-slide-button="true" callback-slide-button="slideButtonFunc">
     <menu-item id="1" text="1">
         <menu-item id="1_1" text="1_1">
             <menu-item id="1_1_1" text="1_1_1"></menu-item>
@@ -164,7 +164,7 @@ callback-slide-button
         alert('slide button 선택');
     }
 </script>
-<sbux-sidemenu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="sideJsonData" show-slide-button="true" callback-silde-button="slideButtonFunc"></sbux-sidemenu>
+<sbux-sidemenu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="sideJsonData" show-slide-button="true" callback-slide-button="slideButtonFunc"></sbux-sidemenu>
 {% endhighlight %}
 
 
@@ -172,7 +172,7 @@ callback-slide-button
 
 ▶ Preview 
 
-<sbux-sidemenu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="sideJsonData" show-slide-button="true" callback-silde-button="slideButtonFunc"></sbux-sidemenu>
+<sbux-sidemenu id="sbIdx1_2" name="sbTagNm1_2" uitype="normal" jsondata-ref="sideJsonData" show-slide-button="true" callback-slide-button="slideButtonFunc"></sbux-sidemenu>
 
     </div>
 </div>

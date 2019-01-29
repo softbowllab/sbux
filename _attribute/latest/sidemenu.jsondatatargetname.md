@@ -149,7 +149,7 @@ jsondata-target-name
 <div id="sbArea2_1"></div>
 <iframe id="idxfrmJson2" name="targetIframe2" style="width:100%;"></iframe>
 <script>
-    var sideJsonData = [
+    var sideJsonData2 = [
         {"id": "1", "pid":"0",       "order":"1",  "text":"1", "targetnameKey":"targetIframe2","link":"https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input"},
         {"id": "2", "pid":"0",       "order":"2",  "text":"2"},
         {"id": "1_1", "pid":"1",     "order":"1",  "text":"1_1"},
@@ -162,7 +162,7 @@ jsondata-target-name
         $('#sbArea2_1').sbSidemenu({
             name : 'sbScriptNm2_1',
             uitype : 'normal',
-            jsondataRef : 'sideJsonData',
+            jsondataRef : 'sideJsonData2',
             jsondataTargetName : 'targetnameKey'
         });
     }); 
@@ -176,11 +176,20 @@ jsondata-target-name
 <div id="sbArea2_1"></div>
 <iframe id="idxfrmJson2" name="targetIframe2" style="width:100%;"></iframe>
 <script>
+    var sideJsonData2 = [
+        {"id": "1", "pid":"0",       "order":"1",  "text":"1", "targetnameKey":"targetIframe2","link":"https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input"},
+        {"id": "2", "pid":"0",       "order":"2",  "text":"2"},
+        {"id": "1_1", "pid":"1",     "order":"1",  "text":"1_1"},
+        {"id": "1_1_1", "pid":"1_1", "order":"1",  "text":"1_1_1"},
+        {"id": "1_1_2", "pid":"1_1", "order":"2",  "text":"1_1_2"},
+        {"id": "2_1", "pid":"2",     "order":"1",  "text":"2_1"},
+        {"id": "2_1_1", "pid":"2_1", "order":"1",  "text":"2_1_1"}
+   ];
     $(document).ready(function(){
         $('#sbArea2_1').sbSidemenu({
             name : 'sbScriptNm2_1',
             uitype : 'normal',
-            jsondataRef : 'sideJsonData',
+            jsondataRef : 'sideJsonData2',
             jsondataTargetName : 'targetnameKey'
         });
     }); 

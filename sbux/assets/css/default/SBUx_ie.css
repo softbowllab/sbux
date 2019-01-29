@@ -3,7 +3,7 @@
 	background : none
 }
 
-select.sbux-sel {background:none;}
+/* select.sbux-sel {background:none;} */
 
 select[disabled].sbux-sel,select.disabled.sbux-sel,select[readonly].sbux-sel,select.readonly.sbux-sel {background: #efefef}
 .sbux-sel option:checked, .sbux-sel option:active {

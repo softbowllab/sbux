@@ -91,7 +91,7 @@ is-expand
     var sideJsonData = [
         {"id": "1", "pid":"0",       "order":"1", "text":"1"},
         {"id": "2", "pid":"0",       "order":"2",  "text":"2"},
-        {"id": "1_1", "pid":"1",     "order":"1",  "text":"1_1"}
+        {"id": "1_1", "pid":"1",     "order":"1",  "text":"1_1"},
         {"id": "1_1_1", "pid":"1_1", "order":"1",  "text":"1_1_1"},
         {"id": "1_1_2", "pid":"1_1", "order":"2",  "text":"1_1_2"},
         {"id": "2_1", "pid":"2",     "order":"1",  "text":"2_1"},
