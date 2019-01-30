@@ -23,19 +23,19 @@ alert common
         <col width="35%"/>
     </colgroup>
     <tr>
-        <td class="tdTitle">기본 문법</td>
+        <td class="tdTitle tdBg">기본 문법</td>
         <td colspan="3">&lt;sbux-alert id="xxx" name="xxx" uitype="normal"&gt;&lt;/sbux-alert&gt;</td>
     </tr>
     <tr>
-        <td class="tdTitle">필수 속성</td>
+        <td class="tdTitle tdBg">필수 속성</td>
         <td colspan="3">id, name, uitype, switch-name, case-array</td>
     </tr>
     <tr>
-        <td class="tdTitle">uitype 속성 값</td>
+        <td class="tdTitle tdBg">uitype 속성 값</td>
         <td colspan="3">alert</td>
     </tr>
     <tr>
-        <td class="tdTitle">이벤트</td>
+        <td class="tdTitle tdBg">이벤트</td>
         <td colspan="3"></td>
     </tr>
 </table>
