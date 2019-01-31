@@ -1,11 +1,11 @@
 ---
-title:  disabled-input
+title:  readonly-input
 date:   2018-12-04
 categories: ["latest","datepicker"]
-order: 27
+order: 26
 ---
 
-disabled-input
+readonly-input
 ===
 
 ---
@@ -20,19 +20,19 @@ disabled-input
         <col width="35%"/>
     </colgroup>
     <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 input 부분만 disabled로 설정합니다.</td>
+        <td class="tdTitle tdBg">설명</td>
+        <td colspan="3">Component의 input 부분만 readonly로 설정합니다.</td>
     </tr>
     <tr>
-        <td class="tdTitle">적용버전</td>
+        <td class="tdTitle tdBg">적용버전</td>
         <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
+        <td class="tdTitle tdBg">필수여부</td>
         <td>선택</td>
     </tr>
     <tr>
-        <td class="tdTitle">선결조건</td>
+        <td class="tdTitle tdBg">선결조건</td>
         <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
+        <td class="tdTitle tdBg">연관자료</td>
         <td>해당없음</td>
     </tr>
 </table>
@@ -44,16 +44,16 @@ disabled-input
         <col width="35%"/>
     </colgroup>
     <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
+        <td class="tdTitle tdBg tdCenter" colspan="4">속성값</td>
     </tr>
     <tr>
-        <td class="tdTitle">기본값</td>
+        <td class="tdTitle tdBg">기본값</td>
         <td>false</td>
-        <td class="tdTitle">자료형</td>
+        <td class="tdTitle tdBg">자료형</td>
         <td>boolean</td>
     </tr>
     <tr>
-        <td class="tdTitle">값형태</td>
+        <td class="tdTitle tdBg">값형태</td>
         <td colspan="3">true | false</td>
     </tr>
 </table>
@@ -66,17 +66,17 @@ disabled-input
         <col width="20%"/>
     </colgroup>
     <tr>
-        <td class="tdTitle tdBg" colspan="5">사용제한</td>
+        <td class="tdTitle tdBg tdCenter" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>uitype</td>
+        <td class="tdTitle tdBg">uitype</td>
         <td class="tdCenter">inline</td>
         <td class="tdCenter">popup</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>가능여부</td>
+        <td class="tdTitle tdBg">가능여부</td>
         <td class="tdCenter">X</td>
         <td class="tdBlue tdCenter">O</td>
         <td></td>
@@ -95,14 +95,14 @@ disabled-input
 ▶ Example
 
 {% highlight html %}
-<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" disabled-input="true"></sbux-datepicker>
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" readonly-input="true"></sbux-datepicker>
 {% endhighlight %}
 
 <br>
 
 ▶ Preview
 
-<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" disabled-input="true"></sbux-datepicker>
+<sbux-datepicker id="sbIdx" name="sbTagNm" uitype="popup" readonly-input="true"></sbux-datepicker>
 
     </div>
 </div>
@@ -124,7 +124,7 @@ disabled-input
         $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
             uitype : 'popup',
-            disabledInput : true
+            readonlyInput : true
         });
     }); 
 </script>
@@ -140,9 +140,9 @@ disabled-input
         $('#sbArea').sbDatepicker({
             name : 'sbScriptNm',
             uitype : 'popup',
-            disabledInput : true
+            readonlyInput : true
         });
-    }); 
+    });  
 </script>
 
     </div>

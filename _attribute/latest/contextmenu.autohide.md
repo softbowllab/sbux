@@ -20,22 +20,22 @@ auto-hide
         <col width="35%"/>
     </colgroup>
     <tr>
-        <td class="tdTitle">설명</td>
+        <td class="tdTitle tdBg">설명</td>
         <td colspan="3">
             trigger="hover"일 경우 마우스가 contextmenu 영역을 벗어날시 자동으로 contextmenu가 사라지게 설정합니다.<br>
             (sbux-input, sbux-label, sbux-picker, sbux-tree 에서만 사용가능합니다.)
         </td>
     </tr>
     <tr>
-        <td class="tdTitle">적용버전</td>
+        <td class="tdTitle tdBg">적용버전</td>
         <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
+        <td class="tdTitle tdBg">필수여부</td>
         <td>선택</td>
     </tr>
     <tr>
-        <td class="tdTitle">선결조건</td>
+        <td class="tdTitle tdBg">선결조건</td>
         <td>contextmenu-id (연동할 component에 설정), trigger="hover"</td>
-        <td class="tdTitle">연관자료</td>
+        <td class="tdTitle tdBg">연관자료</td>
         <td>해당없음</td>
     </tr>
 </table>
@@ -47,16 +47,16 @@ auto-hide
         <col width="35%"/>
     </colgroup>
     <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
+        <td class="tdTitle tdBg tdCenter" colspan="4">속성값</td>
     </tr>
     <tr>
-        <td class="tdTitle">기본값</td>
+        <td class="tdTitle tdBg">기본값</td>
         <td>false</td>
-        <td class="tdTitle">자료형</td>
+        <td class="tdTitle tdBg">자료형</td>
         <td>boolean</td>
     </tr>
     <tr>
-        <td class="tdTitle">값형태</td>
+        <td class="tdTitle tdBg">값형태</td>
         <td colspan="3">true | false</td>
     </tr>
 </table>
@@ -69,17 +69,17 @@ auto-hide
         <col width="20%"/>
     </colgroup>
     <tr>
-        <td class="tdTitle tdBg" colspan="5">사용제한</td>
+        <td class="tdTitle tdBg tdCenter" colspan="5">사용제한</td>
     </tr>
     <tr>
-        <td>uitype</td>
+        <td class="tdTitle tdBg">uitype</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>가능여부</td>
+        <td class="tdTitle tdBg">가능여부</td>
         <td></td>
         <td></td>
         <td></td>
