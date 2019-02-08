@@ -170,8 +170,6 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 										rowspan = that.getAttribute("rowspan") || 1;
 										rowspan = Number(rowspan) + 1;
 										
-										$(that).removeAttr("style");
-										
 										if(parseInt(thiscol.getAttribute('data-rowindex')) - parseInt(that.getAttribute('data-rowindex')) != rowspan){
 											that.setAttribute("rowspan", rowspan);
 											thiscol.style.display = 'none';
@@ -206,8 +204,6 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 											(that.getAttribute('rowspan') != undefined && that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex') )))){
 										rowspan = that.getAttribute("rowspan") || 1;
 										rowspan = Number(rowspan) + 1;
-										
-										$(that).removeAttr("style");
 										
 										if(parseInt(thiscol.getAttribute('data-rowindex')) - parseInt(that.getAttribute('data-rowindex')) != rowspan){
 											that.setAttribute("rowspan", rowspan);
