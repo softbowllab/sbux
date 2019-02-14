@@ -1,4 +1,4 @@
-<ul class="nav nav-list">
+<!-- <ul class="nav nav-list">
 	{% assign version = page.categories[0] %}
 	{% assign cates = site.cate_method[version] %}
 	{% for cate in cates %}
@@ -8,4 +8,19 @@
 			<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
 		{% endfor %}
 	{% endfor %}
-</ul>
+</ul> -->
+
+
+<sbux-tree id="lnbList" name="lnbList" uitype="normal" expand-type="icon" is-expand-only-select="true">
+	{% assign version = page.categories[0] %}
+	{% assign cates = site.cate_method[version] %}
+	{% for cate in cates %}
+		<tree-item id="{{ cate.name }}" text="{{ cate.title }}">
+		{% assign pages = site.method | where: "categories", version | where: "categories", cate.name | sort: "order" %}
+		{% for item in pages %}
+			<tree-item text="{{ item.title }}" link="{{ site.baseurl }}{{site.path}}{{ item.url }}#{{ cate.name }}"></tree-item>
+		{% endfor %}
+		</tree-item>
+	{% endfor %}
+	
+</sbux-tree>

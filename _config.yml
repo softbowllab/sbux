@@ -143,8 +143,28 @@ cate_attribute:
 # method 변수
 cate_method:
   latest: 
-    - {name: 'each'    , title : '개별 set/get'}
-    - {name: 'all'     , title : '전체 set/get'}
+    - {name: 'common'       , title : '공통'}
+    - {name: 'input'        , title : 'Input'}
+    - {name: 'datepicker'   , title : 'Datepicker'}
+    - {name: 'radio'        , title : 'Radio'}
+    - {name: 'checkbox'     , title : 'Checkbox'}
+    - {name: 'label'        , title : 'Label'}
+    - {name: 'select'       , title : 'Select'}
+    - {name: 'button'       , title : 'Button'}
+    - {name: 'textarea'     , title : 'Textarea'}
+    - {name: 'listbox'      , title : 'Listbox'}
+    - {name: 'dropdown'     , title : 'Dropdown'}
+    - {name: 'alert'        , title : 'Alert'}
+    - {name: 'modal'        , title : 'Modal'}
+    - {name: 'progress'     , title : 'Progress'}
+    - {name: 'tabs'         , title : 'Tabs'}
+    - {name: 'menu'         , title : 'Menu'}
+    - {name: 'tree'         , title : 'Tree'}
+    - {name: 'accordion'    , title : 'Accordion'}
+    - {name: 'carousel'     , title : 'Carousel'}
+    - {name: 'sidemenu'     , title : 'Sidemenu'}
+    - {name: 'contextmenu'  , title : 'Contextmenu'}
+    - {name: 'datastore'    , title : 'Datastore'}
 
 # design 변수
 cate_design:

@@ -7,25 +7,31 @@
 
 	<title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
 	<meta name="description" content="{{ site.subtitle }}">
-	
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-	<!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"> -->
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/layout.css">
-	<style>
-		.tdTitle {font-weight:bold}
-		.tdCenter {text-align: center;}
-		.tdBg {background-color:#efefef}
-		.tdRed {color:#dd2200}
-		.tdBlue {color:#3366b2}
-	</style>
-	
 	<script>
 		var SBUxConfig = {
 			Path : "{{site.baseurl}}/sbux/"
 		};
 	</script>
 	<script src="{{ site.baseurl }}/sbux/SBUx.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
+	<!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"> -->
+	<link rel="stylesheet" href="{{ site.baseurl }}/css/layout.css">
+
+	<style>
+		.tdTitle {font-weight:bold}
+		.tdCenter {text-align: center; padding-left:0px!important;}
+		.tdBg {background-color:#efefef}
+		.tdRed {color:#dd2200}
+		.tdBlue {color:#3366b2}
+	</style>
+
+
+	<script>
+		$(document).ready(function(){
+			var openNode = location.hash.substring(1);
+			SBUxMethod.expandTreeNodes('lnbList', openNode, 1);
+		});
+	</script>
 </head>
 <body>
 	<div class="wrap">
