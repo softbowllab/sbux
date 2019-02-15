@@ -1,5 +1,5 @@
 ---
-title:  프로그래스바로 진행률 나타내기
+title:  프로그래스바로 진행률
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 17

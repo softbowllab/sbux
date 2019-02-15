@@ -1,5 +1,5 @@
 ---
-title:  캘린더의 버튼만 사용하기
+title:  캘린더의 버튼만 사용
 date:   2018-12-04
 categories: ["latest","adv"]
 order: 5

@@ -1,5 +1,5 @@
 ---
-title:  체크박스의 별도 코드없는 다중 필수 선택항목 지정하기
+title:  다중 필수 선택항목 지정
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 8

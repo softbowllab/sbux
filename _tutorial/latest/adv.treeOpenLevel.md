@@ -1,5 +1,5 @@
 ---
-title:  트리의 특정 레벨들을 확장한 채로 나타내기
+title:  트리의 특정 레벨까지 확장
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 22

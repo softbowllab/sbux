@@ -1,5 +1,5 @@
 ---
-title:  어코디언에 다양한 컨텐츠 넣기
+title:  어코디언 내 다양한 컨텐츠
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 26

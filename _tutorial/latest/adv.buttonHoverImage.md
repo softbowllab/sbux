@@ -1,5 +1,5 @@
 ---
-title:  버튼에 마우스 오버시 이미지 교체하기 
+title:  버튼에 마우스 오버시 이미지 교체
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 9

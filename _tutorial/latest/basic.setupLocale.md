@@ -1,5 +1,5 @@
 ---
-title:  다국어 설정하기
+title:  다국어 설정
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 11

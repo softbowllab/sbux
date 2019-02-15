@@ -1,5 +1,5 @@
 ---
-title:  그리드와 컴포넌트들 연결하기
+title:  그리드와 컴포넌트들 연결
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 10

@@ -1,5 +1,5 @@
 ---
-title:  탭 내 컨텐츠를 외부 파일과 연결시키기
+title:  탭 내 컨텐츠를 외부 파일 연결
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 19

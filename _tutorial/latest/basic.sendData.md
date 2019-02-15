@@ -1,5 +1,5 @@
 ---
-title:  서버로 컴포넌트 데이터를 전송하기
+title:  서버로 컴포넌트 데이터를 전송
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 9

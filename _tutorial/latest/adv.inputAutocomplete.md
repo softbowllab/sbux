@@ -1,5 +1,5 @@
 ---
-title:  입력박스에 빠른 입력 선택을 위한 자동완성 기능 넣기
+title:  입력박스에 자동완성 기능
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 1

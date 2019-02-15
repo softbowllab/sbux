@@ -1,5 +1,5 @@
 ---
-title:  텍스트에어리어 내 입력에 따른 높이 자동조절하기
+title:  텍스트에어리어 높이 자동조절
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 10
