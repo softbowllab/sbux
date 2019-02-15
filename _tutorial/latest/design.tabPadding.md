@@ -1,5 +1,5 @@
 ---
-title:  탭을 꾸미기
+title:  탭 모양 수정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 11

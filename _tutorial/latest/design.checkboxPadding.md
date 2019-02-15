@@ -1,5 +1,5 @@
 ---
-title:  체크박스 사이 간격 조정하기
+title:  체크박스 사이 간격 조정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 5

@@ -1,5 +1,5 @@
 ---
-title:  툴팁 색상 조정하기
+title:  툴팁 색상 조정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 14
