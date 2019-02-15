@@ -23,8 +23,7 @@
 			Path : "{{site.baseurl}}/sbux/"
 		};
 	</script>
-	<script src="{{ site.baseurl }}/sbux/SBUx.js" type="text/javascript"></script>
-	
+	<script src="{{ site.baseurl }}/sbux/SBUx.js" type="text/javascript"></script>	
 	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
 	
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
@@ -43,7 +42,7 @@
 		$(document).ready(function(){
 			var openNode = location.hash.substring(1);
 			// 선택한 페이지에 대한 좌측 메뉴를 확장시킨다.
-			SBUxMethod.setSideMenu('lnbList', openNode);
+			SBUxMethod.expandTreeNodes('lnbList', openNode, 1);
 		});
 	</script>
 </head>
@@ -60,10 +59,10 @@
 			<div class="content-wrap">
 				{% assign post_count = site.tutorial|size %}
 				{% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
-				<div class="left">
+				<div class="left" style="width:300px;">
 					{% include lnb.tutorial.html %}
 				</div>
-				<div class="sub-content">
+				<div class="sub-content" style="width: calc(100% - 300px);">
 					{{ content }}
 				</div>
 				{% endif %}

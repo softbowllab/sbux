@@ -1,27 +1,12 @@
-<!--
-<ul class="nav nav-list">
+<sbux-tree id="lnbList" name="lnbList" uitype="normal" expand-type="icon" is-expand-only-select="true" style="width:280px;">
 	{% assign version = page.categories[0] %}
 	{% assign cates = site.cate_tutorial[version] %}
 	{% for cate in cates %}
-		<li class="nav-header">{{ cate.title }}</li>
+		<tree-item id="{{ cate.name }}" text="{{ cate.title }}">
 		{% assign pages = site.tutorial | where: "categories", version | where: "categories", cate.name | sort: "order" %}
 		{% for item in pages %}
-			<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+			<tree-item text="{{ item.title }}" link="{{ site.baseurl }}{{site.path}}{{ item.url }}#{{ cate.name }}"></tree-item>
 		{% endfor %}
-	{% endfor %}
-</ul>
--->
-
-
-<sbux-sidemenu id="lnbList" name="lnbList" uitype="normal" style="width:auto;" is-expand-only-select="true" show-slide-button="false">
-	{% assign version = page.categories[0] %}
-	{% assign cates = site.cate_tutorial[version] %}
-	{% for cate in cates %}
-		<menu-item id="{{ cate.name }}" text="{{ cate.title }}">
-		{% assign pages = site.tutorial | where: "categories", version | where: "categories", cate.name | sort: "order" %}
-		{% for item in pages %}
-			<menu-item text="{{ item.title }}" link="{{ site.baseurl }}{{site.path}}{{ item.url }}#{{ cate.name }}"></menu-item>
-		{% endfor %}
-		</menu-item>
-	{% endfor %}
-</sbux-sidemenu>
+		</tree-item>
+	{% endfor %}	
+</sbux-tree>
