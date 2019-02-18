@@ -1,5 +1,5 @@
 ---
-title:  텍스트에어리어 내 HTML 구문으로 다양하게 활용하기
+title:  텍스트에어리어 내 HTML 구문
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 11

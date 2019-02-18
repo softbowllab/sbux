@@ -1,5 +1,5 @@
 ---
-title:  프로그래스의 로딩 조정하기
+title:  프로그래스의 로딩 조정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 10

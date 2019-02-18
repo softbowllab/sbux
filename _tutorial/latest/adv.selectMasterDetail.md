@@ -1,5 +1,5 @@
 ---
-title:  콤보박스의 마스터 디테일관계 연결하기
+title:  콤보박스의 마스터 디테일
 date:   2018-12-04
 categories: ["latest","adv"]
 order: 6

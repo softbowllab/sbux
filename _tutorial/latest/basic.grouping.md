@@ -1,5 +1,5 @@
 ---
-title:  컴포넌트들을 그룹핑하기
+title:  컴포넌트들을 그룹핑
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 6

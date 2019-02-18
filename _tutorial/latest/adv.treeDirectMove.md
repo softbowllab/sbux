@@ -1,5 +1,5 @@
 ---
-title:  트리의 특정항목으로 바로 이동시켜 포커싱하기
+title:  트리와 조건에 대한 포커싱
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 24

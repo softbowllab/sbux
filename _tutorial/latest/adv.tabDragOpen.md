@@ -1,5 +1,5 @@
 ---
-title:  탭 컨텐츠를 윈도우 창으로 별도 보기
+title:  탭 컨텐츠를 별도 창으로(MDI)
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 20

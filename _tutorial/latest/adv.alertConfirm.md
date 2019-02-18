@@ -1,11 +1,11 @@
 ---
-title:  알림창으로 컨폼창 만들기
+title:  알림 컴포넌트로 컨폼창
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 14
 ---
 
-알림창으로 컨폼창 만들기
+Alert 컴포넌트로 컨폼창 만들기
 ===
 
 ---

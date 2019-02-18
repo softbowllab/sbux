@@ -1,5 +1,5 @@
 ---
-title:  모달창으로 상세내용 표시하기
+title:  모달창으로 상세내용 표시
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 16

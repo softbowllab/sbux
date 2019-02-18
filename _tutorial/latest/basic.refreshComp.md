@@ -1,5 +1,5 @@
 ---
-title:  컴포넌트들 새로 고침하기
+title:  컴포넌트들 새로 고침
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 8

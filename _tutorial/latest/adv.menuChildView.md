@@ -1,5 +1,5 @@
 ---
-title:  메뉴 하위 구조를 한꺼번에 보기
+title:  메뉴 하위 구조를 한꺼번에
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 21

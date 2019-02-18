@@ -1,5 +1,5 @@
 ---
-title:  회전판을 이용한 설문조사 만들기
+title:  회전판을 이용한 설문조사
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 27

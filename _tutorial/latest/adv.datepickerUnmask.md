@@ -1,5 +1,5 @@
 ---
-title:  캘린더 입력값을 서버로 포맷없이 전송하기
+title:  캘린더값을 서버로 포맷없이 전송기
 date:   2018-12-04
 categories: ["latest","adv"]
 order: 4

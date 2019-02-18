@@ -1,5 +1,5 @@
 ---
-title:  컴포넌트에 값을 입력하기
+title:  컴포넌트에 값을 입력
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 5

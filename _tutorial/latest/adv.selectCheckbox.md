@@ -1,5 +1,5 @@
 ---
-title:  콤보박스 내 선택을 다중으로 만들기
+title:  콤보박스 내 다중 선택
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 7

@@ -1,5 +1,5 @@
 ---
-title:  캘린더 입력 포맷을 변경하기
+title:  캘린더 입력 포맷 변경
 date:   2018-12-04
 categories: ["latest","adv"]
 order: 3

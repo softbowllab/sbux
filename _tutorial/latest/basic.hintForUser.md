@@ -1,5 +1,5 @@
 ---
-title:  컴포넌트에 사용자를 위한 힌트 주기
+title:  컴포넌트에 사용자를 위한 힌트
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 7

@@ -1,5 +1,5 @@
 ---
-title:  컴포넌트에 입력된 값 호출하기
+title:  컴포넌트에 입력된 값 호출
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 4

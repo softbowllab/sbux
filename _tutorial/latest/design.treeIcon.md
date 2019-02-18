@@ -1,5 +1,5 @@
 ---
-title:  트리의 확장/축소 아이콘 변경하기
+title:  트리의 확장/축소 아이콘 변경
 date:   2018-12-10
 categories: ["latest","design"]
 order: 12

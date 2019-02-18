@@ -1,5 +1,5 @@
 ---
-title:  프로그래스바로 특정실행 종료시까지 로딩바 나타내기
+title:  프로그래스바로 동기화 로딩바
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 18

@@ -1,5 +1,5 @@
 ---
-title:  Lazy 로딩하기
+title:  Lazy 로딩
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 2

@@ -1,5 +1,5 @@
 ---
-title:  컴포넌트 환경 설정하기
+title:  컴포넌트 환경 설정
 date:   2018-12-04
 categories: ["latest","basic"]
 order: 1
@@ -12,112 +12,142 @@ order: 1
 
 ### STEP 1. Javascript 구문, 환경변수 추가
 <div>1. 아래와 같이 제품 구동을 위한 환경변수를 추가합니다.</div>
-
+<br>
+<div>(* 아래는 사용가능한 설정으로 전체를 추가할 필요는 없으며 하단에 있는 탭 중 개발/운영 시 설정을 참고하시기 바랍니다)</div>
+<br>
+<br>
 {% highlight html %}
-<script >
-        var SBUxConfig = {
-            License : "SUE26-XXXX-XXXXX-XXX",
-            Path : "/resources/sbux/",
-            Locale : "ko", // { ko | en | ja }
-            LocaleFile : "LocalTest.js",
+<script>
+    // SBUxConfig 명은 고정입니다.
+    var SBUxConfig = {
+        // 라이센스는 영업으로 문의 바랍니다.
+        License : "SUE26-XXXX-XXXXX-XXX",
+        // 제품 경로
+        Path : "/resources/sbux/",
 
-            Theme : "bootstrap", // { none | bootstrap }
-            CustomCSS : "SBUxCustom_Demo.css",
-            DefaultSetFile : "SBUxDefault.js",
+        // ========================================
+        // 다국어 설정
+        // ----------------------------------------
+        // 로케일 설정
+        // ----------------------------------------
+        Locale : "ko", // { ko | en | ja }
+        // ----------------------------------------
+        // 페이지내 데이터 형태가 아닌 파일로 설정되어 있는 경우
+        // ? 에 지정된 locale 명으로 변경됩니다.
+        // ----------------------------------------
+        LocaleFile : "<c:url value='/resources/locale/locale_?.js' />", 
+        // ========================================
 
-            Debug : true,
-            DeveloperTipType : "none", // { console | alert | storage | none }
-            SystemLogType : "console", // { console | storage | none}
+        // ========================================
+        // 디자인 설정
+        // ----------------------------------------
+        // Design 파일에 대한 호출 여부 입니다.
+        // ----------------------------------------
+        Design : true, 
+        // ----------------------------------------
+        // 커스텀으로 만든 CSS, 파일위치 기준은 상단 Path 설정입니다.
+        // ----------------------------------------
+        CustomCSS : "SBUxCustom_Demo.css",
+        // ========================================
 
-            Design : true, // css 를 호출, false 시 css 호출하지 않음.
-            LoadingType : "holding",  // none | holding(default) | progress
-            LoadIncludeClass : 'lazyLoadClass',  // 선언한 Class 가 있는 컴포넌트만 우선 로드
-            LoadExcludeClass : 'notLoadClass', // 선언한 Class 를 제외한 컴포넌트 로드
-            CustomAttrs : ['custom-attr1','custom-attr2'],  // 받아들이는 custom 속성에 대한 정의
+        // ========================================
+        // 개발자 설정
+        // ----------------------------------------
+        // 개발자를 위한 Debug 활성 모드입니다.
+        // ----------------------------------------
+        Debug : true,
+        // ----------------------------------------
+        // 개발자 Tip 으로 나타내는 방법에 대한 설정입니다.
+        // ----------------------------------------
+        DeveloperTipType : "console", // { console | alert | storage | none }
+        // ========================================
+        
+        // ========================================
+        // 성능 관련 설정
+        // ----------------------------------------
+        // 선언한 Class 가 있는 컴포넌트를 로드합니다.
+        // ----------------------------------------
+        LoadIncludeClass : 'lazyLoadClass',  
+        // ----------------------------------------
+        // 선언한 Class 를 제외한 컴포넌트를 로드합니다.
+        // ----------------------------------------
+        LoadExcludeClass : 'notLoadClass', 
+        // ========================================
 
-            SBGrid : {
-                Theme : 'default',
-                DefaultSetFile : 'SBGridDefault.js',
-                Version2_5 : true
-            },
-            SBChart : {
-                Version2_0 : true
-            }
-        };
+        // ========================================
+        // 사용자 변수 설정
+        // ----------------------------------------
+        // 받아들이는 custom 속성에 대해 정의합니다.
+        // ----------------------------------------
+        CustomAttrs : ['custom-attr1','custom-attr2'],
+        // ========================================
+
+        // ========================================
+        // SBGrid 설정
+        // ----------------------------------------
+        SBGrid : {
+            Theme : 'default',
+            Version2_5 : true
+        },
+        // ========================================
+
+        // ========================================
+        // SBChart 설정
+        // ----------------------------------------
+        SBChart : {
+            Version2_0 : true
+        }
+        // ========================================
+    };
 </script>
 {% endhighlight %}
 
 ### STEP 2. Javascript 파일, 제품 추가
 <div>2. 아래와 같이 제품을 추가합니다.</div>
-
+<br>
+<div>(* 사용자 환경에 맞게 경로를 변경하시기 바랍니다.*)</div>
+<br>
 {% highlight html %}
 <script src="/resources/sbux/SBUx.js"></script>
 {% endhighlight %}
 
-<div>3. 설명</div>
-<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1^exTab2^exTab3" 
-           title-text-array="설명^개발시 설정^운영시 설정">
+<div>3. 개발 및 운영 설정</div>
+<br>
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1^exTab2" 
+           title-text-array="개발시 설정^운영시 설정">
 </sbux-tabs>
 <div class="tab-content">
-    <div id="exTab1">
-        <div>입력 가능한 설정들 (* : 필수 입력사항)</div>
-        <table style="width:100%">
-            <colgroup>
-                <col style="width:15%"/>
-                <col style="width:85%"/>
-            </colgroup>
-            <tr>
-                <td class="tdTitle">환경 변수명</td>
-                <td >var SBUxConfig - 변수명은 변경할 수 없습니다.</td>
-            </tr>
-            <tr>
-                <td class="tdTitle">환경 변수명</td>
-                <td >var SBUxConfig - 변수명은 변경할 수 없습니다.</td>
-            </tr>
-            <tr>
-                <td class="tdTitle">Path<span style="color:#dd2200">(*)</span></td>
-                <td >SBUx.js 파일의 위치 전까지 경로를 설정합니다.</td>
-            </tr>
-            <tr>
-                <td class="tdTitle">선결조건</td>
-                <td>해당없음</td>
-            </tr>
-        </table>
+    <div id="exTab1">       
+{% highlight html %}
+<script>
+    var SBUxConfig = {
+        Path : "/resources/SBUx/", 
+        Debug : true,
+        DeveloperTipType : "console", // { console | alert | storage | none }
+        SBGrid : {
+            Version2_5 : true
+        },
+        SBChart : {
+            Version2_0 : true
+        }
+    };
+</script>
+{% endhighlight %}
     </div>
     <div id="exTab2">
-        <div>개발시 설정</div>        
-        {% highlight html %}
-        <script>
-                var SBUxConfig = {
-                    Path : "/resources/SBUx/", 
-                    Debug : true,
-                    DeveloperTipType : "console", // { console | alert | storage | none }
-                    SystemLogType : "none", // { console | storage | none}
-                    SBGrid : {
-                        Version2_5 : true
-                    },
-                    SBChart : {
-                        Version2_0 : true
-                    }
-                };
-        </script>
-        {% endhighlight %}
-    </div>
-    <div id="exTab3">
-        <div>운영시 설정</div>
-        {% highlight html %}
-        <script>
-                var SBUxConfig = {
-                    Path : "/resources/SBUx/",  
-                    SBGrid : {
-                        Version2_5 : true
-                    },
-                    SBChart : {
-                        Version2_0 : true
-                    }
-                };
-        </script>
-        {% endhighlight %}
+{% highlight html %}
+<script>
+    var SBUxConfig = {
+        Path : "/resources/SBUx/",  
+        SBGrid : {
+            Version2_5 : true
+        },
+        SBChart : {
+            Version2_0 : true
+        }
+    };
+</script>
+{% endhighlight %}
     </div>
 
 </div>

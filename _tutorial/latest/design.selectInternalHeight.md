@@ -1,5 +1,5 @@
 ---
-title:  콤보박스 내부 높이 조정하기
+title:  콤보박스 내부 높이 조정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 6

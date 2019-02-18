@@ -1,5 +1,5 @@
 ---
-title:  팝오버의 색상 조정하기
+title:  팝오버의 색상 조정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 15

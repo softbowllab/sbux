@@ -1,5 +1,5 @@
 ---
-title:  사이드 메뉴의 색성조정하기
+title:  사이드 메뉴의 색성조정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 13
