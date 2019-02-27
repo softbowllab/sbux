@@ -2,7 +2,7 @@
 title:  서버 데이터를 컴포넌트에 바인딩
 date:   2018-12-07
 categories: ["latest","basic"]
-order: 3
+order: 9
 ---
 
 서버 데이터를 컴포넌트에 바인딩하기

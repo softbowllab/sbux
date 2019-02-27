@@ -10,90 +10,60 @@ alet 컴포넌트로 공지사항 만들기
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. alert 컴포넌트 생성
+<div>1. alert을 띄우게할 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<sbux-select id="test_1" name="test_1" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+<div>2. 생성한 컴포넌트와 연동하여 alert 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+<sbux-select id="test_1" name="test_1" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="test_1"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}">
+</sbux-alert>
 {% endhighlight %}
 
-### Preview 
+### STEP 2. is-fixed 속성 추가
+<div>1. is-fixed 속성을 추가합니다.</div>
+<br>
+{% highlight html %}
+<sbux-select id="test_1" name="test_1" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="test_1"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}"
+            is-fixed="true">
+</sbux-alert>
+{% endhighlight %}
 
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
-
-
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/alert.isconfirm#alert" target="_blank">alert > is-fixed</a><br>
+    </div>
+</div>

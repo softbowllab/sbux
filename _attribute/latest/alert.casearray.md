@@ -5,7 +5,7 @@ categories: ["latest","alert"]
 order: 2
 ---
 
-switch-name
+case-array
 ===
 
 ---

@@ -2,7 +2,7 @@
 title:  Lazy 로딩
 date:   2018-12-07
 categories: ["latest","basic"]
-order: 2
+order: 8
 ---
 
 Lazy 로딩하기
@@ -10,116 +10,114 @@ Lazy 로딩하기
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td>선택</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3"> A | B | C | D 중 택 1  ,  JSON Object 변수</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="5">사용제한</td>
-    </tr>
-    <tr>
-        <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
-    </tr>
-    <tr>
-        <td>가능여부</td>
-        <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. LoadIncludeClass 설정 사용
+<div>1. 컴포넌트 환경설정에 LoadIncludeClass를 설정합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-{% endhighlight %}
-
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
-{% highlight html %}
-<div id="sbArea"></div>
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    var SBUxConfig = {
+        Path : "/resources/SBUx/",  
+        SBGrid : {
+            Version2_5 : true
+        },
+        SBChart : {
+            Version2_0 : true
+        },
+        LoadIncludeClass : 'lazyLoadClass'
+    };
 </script>
 {% endhighlight %}
 
-### Preview 
+<div>2. 우선 랜더링할 컴포넌트에만 lazyLoadClass를 설정합니다.</div>
+<br>
+{% highlight html %}
+<sbux-input id="sbIdx1" name="sbName1" uitype="text"></sbux-input>
+<sbux-input id="sbIdx2" name="sbName2" uitype="text" class="lazyLoadClass"></sbux-input>
+<sbux-input id="sbIdx3" name="sbName3" uitype="text"></sbux-input>
+{% endhighlight %}
 
-<div id="sbArea"></div>
+<div>3. render Method를 사용하여 남은 컴포넌트를 랜더링합니다.</div>
+<br>
+{% highlight html %}
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+        SBUxMethod.render();
+    });
 </script>
+{% endhighlight %}
 
+### STEP 2. LoadExcludeClass 설정 사용
+<div>1. 컴포넌트 환경설정에 LoadExcludeClass를 설정합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    var SBUxConfig = {
+        Path : "/resources/SBUx/",  
+        SBGrid : {
+            Version2_5 : true
+        },
+        SBChart : {
+            Version2_0 : true
+        },
+        LoadExcludeClass : 'notLoadClass'
+    };
+</script>
+{% endhighlight %}
 
+<div>2. 랜더링하지않을 컴포넌트에만 notLoadClass를 설정합니다.</div>
+<br>
+{% highlight html %}
+<sbux-input id="sbIdx1" name="sbName1" uitype="text"></sbux-input>
+<sbux-input id="sbIdx2" name="sbName2" uitype="text" class="notLoadClass"></sbux-input>
+<sbux-input id="sbIdx3" name="sbName3" uitype="text"></sbux-input>
+{% endhighlight %}
+
+<div>3. render Method를 사용하여 남은 컴포넌트를 랜더링합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    $(document).ready(function(){
+        SBUxMethod.render();
+    });
+</script>
+{% endhighlight %}
+
+### STEP 3. lazyloading 속성 사용 (Tabs)
+<div>1. tabs 컴포넌트에 lazyloading 속성을 추가합니다.</div>
+<br>
+{% highlight html %}
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" title-target-id-array="tab1_1_1^tab1_1_2" title-text-array="tab1^tab2" is-scrollable="false" lazyloading="true"></sbux-tabs>
+<div class="tab-content">
+    <div id="tab1_1_1">
+        tab1 content
+    </div>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
+{% endhighlight %}
+
+### STEP 4. lazyloading 속성 사용 (Carousel)
+<div>1. carousel 컴포넌트에 lazyloading 속성을 추가합니다.</div>
+<br>
+{% highlight html %}
+<sbux-carousel id="sbIdx1_1" name="sbTagNm1_1" uitype="tag" lazyloading="true">
+    <content-item><sbux-input id="couinput" name="couinput" uitype="text"></sbux-input></content-item>
+    <content-item><sbux-datepicker id="coupicker" name="coupicker" uitype="inline"></sbux-datepicker></content-item>
+    <content-item><sbux-button id="coubutton" name="coubutton" uitype="normal" text="버튼"></sbux-button></content-item>
+</sbux-carousel>
+{% endhighlight %}
+
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 환경설정<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/tutorial/latest/basic.configSetting#basic" target="_blank">환경설정하기</a><br>
+        <br>
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.lazyloding#tabs" target="_blank">tabs > lazyloding</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/carousel.lazyloding#carousel" target="_blank">carousel > lazyloding</a><br>
+    </div>
+</div>
