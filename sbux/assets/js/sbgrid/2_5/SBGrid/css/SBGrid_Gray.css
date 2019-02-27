@@ -240,6 +240,75 @@
 .sbgrid_GA {										/*GridArea 영역의 레이아웃 CSS 클래스*/					
 }
 
+.sbgrid_CPA {							/*ControlPanelArea 영역의 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_title {							/*ControlPanelArea 영역의 타이틀 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPI {						/*ControlPanelArea 영역의 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_refresh {							/*ControlPanelArea 영역의 새로고침 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_toggle_up {						/*ControlPanelArea 영역의 접기 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_toggle_down{						/*ControlPanelArea 영역의 펼치기 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_finddata {							/*ControlPanelArea 영역의 검색 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_addrow {							/*ControlPanelArea 영역의 행추가 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_removerow {							/*ControlPanelArea 영역의 행삭제 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_description {							/*ControlPanelArea 영역의 그리드 설명 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_columns {							/*ControlPanelArea 영역의 컬럼설정 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_description_ui {							/*ControlPanelArea 영역의 그리드 설명 UI 레이아웃 CSS 클래스*/
+	position: absolute !important;
+}
+
+.sbgrid_CPA_columns_ui {							/*ControlPanelArea 영역의 컬럼설정 UI 레이아웃 CSS 클래스*/
+	position: absolute !important;
+}
+
+.sbgrid_CPA_columns_header {							/*ControlPanelArea 영역의 컬럼설정 UI 의 헤더 레이아웃 CSS 클래스*/
+	display: table;
+}
+
+.sbgrid_CPA_columns_body {						/*ControlPanelArea 영역의 컬럼설정 UI 의 바디 레이아웃 CSS 클래스*/
+	display: block;
+}
+
+.sbgrid_CPA_columns_caption {						/*ControlPanelArea 영역의 컬럼설정 UI 의 캡션설정 레이아웃 CSS 클래스*/
+	min-width: 40px;
+}
+
+.sbgrid_CPA_columns_hidden {						/*ControlPanelArea 영역의 컬럼설정 UI 의 숨김설정 레이아웃 CSS 클래스*/
+	min-width: 5px;
+}
+
+.sbgrid_CPA_columns_width {						/*ControlPanelArea 영역의 컬럼설정 UI 의 너비설정 레이아웃 CSS 클래스*/
+	min-width: 60px;
+}
+
+.sbgrid_CPA_columns_frozen {						/*ControlPanelArea 영역의 컬럼설정 UI 의 고정설정 레이아웃 CSS 클래스*/
+	min-width: 50px;
+}
+
+.sbgrid_CPA_columns_filter {						/*ControlPanelArea 영역의 컬럼설정 UI 의 필터링설정 레이아웃 CSS 클래스*/
+	min-width: 60px;
+}
+
 .sbgrid_GFA {										/*GridFrameArea 영역의 레이아웃 CSS 클래스*/
 	outline:none;									/*포커스 있는 경우 점선 표시 제거*/
 	position:relative !important;
