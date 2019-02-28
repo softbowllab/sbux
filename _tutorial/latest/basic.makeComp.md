@@ -11,7 +11,7 @@ order: 1
 ---
 
 ### STEP 1. tag 방식(고정형) 생성
-<div>1. 아래와 같이 생성</div>
+<div>1. 아래와 같이 생성합니다.</div>
 <br>
 {% highlight html %}
 <sbux-select id="sbIdx1" name="sbName1" uitype="single">
@@ -22,7 +22,7 @@ order: 1
 {% endhighlight %}
 
 ### STEP 2. tag 방식(변동형) 생성
-<div>1. 아래와 같이 생성</div>
+<div>1. 아래와 같이 생성합니다.</div>
 <br>
 {% highlight html %}
 <script>
@@ -36,7 +36,7 @@ order: 1
 {% endhighlight %}
 
 ### STEP 3. jQuery 방식 생성
-<div>1. 아래와 같이 생성</div>
+<div>1. 아래와 같이 생성합니다.</div>
 <br>
 {% highlight html %}
 <script>
