@@ -1,11 +1,11 @@
 ---
-title:  커스터마이징 CSS
+title:  3.2 커스터마이징 CSS
 date:   2018-12-10
 categories: ["latest","design"]
 order: 2
 ---
 
-커스터마이징 CSS
+3.2 커스터마이징 CSS
 ===
 
 ---

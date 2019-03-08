@@ -1,11 +1,11 @@
 ---
-title:  버튼색상 조정
+title:  3.7 버튼색상 조정
 date:   2018-12-10
 categories: ["latest","design"]
 order: 7
 ---
 
-버튼색상 조정하기
+3.7 버튼색상 조정하기
 ===
 
 ---

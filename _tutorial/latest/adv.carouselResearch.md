@@ -1,17 +1,17 @@
 ---
-title:  회전판을 이용한 설문조사
+title:  2.27 회전판을 이용한 설문조사
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 27
 ---
 
-회전판을 이용한 설문조사 만들기
+2.27 회전판을 이용한 설문조사 만들기
 ===
 
 ---
 
 ### STEP 1. tag type으로 컴포넌트 생성
-<div>1. image-src 속성을 사용하여 이미지가 포함된 컴포넌트를 생성합니다.</div>
+<div>1. tag type 컴포넌트를 생성합니다.</div>
 <br>
 {% highlight html %}
 <sbux-carousel id="sbIdx1_1" name="sbTagNm1_1" uitype="tag">

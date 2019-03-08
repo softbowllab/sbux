@@ -1,11 +1,11 @@
 ---
-title:  입력박스에 자동완성 기능
+title:  2.1 입력박스에 자동완성 기능
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 1
 ---
 
-입력박스에 빠른 입력 선택을 위한 자동완성 기능 넣기
+2.1 입력박스에 빠른 입력 선택을 위한 자동완성 기능 넣기
 ===
 
 ---
@@ -26,10 +26,15 @@ order: 1
 {% endhighlight %}
 
 ### STEP 2. autoClplete 속성 추가 기능 사용
-<div>1. autocomplete-ref 속성을 필수로 사용하며 추가로 관련 속성을 적용합니다.</div>
+<div>1. autocomplete-select-callback 속성을 적용합니다.</div>
 <br>
 {% highlight html %}
-<sbux-input id="sbIdx1" name="sbName1" uitype="text" autocomplete-ref="autoCompData" grid-direction="both"></sbux-input>
+<script>
+    function autoFunc(value, label){
+        console.log("선택한 항목 : " + value, label);
+    }
+</script>
+<sbux-input id="sbIdx1" name="sbName1" uitype="text" autocomplete-ref="autoCompData" autocomplete-select-callback="autoFunc()"></sbux-input>
 {% endhighlight %}
 
 <sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
@@ -38,6 +43,7 @@ order: 1
 <div class="tab-content">
     <div id="exTab1">
         ▶ 관련 속성<br><br>
-        &nbsp;&nbsp;- input의 autocomplete- 로 시작하는 속성<br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/input.autocompleteref#input" target="_blank">input > autocomplete-ref</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/input.autocompleteselectcallback#input" target="_blank">input > autocomplete-select-callback</a><br>
     </div>
 </div>

@@ -1,11 +1,11 @@
 ---
-title:  입력박스에 masking
+title:  2.2 입력박스에 masking
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 2
 ---
 
-입력박스에 다양한 형태를 위한 masking 입히기
+2.2 입력박스에 다양한 형태를 위한 masking 입히기
 ===
 
 ---

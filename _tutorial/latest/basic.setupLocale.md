@@ -1,11 +1,11 @@
 ---
-title:  다국어 설정
+title:  1.12 다국어 설정
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 11
 ---
 
-다국어 설정하기
+1.12 다국어 설정하기
 ===
 
 ---

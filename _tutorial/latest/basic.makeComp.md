@@ -1,11 +1,11 @@
 ---
-title:  컴포넌트 생성
+title:  1.2 컴포넌트 생성
 date:   2018-12-04
 categories: ["latest","basic"]
 order: 1
 ---
 
-컴포넌트 생성 하기
+1.2 컴포넌트 생성 하기
 ===
 
 ---

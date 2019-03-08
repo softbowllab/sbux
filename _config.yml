@@ -104,9 +104,9 @@ defaults:
 # tutorial 변수
 cate_tutorial:
   latest: 
-    - {name: 'basic'   , title : '기초편'}
-    - {name: 'adv'     , title : '확장편'}
-    - {name: 'design'  , title : '디자인편'}
+    - {name: 'basic'   , title : '1. 기초편'}
+    - {name: 'adv'     , title : '2. 확장편'}
+    - {name: 'design'  , title : '3. 디자인편'}
 
 # setup 변수
 cate_setup:

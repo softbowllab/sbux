@@ -1,11 +1,11 @@
 ---
-title:  컴포넌트에 입력된 값 호출
+title:  1.4 컴포넌트에 입력된 값 호출
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 3
 ---
 
-컴포넌트에 입력된 값 호출하기
+1.4 컴포넌트에 입력된 값 호출하기
 ===
 
 ---
@@ -14,7 +14,7 @@ order: 3
 <div>1. 컴포넌트에 값을 입력합니다.</div>
 <br>
 {% highlight html %}
-<sbux-input id="sbIdx1" name="sbName1" uitype="text" init="input test"></sbux-input>
+<sbux-input id="sbIdx1" name="sbName1" uitype="text" init="input get"></sbux-input>
 {% endhighlight %}
 
 <div>2. get Method를 사용하여 값을 호출합니다.</div>
@@ -31,9 +31,9 @@ order: 3
 <div>1. 컴포넌트에 값을 입력합니다.</div>
 <br>
 {% highlight html %}
-<sbux-input id="sbIdx1" name="sbName1" uitype="text" init="input test1"></sbux-input>
-<sbux-input id="sbIdx2" name="sbName2" uitype="text" init="input test2"></sbux-input>
-<sbux-input id="sbIdx3" name="sbName3" uitype="text" init="input test3"></sbux-input>
+<sbux-input id="sbIdx1" name="sbName1" uitype="text" init="input get1"></sbux-input>
+<sbux-input id="sbIdx2" name="sbName2" uitype="text" init="input get2"></sbux-input>
+<sbux-input id="sbIdx3" name="sbName3" uitype="text" init="input get3"></sbux-input>
 {% endhighlight %}
 
 <div>2. getAllData 사용하여 값을 호출합니다.</div>

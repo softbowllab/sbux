@@ -1,11 +1,11 @@
 ---
-title:  알림 컴포넌트로 공지사항
+title:  2.15 알림 컴포넌트로 공지사항
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 15
 ---
 
-alet 컴포넌트로 공지사항 만들기
+2.15 alet 컴포넌트로 공지사항 만들기
 ===
 
 ---
@@ -14,7 +14,7 @@ alet 컴포넌트로 공지사항 만들기
 <div>1. alert을 띄우게할 컴포넌트를 생성합니다.</div>
 <br>
 {% highlight html %}
-<sbux-select id="test_1" name="test_1" uitype="single">
+<sbux-select id="sbIdx" name="sbName" uitype="single">
     <option-item value="value">input</option-item>
     <option-item value="value">picker</option-item>
     <option-item value="value">radio</option-item>
@@ -25,13 +25,13 @@ alet 컴포넌트로 공지사항 만들기
 <div>2. 생성한 컴포넌트와 연동하여 alert 컴포넌트를 생성합니다.</div>
 <br>
 {% highlight html %}
-<sbux-select id="test_1" name="test_1" uitype="single">
+<sbux-select id="sbIdx" name="sbName" uitype="single">
     <option-item value="value">input</option-item>
     <option-item value="value">picker</option-item>
     <option-item value="value">radio</option-item>
     <option-item value="value">select</option-item>
 </sbux-select>
-<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="test_1"
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
             case-array="{iValue,,input을 선택하셨습니다.,}^
                         {pValue,,picker를 선택하셨습니다.,}^
                         {rValue,,radio를 선택하셨습니다.,}^
@@ -43,13 +43,13 @@ alet 컴포넌트로 공지사항 만들기
 <div>1. is-fixed 속성을 추가합니다.</div>
 <br>
 {% highlight html %}
-<sbux-select id="test_1" name="test_1" uitype="single">
+<sbux-select id="sbIdx" name="sbName" uitype="single">
     <option-item value="value">input</option-item>
     <option-item value="value">picker</option-item>
     <option-item value="value">radio</option-item>
     <option-item value="value">select</option-item>
 </sbux-select>
-<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="test_1"
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
             case-array="{iValue,,input을 선택하셨습니다.,}^
                         {pValue,,picker를 선택하셨습니다.,}^
                         {rValue,,radio를 선택하셨습니다.,}^

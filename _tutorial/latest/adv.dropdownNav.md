@@ -1,11 +1,11 @@
 ---
-title:  드롭다운의 Bradcrumb 기능
+title:  2.13 드롭다운의 Bradcrumb 기능
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 13
 ---
 
-드롭다운의 Bradcrumb 기능 활용하기
+2.13 드롭다운의 Bradcrumb 기능 활용하기
 ===
 
 ---

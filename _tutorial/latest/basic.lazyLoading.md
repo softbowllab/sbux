@@ -1,11 +1,11 @@
 ---
-title:  Lazy 로딩
+title:  1.9 Lazy 로딩
 date:   2018-12-07
 categories: ["latest","basic"]
 order: 8
 ---
 
-Lazy 로딩하기
+1.9 Lazy 로딩하기
 ===
 
 ---
@@ -36,13 +36,13 @@ Lazy 로딩하기
 <sbux-input id="sbIdx3" name="sbName3" uitype="text"></sbux-input>
 {% endhighlight %}
 
-<div>3. render Method를 사용하여 남은 컴포넌트를 랜더링합니다.</div>
+<div>3. render Method 를 사용하여 화면 로딩 후 특정 시점에서 사용하고자 하는 컴포넌트를 랜더링합니다.</div>
 <br>
 {% highlight html %}
 <script>
-    $(document).ready(function(){
-        SBUxMethod.render();
-    });
+    function LoadOthersCompoent(){
+		SBUxMethod.render();
+	}
 </script>
 {% endhighlight %}
 
@@ -72,13 +72,13 @@ Lazy 로딩하기
 <sbux-input id="sbIdx3" name="sbName3" uitype="text"></sbux-input>
 {% endhighlight %}
 
-<div>3. render Method를 사용하여 남은 컴포넌트를 랜더링합니다.</div>
+<div>3. render Method 를 사용하여 화면 로딩 후 특정 시점에서 사용하고자 하는 컴포넌트를 랜더링합니다.</div>
 <br>
 {% highlight html %}
 <script>
-    $(document).ready(function(){
-        SBUxMethod.render();
-    });
+    function LoadOthersCompoent(){
+		SBUxMethod.render();
+	}
 </script>
 {% endhighlight %}
 

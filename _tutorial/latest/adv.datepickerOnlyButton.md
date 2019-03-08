@@ -1,11 +1,11 @@
 ---
-title:  캘린더의 버튼만 사용
+title:  2.5 캘린더의 버튼만 사용
 date:   2018-12-04
 categories: ["latest","adv"]
 order: 5
 ---
 
-캘린더의 버튼만 사용하기
+2.5 캘린더의 버튼만 사용하기
 ===
 
 ---
@@ -21,7 +21,7 @@ order: 5
 <div>1. 컴포넌트에 readonly-input 속성을 추가합니다.</div>
 <br>
 {% highlight html %}
-<sbux-datepicker id="sbIdx1" name="sbName1" uitype="popup" readonly-input="true"></sbux-datepicker>
+<sbux-datepicker id="sbIdx1" name="sbName1" uitype="popup" disabled-input="true"></sbux-datepicker>
 {% endhighlight %}
 
 <sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
