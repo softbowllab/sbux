@@ -968,6 +968,19 @@ body {
   box-sizing: border-box;
   /*width:500px; height:100px; //user-style*/
 }
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-tabs-item-disabled,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-tabs-item-disabled {
+  cursor: not-allowed !important;
+}
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled {
+  background-color: #b9bcc3 !important;
+  cursor: not-allowed !important;
+}
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled div.sbux-tabs-close-disabled,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled div.sbux-tabs-close-disabled {
+  cursor: not-allowed !important;
+}
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd .sbux-tabs-content,
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd .sbux-tabs-content {
   position: relative;

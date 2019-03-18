@@ -9,3 +9,7 @@ select[disabled].sbux-sel,select.disabled.sbux-sel,select[readonly].sbux-sel,sel
 .sbux-sel option:checked, .sbux-sel option:active {
     color: #000 !important;
     background: none;}
+
+.sbux-inp-btn-group .sbux-inp-fr-span > button.glyphicon span, .sbux-inp-btn-group .sbux-inp-bk-span > button.glyphicon span {
+	vertical-align: middle;
+}

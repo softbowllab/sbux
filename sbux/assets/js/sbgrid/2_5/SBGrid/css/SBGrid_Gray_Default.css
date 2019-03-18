@@ -563,7 +563,6 @@
 .sbgrid_FUIA_st {}							/*FindingUIArea 영역의 스타일 CSS 클래스*/
 
 .sbgrid_FUI_WRAP_st {							/*FindingUIArea의 jqueryui 제외 영역의 스타일 CSS 클래스*/
-	height: 50px !important;
 	font-size: 12px;
 }
 .sbgrid_FUI_option_st {							/*FindingUI 검색 조건 영역의 스타일 CSS 클래스*/

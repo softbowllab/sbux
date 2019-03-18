@@ -339,6 +339,18 @@ input.sbux-rdo-input {
   background: #eff2f3;
   color: #768f98;
 }
+.sbux-inp-btn-group .sbux-inp-fr-span > button.glyphicon:before,
+.sbux-inp-btn-group .sbux-inp-bk-span > button.glyphicon:before {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 1px;
+}
+.sbux-inp-btn-group .sbux-inp-fr-span > button.glyphicon span,
+.sbux-inp-btn-group .sbux-inp-bk-span > button.glyphicon span {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 2px;
+}
 .sbux-inp-btn-group span.sbux-inp-fr-span {
   width: 30px;
 }
@@ -832,7 +844,7 @@ div.sbux-pik-pop-body td.sbux-pik-saturday .sbux-btn:active {
 }
 .sbux-pik-popwrap .sbux-pik-pop-body .sbux-pik-today,
 .sbux-pik-popwrap .sbux-pik-pop-body .sbux-pik-now {
-  color: #ff8f4b;
+  color: #ff6e00;
 }
 table.sbux-pik-pop-day {
   border-collapse: collapse;
@@ -1012,7 +1024,7 @@ div.sbux-pik-pop-body .btn-default.active,
 div.sbux-pik-pop-body .btn-default.disabled.active,
 div.sbux-pik-pop-body .btn-default[disabled]:active,
 div.sbux-pik-pop-body .btn-default[disabled].active {
-  background: #ff8f4b;
+  background: #ff6e00;
   color: #fff;
   border-radius: 5px;
   -webkit-border-radius: 5px;

@@ -332,6 +332,18 @@ input.sbux-rdo-input {
   background: #eff2f3;
   color: #768f98;
 }
+.sbux-inp-btn-group .sbux-inp-fr-span > button.glyphicon:before,
+.sbux-inp-btn-group .sbux-inp-bk-span > button.glyphicon:before {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 1px;
+}
+.sbux-inp-btn-group .sbux-inp-fr-span > button.glyphicon span,
+.sbux-inp-btn-group .sbux-inp-bk-span > button.glyphicon span {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 2px;
+}
 .sbux-inp-btn-group span.sbux-inp-fr-span {
   width: 30px;
 }

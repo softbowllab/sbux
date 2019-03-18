@@ -365,6 +365,7 @@
 		jsondataImageAlt  : 'imagealt',
 		jsondataCssStyle  : 'cssstyle',
 		jsondataOpenLevel : 'openlevel',
+		showRootVline   : false,
 
 		scrollHeightPerNode : 22,
 

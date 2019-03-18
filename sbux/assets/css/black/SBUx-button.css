@@ -1384,6 +1384,7 @@ div.sbux-ddl-spbtn-down-wrap {
 }
 ul.sbux-tre-bd {
   padding: 0 0 0 9px;
+  position: relative;
 }
 ul.sbux-tre-bd i.sbux-tre-item-chk-icon {
   width: 13px;
@@ -1409,6 +1410,23 @@ ul.sbux-tre-bd li[disabled] span.sbux-tre-item-txt {
 ul.sbux-tre-bd li.readonly span.sbux-tre-item-txt,
 ul.sbux-tre-bd li[readonly] span.sbux-tre-item-txt {
   color: #555 !important;
+}
+ul.sbux-tre-bd li.sbux-tre-item-wrap {
+  padding: 3px 5px;
+  box-sizing: border-box;
+  /*height: 20px;*/
+  line-height: 20px;
+}
+ul.sbux-tre-bd li:before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -13px;
+  width: 18px;
+  height: 0;
+  border-top: 1px dotted #bababa;
+  z-index: 1;
 }
 ul.sbux-tre-bd .sbux-tre-item-txt {
   display: inline-block;
@@ -1611,6 +1629,18 @@ ul.sbux-tre-bd li.sbux-tre-li-selected .sbux-tre-wrap-selected {
 }
 ul.sbux-tre-bd li.sbux-tre-li-selected .sbux-tre-wrap-selected span {
   font-weight: bold;
+}
+ul.sbux-tre-bd.sbux-tre-bd-lb:before {
+  position: absolute;
+  top: 11px;
+  left: -15px;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 10px;
+  display: inline-block;
+  content: "";
+  border: 1px dotted #bababa;
+  border-width: 0 0 0 1px;
 }
 @media (max-width: 768px) {
   .sbux-mol-wrap .sbux-mol-lg-dlg {

@@ -154,8 +154,8 @@ span.sbux-chk-wrap input .sbux-rdo-wrap label.checked .glyphicon:before {
   content: '';
   display: block;
   position: absolute;
-  top: 1px;
-  left: 5px;
+  top: 0px;
+  left: 4px;
   width: 4px;
   height: 9px;
   border: solid #000;
@@ -196,8 +196,8 @@ span.sbux-chk-wrap input.disabled:checked + label .glyphicon:before {
   content: '';
   display: block;
   position: absolute;
-  top: 1px;
-  left: 5px;
+  top: 0px;
+  left: 4px;
   width: 4px;
   height: 9px;
   border: solid #999;
@@ -236,7 +236,6 @@ span.sbux-chk-wrap input.readonly + label .glyphicon {
 }
 span.sbux-chk-wrap label {
   display: inline-block;
-  position: relative;
   vertical-align: top;
 }
 span.sbux-chk-wrap label .glyphicon {
@@ -250,6 +249,7 @@ span.sbux-chk-wrap label .glyphicon {
   font-weight: normal;
 }
 span.sbux-chk-wrap label .sbux-chk-box {
+  position: relative;
   width: 16px;
   height: 16px;
   color: #1b6f9b;
