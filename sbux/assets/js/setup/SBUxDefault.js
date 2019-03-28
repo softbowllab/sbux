@@ -225,6 +225,8 @@
 		expandedGlyphs    : 'glyphicon-triangle-bottom',
 		collapseGlyphs    : 'glyphicon-triangle-right',
 
+		isExpandOnlySelect: false,
+
 		jsondataId        : 'id',
 		jsondataPid       : 'pid',
 		jsondataOrder     : 'order',

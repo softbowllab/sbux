@@ -181,6 +181,10 @@
 	padding-left: 13px;
 	font-size: 14px;
 	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	overflow: hidden;
 }
 .sbgrid_CPA_title_st:before {
 	position: absolute;
@@ -368,6 +372,15 @@
 
 .sbgrid_CPA_columns_caption_st {						/*ControlPanelArea 영역의 컬럼설정 UI 의 캡션설정 스타일 CSS 클래스*/
 	width: 20px;
+}
+
+.sbgrid_CPA_columns_caption_st > span {						/*ControlPanelArea 영역의 컬럼설정 UI 의 캡션설정 span 스타일 CSS 클래스*/
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	overflow: hidden;
+	display: inline-block;
+	max-width: 60px;
 }
 
 .sbgrid_CPA_columns_hidden_st {						/*ControlPanelArea 영역의 컬럼설정 UI 의 숨김설정 스타일 CSS 클래스*/
