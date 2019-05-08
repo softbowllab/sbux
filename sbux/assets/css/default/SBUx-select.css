@@ -8,7 +8,7 @@ body {
 }
 /********************color********************/
 /*#d4d4d5*/
-/*readonly,disabled 공통적으로 쓰이는 bgcolor*/
+/*readonly,disabled bgcolor*/
 /********************icon********************/
 .glyphicon {
   /* 20180329, remove for picker icon position position: relative;*/

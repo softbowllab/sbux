@@ -8,7 +8,7 @@ body {
 }
 /********************color********************/
 /*#d4d4d5*/
-/*readonly,disabled 공통적으로 쓰이는 bgcolor*/
+/*readonly,disabled bgcolor*/
 /********************icon********************/
 .glyphicon {
   /* 20180329, remove for picker icon position position: relative;*/
@@ -602,7 +602,7 @@ ul.sbux-ato {
   box-sizing: border-box;
   outline-width: 0;
   border-right: none;
-  /*버튼누르면 input border 활성화*/
+  /*btn click: ; input border active*/
 }
 .sbux-pik-input.sbux-dirty {
   background: #307ea5;
@@ -1264,7 +1264,7 @@ table.sbux-pik-pop-year tbody td button.sbux-btn.sbux-btn-secondary:hover {
   background: #b5b5b5;
   color: #fff;
 }
-/*picker 달력 선택되었을때 button*/
+/*picker selected  button*/
 input.sbux-pik-input.sbux-dirty + ul.sbux-ddl-menu + .sbux-pik-icon-span .sbux-pik-icon-btn,
 input.sbux-pik-input.sbux-dirty + .sbux-pik-icon-span .sbux-pik-icon-btn {
   background: #307ea5;
@@ -1272,7 +1272,7 @@ input.sbux-pik-input.sbux-dirty + .sbux-pik-icon-span .sbux-pik-icon-btn {
   border-color: #307ea5;
   margin-left: 0px;
 }
-/*picker 달력 선택되었을때 button disabled, readonly*/
+/*picker selected  button disabled, readonly*/
 input.sbux-pik-input.sbux-dirty[disabled] {
   color: #999;
 }

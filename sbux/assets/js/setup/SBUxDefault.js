@@ -6,6 +6,32 @@
 	//****************************
 	// Setup Base Config
 	//****************************
+	SBUxG.DEF.SET_DETECT_SET = {
+		// detection of SQL meta-characters
+		// or 1=1--'
+		regExpSqlMeta : /((\%3D)|(=))[^\n]*((\%27)|(\')|(\-\-)|(\%3B)|(;))/i,
+		// typical SQL Injection Attack
+		// \w* - zero or more alphanumeric or underscore characters
+        // (\%27)|\' - the ubiquitous single-quote or its hex equivalent
+		// (\%6F)|o|(\%4F))((\%72)|r|(\%52)
+		   // - the word 'or' with various combinations of its upper and lower case hex equivalents.
+		regExpSqlInjection : /\w*((\%27)|(\'))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/i,
+		// SQL Queries
+		regExpSqlQueries : /(union|select|insert|update|delete|drop|where)/i,
+		// System command
+		regExpSystemCommand : /(exec|xp_cmdshell)/i,
+		// Cross Site Scripting Attack
+		// ((\%3C)|<) - check for opening angle bracket or hex equivalent
+        // ((\%2F)|\/)* - the forward slash for a closing tag or its hex equivalent
+        // [a-z0-9\%]+ - check for alphanumeric string inside the tag, or hex representation of these
+        // ((\%3E)|>) - check for closing angle bracket or hex equivalent
+		regExpXSS : /((\%3C)|<)((\%2F)|\/)*[a-z0-9\%]+((\%3E)|>)/i,
+		message :'[Detecting] SQL Injdection 및 XSS 에 해당하는 값은 사용할 수 없습니다.',
+		// view time
+		messageDelay : 1000
+	};
+
+
 	SBUxG.DEF.SET_PERMIT_KEYCODES_SET = {
 		kr : [], // not num and not eng
 		num : [48,49,50,51,52,53,54,55,56,57], // 0 ~ 9
@@ -417,7 +443,8 @@
 
 	SBUxG.DEF.SET_DATASTORE_AJAX = {
 		type        : 'post',
-		contentType : 'application/json; charset=utf-8',
+		contentType : 'application/x-www-form-urlencoded; charset=utf-8',
+		// contentType : 'application/json; charset=utf-8',
 		dataType    : 'json',
 		async       : 'true',
 		cache       : 'false',

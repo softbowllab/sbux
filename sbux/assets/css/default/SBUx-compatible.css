@@ -1,3 +1,4 @@
+/*SBUx-compatable*/
 body {
   padding: 0;
   font-size: 12px;
@@ -7,7 +8,7 @@ body {
 }
 /********************color********************/
 /*#d4d4d5*/
-/*readonly,disabled bgcolor*/
+/*readonly,disabled 공통적으로 쓰이는 bgcolor*/
 /********************icon********************/
 .glyphicon {
   /* 20180329, remove for picker icon position position: relative;*/
@@ -93,4 +94,50 @@ body {
 }
 .light-grey {
   color: #bbb !important;
+}
+/*button*/
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd {
+  /*change//tab-content->sbux-tab-content*/
+}
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd .tab-content {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #bdbfc5;
+  border-top: none;
+}
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd .tab-content .tab-pane {
+  display: none;
+}
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd .tab-content .active {
+  display: block;
+}
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd .tab-content > div > table td {
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd .tab-content > div > table td select {
+  height: 30px;
+}
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd .tab-content > div > table td button {
+  height: 30px;
+  margin-left: 10px;
+  background: orange;
+  color: #fff;
+}
+.sbux-mol-wrap .sbux-mol-cont .sbux-mol-bd .tab-content table {
+  vertical-align: middle;
+}
+/*extend*/
+.tab-content {
+  position: relative;
+  padding: 16px 12px;
+  overflow: auto;
+  border: 1px solid #bdbfc5;
+  background: #fff;
+}
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .tab-pane.active {
+  display: block;
 }

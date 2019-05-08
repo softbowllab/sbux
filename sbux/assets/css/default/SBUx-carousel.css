@@ -8,7 +8,7 @@ body {
 }
 /********************color********************/
 /*#d4d4d5*/
-/*readonly,disabled 공통적으로 쓰이는 bgcolor*/
+/*readonly,disabled bgcolor*/
 /********************icon********************/
 .glyphicon {
   /* 20180329, remove for picker icon position position: relative;*/
@@ -27,17 +27,10 @@ body {
 }
 /********************font-size********************/
 .smallfont {
-  font-size: 0.9em;
+  font-size: 11px;
 }
 .basefont {
-  font-size: 1em;
-}
-.largefont {
-  font-size: 1.5em;
-}
-.bigfont {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 12px;
 }
 .btn-red {
   background: red;
@@ -189,7 +182,7 @@ body {
 }
 .sbux-cou > .sbux-cou-control-next {
   right: 0;
-  margin: 150px 0;
+  margin: 100px 0;
 }
 .sbux-cou > .sbux-cou-control-next > .sbux-cou-control-next-icon {
   opacity: 0.5;

@@ -286,6 +286,11 @@
 	content: "\e906";
 }
 
+.sbgrid_CPA_custom_st {							/*ControlPanelArea 영역의 사용자 정의 아이콘 스타일 CSS 클래스*/
+}
+.sbgrid_CPA_custom_st:before {							/*ControlPanelArea 영역의 사용자 정의 아이콘 svg 스타일 CSS 클래스*/
+}
+
 .sbgrid_CPA_description_ui_st {							/*ControlPanelArea 영역의 그리드 설명 UI 스타일 CSS 클래스*/
 	border: 2px solid #7a8dc5;
 	background: white;

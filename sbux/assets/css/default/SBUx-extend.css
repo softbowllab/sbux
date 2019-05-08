@@ -8,7 +8,7 @@ body {
 }
 /********************color********************/
 /*#d4d4d5*/
-/*readonly,disabled 공통적으로 쓰이는 bgcolor*/
+/*readonly,disabled bgcolor*/
 /********************icon********************/
 .glyphicon {
   /* 20180329, remove for picker icon position position: relative;*/
@@ -493,7 +493,7 @@ body {
   border-radius: 4px 4px 0 0;
   text-decoration: none;
   line-height: 18px;
-  /*언더바 수정  class*/
+  /*under bar edit  class*/
 }
 .sbux-tabs-wrap > ul.sbux-tabs-nor-bd li.sbux-tabs-item > a .glyphicon-star.light-blue,
 .sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item > a .glyphicon-star.light-blue {
@@ -912,13 +912,13 @@ body {
   /*overflow: hidden;*/
   position: relative;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item {
   float: left;
   position: static;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item a,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item a {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item > a,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item > a {
   position: relative;
   display: block;
   margin-right: -1px;
@@ -930,8 +930,8 @@ body {
   text-decoration: none;
   line-height: 18px;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item a .sbux-tabs-close-btn,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item a .sbux-tabs-close-btn {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item > a .sbux-tabs-close-btn,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item > a .sbux-tabs-close-btn {
   position: absolute;
   top: 12px;
   right: 9px;
@@ -940,45 +940,45 @@ body {
   height: 10px;
   background: url(images/ico_close.png) 0px 0px no-repeat;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item a:hover,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item a:hover {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item > a:hover,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item > a:hover {
   color: #555;
   cursor: pointer;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.active a,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.active a {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item.active > a,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item.active > a {
   z-index: 0;
   background-color: #307ea5;
   color: #fff;
   border-color: #307ea5;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item .sbux-tabs-content,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item .sbux-tabs-content {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item .sbux-tabs-content,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item .sbux-tabs-content {
   position: absolute;
   width: 100%;
   left: 0;
   display: none;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.active .sbux-tabs-content,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.active .sbux-tabs-content {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item.active .sbux-tabs-content,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item.active .sbux-tabs-content {
   display: block;
   box-sizing: border-box;
   /*width:500px; height:100px; //user-style*/
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-tabs-item-disabled,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-tabs-item-disabled {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item.sbux-tabs-item-disabled,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item.sbux-tabs-item-disabled {
   cursor: not-allowed !important;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled {
   background-color: #b9bcc3 !important;
   cursor: not-allowed !important;
 }
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled div.sbux-tabs-close-disabled,
-.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled div.sbux-tabs-close-disabled {
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled div.sbux-tabs-close-disabled,
+.sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item.sbux-tabs-item-disabled a.sbux-tabs-tgl-disabled div.sbux-tabs-close-disabled {
   cursor: not-allowed !important;
 }
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd .sbux-tabs-content,
@@ -1044,20 +1044,6 @@ body {
 }
 .sbux-tabs-wrap.sbux-tabs-webacc > .sbux-tabs-right li.sbux-tabs-item a {
   border-radius: 0 4px 4px 0;
-}
-/*sbux추가클래스 필요*/
-.tab-content {
-  position: relative;
-  padding: 16px 12px;
-  overflow: auto;
-  border: 1px solid #bdbfc5;
-  background: #fff;
-}
-.tab-content > .tab-pane {
-  display: none;
-}
-.tab-content > .tab-pane.active {
-  display: block;
 }
 .sbux-tabs-scroll-wrap div.scroll_tab_inner span.sbux-sct-left-finisher {
   padding: 0px;
