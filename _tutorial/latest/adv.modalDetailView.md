@@ -1,99 +1,73 @@
 ---
-title:  모달창으로 상세내용 표시
+title:  2.16 모달창으로 상세내용 표시
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 16
 ---
 
-모달창으로 상세내용 표시하기
+2.16 모달창으로 상세내용 표시하기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. modal 컴포넌트 생성
+<div>1. alert을 띄우게할 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<sbux-modal id="sbIdx1_1" name="sbTagNm1_1" uitype="small"></sbux-modal>
+<input type="button" value="modal open" onclick="SBUxMethod.openModal('sbTagNm1_1')">
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+### STEP 2. 속성으로 cotnent 추가
+<div>1. header-title 속성을 추가합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+<sbux-modal id="sbIdx1_1" name="sbTagNm1_1" uitype="small" header-title="Modal Title"></sbux-modal>
+<input type="button" value="modal open" onclick="SBUxMethod.openModal('sbTagNm1_1')">
 {% endhighlight %}
 
-### Preview 
+<div>2. body-html 속성을 추가합니다.</div>
+<br>
+{% highlight html %}
+<sbux-modal id="sbIdx1_1" name="sbTagNm1_1" uitype="small" header-title="Modal Title" body-html="<b>Modal Content</b>"></sbux-modal>
+<input type="button" value="modal open" onclick="SBUxMethod.openModal('sbTagNm1_1')">
+{% endhighlight %}
 
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+<div>3. footer-html 속성을 추가합니다.</div>
+<br>
+{% highlight html %}
+<sbux-modal id="sbIdx1_1" name="sbTagNm1_1" uitype="small" header-title="Modal Title" body-html="<b>Modal Content</b>" footer-html="Modal Footer"></sbux-modal>
+<input type="button" value="modal open" onclick="SBUxMethod.openModal('sbTagNm1_1')">
+{% endhighlight %}
 
+### STEP 3. 외부 div로 cotnent 추가
+<div>1. body-html-id 속성을 추가하고 가져올 외부 div id를 입력합니다.</div>
+<br>
+{% highlight html %}
+<div id="contentTag1"><b>Modal Contnet</b></div>
+<sbux-modal id="sbIdx1_1" name="sbTagNm1_1" uitype="small" header-title="Modal Title" body-html-id="contentTag1"></sbux-modal>
+<input type="button" value="modal open" onclick="SBUxMethod.openModal('sbTagNm1_1')">
+{% endhighlight %}
 
+<div>3. footer-html-id 속성을 추가하고 가져올 외부 div id를 입력합니다.</div>
+<br>
+{% highlight html %}
+<div id="contentTag1"><b>Modal Contnet</b></div>
+<div id="footerTag1"><b>Modal Footer</b></div>
+<sbux-modal id="sbIdx1_1" name="sbTagNm1_1" uitype="small" header-title="Modal Title" body-html-id="contentTag1" footer-html-id="footerTag1"></sbux-modal>
+<input type="button" value="modal open" onclick="SBUxMethod.openModal('sbTagNm1_1')">
+{% endhighlight %}
+
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/modal.bodyhtml#modal" target="_blank">modal > body-html</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/modal.bodyhtmlid#modal" target="_blank">modal > body-html-id</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/modal.footerhtml#modal" target="_blank">modal > footer-html</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/modal.footerhtmlid#modal" target="_blank">modal > footer-html-id</a><br>
+
+    </div>
+</div>

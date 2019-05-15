@@ -1,99 +1,36 @@
 ---
-title:  버튼에 마우스 오버시 이미지 교체
+title:  2.9 버튼에 마우스 오버시 이미지 교체
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 9
 ---
 
-버튼에 마우스 오버시 이미지 교체하기 
+2.9 버튼에 마우스 오버시 이미지 교체하기 
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. 이미지가 포함된 컴포넌트 생성
+<div>1. image-src 속성을 사용하여 이미지가 포함된 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<sbux-button id="sbIdx1" name="sbName1" uitype="normal" image-src="image.jpg"></sbux-button>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+### STEP 2. 컴포넌트에 hover 이미지 속성 추가
+<div>1. hover-image-src 속성을 컴포넌트에 추가합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+<sbux-button id="sbIdx1" name="sbName1" uitype="normal" image-src="image.jpg" hover-image-src="hoverimage.jpg"></sbux-button>
 {% endhighlight %}
 
-### Preview 
-
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
-
-
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/button.imagesrc#button" target="_blank">button > image-src</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/button.hoverimagesrc#button" target="_blank">button > hover-image-src</a><br>
+    </div>
+</div>

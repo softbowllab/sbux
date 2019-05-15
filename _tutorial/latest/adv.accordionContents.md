@@ -1,99 +1,85 @@
 ---
-title:  어코디언 내 다양한 컨텐츠
+title:  2.26 어코디언 내 다양한 컨텐츠
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 26
 ---
 
-어코디언에 다양한 컨텐츠 넣기
+2.26 어코디언에 다양한 컨텐츠 넣기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. accordion 컴포넌트 생성
+<div>1. 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<sbux-accordion id="sbIdx1_1" name="sbIdx1_1" uitype="normal" title-target-id-array="acc1_1^acc1_2" title-text-array="acc1_1^acc1_2"></sbux-accordion>
+<div id="acc1_1">
+   acc contents 1
+</div>
+<div id="acc1_2">
+   acc contents 2
+</div>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+### STEP 2. 다양한 content 추가
+<div>1. html tag를 입력합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+<sbux-accordion id="sbIdx1_1" name="sbIdx1_1" uitype="normal" title-target-id-array="acc1_1^acc1_2" title-text-array="acc1_1^acc1_2"></sbux-accordion>
+<div id="acc1_1">
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+    </ul>
+</div>
+<div id="acc1_2">
+    <p>accordion</p>
+</div>
 {% endhighlight %}
 
-### Preview 
+<div>2. iframe으로 외부 content를 호출합니다. (고정형)</div>
+<br>
+{% highlight html %}
+<sbux-accordion id="sbIdx1_1" name="sbIdx1_1" uitype="normal" title-target-id-array="acc1_1^acc1_2"
+                title-text-array="acc1_1^acc1_2"
+                title-frame-name-array="targetIframe1^targetIframe2"
+                title-frame-link-array="https://softbowllab.github.io/sbux^https://softbowllab.github.io/sbgrid"></sbux-accordion>
+<div id="acc1_1">
+    <iframe id="idxfrmJson1" name="targetIframe1" style="width:100%;"></iframe>
+</div>
+<div id="acc1_2">
+    <iframe id="idxfrmJson2" name="targetIframe2" style="width:100%;"></iframe>
+</div>
+{% endhighlight %}
 
-<div id="sbArea"></div>
+<div>3. iframe으로 외부 content를 호출합니다. (변동형)</div>
+<br>
+{% highlight html %}
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    var accJsonData=[
+        { "id": "0", "pid": "-1", "order": "1", "targetid": "acc1_1", "text": "acc1_1", "link":"https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input", "targetname":"targetIframe" },
+        { "id": "1", "pid": "-1", "order": "2", "targetid": "acc1_2", "text": "acc1_2" }
+    ];
 </script>
+<sbux-accordion id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="accJsonData"></sbux-accordion>
+<div id="acc1_1">
+    <iframe id="idxfrmJson1" name="targetIframe" style="width:100%;"></iframe>
+</div>
+<div id="acc1_2">
+    acc contents 2
+</div>
+{% endhighlight %}
 
-
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/accordion#accordion" target="_blank">accordion > accordion common</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/accordion.titleframenamearray#accordion" target="_blank">accordion > title-frame-name-array</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/accordion.titleframelinkarray#accordion" target="_blank">accordion > title-frame-link-array</a><br>
+    </div>
+</div>

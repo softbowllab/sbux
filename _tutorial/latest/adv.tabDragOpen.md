@@ -1,99 +1,85 @@
 ---
-title:  탭 컨텐츠를 별도 창으로(MDI)
+title:  2.20 탭 컨텐츠를 별도 창으로(MDI)
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 20
 ---
 
-탭 컨텐츠를 윈도우 창으로 별도 보기
+2.20 탭 컨텐츠를 윈도우 창으로 별도 보기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. tabs 컴포넌트 생성
+<div>1. iframe이 적용된 tabs 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<script>
+    var tabJsonData1 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "targetname" : "targetIframe1",
+        "linkKey" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
+    ];  
+</script>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1"></sbux-tabs>
+<div class="tab-content">
+    <iframe id="idxfrmJson1" name="targetIframe1" style="width:100%;"></iframe>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+### STEP 2. div layer로 보기
+<div>1. is-draggable-openlayer 속성을 설정합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    var tabJsonData1 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "targetname" : "targetIframe1",
+        "linkKey" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
+    ];  
 </script>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" is-draggable-openlayer="true"></sbux-tabs>
+<div class="tab-content">
+    <iframe id="idxfrmJson1" name="targetIframe1" style="width:100%;"></iframe>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
 {% endhighlight %}
 
-### Preview 
-
-<div id="sbArea"></div>
+### STEP 3. 새창으로 보기
+<div>1. is-draggable-openwin 속성을 설정합니다.</div>
+<br>
+{% highlight html %}
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    var tabJsonData1 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "targetname" : "targetIframe1",
+        "linkKey" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
+    ];  
 </script>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" is-draggable-openwin="true"></sbux-tabs>
+<div class="tab-content">
+    <iframe id="idxfrmJson1" name="targetIframe1" style="width:100%;"></iframe>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
+{% endhighlight %}
 
-
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs#tabs" target="_blank">tabs > tabs common</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.jsondatatargetname#tabs" target="_blank">tabs > jsondata-target-name</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.jsondatatargetlink#tabs" target="_blank">tabs > jsondata-target-link</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.isdraggableopenlayer#tabs" target="_blank">tabs > is-draggable-openlayer</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.isdraggableopenwin#tabs" target="_blank">tabs > is-draggable-openwin</a><br>
+    </div>
+</div>

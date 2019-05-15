@@ -1,99 +1,59 @@
 ---
-title:  좌측 메뉴의 슬라이드 버튼
+title:  2.28 좌측 메뉴의 슬라이드 버튼
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 28
 ---
 
-좌측 메뉴의 접고/펼치기 기능을 이용한 화면 넓게 사용하기
+2.28 좌측 메뉴의 접고/펼치기 기능을 이용한 화면 넓게 사용하기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. sidemenu 컴포넌트 생성
+<div>1. menu 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<sbux-sidemenu id="sbIdx1_1" name="sbIdx1_1" uitype="normal">
+    <menu-item id="1" text="1">
+        <menu-item id="1_1" text="1_1">
+            <menu-item id="1_1_1" text="1_1_1"></menu-item>
+            <menu-item id="1_1_2" text="1_1_2"></menu-item>
+        </menu-item>
+    </menu-item>
+    <menu-item id="2" text="2" >
+        <menu-item id="2_1" text="2_1">
+            <menu-item id="2_1_1" text="2_1_1"></menu-item>
+        </menu-item>
+    </menu-item>
+</sbux-sidemenu>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+### STEP 2. show-slide-button 속성 추가
+<div>1. show-slide-button 속성을 설정합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+<sbux-sidemenu id="sbIdx1_1" name="sbIdx1_1" uitype="normal" show-slide-button="true">
+    <menu-item id="1" text="1">
+        <menu-item id="1_1" text="1_1">
+            <menu-item id="1_1_1" text="1_1_1"></menu-item>
+            <menu-item id="1_1_2" text="1_1_2"></menu-item>
+        </menu-item>
+    </menu-item>
+    <menu-item id="2" text="2" >
+        <menu-item id="2_1" text="2_1">
+            <menu-item id="2_1_1" text="2_1_1"></menu-item>
+        </menu-item>
+    </menu-item>
+</sbux-sidemenu>
 {% endhighlight %}
 
-### Preview 
-
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
-
-
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/sidemenu.showslidebutton#sidemenu" target="_blank">sidemenu > show-slide-button</a><br>
+    </div>
+</div>

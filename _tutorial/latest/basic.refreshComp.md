@@ -1,125 +1,76 @@
 ---
-title:  컴포넌트들 새로 고침
+title:  1.5 컴포넌트들 새로 고침
 date:   2018-12-07
 categories: ["latest","basic"]
-order: 8
+order: 4
 ---
 
-컴포넌트들 새로 고침하기
+1.5 컴포넌트들 새로 고침하기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td>선택</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3"> A | B | C | D 중 택 1  ,  JSON Object 변수</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="5">사용제한</td>
-    </tr>
-    <tr>
-        <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
-    </tr>
-    <tr>
-        <td>가능여부</td>
-        <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. 개별 Component refresh
+<div>1. refresh Method를 사용하여 새로고침합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-{% endhighlight %}
-
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
-{% highlight html %}
-<div id="sbArea"></div>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+        SBUxMethod.refresh('sbName1');
+    });
+</script>
+<sbux-input id="sbIdx1" name="sbName1" uitype="text"></sbux-input>
+{% endhighlight %}
+
+### STEP 2. 여러 Component 한번에 refresh
+<div>1. refreshAll Method를 사용하여 새로고침합니다.</div>
+<br>
+{% highlight html %}
+<sbux-input id="sbIdx1" name="sbName1" uitype="text"></sbux-input>
+<sbux-input id="sbIdx2" name="sbName2" uitype="text"></sbux-input>
+<sbux-input id="sbIdx3" name="sbName3" uitype="text"></sbux-input>
+<script>
+    $(document).ready(function(){
+        SBUxMethod.refreshAll();
+    });
 </script>
 {% endhighlight %}
 
-### Preview 
-
-<div id="sbArea"></div>
+### STEP 3. Component Group refresh
+<div>1. 아래와 같이 컴포넌트에 그룹핑을 위한 속성을 추가합니다.</div>
+<br>
+{% highlight html %}
+<sbux-input id="sbIdx1" name="sbName1" uitype="text" group-id="sbGroup"></sbux-input>
+<sbux-input id="sbIdx2" name="sbName2" uitype="text" group-id="sbGroup"></sbux-input>
+<sbux-input id="sbIdx3" name="sbName3" uitype="text" group-id="sbGroup"></sbux-input>
 <script>
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+        SBUxMethod.refreshGroup();
+    });
 </script>
+{% endhighlight %}
 
+<div>2. refreshAll Method로 컴포넌트 그룹 전체를 새로고침합니다.</div>
+<br>
+{% highlight html %}
+<sbux-input id="sbIdx1" name="sbName1" uitype="text"></sbux-input>
+<sbux-input id="sbIdx2" name="sbName2" uitype="text"></sbux-input>
+<sbux-input id="sbIdx3" name="sbName3" uitype="text"></sbux-input>
+<script>
+    $(document).ready(function(){
+        SBUxMethod.refreshGroup();
+    });
+</script>
+{% endhighlight %}
 
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 메소드<br><br>
+        &nbsp;&nbsp;- 각 컴포넌트별 refresh<br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/method/latest/common.refreshAll#common" target="_blank">공통 > refreshAll</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/method/latest/common.refreshGroup#common" target="_blank">공통 > refreshGroup</a><br>
+    </div>
+</div>

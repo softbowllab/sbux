@@ -1,125 +1,175 @@
 ---
-title:  그리드와 컴포넌트들 연결
+title:  1.8 그리드와 컴포넌트들 연결
 date:   2018-12-07
 categories: ["latest","basic"]
-order: 10
+order: 7
 ---
 
-그리드와 컴포넌트들 연결하기
+1.8 그리드와 컴포넌트들 연결하기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component 입력에 대한 자동 완성 기능의 Data를 Mapping 합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td>선택</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3"> A | B | C | D 중 택 1  ,  JSON Object 변수</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-        <col width="20%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="5">사용제한</td>
-    </tr>
-    <tr>
-        <td>uitype</td>
-        <td class="tdCenter">text</td>
-        <td class="tdCenter">password</td>
-        <td class="tdCenter">search</td>
-        <td class="tdCenter">hidden</td>
-    </tr>
-    <tr>
-        <td>가능여부</td>
-        <td class="tdBlue tdCenter">O</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-        <td class="tdCenter">X</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. 그리드 연동 (tag)
+<div>1. 그리드를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<script>
+    var sbgridData=[
+        {name:'이현수', gender:'남', phone:'01066479768'},
+        {name:'정기승', gender:'남', phone:'01022454487'},
+        {name:'한수정', gender:'여', phone:'01088956544'}
+    ];
+</script>
+<sbux-sbgrid id="datagrid" name="datagrid" uitype="2.5" style="width:100%;height:300px;" jsonref="sbgridData">
+    <sbgrid-columns>
+        <sbgrid-column text="col1" width="150px" type="input" ref="name"></sbgrid-column>
+        <sbgrid-column text="col2" width="150px" type="input" ref="gender"></sbgrid-column>
+        <sbgrid-column text="col3" width="150px." type="input" ref="phone"></sbgrid-column>
+    </sbgrid-columns>
+</sbux-sbgrid>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+<div>2. 연동할 column ref와 component name을 같게 설정합니다. </div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
 <script>
+    var sbgridData=[
+        {name:'이현수', gender:'남', phone:'01066479768'},
+        {name:'정기승', gender:'남', phone:'01022454487'},
+        {name:'한수정', gender:'여', phone:'01088956544'}
+    ];
+</script>
+<sbux-sbgrid id="datagrid" name="datagrid" uitype="2.5" style="width:100%;height:300px;" jsonref="sbgridData">
+    <sbgrid-columns>
+        <sbgrid-column text="col1" width="150px" type="input" ref="name"></sbgrid-column>
+        <sbgrid-column text="col2" width="150px" type="input" ref="gender"></sbgrid-column>
+        <sbgrid-column text="col3" width="150px." type="input" ref="phone"></sbgrid-column>
+    </sbgrid-columns>
+</sbux-sbgrid>
+<sbux-input id="sbIdx" name="name" uitype="text"></sbux-input>
+{% endhighlight %}
+
+<div>3. 컴포넌트의 grid-id 속성과 그리드의 id를 같게 설정합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    var sbgridData=[
+        {name:'이현수', gender:'남', phone:'01066479768'},
+        {name:'정기승', gender:'남', phone:'01022454487'},
+        {name:'한수정', gender:'여', phone:'01088956544'}
+    ];
+</script>
+<sbux-sbgrid id="datagrid" name="datagrid" uitype="2.5" style="width:100%;height:300px;" jsonref="sbgridData">
+    <sbgrid-columns>
+        <sbgrid-column text="col1" width="150px" type="input" ref="name"></sbgrid-column>
+        <sbgrid-column text="col2" width="150px" type="input" ref="gender"></sbgrid-column>
+        <sbgrid-column text="col3" width="150px." type="input" ref="phone"></sbgrid-column>
+    </sbgrid-columns>
+</sbux-sbgrid>
+<sbux-input id="sbIdx" name="name" uitype="text" grid-id="datagrid"></sbux-input>
+{% endhighlight %}
+
+### STEP 2. 그리드 연동 (script)
+<div>1. 그리드를 생성합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    var datagrid;
+    var SBGridProperties={};
+    var sbgridData=[
+        {name:'이현수', gender:'남', phone:'01066479768'},
+        {name:'정기승', gender:'남', phone:'01022454487'},
+        {name:'한수정', gender:'여', phone:'01088956544'}
+    ];
+
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+        createGrid();
+    });
+
+    function createGrid(){
+        SBGridProperties.parentid='SBGridArea';
+        SBGridProperties.id='datagrid';
+        SBGridProperties.jsonref='sbgridData';
+        SBGridProperties.columns=[
+            {caption:['col1'], ref:'name', width:'150px', type:'input'},
+            {caption:['col2'], ref:'gender', width:'150px', type:'input'},
+            {caption:['col3'], ref:'phone', width:'150px', type:'input'}
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+    };
 </script>
 {% endhighlight %}
 
-### Preview 
-
-<div id="sbArea"></div>
+<div>2. 연동할 column ref와 component name을 같게 설정합니다. </div>
+<br>
+{% highlight html %}
 <script>
+    var datagrid;
+    var SBGridProperties={};
+    var sbgridData=[
+        {name:'이현수', gender:'남', phone:'01066479768'},
+        {name:'정기승', gender:'남', phone:'01022454487'},
+        {name:'한수정', gender:'여', phone:'01088956544'}
+    ];
+
     $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+        createGrid();
+    });
+
+    function createGrid(){
+        SBGridProperties.parentid='SBGridArea';
+        SBGridProperties.id='datagrid';
+        SBGridProperties.jsonref='sbgridData';
+        SBGridProperties.columns=[
+            {caption:['col1'], ref:'name', width:'150px', type:'input'},
+            {caption:['col2'], ref:'gender', width:'150px', type:'input'},
+            {caption:['col3'], ref:'phone', width:'150px', type:'input'}
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+    };
 </script>
+<sbux-input id="sbIdx" name="name" uitype="text"></sbux-input>
+{% endhighlight %}
+
+<div>3. 컴포넌트의 grid-id 속성과 그리드의 id를 같게 설정합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    var datagrid;
+    var SBGridProperties={};
+    var sbgridData=[
+        {name:'이현수', gender:'남', phone:'01066479768'},
+        {name:'정기승', gender:'남', phone:'01022454487'},
+        {name:'한수정', gender:'여', phone:'01088956544'}
+    ];
+
+    $(document).ready(function(){
+        createGrid();
+    });
+
+    function createGrid(){
+        SBGridProperties.parentid='SBGridArea';
+        SBGridProperties.id='datagrid';
+        SBGridProperties.jsonref='sbgridData';
+        SBGridProperties.columns=[
+            {caption:['col1'], ref:'name', width:'150px', type:'input'},
+            {caption:['col2'], ref:'gender', width:'150px', type:'input'},
+            {caption:['col3'], ref:'phone', width:'150px', type:'input'}
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+    };
+</script>
+<sbux-input id="sbIdx" name="name" uitype="text" grid-id="datagrid"></sbux-input>
+{% endhighlight %}
 
 
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/common.gridid#common" target="_blank">공통 >  grid-id</a>
+    </div>
+</div>

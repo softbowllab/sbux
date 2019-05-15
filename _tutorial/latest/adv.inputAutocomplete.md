@@ -1,99 +1,49 @@
 ---
-title:  입력박스에 자동완성 기능
+title:  2.1 입력박스에 자동완성 기능
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 1
 ---
 
-입력박스에 빠른 입력 선택을 위한 자동완성 기능 넣기
+2.1 입력박스에 빠른 입력 선택을 위한 자동완성 기능 넣기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. autoComplete 속성 사용
+<div>1. 문자열로 이루어진 배열형태로 Data를 구성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-{% endhighlight %}
-
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
-{% highlight html %}
-<div id="sbArea"></div>
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    var autoCompData=["red", "green", "blue", "yellow","black"];
 </script>
 {% endhighlight %}
 
-### Preview 
+<div>2. 컴포넌트에 autocomplete-ref 속성을 이용하여 연동합니다.</div>
+<br>
+{% highlight html %}
+<sbux-input id="sbIdx1" name="sbName1" uitype="text" autocomplete-ref="autoCompData"></sbux-input>
+{% endhighlight %}
 
-<div id="sbArea"></div>
+### STEP 2. autoClplete 속성 추가 기능 사용
+<div>1. autocomplete-select-callback 속성을 적용합니다.</div>
+<br>
+{% highlight html %}
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    function autoFunc(value, label){
+        console.log("선택한 항목 : " + value, label);
+    }
 </script>
+<sbux-input id="sbIdx1" name="sbName1" uitype="text" autocomplete-ref="autoCompData" autocomplete-select-callback="autoFunc()"></sbux-input>
+{% endhighlight %}
 
-
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/input.autocompleteref#input" target="_blank">input > autocomplete-ref</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/input.autocompleteselectcallback#input" target="_blank">input > autocomplete-select-callback</a><br>
+    </div>
+</div>

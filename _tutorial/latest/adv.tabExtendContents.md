@@ -1,99 +1,105 @@
 ---
-title:  탭 내 컨텐츠를 외부 파일 연결
+title:  2.19 탭 내 컨텐츠를 외부 파일 연결
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 19
 ---
 
-탭 내 컨텐츠를 외부 파일과 연결시키기
+2.19 탭 내 컨텐츠를 외부 파일과 연결시키기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. tabs 컴포넌트 생성
+<div>1. tabs 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<script>
+    var tabJsonData1 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
+    ];  
+</script>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" is-scrollable="false"></sbux-tabs>
+<div class="tab-content">
+    <div id="tab1_1_1">
+        tab1 content
+    </div>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+### STEP 2. iframe으로 연결
+<div>1. iframe을 추가하고 data에 targetname을 설정합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    var tabJsonData1 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "targetname" : "targetIframe1" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
+    ];  
 </script>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" is-scrollable="false"></sbux-tabs>
+<div class="tab-content">
+    <iframe id="idxfrmJson1" name="targetIframe1" style="width:100%;"></iframe>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
 {% endhighlight %}
 
-### Preview 
-
-<div id="sbArea"></div>
+<div>2. 연결할 페이지를 data에 link를 설정합니다.</div>
+<br>
+{% highlight html %}
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    var tabJsonData1 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1", "targetname" : "targetIframe1",
+        "linkKey" : "https://softbowllab.github.io/sbux/attribute/latest/input.uitype#input" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
+    ];  
 </script>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" is-scrollable="false"></sbux-tabs>
+<div class="tab-content">
+    <iframe id="idxfrmJson1" name="targetIframe1" style="width:100%;"></iframe>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
+{% endhighlight %}
 
+### STEP 3. 외부 페이지를 직접 import
+<div>1. import할 페이지 링크를 data contentlink에 설정합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    var tabJsonData1 = [                
+        { "id" : "0", "pid" : "-1", "order" : "1", "text" : "tab1", "targetid" : "tab1_1_1",
+        "contentlink" : "https://softbowllab.github.io/sbux/attribute/htmlcontent/aframe.html" },
+        { "id" : "1", "pid" : "-1", "order" : "2", "text" : "tab2", "targetid" : "tab1_1_2" }
+    ];  
+</script>
+<sbux-tabs id="sbIdx1_1" name="sbTagNm1_1" uitype="normal" jsondata-ref="tabJsonData1" is-scrollable="false"></sbux-tabs>
+<div class="tab-content">
+    <div id="tab1_1_1">
+        tab1 content
+    </div>
+    <div id="tab1_1_2">
+        tab2 content
+    </div>
+</div>
+{% endhighlight %}
 
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs#tabs" target="_blank">tabs > tabs common</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.jsondatatargetname#tabs" target="_blank">tabs > jsondata-target-name</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.jsondatatargetlink#tabs" target="_blank">tabs > jsondata-target-link</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/tabs.jsondatacontentlink#tabs" target="_blank">tabs > jsondata-content-link</a><br>
+    </div>
+</div>

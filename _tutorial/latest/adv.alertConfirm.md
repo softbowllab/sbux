@@ -1,99 +1,168 @@
 ---
-title:  알림 컴포넌트로 컨폼창
+title:  2.14 알림 컴포넌트로 컨폼창
 date:   2018-12-10
 categories: ["latest","adv"]
 order: 14
 ---
 
-Alert 컴포넌트로 컨폼창 만들기
+2.14 Alert 컴포넌트로 컨폼창 만들기
 ===
 
 ---
 
-### Description
-
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle">설명</td>
-        <td colspan="3">Component의 고유 ID를 지정합니다.</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">적용버전</td>
-        <td>2.6.0</td>
-        <td class="tdTitle">필수여부</td>
-        <td class="tdRed">필수</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">선결조건</td>
-        <td>해당없음</td>
-        <td class="tdTitle">연관자료</td>
-        <td>해당없음</td>
-    </tr>
-</table>
-<table style="width:100%">
-    <colgroup>
-        <col width="15%"/>
-        <col width="35%"/>
-        <col width="15%"/>
-        <col width="35%"/>
-    </colgroup>
-    <tr>
-        <td class="tdTitle tdBg" colspan="4">속성값</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">기본값</td>
-        <td>해당없음</td>
-        <td class="tdTitle">자료형</td>
-        <td>string</td>
-    </tr>
-    <tr>
-        <td class="tdTitle">값형태</td>
-        <td colspan="3">Component 고유 ID</td>
-    </tr>
-</table>
-
----
-### Example (Tag)
-
+### STEP 1. alert 컴포넌트 생성
+<div>1. alert을 띄우게할 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
+<sbux-select id="sbIdx" name="sbName" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
 {% endhighlight %}
 
-### Preview
-
-<sbux-input id="sbIdx" name="sbTagNm" uitype="text"></sbux-input>
-
----
-### Example (Script)
-
+<div>2. 생성한 컴포넌트와 연동하여 alert 컴포넌트를 생성합니다.</div>
+<br>
 {% highlight html %}
-<div id="sbArea"></div>
-<script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
-</script>
+<sbux-select id="sbIdx" name="sbName" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}">
+</sbux-alert>
 {% endhighlight %}
 
-### Preview 
+### STEP 2. is-confirm 속성 추가
+<div>1. is-confirm 속성을 추가합니다.</div>
+<br>
+{% highlight html %}
+<sbux-select id="sbIdx" name="sbName" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}"
+            is-confirm="true">
+</sbux-alert>
+{% endhighlight %}
 
-<div id="sbArea"></div>
+### STEP 3. ok, cancel callback function 설정
+<div>1. callback-confirm-ok 속성을 추가하여 ok에 대한 callback을 설정합니다.</div>
+<br>
+{% highlight html %}
+<sbux-select id="sbIdx" name="sbName" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}"
+            is-confirm="true"
+            callback-confirm-ok="okCallback">
+</sbux-alert>
+{% endhighlight %}
+
+<div>2. callback-confirm-ok 속성에 지정한 function을 추가합니다.</div>
+<br>
+{% highlight html %}
 <script>
-    $(document).ready(function(){
-        $('#sbArea').sbInput({
-            name : 'sbScriptNm',
-            uitype : 'text'
-        });
-    }); 
+    function okCallback(){
+        alert('확인');
+    }
 </script>
+<sbux-select id="sbIdx" name="sbName" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}"
+            is-confirm="true"
+            callback-confirm-ok="okCallback">
+</sbux-alert>
+{% endhighlight %}
 
+<div>3. callback-confirm-cancel 속성을 추가하여 ok에 대한 callback을 설정합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    function okCallback(){
+        alert('확인');
+    }
+</script>
+<sbux-select id="sbIdx" name="sbName" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}"
+            is-confirm="true"
+            callback-confirm-ok="okCallback"
+            callback-confirm-cancel="cancelCallback">
+</sbux-alert>
+{% endhighlight %}
 
+<div>4. callback-confirm-cancel 속성에 지정한 function을 추가합니다.</div>
+<br>
+{% highlight html %}
+<script>
+    function okCallback(){
+        alert('확인');
+    }
+    function cancelCallback(){
+        alert('취소');
+    }
+</script>
+<sbux-select id="sbIdx" name="sbName" uitype="single">
+    <option-item value="value">input</option-item>
+    <option-item value="value">picker</option-item>
+    <option-item value="value">radio</option-item>
+    <option-item value="value">select</option-item>
+</sbux-select>
+<sbux-alert id="sbIdx1_1" name="sbTagNm1_1" uitype="alert" switch-name="sbName"
+            case-array="{iValue,,input을 선택하셨습니다.,}^
+                        {pValue,,picker를 선택하셨습니다.,}^
+                        {rValue,,radio를 선택하셨습니다.,}^
+                        {sValue,,select를 선택하셨습니다.,}"
+            is-confirm="true"
+            callback-confirm-ok="okCallback"
+            callback-confirm-cancel="cancelCallback">
+</sbux-alert>
+{% endhighlight %}
+
+<sbux-tabs id="explainTab" name="explainTab" uitype="normal" title-target-id-array="exTab1" 
+           title-text-array="설명">
+</sbux-tabs>
+<div class="tab-content">
+    <div id="exTab1">
+        ▶ 관련 속성<br><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/alert.isconfirm#alert" target="_blank">alert > is-confirm</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/alert.callbackconfirmok#alert" target="_blank">alert > callback-confirm-ok</a><br>
+        &nbsp;&nbsp;- <a href="https://softbowllab.github.io/sbux/attribute/latest/alert.callbackconfirmcancel#alert" target="_blank">alert > callback-confirm-cancel</a><br>
+    </div>
+</div>
