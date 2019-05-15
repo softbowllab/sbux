@@ -20,6 +20,7 @@
             DATEPICKER_CLEAR_TEXT: '지움',
             DATEPICKER_CLOSE_TEXT: '닫기',
             DATEPICKER_OUTOF_RANGE: '입력범위가 벗어났습니다.',
+            DATEPICKER_WRONG_RANGE: '시작일보다 종료일이 빠릅니다.',
             DATEPICKER_MIN_DATE: '최소',
             DATEPICKER_MAX_DATE: '최대'
         },
@@ -43,6 +44,7 @@
             DATEPICKER_CLEAR_TEXT: 'Clear',
             DATEPICKER_CLOSE_TEXT: 'Close',
             DATEPICKER_OUTOF_RANGE: 'The input range is out of range.',
+            DATEPICKER_WRONG_RANGE: 'End date is earlier than start date.',
             DATEPICKER_MIN_DATE: 'Min Date',
             DATEPICKER_MAX_DATE: 'Max Date'
         },
@@ -66,6 +68,7 @@
             DATEPICKER_CLEAR_TEXT: 'クリア',
             DATEPICKER_CLOSE_TEXT: '閉じる',
             DATEPICKER_OUTOF_RANGE: '入力範囲が範囲外です。',
+            DATEPICKER_WRONG_RANGE: '終了日が開始日より前です。',
             DATEPICKER_MIN_DATE: '分の日付',
             DATEPICKER_MAX_DATE: '最大の日付'
         },
@@ -89,6 +92,7 @@
             DATEPICKER_CLEAR_TEXT: '清',
             DATEPICKER_CLOSE_TEXT: '关闭',
             DATEPICKER_OUTOF_RANGE: '输入范围超出范围。',
+            DATEPICKER_WRONG_RANGE: '结束日期早于开始日期。',
             DATEPICKER_MIN_DATE: '分钟日期',
             DATEPICKER_MAX_DATE: '最大日期'
         }

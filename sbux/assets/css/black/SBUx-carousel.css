@@ -27,17 +27,10 @@ body {
 }
 /********************font-size********************/
 .smallfont {
-  font-size: 0.9em;
+  font-size: 11px;
 }
 .basefont {
-  font-size: 1em;
-}
-.largefont {
-  font-size: 1.5em;
-}
-.bigfont {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 12px;
 }
 .btn-red {
   background: red;
@@ -189,7 +182,7 @@ body {
 }
 .sbux-cou > .sbux-cou-control-next {
   right: 0;
-  margin: 150px 0;
+  margin: 100px 0;
 }
 .sbux-cou > .sbux-cou-control-next > .sbux-cou-control-next-icon {
   opacity: 0.5;
@@ -282,7 +275,7 @@ body {
   content: "";
 }
 .sbux-cou > .sbux-cou-indicator-wrap > .sbux-cou-active {
-  background-color: orange;
+  background-color: red;
 }
 .sbux-cou > .sbux-cou-controlbox-wrap {
   position: absolute;

@@ -27,17 +27,10 @@ body {
 }
 /********************font-size********************/
 .smallfont {
-  font-size: 0.9em;
+  font-size: 11px;
 }
 .basefont {
-  font-size: 1em;
-}
-.largefont {
-  font-size: 1.5em;
-}
-.bigfont {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 12px;
 }
 .btn-red {
   background: red;
@@ -175,15 +168,15 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: #e4e4e4;
+  background: #000;
   border-radius: 50%;
   cursor: pointer;
 }
 .sbux-ale-dark .sbux-ale-item .sbux-ale-close:hover {
-  background: #e8e8e8;
+  background: #000000;
 }
 .sbux-ale-dark .sbux-ale-item .sbux-ale-close:hover:before {
-  color: #777;
+  color: #fff;
 }
 .sbux-ale-dark .sbux-ale-item .sbux-ale-close:before {
   position: absolute;
@@ -191,7 +184,7 @@ body {
   left: 4px;
   font-family: 'Glyphicons Halflings';
   content: "\e014";
-  color: #555;
+  color: #fff;
 }
 .sbux-ale-dark .sbux-ale-item img.sbux-ale-img {
   float: left;
@@ -240,15 +233,15 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: #e4e4e4;
+  background: #000;
   border-radius: 50%;
   cursor: pointer;
 }
 .sbux-ale-dark.hover .sbux-ale-close:hover {
-  background: #e8e8e8;
+  background: #000000;
 }
 .sbux-ale-dark.hover .sbux-ale-close:hover:before {
-  color: #777;
+  color: #fff;
 }
 .sbux-ale-dark.hover .sbux-ale-close:before {
   position: absolute;
@@ -256,7 +249,7 @@ body {
   left: 4px;
   font-family: 'Glyphicons Halflings';
   content: "\e014";
-  color: #555;
+  color: #fff;
 }
 .sbux-mol-backdrop {
   position: fixed;
@@ -318,15 +311,15 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: #e4e4e4;
+  background: #000;
   border-radius: 50%;
   cursor: pointer;
 }
 .sbux-ale-light .sbux-ale-item .sbux-ale-close:hover {
-  background: #e8e8e8;
+  background: #000000;
 }
 .sbux-ale-light .sbux-ale-item .sbux-ale-close:hover:before {
-  color: #777;
+  color: #fff;
 }
 .sbux-ale-light .sbux-ale-item .sbux-ale-close:before {
   position: absolute;
@@ -334,7 +327,7 @@ body {
   left: 4px;
   font-family: 'Glyphicons Halflings';
   content: "\e014";
-  color: #555;
+  color: #fff;
 }
 .sbux-ale-light .sbux-ale-item img.sbux-ale-img {
   float: left;
@@ -380,15 +373,15 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: #e4e4e4;
+  background: #000;
   border-radius: 50%;
   cursor: pointer;
 }
 .sbux-ale-light.hover .sbux-ale-close:hover {
-  background: #e8e8e8;
+  background: #000000;
 }
 .sbux-ale-light.hover .sbux-ale-close:hover:before {
-  color: #777;
+  color: #fff;
 }
 .sbux-ale-light.hover .sbux-ale-close:before {
   position: absolute;
@@ -396,7 +389,7 @@ body {
   left: 4px;
   font-family: 'Glyphicons Halflings';
   content: "\e014";
-  color: #555;
+  color: #fff;
 }
 .sbux-badge {
   position: relative;
@@ -460,7 +453,7 @@ body {
   margin-bottom: 0;
   margin-left: 0;
   border-bottom: 0;
-  border-color: #4c5365;
+  border-color: #c5d0dc;
 }
 .sbux-tabs-wrap > ul.sbux-tabs-nor-bd li.sbux-tabs-item,
 .sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item {
@@ -500,7 +493,7 @@ body {
   border-radius: 4px 4px 0 0;
   text-decoration: none;
   line-height: 18px;
-  /*언더바 수정  class*/
+  /*under bar edit  class*/
 }
 .sbux-tabs-wrap > ul.sbux-tabs-nor-bd li.sbux-tabs-item > a .glyphicon-star.light-blue,
 .sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item > a .glyphicon-star.light-blue {
@@ -661,15 +654,15 @@ body {
 }
 .sbux-tabs-wrap .sbux-tabs-nor-bd > li.open a.sbux-tabs-ddl-tgl,
 .sbux-tabs-wrap .sbux-tabs-nor-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl {
-  background-color: #777;
-  border-color: #777;
+  background-color: #4f99c6;
+  border-color: #4f99c6;
   color: #fff;
   cursor: pointer;
 }
 .sbux-tabs-wrap .sbux-tabs-nor-bd > li.open a.sbux-tabs-ddl-tgl:hover,
 .sbux-tabs-wrap .sbux-tabs-nor-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl:hover {
-  background-color: #999;
-  border-color: #999;
+  background-color: #4f99c6;
+  border-color: #4f99c6;
   color: #fff;
 }
 .sbux-tabs-wrap ul.sbux-tabs-nor-bd.sbux-tabs-left {
@@ -725,7 +718,7 @@ body {
   left: 0;
   right: 0;
   padding-top: 10px;
-  background: #4c5365;
+  background: #333645;
 }
 .sbux-tabs-wrap ul.sbux-tabs-inbox-bd > li {
   position: relative;
@@ -810,28 +803,28 @@ body {
 }
 .sbux-tabs-wrap .sbux-tabs-inbox-bd > li.open a.sbux-tabs-ddl-tgl,
 .sbux-tabs-wrap .sbux-tabs-inbox-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl {
-  background-color: #999;
-  border-color: #999;
+  background-color: #4f99c6;
+  border-color: #4f99c6;
   color: #fff;
   cursor: pointer;
 }
 .sbux-tabs-wrap .sbux-tabs-inbox-bd > li.open a.sbux-tabs-ddl-tgl:hover,
 .sbux-tabs-wrap .sbux-tabs-inbox-bd[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl:hover {
-  background-color: #777;
-  border-color: #777;
+  background-color: #4f99c6;
+  border-color: #4f99c6;
   color: #fff;
 }
 .sbux-tabs-wrap .sbux-sct-wrap > li.open a.sbux-tabs-ddl-tgl,
 .sbux-tabs-wrap .sbux-sct-wrap[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl {
-  background-color: #999;
-  border-color: #999;
+  background-color: #4f99c6;
+  border-color: #4f99c6;
   color: #fff;
   cursor: pointer;
 }
 .sbux-tabs-wrap .sbux-sct-wrap > li.open a.sbux-tabs-ddl-tgl:hover,
 .sbux-tabs-wrap .sbux-sct-wrap[class*="tab-color-"] > li.open a.sbux-tabs-ddl-tgl:hover {
-  background-color: #777;
-  border-color: #777;
+  background-color: #4f99c6;
+  border-color: #4f99c6;
   color: #fff;
 }
 .sbux-tabs-wrap ul.sbux-tabs-scroll-wrap {
@@ -964,8 +957,8 @@ body {
 }
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd > li.sbux-tabs-item .sbux-tabs-content,
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd > li.sbux-tabs-item .sbux-tabs-content {
-  width: 100%;
   position: absolute;
+  width: 100%;
   left: 0;
   display: none;
 }
@@ -991,9 +984,9 @@ body {
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-nor-bd .sbux-tabs-content,
 .sbux-tabs-wrap.sbux-tabs-webacc ul.sbux-tabs-inbox-bd .sbux-tabs-content {
   position: relative;
+  width: 100%;
   padding: 16px 12px;
   overflow: auto;
-  width: 100%;
   border: 1px solid #bdbfc5;
   background: #fff;
   list-style: none;
@@ -1100,15 +1093,15 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: #e4e4e4;
+  background: #000;
   border-radius: 50%;
   cursor: pointer;
 }
 .sbux-prg-layerpop .sbux-prg-close:hover {
-  background: #e8e8e8;
+  background: #000000;
 }
 .sbux-prg-layerpop .sbux-prg-close:hover:before {
-  color: #777;
+  color: #fff;
 }
 .sbux-prg-layerpop .sbux-prg-close:before {
   position: absolute;
@@ -1116,7 +1109,7 @@ body {
   left: 4px;
   font-family: 'Glyphicons Halflings';
   content: "\e014";
-  color: #555;
+  color: #fff;
 }
 .sbux-prg-deemed {
   position: fixed;
@@ -1358,8 +1351,8 @@ ul.sbux-acc-meu-list li.sbux-acc-meu a.sbux-acc-link span.sbux-acc-top-txt {
 }
 ul.sbux-acc-meu-list li.sbux-acc-meu a.sbux-acc-link:hover,
 ul.sbux-acc-meu-list li.sbux-acc-meu a.sbux-acc-link:focus {
-  background-color: #e5e5e5;
-  border-color: #337ab7;
+  background: #fff;
+  color: #2980b9;
 }
 ul.sbux-acc-meu-list li.sbux-acc-meu .sbux-acc-submeu[aria-hidden="true"] {
   display: none;
@@ -1378,13 +1371,8 @@ ul.sbux-acc-meu-list li.sbux-acc-meu .sbux-acc-submeu a {
 ul.sbux-acc-meu-list li.sbux-acc-meu.open > a,
 ul.sbux-acc-meu-list li.sbux-acc-meu.open > a:hover,
 ul.sbux-acc-meu-list li.sbux-acc-meu.open > a:focus {
-  background-color: #666;
+  background-color: #e6e6e6;
   border-color: #337ab7;
-}
-ul.sbux-acc-meu-list li.sbux-acc-meu.open > a span.sbux-acc-top-txt,
-ul.sbux-acc-meu-list li.sbux-acc-meu.open > a:hover span.sbux-acc-top-txt,
-ul.sbux-acc-meu-list li.sbux-acc-meu.open > a:focus span.sbux-acc-top-txt {
-  color: #fff;
 }
 ul.sbux-acc-meu-list li.sbux-acc-item-disabled a.sbux-acc-tgl-disabled {
   background: #efefef;

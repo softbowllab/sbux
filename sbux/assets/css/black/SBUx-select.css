@@ -27,17 +27,10 @@ body {
 }
 /********************font-size********************/
 .smallfont {
-  font-size: 0.9em;
+  font-size: 11px;
 }
 .basefont {
-  font-size: 1em;
-}
-.largefont {
-  font-size: 1.5em;
-}
-.bigfont {
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 12px;
 }
 .btn-red {
   background: red;
@@ -119,7 +112,7 @@ body {
   min-width: 100%;
   padding: 3px 12px;
   margin: 0;
-  font-size: 1em;
+  font-size: 12px;
   text-align: left;
   list-style: none;
 }
@@ -701,7 +694,7 @@ ul.sbux-sel-chk-wrap {
   content: "";
   border: 4px solid transparent;
   border-top: 0;
-  border-bottom-color: #fff;
+  border-bottom-color: #333;
 }
 .sbux-rdo-wrap {
   display: inline-block;
@@ -752,6 +745,9 @@ ul.sbux-sel-chk-wrap {
 .sbux-rdo-wrap input[readonly],
 .sbux-rdo-wrap input.readonly {
   cursor: default;
+}
+.sbux-rdo-wrap label {
+  display: inline-block;
 }
 .sbux-rdo-wrap label .glyphicon {
   position: relative;

@@ -643,3 +643,14 @@
 	height : 70px;
 	background:url(../img/grid/SBGridexpiratio.png) center no-repeat;
 }
+
+.sbgrid_tree_ui{
+	table-layout: fixed;
+}
+
+.sbgrid_tree_ui_button {
+	width:95%;
+	height:18px;
+	border-width:1px;
+	border-style:soild;
+}

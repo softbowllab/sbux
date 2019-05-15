@@ -7,7 +7,7 @@ body {
 }
 /********************color********************/
 /*#d4d4d5*/
-/*readonly,disabled 공통적으로 쓰이는 bgcolor*/
+/*readonly,disabled bgcolor*/
 /********************icon********************/
 .glyphicon {
   /* 20180329, remove for picker icon position position: relative;*/
@@ -1457,7 +1457,7 @@ ul.sbux-tre-bd li.sbux-tre-item-chl-wrap div.sbux-tre-item-chl-hd {
   overflow: hidden;
 }
 ul.sbux-tre-bd li.sbux-tre-item-chl-wrap div.sbux-tre-item-chl-hd:hover {
-  background-color: #f0f7fc;
+  background-color: #f9f9f9;
 }
 ul.sbux-tre-bd li.sbux-tre-item-chl-wrap div.sbux-tre-item-chl-hd span.sbux-tre-item-chl-nm {
   /*display:table;*/
@@ -1609,8 +1609,7 @@ ul.sbux-tre-bd li.sbux-tre-item-chl-wrap i.sbux-tre-item-chk-icon {
   box-sizing: border-box;
 }
 ul.sbux-tre-bd li.sbux-tre-li-selected {
-  background-color: rgba(98, 168, 209, 0.1);
-  color: #6398b0;
+  background-color: #f9f9f9;
 }
 ul.sbux-tre-bd li.sbux-tre-li-selected i.sbux-tre-item-chk-icon {
   width: 13px !important;
@@ -1630,7 +1629,7 @@ ul.sbux-tre-bd li.sbux-tre-li-selected i.sbux-tre-item-chk-icon:before {
   color: #307ea5;
 }
 ul.sbux-tre-bd li.sbux-tre-li-selected .sbux-tre-wrap-selected {
-  background-color: #f0f7fc;
+  background-color: #f9f9f9;
 }
 ul.sbux-tre-bd li.sbux-tre-li-selected .sbux-tre-wrap-selected span {
   font-weight: bold;

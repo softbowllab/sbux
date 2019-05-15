@@ -222,6 +222,8 @@
 
 		inBoxColor        : 'blue',  // if you add or change, neeed to css
 
+		showControlPanel : false, // control pannel
+
 		jsondataId        : 'id',
 		jsondataPid       : 'pid',
 		jsondataOrder     : 'order',

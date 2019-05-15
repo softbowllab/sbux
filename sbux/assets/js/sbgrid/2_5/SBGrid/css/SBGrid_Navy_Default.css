@@ -892,3 +892,17 @@
 
 .sbgrid_image_data_col_st{			/*image의 data 영역 스타일 CSS 클래스*/
 }
+
+.sbgrid_tree_ui_button_st {			/* tree 영역에 <button>에 적용되는 스타일 CSS 클래스*/
+	width:19px;
+	height:18px;
+	border:none;
+}
+
+.sbgrid_tree_ui_open_st {								/* tree UI가 펼쳐졌을 때 표시하는 이미지를 설정하는 CSS 클래스*/
+	background:url(../img/grid/group_open3_navy.gif) center no-repeat;
+}
+
+.sbgrid_tree_ui_close_st {								/* tree UI가 닫혀졌을 때 표시하는 이미지를 설정하는 CSS 클래스*/
+	background:url(../img/grid/group_collapse3_navy.gif) center no-repeat;
+}
