@@ -31,6 +31,8 @@
 
         NOT_FOUND_TEXT: '検出された結果がありません',
 
+        INFORMATION_TEXT : '情報',
+
         // MESSAGE
         MESSAGE_NOT_FOUND_NAME: '[SBUx] 参照することができるnameがありません。',
         MESSAGE_NOT_FOUND_ID: '[SBUx] 参照することができるidがありません。',
@@ -89,6 +91,10 @@
         TAB_DONT_CLOSE : '他のすべてのタブは非アクティブです。',
         TAB_OPEN_NOTFOUND_LINK : '接続された画面が存在しません。',
         TAB_DONT_REMOVE : '削除するタブは存在しません。',
+        TAB_MENU_LIST_DEL_ALL : '全タブの削除',
+        TAB_MENU_LIST_DEL_FOCUS : 'フォーカスタブを削除',
+        TAB_MENU_LIST_DEL_EXCEPT : ',固定タブ以外は取り外す',
+        TAB_MENU_DONT_REMOVE : '削除することができません。',
 
         // PROGRESS BAR
         PROGRESS_NOT_ALLOWED_TWOBAR : '"indicator-type"属性が "normal value"の場合は、 "sbux-bar"タグを1つだけ設定する必要があります。',
@@ -138,6 +144,30 @@
 
         // Side menu
         SIDEMENU_NO_DATA : 'データなし',
+
+        // Fileupload
+        HEADER_TITLE : '添付ファイル一覧',
+        ADD_FILE : '追加ファイル',
+        CANCEL_FILE : 'ファイルをキャンセル',
+        UPLOAD_ALL_FILE : 'すべてアップロード',
+        DELETE_FILE : 'ファイルを削除する',
+
+        // Web Editor Button
+        EDITOR_BUTTON_PARAGRAPH : '段落',
+        EDITOR_BUTTON_BOLD   : '大胆な',
+        EDITOR_BUTTON_UNDERLINE  : '下線',
+        EDITOR_BUTTON_ITALIC : 'イタリック',
+        EDITOR_BUTTON_STROKE : 'ストロークスルー',
+        EDITOR_BUTTON_BULLET_LIST : '箇条書きリスト',
+        EDITOR_BUTTON_NUM_LIST : '数値リスト',
+        EDITOR_BUTTON_PICTURE : '画像',
+        EDITOR_BUTTON_LINK : 'リンク',
+        EDITOR_BUTTON_CLEAN : 'クリーン',
+        EDITOR_BUTTON_PREVIEW : 'プレビュー',
+
+        EDITOR_BUTTON_PICTURE_MSG : '画像のURL',
+        EDITOR_BUTTON_PICTURE_ALT_MSG : '代替テキスト',
+        EDITOR_BUTTON_LINK_MSG : 'テキストリンク',
 
         // web accessibility
         WEB_ACCESS_UNTITLED : '無題',

@@ -90,9 +90,13 @@
 		// currentTextYear   : SBUxG.DEF.MSG.DATEPICKER_CURRENT_YEAR_TEXT,
 		// clearText         : SBUxG.DEF.MSG.DATEPICKER_CLEAR_TEXT,
 		// closeText         : SBUxG.DEF.MSG.DATEPICKER_CLOSE_TEXT,
+		showPeriodBar     : false,
+		periodSet         : '3D,5D,1W,2M,6M,1Y',
+
 		closeOnDateSelection : true,
-		placement         : 'bottomLeft'
+		placement         : 'bottomLeft',
 		// inputMask         : SBUxG.DEF.MSG.DATEPICKER_INPUTMASK
+		doubleOpen         : false
 	};
 
 	SBUxG.DEF.SET_RADIO = {
@@ -183,6 +187,11 @@
 		jsondataId        : 'id',
 		jsondataPid       : 'pid',
 		jsondataOrder     : 'order',
+
+		verticalScrollPlacement : 'right',
+		verticalScrollColor : '#000',
+		verticalScrollSize : '7px',
+
 		storageData       : 'value'
 	};
 
@@ -194,7 +203,8 @@
 		closeKeyenter     : false,
 		storageData       : 'value',
 		showCloseButton   : true,
-		showOnlyOne       : false
+		showOnlyOne       : false,
+		showWindowScroll  : true
 	};
 
 	SBUxG.DEF.SET_MODAL    = {
@@ -202,6 +212,8 @@
 		headerCloseText   : '&times;',
 		footerIsCloseButton   : true   ,
 		footerButtonPlacement : 'right',
+		showWindowScroll : true,
+
 		footerCloseText   : SBUxG.DEF.MSG.CLOSE_TEXT,
 		storageData       : 'value'
 	};
@@ -223,6 +235,7 @@
 		inBoxColor        : 'blue',  // if you add or change, neeed to css
 
 		showControlPanel : false, // control pannel
+		showTooltip : false, // tooltip
 
 		jsondataId        : 'id',
 		jsondataPid       : 'pid',
@@ -311,34 +324,15 @@
 		storageData       : 'text'
 	};
 
-	SBUxG.DEF.SET_SIDEMENU = {
-		PATH_DELIMITER    : '/',
-		placement         : 'left',   // left, right
-		showSlideButton   : false,
-		isExpand          : false,
-		isExpandOnlySelect: false,
-		expandType        : 'all',
-		emptyMessage      : SBUxG.DEF.MSG.SIDEMENU_NO_DATA,
+	SBUxG.DEF.SET_SLIDER = {
+		direction         : 'horizontal',
+		minValue          : 0,
+		maxValue          : 100,
 
-		jsondataId        : 'id',
-		jsondataPid       : 'pid',
-		jsondataOrder     : 'order',
-		jsondataText      : 'text',
-		jsondataValue     : 'value',
-		jsondataLink      : 'link',
+		showValue       : true,
 
-		jsondataTargetName : 'targetname',
-		jsondataTarget     : 'target',
-		jsondataImageSrc  : 'imagesrc',
-		jsondataImageStyle: 'imagestyle',
-		jsondataImageAlt : 'imagealt',
-		jsondataImageTitle : 'imagetitle',
-		jsondataImagePosition : 'imagepos',
-		jsondataCssStyle  : 'cssstyle',
-		jsondataCssClass  : 'cssclass',
-		jsondataShortcutId : 'shortcutid',
 
-		storageData       : 'text'
+		storageData       : 'value'
 	};
 
 	SBUxG.DEF.SET_PROGRESS = {
@@ -396,6 +390,7 @@
 		jsondataCssStyle  : 'cssstyle',
 		jsondataOpenLevel : 'openlevel',
 		showRootVline   : false,
+		showTooltipAction : 'hover',
 
 		scrollHeightPerNode : 22,
 
@@ -425,6 +420,117 @@
 		lazyloading       : false
 	};
 
+	SBUxG.DEF.SET_SIDEMENU = {
+		PATH_DELIMITER    : '/',
+		placement         : 'left',   // left, right
+		showSlideButton   : false,
+		isExpand          : false,
+		isExpandOnlySelect: false,
+		expandType        : 'all',
+		emptyMessage      : SBUxG.DEF.MSG.SIDEMENU_NO_DATA,
+
+		jsondataId        : 'id',
+		jsondataPid       : 'pid',
+		jsondataOrder     : 'order',
+		jsondataText      : 'text',
+		jsondataValue     : 'value',
+		jsondataLink      : 'link',
+
+		jsondataTargetName : 'targetname',
+		jsondataTarget     : 'target',
+		jsondataImageSrc  : 'imagesrc',
+		jsondataImageStyle: 'imagestyle',
+		jsondataImageAlt : 'imagealt',
+		jsondataImageTitle : 'imagetitle',
+		jsondataImagePosition : 'imagepos',
+		jsondataCssStyle  : 'cssstyle',
+		jsondataCssClass  : 'cssclass',
+		jsondataShortcutId : 'shortcutid',
+
+		verticalScrollPlacement : 'right',
+		verticalScrollColor : '#000',
+		verticalScrollSize : '7px',
+
+		storageData       : 'text'
+	};
+
+	SBUxG.DEF.SET_FILEUPLOAD = {
+		initUrl : undefined,
+		uploadUrl : undefined,
+		downloadUrl : undefined,
+
+		dataType: 'json',
+
+		acceptFileTypes: 'txt|zip|jar|docx?|xls?x|pdf|gif|jpe?g|png|pptx?',
+		maxFileSize: 10000000, // 10MB
+
+		uploadButtonText: 'Upload...^Sending...^Sucess...^Failed',
+
+		verticalScrollPlacement : 'right',
+		verticalScrollColor : '#000',
+		verticalScrollSize : '7px',
+
+		headerTitle : SBUxG.DEF.MSG.HEADER_TITLE,
+		buttonAddTitle : SBUxG.DEF.MSG.ADD_FILE,
+		buttonCancelTitle : SBUxG.DEF.MSG.CANCEL_FILE,
+		buttonUploadTitle : SBUxG.DEF.MSG.UPLOAD_ALL_FILE,
+		buttonDeleteTitle : SBUxG.DEF.MSG.DELETE_FILE,
+
+		acceptFileTypesMessage : 'File type not allowed',
+		maxFileSizeMessage : 'File is too large',
+		uploadFailMessage : 'Upload failed',
+
+		jsondataName : 'name',
+		jsondataSize : 'size',
+		jsondataExt  : 'ext',
+
+		storageData       : 'value',
+
+		statusInit : 'init',
+		statusAdd : 'add',
+		statusDelete : 'delete',
+		isMulti : false,
+		multiDelimiter : ',',
+
+		autoUpload: false
+	};
+
+	SBUxG.DEF.SET_GALLERY = {
+		jsondataTitle     : 'title',
+		jsondataThumbnail : 'thumbnail',
+		jsondataUrl       : 'url',
+
+		width             : '100px',
+		height            : '100px',
+
+		previousText      : 'Previous',
+		nextText          : 'Next',
+
+		storageData       : 'value'
+	};
+
+	SBUxG.DEF.SET_EDITOR = {
+		width             : '470px',
+		height            : '320px',
+
+		buttonParagraph : SBUxG.DEF.MSG.EDITOR_BUTTON_PARAGRAPH,
+		buttonBold      : SBUxG.DEF.MSG.EDITOR_BUTTON_BOLD,
+		buttonUnderline : SBUxG.DEF.MSG.EDITOR_BUTTON_UNDERLINE,
+		buttonItalic    : SBUxG.DEF.MSG.EDITOR_BUTTON_ITALIC,
+		buttonStroke    : SBUxG.DEF.MSG.EDITOR_BUTTON_STROKE,
+		buttonBulletList : SBUxG.DEF.MSG.EDITOR_BUTTON_BULLET_LIST,
+		buttonNumList   : SBUxG.DEF.MSG.EDITOR_BUTTON_NUM_LIST,
+		buttonPicture   : SBUxG.DEF.MSG.EDITOR_BUTTON_PICTURE,
+		buttonLink      : SBUxG.DEF.MSG.EDITOR_BUTTON_LINK,
+		buttonClean     : SBUxG.DEF.MSG.EDITOR_BUTTON_CLEAN,
+		buttonPreview   : SBUxG.DEF.MSG.EDITOR_BUTTON_PREVIEW,
+
+		buttonPictureMsg   : SBUxG.DEF.MSG.EDITOR_BUTTON_PICTURE_MSG,
+		buttonPictureAltMsg : SBUxG.DEF.MSG.EDITOR_BUTTON_PICTURE_ALT_MSG,
+		buttonLinkMsg   : SBUxG.DEF.MSG.EDITOR_BUTTON_LINK_MSG,
+
+		storageData     : 'value'
+	};
 
 	SBUxG.DEF.SET_CONTEXT_MENU = {
 		zIndex : 2000	,

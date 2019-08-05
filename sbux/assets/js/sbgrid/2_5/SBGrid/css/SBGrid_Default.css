@@ -286,9 +286,11 @@
 	content: "\e906";
 }
 
-.sbgrid_CPA_custom_st {							/*ControlPanelArea 영역의 사용자 정의 아이콘 스타일 CSS 클래스*/
+.sbgrid_CPA_customs_st {							/*ControlPanelArea 영역의 사용자 정의 아이콘 스타일 공통 CSS 클래스*/
 }
-.sbgrid_CPA_custom_st:before {							/*ControlPanelArea 영역의 사용자 정의 아이콘 svg 스타일 CSS 클래스*/
+.sbgrid_CPA_custom_1_st {						/*ControlPanelArea 영역의 첫번째 사용자 정의 아이콘 스타일 CSS 클래스(여러 개 사용시 클래스 추가 .sbgrid_CPA_customs_2_st .sbgrid_CPA_customs_3_st ....)*/
+}
+.sbgrid_CPA_custom_1_st:before {							/*ControlPanelArea 영역의 첫번째 사용자 정의 아이콘 svg 스타일 CSS 클래스(여러 개 사용시 클래스 추가)*/
 }
 
 .sbgrid_CPA_description_ui_st {							/*ControlPanelArea 영역의 그리드 설명 UI 스타일 CSS 클래스*/
@@ -726,6 +728,7 @@
 	border-width: 0px 1px 1px 0px;
 	border-style: solid;
 	border-color: #B2BAD2;
+	overflow: hidden;
 }
 
 .sbgrid_CGAL_st > span {										/*ColumnGroupArea의 리스트 글자 영역 스타일 클래스*/

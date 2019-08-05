@@ -39,6 +39,31 @@
 .fa-angle-up:before {
   content: "\f106";
 }
+/*upload*/
+.fa-plus:before {
+  content: "\f067";
+}
+.fa-minus:before {
+  content: "\f068";
+}
+.fa-upload:before {
+  content: "\f093";
+}
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-copy:before {
+  content: "\f0c5";
+}
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+.fa-trash-alt:before {
+  content: "\f2ed";
+}
+.fa-search:before {
+  content: "\f002";
+}
 .far {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;

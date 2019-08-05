@@ -31,6 +31,8 @@
 
         NOT_FOUND_TEXT: '검색된 결과가 없습니다.',
 
+        INFORMATION_TEXT : '알려드립니다',
+
         // MESSAGE
         MESSAGE_NOT_FOUND_NAME: '[SBUx] 참조할 수 있는 name 이 없습니다.',
         MESSAGE_NOT_FOUND_ID: '[SBUx] 참조할 수 있는 id 가 없습니다.',
@@ -89,6 +91,10 @@
         TAB_DONT_CLOSE : '다른 탭이 모두 비활성 상태입니다.',
         TAB_OPEN_NOTFOUND_LINK : '연결된 화면이 존재하지 않습니다.',
         TAB_DONT_REMOVE : '삭제할 탭이 존재하지 않습니다.',
+        TAB_MENU_LIST_DEL_ALL : '전체 탭 닫음',
+        TAB_MENU_LIST_DEL_FOCUS : '현재 탭 닫음',
+        TAB_MENU_LIST_DEL_EXCEPT : '를 제외한 탭 닫음',
+        TAB_MENU_DONT_REMOVE : '닫을 수 없는 탭 입니다.',
 
         // PROGRESS BAR
         PROGRESS_NOT_ALLOWED_TWOBAR : '"indicator-type" 속성이 "normal" 값인 경우는 sbux-bar tag 를 하나만 설정하셔야 합니다.',
@@ -138,6 +144,30 @@
 
         // Side menu
         SIDEMENU_NO_DATA : '데이터가 존재하지 않습니다.',
+
+        // Fileupload
+        HEADER_TITLE : '첨부파일목록',
+        ADD_FILE : '추가',
+        CANCEL_FILE : '취소',
+        UPLOAD_ALL_FILE : '전체업로드',
+        DELETE_FILE : '삭제',
+
+        // Web Editor Button
+        EDITOR_BUTTON_PARAGRAPH : '문단구분',
+        EDITOR_BUTTON_BOLD   : '굵게',
+        EDITOR_BUTTON_UNDERLINE  : '밑줄',
+        EDITOR_BUTTON_ITALIC : '기울임',
+        EDITOR_BUTTON_STROKE : '취소선',
+        EDITOR_BUTTON_BULLET_LIST : '불릿리스트',
+        EDITOR_BUTTON_NUM_LIST : '순서리스트',
+        EDITOR_BUTTON_PICTURE : '이미지 링크',
+        EDITOR_BUTTON_LINK : '주소 링크',
+        EDITOR_BUTTON_CLEAN : '태그 제거',
+        EDITOR_BUTTON_PREVIEW : '미리보기',
+
+        EDITOR_BUTTON_PICTURE_MSG : '이미지 주소',
+        EDITOR_BUTTON_PICTURE_ALT_MSG : '도움말',
+        EDITOR_BUTTON_LINK_MSG : '링크 주소',
 
         // web accessibility
         WEB_ACCESS_UNTITLED : '미정',

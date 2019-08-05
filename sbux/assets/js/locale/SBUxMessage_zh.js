@@ -31,6 +31,8 @@
 
         NOT_FOUND_TEXT: '未找到结果。',
 
+        INFORMATION_TEXT : '信息',
+
         // MESSAGE
         MESSAGE_NOT_FOUND_NAME: '[SBUx] 没有可引用的名称。',
         MESSAGE_NOT_FOUND_ID: '[SBUx] 没有ID可被引用。',
@@ -89,6 +91,10 @@
         TAB_DONT_CLOSE : '所有其他选项卡都是不活动',
         TAB_OPEN_NOTFOUND_LINK : '连接的屏幕不存在。',
         TAB_DONT_REMOVE : '要删除的选项卡不存在。',
+        TAB_MENU_LIST_DEL_ALL : '删除所有标签',
+        TAB_MENU_LIST_DEL_FOCUS : '删除焦点标签',
+        TAB_MENU_LIST_DEL_EXCEPT : ',除固定标签外，请将其移除',
+        TAB_MENU_DONT_REMOVE : '你无法删除它。',
 
         // PROGRESS BAR
         PROGRESS_NOT_ALLOWED_TWOBAR : '如果 indicator-type="normal"，则只能设置一个 sbux-bar 标签',
@@ -138,6 +144,30 @@
 
         // Side menu
         SIDEMENU_NO_DATA : '没有数据',
+
+        // Fileupload
+        HEADER_TITLE : '附件文件列表',
+        ADD_FILE : '添加文件',
+        CANCEL_FILE : '取消文件',
+        UPLOAD_ALL_FILE : '全部上传',
+        DELETE_FILE : '删除文件',
+
+        // Web Editor Button
+        EDITOR_BUTTON_PARAGRAPH : '段',
+        EDITOR_BUTTON_BOLD   : '胆大',
+        EDITOR_BUTTON_UNDERLINE  : '强调',
+        EDITOR_BUTTON_ITALIC : '斜体',
+        EDITOR_BUTTON_STROKE : '中风',
+        EDITOR_BUTTON_BULLET_LIST : '项目符号列表',
+        EDITOR_BUTTON_NUM_LIST : '数字列表',
+        EDITOR_BUTTON_PICTURE : '图片',
+        EDITOR_BUTTON_LINK : '链接',
+        EDITOR_BUTTON_CLEAN : '清洁',
+        EDITOR_BUTTON_PREVIEW : '预习',
+
+        EDITOR_BUTTON_PICTURE_MSG : '图片网址',
+        EDITOR_BUTTON_PICTURE_ALT_MSG : '替代文字',
+        EDITOR_BUTTON_LINK_MSG : '文字链接',
 
         // web accessibility
         WEB_ACCESS_UNTITLED : '无标题',

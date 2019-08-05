@@ -200,7 +200,7 @@ div.sbux-form-group > span button.readonly {
   background-color: #fff;
   font-size: 12px;
   color: #222;
-  /*.basefont;*/
+  -webkit-appearance: none;
   border-radius: 5px;
   border: 1px solid #d3d3d3;
   box-sizing: border-box;
@@ -386,6 +386,10 @@ input.sbux-rdo-input {
 .sbux-inp-btn-group .sbux-inp-divgroup span.sbux-inp-icon.glyphicon-search:before {
   content: "\e003";
 }
+.sbux-inp-btn-group .sbux-inp-divgroup span.sbux-inp-icon.glyphicon-remove {
+  cursor: pointer;
+  pointer-events: auto;
+}
 .sbux-inp-btn-group button.btn-warning {
   color: #fff;
   background-color: #f0ad4e;
@@ -403,6 +407,10 @@ input.sbux-rdo-input {
 .sbux-inp-btn-group button.btn-info:hover {
   background: #2490af;
   color: #fff;
+}
+.sbux-inp-divgroup span.sbux-inp-icon.glyphicon-remove {
+  cursor: pointer;
+  pointer-events: auto;
 }
 .sbux-btn-group input.btn-info,
 .sbux-btn-group button.btn-info {
@@ -548,7 +556,7 @@ ul.sbux-ato {
   background-color: #fff;
   color: #222;
   border: 1px solid #d3d3d3;
-  border-radius: 2px;
+  border-radius: 5px;
   box-sizing: border-box;
   outline-width: 0;
 }
@@ -578,7 +586,6 @@ ul.sbux-ato {
   font-weight: normal;
   color: #fff;
 }
-/*sbux-ui-autocomplete, sbux-ui-front, sbux-ui-widget, sbux-ui-widget-content 클래스 정리 필요*/
 .sbux-pik-inline-group ul.sbux-pik-popwrap {
   display: inline-block;
   position: static;
@@ -602,6 +609,7 @@ ul.sbux-ato {
   box-sizing: border-box;
   outline-width: 0;
   border-right: none;
+  -webkit-appearance: none;
   /*btn click: ; input border active*/
 }
 .sbux-pik-input.sbux-dirty {
@@ -806,7 +814,6 @@ div.sbux-pik-pop-body td.sbux-pik-saturday .sbux-btn:active {
   background: #333645;
   border-radius: 5px 5px 0 0;
   color: #fff;
-  /*sbux-pik-cw*으로 변경*/
 }
 .sbux-pik-popwrap .sbux-pik-pop-body table {
   vertical-align: top;
@@ -1334,7 +1341,6 @@ table.sbux-pik-pop-year tbody td button.sbux-btn.sbux-btn-secondary:hover {
 .sbux-pik-daterange .sbux-pik-wrap {
   display: inline-block;
   text-align: center;
-  /*input design 변경*/
 }
 .sbux-pik-daterange .sbux-pik-wrap .sbux-pik-icon-span button.sbux-pik-icon-btn {
   border: none;
@@ -1343,10 +1349,17 @@ table.sbux-pik-pop-year tbody td button.sbux-btn.sbux-btn-secondary:hover {
 .sbux-pik-daterange .sbux-pik-wrap .sbux-pik-dash {
   display: none;
 }
+.sbux-pik-daterange .sbux-pik-wrap .sbux-pik-dash-txt {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+}
 .sbux-pik-daterange .sbux-pik-wrap .sbux-pik-date {
   display: inline-table;
   text-align: center;
   margin: 0 auto;
+  vertical-align: top;
 }
 .sbux-pik-daterange .sbux-pik-wrap .sbux-pik-date .sbux-pik-input {
   background: #fff;
@@ -1522,6 +1535,66 @@ table.sbux-pik-pop-year tbody td button.sbux-btn.sbux-btn-secondary:hover {
   color: #555;
   border-color: #d9d9d9;
 }
+.sbux-pik-daterange .sbux-pik-wrap .sbux-pik-popwrap .sbux-pik-mode-days.widthsize {
+  width: 163px;
+}
+.sbux-pik-daterange .sbux-pik-wrap .sbux-pik-popwrap .sbux-pik-mode-months.widthsize {
+  width: 163px;
+}
+.sbux-pik-daterange .sbux-pik-wrap table.sbux-pik-pop-day thead th strong {
+  display: inline-block;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sbux-pik-daterange .sbux-pik-period {
+  width: 100%;
+  height: 36px;
+  background: #272935;
+}
+.sbux-pik-daterange .sbux-pik-period ul {
+  padding-top: 7px;
+  padding: 7px;
+  overflow: hidden;
+}
+.sbux-pik-daterange .sbux-pik-period ul li {
+  display: inline-block;
+  float: left;
+  padding-right: 5px;
+}
+.sbux-pik-daterange .sbux-pik-period ul li button {
+  display: inline-block;
+  width: 40px;
+  height: 21px;
+  font-size: 11px;
+  padding: 0;
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+  background: #4d4e5a;
+  color: #fff;
+  line-height: 20px;
+  cursor: pointer;
+}
+.sbux-pik-daterange .sbux-pik-period ul li:last-child {
+  padding: 0;
+}
+.sbux-pik-daterange .sbux-pik-period ul li:hover button {
+  background: #6c6d78;
+}
+.sbux-pik-daterange .sbux-pik-period ul li.sbux-pik-period-clear {
+  float: right;
+}
+.sbux-pik-daterange .sbux-pik-period ul li.sbux-pik-period-clear button {
+  background: #69b300;
+}
+.sbux-pik-daterange .sbux-pik-period ul li.sbux-pik-period-clear:hover {
+  background: #5a9a00;
+}
+.sbux-pik-daterange .sbux-pik-period.sbux-pik-period-second ul {
+  padding-left: 0;
+}
 /*picker selected  button*/
 input.sbux-pik-input.sbux-dirty + ul.sbux-ddl-menu + .sbux-pik-icon-span .sbux-pik-icon-btn,
 input.sbux-pik-input.sbux-dirty + .sbux-pik-icon-span .sbux-pik-icon-btn {
@@ -1571,6 +1644,7 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   background: #fff;
   border: 1px solid #d3d3d3;
   outline-width: 0;
+  -webkit-appearance: none;
 }
 .sbux-txa[disabled],
 .sb-textarea[disabled],

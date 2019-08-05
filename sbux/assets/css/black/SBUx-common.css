@@ -825,6 +825,16 @@ nav.sbux-meu-fixed-bottom .sbux-meu-fluid .sbux-meu-bd-wrap > ul.sbux-meu-bd-ul 
 .slideline {
   border-right-width: 3px;
 }
+/*마지막선택*/
+.sbux-sidemeu-li.active.sbux-sidemeu-selected > div > a.sbux-sidemeu-link > span {
+  color: #fff;
+}
+/*sidemenu-scroll*/
+.sbux-sidemeu-scroll {
+  position: relative;
+  display: inline-table;
+  width: 200px;
+}
 /*햄버거버튼*/
 nav.sbux-meu-wrap .sbux-meu-fluid .sbux-meu-hd-wrap .sbux-meu-hd-tgl {
   display: none;

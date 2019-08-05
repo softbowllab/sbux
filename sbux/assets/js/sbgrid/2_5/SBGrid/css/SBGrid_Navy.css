@@ -79,7 +79,7 @@
 }
 
 .sbgrid_multisort_td{
-	padding-right : 25px;
+	padding-right : 23px;
 }
 
 .sbgrid_input_text {								/*SBGrid의 data를 입력하는 <input>에 적용하는 레이아웃 CSS 클래스*/
@@ -108,6 +108,7 @@
 .sbgrid_inputdate {									/*SBGrid의 inputdate를 표시하는 <table>에 적용하는 CSS 클래스*/
 	table-layout:fixed;
 	width:100%;
+	border-collapse: collapse !important;
 }
 
 .sbgrid_inputdate_data_cell {						/*inputdate 영역에 data를 표시하는 <td>에 적용하는 CSS 클래스*/
@@ -132,6 +133,7 @@
 .sbgrid_inputbutton {								/*SBGrid의 inputbutton를 표시하는 <table>에 적용하는 CSS 클래스*/
 	table-layout:fixed;
 	width:100%;
+	border-collapse: collapse !important;
 }
 
 .sbgrid_inputbutton_data_cell {						/*inputbutton 영역에 data를 표시하는 <td>에 적용하는 CSS 클래스*/
@@ -156,6 +158,7 @@
 .sbgrid_outputbutton {								/*SBGrid의 outputbutton를 표시하는 <table>에 적용하는 CSS 클래스*/
 	table-layout:fixed;
 	width:100%;
+	border-collapse: collapse !important;
 }
 
 .sbgrid_outputbutton_data_cell {					/*outputbutton 영역에 data를 표시하는 <td>에 적용하는 CSS 클래스*/
@@ -271,6 +274,9 @@
 }
 
 .sbgrid_CPA_columns {							/*ControlPanelArea 영역의 컬럼설정 아이콘 레이아웃 CSS 클래스*/
+}
+
+.sbgrid_CPA_customs {						/*ControlPanelArea 영역의 사용자 정의 아이콘 공통 레이아웃 CSS 클래스*/
 }
 
 .sbgrid_CPA_description_ui {							/*ControlPanelArea 영역의 그리드 설명 UI 레이아웃 CSS 클래스*/
@@ -654,4 +660,8 @@
 	height:18px;
 	border-width:1px;
 	border-style:soild;
+}
+
+.sbgrid_tree_ui_data_cell{
+	text-align : left;
 }

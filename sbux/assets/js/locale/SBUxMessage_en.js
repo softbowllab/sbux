@@ -31,6 +31,8 @@
 
         NOT_FOUND_TEXT: 'Not Found..',
 
+        INFORMATION_TEXT : 'Information',
+
         // MESSAGE
         MESSAGE_NOT_FOUND_NAME: '[SBUx] There is no name that can be referenced.',
         MESSAGE_NOT_FOUND_ID: '[SBUx] There is no id that can be referenced.',
@@ -89,6 +91,10 @@
         TAB_DONT_CLOSE : 'All other tabs are inactive.',
         TAB_OPEN_NOTFOUND_LINK : 'The connected screen does not exist.',
         TAB_DONT_REMOVE : 'The tab to delete does not exist',
+        TAB_MENU_LIST_DEL_ALL : 'Close all',
+        TAB_MENU_LIST_DEL_FOCUS : 'Close',
+        TAB_MENU_LIST_DEL_EXCEPT : ',Close Others',
+        TAB_MENU_DONT_REMOVE : 'Can not be deleted',
 
         // PROGRESS BAR
         PROGRESS_NOT_ALLOWED_TWOBAR : 'If the indicator-type attribute is a normal value, you must set only one sbux-bar tag.',
@@ -138,6 +144,30 @@
 
         // Side menu
         SIDEMENU_NO_DATA : 'No Data',
+
+        // Fileupload
+        HEADER_TITLE : 'Attachment file list',
+        ADD_FILE : 'Add Files',
+        CANCEL_FILE : 'Cancel Files',
+        UPLOAD_ALL_FILE : 'Upload All Files',
+        DELETE_FILE : 'Delete Files',
+
+        // Web Editor Button
+        EDITOR_BUTTON_PARAGRAPH : 'Paragraph',
+        EDITOR_BUTTON_BOLD   : 'Bold',
+        EDITOR_BUTTON_UNDERLINE  : 'Underline',
+        EDITOR_BUTTON_ITALIC : 'Italic',
+        EDITOR_BUTTON_STROKE : 'Stroke through',
+        EDITOR_BUTTON_BULLET_LIST : 'Bulleted List',
+        EDITOR_BUTTON_NUM_LIST : 'Numeric List',
+        EDITOR_BUTTON_PICTURE : 'Picture',
+        EDITOR_BUTTON_LINK : 'Link',
+        EDITOR_BUTTON_CLEAN : 'Clean',
+        EDITOR_BUTTON_PREVIEW : 'Preview',
+
+        EDITOR_BUTTON_PICTURE_MSG : 'Image Source',
+        EDITOR_BUTTON_PICTURE_ALT_MSG : 'Alternative text',
+        EDITOR_BUTTON_LINK_MSG : 'Link',
 
         // web accessibility
         WEB_ACCESS_UNTITLED : 'untitled',
