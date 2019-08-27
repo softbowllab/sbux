@@ -62,7 +62,10 @@
   content: "\f2ed";
 }
 .fa-search:before {
-  content: "\f002";
+  content: " \f002";
+}
+.fa-sort-down:before {
+  content: "\f0dd";
 }
 .far {
   font-family: 'Font Awesome 5 Free';

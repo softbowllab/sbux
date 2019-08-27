@@ -78,10 +78,6 @@
 	position: absolute !important;
 }
 
-.sbgrid_multisort_td{
-	padding-right : 23px;
-}
-
 .sbgrid_input_text {								/*SBGrid의 data를 입력하는 <input>에 적용하는 레이아웃 CSS 클래스*/
 	border-left-width:2px !important;
 	border-right-width:1px !important;

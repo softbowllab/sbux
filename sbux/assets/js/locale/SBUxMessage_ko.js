@@ -144,9 +144,11 @@
 
         // Side menu
         SIDEMENU_NO_DATA : '데이터가 존재하지 않습니다.',
+        SIDEMENU_FILTER_PLACEHOLDER : '메뉴명 검색',
 
         // Fileupload
         HEADER_TITLE : '첨부파일목록',
+        HEADER_FILENAME : '파일명',
         ADD_FILE : '추가',
         CANCEL_FILE : '취소',
         UPLOAD_ALL_FILE : '전체업로드',

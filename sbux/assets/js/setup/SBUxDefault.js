@@ -46,6 +46,10 @@
 		regExpRep : '$1-$2-$3'
 	};
 
+	SBUxG.DEF.SET_POPUPLAYER = {
+		zIndex : 100
+	};
+
 	SBUxG.DEF.SET_COMMON = {
 		storageData       : 'value'
 	};
@@ -146,6 +150,7 @@
 		autoTrimValue : false,
 		emptyValueType    : null, // null , undefined
 		notFoundText      : SBUxG.DEF.MSG.NOT_FOUND_TEXT,
+		noDataText        : SBUxG.DEF.MSG.SELECT_NO_DATA,
 
 		storageData       : 'value'
 	};
@@ -235,6 +240,8 @@
 		inBoxColor        : 'blue',  // if you add or change, neeed to css
 
 		showControlPanel : false, // control pannel
+		closeOthersRemainAlert : false, // if close last tab , alert
+
 		showTooltip : false, // tooltip
 
 		jsondataId        : 'id',
@@ -451,6 +458,16 @@
 		verticalScrollColor : '#000',
 		verticalScrollSize : '7px',
 
+		showFilterBox : false,
+		filterStartsWith : false,
+		filterBoxPlaceholder : SBUxG.DEF.MSG.SIDEMENU_FILTER_PLACEHOLDER,
+
+		isCloseIcon: false,
+		isDraggable: false,
+		highlightColor: '#ff7f4d',
+		highlightWidth: '3px',
+		highlightzIndex : '999',
+
 		storageData       : 'text'
 	};
 
@@ -471,6 +488,7 @@
 		verticalScrollSize : '7px',
 
 		headerTitle : SBUxG.DEF.MSG.HEADER_TITLE,
+		headerFileName : SBUxG.DEF.MSG.HEADER_FILENAME,
 		buttonAddTitle : SBUxG.DEF.MSG.ADD_FILE,
 		buttonCancelTitle : SBUxG.DEF.MSG.CANCEL_FILE,
 		buttonUploadTitle : SBUxG.DEF.MSG.UPLOAD_ALL_FILE,

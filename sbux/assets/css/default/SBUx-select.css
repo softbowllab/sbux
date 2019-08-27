@@ -275,6 +275,9 @@ span.sbux-chk-wrap label[disabled],
 span.sbux-chk-wrap label.readonly {
   cursor: default;
 }
+span.sbux-chk-wrap label .sbux-chk-box-checked-readonly {
+  position: relative;
+}
 span.sbux-chk-wrap label span.readonly,
 span.sbux-chk-wrap label span[readonly],
 span.sbux-chk-wrap label span.disabled,
@@ -366,7 +369,7 @@ a.sbux-sel.readonly {
   background-color: #efefef;
 }
 a.sbux-sel span.sbux-sel-chk-btn-txt {
-  color: #555;
+  color: #000;
 }
 .sbux-sel option:checked,
 .sbux-sel option:active {
@@ -409,7 +412,7 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
 .sbux-sel-chk > a {
   position: relative;
   display: block;
-  padding: 7px 22px 7px 10px;
+  padding: 8px 22px 8px 10px;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   box-sizing: border-box;
@@ -462,7 +465,7 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
   min-width: 80px;
   padding: 0;
   color: #222;
-  font-size: 13px;
+  font-size: 12px;
   white-space: nowrap;
   border: none;
 }
@@ -504,13 +507,13 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
   display: none;
   margin-bottom: 5px;
 }
-.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-item a.sbux-sel-chk-item-tgl label span,
-.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-all a.sbux-sel-chk-item-tgl label span,
-.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-item a.sbux-sel-chk-all-tgl label span,
-.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-all a.sbux-sel-chk-all-tgl label span {
+.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-item a.sbux-sel-chk-item-tgl label span.sbux-sel-chk-bgimg,
+.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-all a.sbux-sel-chk-item-tgl label span.sbux-sel-chk-bgimg,
+.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-item a.sbux-sel-chk-all-tgl label span.sbux-sel-chk-bgimg,
+.sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-all a.sbux-sel-chk-all-tgl label span.sbux-sel-chk-bgimg {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   /*margin-top:2px;*/
   margin-left: 10px;
   background: #fff;
@@ -540,8 +543,8 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
 .sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-all.active label span {
   position: relative;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   /*margin-top:2px; */
   margin-left: 10px;
   background: #fff;
@@ -555,9 +558,9 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
   content: "";
   display: block;
   position: absolute;
-  top: 0px;
-  left: 4px;
-  width: 4px;
+  top: -1px;
+  left: 3px;
+  width: 3px;
   height: 9px;
   border: solid #307ea5;
   border-width: 0 3px 3px 0;
@@ -575,8 +578,8 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
 .sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-all.active[disabled] label span {
   position: relative;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   /*margin-top:2px; */
   margin-left: 10px;
   background: #fff;
@@ -596,9 +599,9 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
   content: "";
   display: block;
   position: absolute;
-  top: 0px;
-  left: 4px;
-  width: 4px;
+  top: -1px;
+  left: 3px;
+  width: 3px;
   height: 9px;
   border: solid #999;
   border-width: 0 3px 3px 0;
@@ -640,13 +643,22 @@ a.sbux-sel span.sbux-sel-chk-btn-txt {
 .sbux-sel-chk ul.sbux-sel-chk-wrap li.sbux-sel-chk-all.disabled span.sbux-sel-chk-bgimg {
   position: relative;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   margin-left: 10px;
   background: #efefef;
   border: 1px solid #cdcdcd;
   border-radius: 2px;
   box-sizing: border-box;
+}
+.sbux-sel-chk .sbux-sel-data-none {
+  font-size: 12px !important;
+  padding: 4px 5px !important;
+}
+.sbux-sel-chk .sbux-sel-data-none label {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 5px !important;
 }
 .sbux-sel-chk .open .sbux-sel-chk-wrap {
   display: block;

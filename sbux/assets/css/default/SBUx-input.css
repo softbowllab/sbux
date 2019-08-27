@@ -1193,7 +1193,7 @@ table.sbux-pik-pop-year tbody td {
   box-sizing: border-box;
 }
 table.sbux-pik-pop-year tbody td button {
-  padding: 7px 7px;
+  padding: 7px 12px;
   font-size: 12px;
   background: none;
   border: 0;
@@ -1539,6 +1539,9 @@ table.sbux-pik-pop-year tbody td button.sbux-btn.sbux-btn-secondary:hover {
   width: 163px;
 }
 .sbux-pik-daterange .sbux-pik-wrap .sbux-pik-popwrap .sbux-pik-mode-months.widthsize {
+  width: 163px;
+}
+.sbux-pik-daterange .sbux-pik-wrap .sbux-pik-popwrap .sbux-pik-mode-years.widthsize {
   width: 163px;
 }
 .sbux-pik-daterange .sbux-pik-wrap table.sbux-pik-pop-day thead th strong {

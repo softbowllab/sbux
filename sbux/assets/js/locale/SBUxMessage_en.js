@@ -144,9 +144,11 @@
 
         // Side menu
         SIDEMENU_NO_DATA : 'No Data',
+        SIDEMENU_FILTER_PLACEHOLDER : 'Search',
 
         // Fileupload
         HEADER_TITLE : 'Attachment file list',
+        HEADER_FILENAME : 'File Names',
         ADD_FILE : 'Add Files',
         CANCEL_FILE : 'Cancel Files',
         UPLOAD_ALL_FILE : 'Upload All Files',

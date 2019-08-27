@@ -144,9 +144,11 @@
 
         // Side menu
         SIDEMENU_NO_DATA : 'データなし',
+        SIDEMENU_FILTER_PLACEHOLDER : 'サーチ',
 
         // Fileupload
         HEADER_TITLE : '添付ファイル一覧',
+        HEADER_FILENAME : 'ファイル名',
         ADD_FILE : '追加ファイル',
         CANCEL_FILE : 'ファイルをキャンセル',
         UPLOAD_ALL_FILE : 'すべてアップロード',

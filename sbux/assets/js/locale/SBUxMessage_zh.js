@@ -144,9 +144,11 @@
 
         // Side menu
         SIDEMENU_NO_DATA : '没有数据',
+        SIDEMENU_FILTER_PLACEHOLDER : '搜索',
 
         // Fileupload
         HEADER_TITLE : '附件文件列表',
+        HEADER_FILENAME : '文件名',
         ADD_FILE : '添加文件',
         CANCEL_FILE : '取消文件',
         UPLOAD_ALL_FILE : '全部上传',

@@ -624,6 +624,25 @@ body {
 .sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item.open ul.sbux-tabs-ddl-bd {
   display: block;
 }
+.sbux-tabs-wrap > ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-cancel-drag,
+.sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-cancel-drag {
+  position: relative;
+}
+.sbux-tabs-wrap > ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-cancel-drag a,
+.sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-cancel-drag a {
+  padding-left: 22px;
+}
+.sbux-tabs-wrap > ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-cancel-drag:before,
+.sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-cancel-drag:before {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  content: "\f08d";
+  color: #999;
+  z-index: 9999000;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
 .sbux-tabs-wrap > ul.sbux-tabs-nor-bd li.sbux-tabs-item.sbux-ddl.sbux-tabs-item-disabled a,
 .sbux-tabs-wrap ul.sbux-tabs-inbox-bd li.sbux-tabs-item.sbux-ddl.sbux-tabs-item-disabled a {
   background: #dcdcdc !important;
@@ -1165,11 +1184,11 @@ body {
 }
 .sbux-tabsmenu-wrap > .sbux-tabs-menu .sbux-tabs-panel > li ul {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 0;
-  width: 150px;
   background: #f8f8f8;
   border-radius: 5px;
+  box-sizing: border-box;
   box-shadow: 0px 3px 3px #d6d6d6;
   padding: 5px 0;
 }
@@ -1342,6 +1361,8 @@ body {
 }
 .sbux-tabsmenu-wrap.sbux-tabs-left-wrap .sbux-tabs-panel li ul {
   left: 0;
+  bottom: 30px;
+  top: auto;
 }
 .sbux-tabsmenu-wrap.sbux-tabs-left-wrap .sbux-sct-left-button-disabled {
   cursor: not-allowed !important;
@@ -1394,6 +1415,8 @@ body {
 }
 .sbux-tabsmenu-wrap.sbux-tabs-right-wrap .sbux-tabs-panel li ul {
   right: 0;
+  bottom: 30px;
+  top: auto;
 }
 .sbux-tabsmenu-wrap.sbux-tabs-right-wrap .sbux-sct-left-button-disabled {
   cursor: not-allowed !important;
@@ -1426,6 +1449,46 @@ body {
 }
 .sbux-tabsmenu-wrap.sbux-tabs-right-wrap .sbux-tabs-item:hover > a.sbux-tabs-tgl span.sbux-tabs-text {
   color: #999 !important;
+}
+.sbux-tabs-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap {
+  position: absolute !important;
+  top: 30px !important;
+  right: 0 !important;
+  width: 200px !important;
+  overflow: visible !important;
+}
+.sbux-tabs-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap .sbux-tabs-list {
+  width: 106px;
+}
+.sbux-tabs-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap .sbux-tabs-list.sbux-tabs-scroll {
+  top: 0;
+}
+.sbux-tabs-wrap .sbux-tabs-list {
+  width: 106px;
+}
+.sbux-tabs-bottom-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap {
+  top: auto !important;
+  right: 0 !important;
+  bottom: 30px !important;
+}
+.sbux-tabs-bottom-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap .sbux-tabs-list.sbux-tabs-scroll {
+  top: 0;
+}
+.sbux-tabs-left-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap {
+  top: auto !important;
+  left: 0 !important;
+  bottom: 30px !important;
+}
+.sbux-tabs-left-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap .sbux-tabs-list.sbux-tabs-scroll {
+  top: 0;
+}
+.sbux-tabs-right-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap {
+  top: auto !important;
+  right: 0 !important;
+  bottom: 30px !important;
+}
+.sbux-tabs-right-wrap .sbux-tabs-list-wrap .sbux-vscroll-wrap .sbux-tabs-list.sbux-tabs-scroll {
+  top: 0;
 }
 .sbux-tabs-text.sbux-tabs-ellipsis {
   display: block;

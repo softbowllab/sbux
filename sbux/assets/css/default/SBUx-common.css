@@ -971,3 +971,50 @@ body > form .sbux-nor-input {
 #div25Test {
   display: block !important;
 }
+.sbux-sidemeu-title-wrap {
+  padding: 5px 10px;
+  background: #272c35;
+}
+.sbux-sidemeu-title-wrap > div {
+  color: #fff;
+}
+.sbux-sidemeu-title-wrap > div span {
+  display: inline-block;
+  padding: 20px 0;
+  font-size: 18px;
+}
+.sbux-sidemeu-title-wrap > div img {
+  display: block;
+  margin: 0 auto;
+}
+/*filter*/
+.sbux-sidemeu-filter-wrap {
+  padding: 8px;
+}
+.sbux-sidemeu-filter-wrap div.sbux-sidemeu-input-wrap {
+  display: table;
+  width: 100%;
+}
+.sbux-sidemeu-filter-wrap div.sbux-sidemeu-input-wrap input {
+  float: left;
+  display: table-cell;
+  width: 80%;
+  height: 25px;
+  padding-left: 5px;
+  border: 0;
+  box-sizing: border-box;
+  background: #474d5a;
+  color: #ccced2;
+}
+.sbux-sidemeu-filter-wrap div.sbux-sidemeu-input-wrap button {
+  float: left;
+  display: table-cell;
+  width: 20%;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #474d5a;
+  color: #91979e;
+  cursor: pointer;
+}

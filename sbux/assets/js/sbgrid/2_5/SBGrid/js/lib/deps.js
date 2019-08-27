@@ -163,13 +163,14 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 									var isTextAreaScroll = (nColType == 'textarea' && colinfo[thiscol.getAttribute("data-colindex")].getTypeInfo().textareascroll) ? true : false;
 									var isThisGroupCell = thiscol.getAttribute('columngroup-cell') ? true : false;
 									var isThatGroupCell = that.getAttribute('columngroup-cell') ? true : false;
-									
-									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisGroupCell && !isThatGroupCell) && (((isTextAreaScroll && $(thiscol).text() == $(that).text()) || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("colspan") == that.getAttribute("colspan")
-										&& (( that.getAttribute('rowspan') == undefined && ((thiscol.getAttribute('merge-colindex') == undefined && that.getAttribute('merge-colindex') == undefined) || that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex'))) ||
-											(that.getAttribute('rowspan') != undefined && that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex') )))){
+									var isThisMergeByFreeCell = thiscol.getAttribute('mergebyfree-cell') ? true : false;
+									var isThatMergeByFreeCell = that.getAttribute('mergebyfree-cell') ? true : false;
+									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisGroupCell && !isThatGroupCell)
+										&& (!isThisMergeByFreeCell && !isThatMergeByFreeCell) && (((isTextAreaScroll && $(thiscol).text() == $(that).text()) || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("colspan") == that.getAttribute("colspan")
+										&& (( that.getAttribute('rowspan') == undefined && ((thiscol.getAttribute('merge-colindex') == undefined && that.getAttribute('merge-colindex') == undefined)
+										|| that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex'))) ||(that.getAttribute('rowspan') != undefined && that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex') )))){
 										rowspan = that.getAttribute("rowspan") || 1;
 										rowspan = Number(rowspan) + 1;
-										
 										if(parseInt(thiscol.getAttribute('data-rowindex')) - parseInt(that.getAttribute('data-rowindex')) != rowspan){
 											that.setAttribute("rowspan", rowspan);
 											thiscol.style.display = 'none';
@@ -192,16 +193,20 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 									that = thiscol;
 								} else{
 									var thisRowIndex = parseInt(thiscol.getAttribute("data-rowindex"));
-									
 									var thatColIndex = parseInt(that.getAttribute("data-colindex"));
 									var thatRowIndex = parseInt(that.getAttribute("data-rowindex"));
 									var targetGrid = colinfo[nCol].attr('parent');
 									var isThisTotal = (thiscol.getAttribute('sbtotal-cell') == 'sub' || thiscol.getAttribute('sbtotal-cell') == 'grand') ? true : false;
 									var isThatTotal = (that.getAttribute('sbtotal-cell') == 'sub' || that.getAttribute('sbtotal-cell') == 'grand') ? true : false;
 									var isStandCol = colinfo[thiscol.getAttribute("data-colindex")].getTotalStandard();
-									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (targetGrid.getCellLabelData(thatRowIndex, thatColIndex) == targetGrid.getCellLabelData(thisRowIndex, nCol) && thiscol.getAttribute("colspan") == that.getAttribute("colspan")
-										&& (( that.getAttribute('rowspan') == undefined && ((thiscol.getAttribute('merge-colindex') == undefined && that.getAttribute('merge-colindex') == undefined) || that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex'))) ||
-											(that.getAttribute('rowspan') != undefined && that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex') )))){
+									var isThisGroupCell = thiscol.getAttribute('columngroup-cell') ? true : false;
+									var isThatGroupCell = that.getAttribute('columngroup-cell') ? true : false;
+									var isThisMergeByFreeCell = thiscol.getAttribute('mergebyfree-cell') ? true : false;
+									var isThatMergeByFreeCell = that.getAttribute('mergebyfree-cell') ? true : false;
+									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisGroupCell && !isThatGroupCell)
+										&& (!isThisMergeByFreeCell && !isThatMergeByFreeCell) && (targetGrid.getCellLabelData(thatRowIndex, thatColIndex) == targetGrid.getCellLabelData(thisRowIndex, nCol) && thiscol.getAttribute("colspan") == that.getAttribute("colspan")
+										&& (( that.getAttribute('rowspan') == undefined && ((thiscol.getAttribute('merge-colindex') == undefined && that.getAttribute('merge-colindex') == undefined)
+										|| that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex'))) || (that.getAttribute('rowspan') != undefined && that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex') )))){
 										rowspan = that.getAttribute("rowspan") || 1;
 										rowspan = Number(rowspan) + 1;
 										
@@ -235,7 +240,6 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 										(that.getAttribute('rowspan') != undefined && that.getAttribute('merge-colindex') == thiscol.getAttribute('merge-colindex') )))){
 									rowspan = that.getAttribute("rowspan") || 1;
 									rowspan = Number(rowspan) + 1;
-									
 									if(parseInt(thiscol.getAttribute('data-rowindex')) - parseInt(that.getAttribute('data-rowindex')) != rowspan){
 										that.setAttribute("rowspan", rowspan);
 										thiscol.style.display = 'none';
@@ -250,7 +254,7 @@ jQuery.fn.rowspan = function (colIdx, colinfo, bSpaceSkip) {
 							}
 						}
 					}
-				}    
+				}
 			}
 		}
 	});
@@ -276,10 +280,12 @@ jQuery.fn.colspan = function (rowIdx, colinfo, bSpaceSkip) {
 								var isThatTotal = (that.getAttribute('sbtotal-cell') == 'sub' || that.getAttribute('sbtotal-cell') == 'grand') ? true : false;
 								var isStandCol = colinfo[thiscol.getAttribute("data-colindex")].getTotalStandard();
 								var isTextAreaScroll = (nColType == 'textarea' && colinfo[thiscol.getAttribute("data-colindex")].getTypeInfo().textareascroll) ? true : false;
-								
+								var isThisMergeByFreeCell = thiscol.getAttribute('mergebyfree-cell') ? true : false;
+								var isThatMergeByFreeCell = that.getAttribute('mergebyfree-cell') ? true : false;
 								if(nColType == 'input' || nColType == 'output' || nColType == 'textarea' || nColType == 'image' || nColType == 'radio'|| nColType == 'checkbox' || nColType == 'html'){
-									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (((isTextAreaScroll && $(thiscol).text() == $(that).text()) || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("rowspan") == that.getAttribute("rowspan") && colinfo[nCol].getMerge() && colinfo[that.getAttribute("data-colindex")].getMerge() 
-										&& ((that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')) ))){
+									if ((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && ((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisMergeByFreeCell && !isThatMergeByFreeCell)
+										&& (((isTextAreaScroll && $(thiscol).text() == $(that).text()) || $(thiscol).html() == $(that).html()) && thiscol.getAttribute("rowspan") == that.getAttribute("rowspan") && colinfo[nCol].getMerge() && colinfo[that.getAttribute("data-colindex")].getMerge() 
+										&& ((that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))))){
 										colspan = that.getAttribute("colspan") || 1;
 										colspan = Number(colspan) + 1;
 										
@@ -294,8 +300,8 @@ jQuery.fn.colspan = function (rowIdx, colinfo, bSpaceSkip) {
 									var thisRowIndex = parseInt(thiscol.getAttribute("data-rowindex"));
 									var thatColIndex = parseInt(that.getAttribute("data-colindex"));	
 									var targetGrid = colinfo[nCol].attr('parent');
-									if(targetGrid.getCellData(thisRowIndex, thatColIndex) == targetGrid.getCellData(thisRowIndex, nCol) && colinfo[thiscol.getAttribute("data-colindex")].getType() == 'chart'
-										&& ( ( that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')) )){
+									if(targetGrid.getCellData(thisRowIndex, thatColIndex) == targetGrid.getCellData(thisRowIndex, nCol) && colinfo[thiscol.getAttribute("data-colindex")].getType() == 'chart' && (!isThisMergeByFreeCell && !isThatMergeByFreeCell)
+										&& (( that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')))){
 										colspan = that.getAttribute("colspan") || 1;
 										colspan = Number(colspan) + 1;
 										
@@ -310,8 +316,8 @@ jQuery.fn.colspan = function (rowIdx, colinfo, bSpaceSkip) {
 									var thisRowIndex = parseInt(thiscol.getAttribute("data-rowindex"));
 									var thatColIndex = parseInt(that.getAttribute("data-colindex"));
 									var targetGrid = colinfo[nCol].attr('parent');
-									if((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && targetGrid.getCellLabelData(thisRowIndex, thatColIndex) == targetGrid.getCellLabelData(thisRowIndex, nCol)
-										&& ( ( that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')) )){
+									if((isStandCol && !$(thiscol).text() == '' || (!isStandCol && !isThisTotal && !isThatTotal)) && targetGrid.getCellLabelData(thisRowIndex, thatColIndex) == targetGrid.getCellLabelData(thisRowIndex, nCol) && (!isThisMergeByFreeCell && !isThatMergeByFreeCell)
+										&& (( that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')))){
 										colspan = that.getAttribute("colspan") || 1;
 										colspan = Number(colspan) + 1;
 										
@@ -334,7 +340,6 @@ jQuery.fn.colspan = function (rowIdx, colinfo, bSpaceSkip) {
 							else{
 								var isThisGroupCell = thiscol.getAttribute('columngroup-cell') ? true : false;
 								var isThatGroupCell = that.getAttribute('columngroup-cell') ? true : false;
-								
 								if (((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (!isThisGroupCell && !isThatGroupCell) && ($(thiscol).html() == $(that).html() && thiscol.getAttribute("rowspan") == that.getAttribute("rowspan")
 										&& ( ( that.getAttribute('colspan') == undefined && ((thiscol.getAttribute('merge-rowindex') == undefined && that.getAttribute('merge-rowindex') == undefined) || that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex'))) || (that.getAttribute('colspan') != undefined && that.getAttribute('merge-rowindex') == thiscol.getAttribute('merge-rowindex')) ))){
 										colspan = that.getAttribute("colspan") || 1;
@@ -368,6 +373,8 @@ jQuery.fn.byrestriccol = function (colIdx, tds, nRowHeader, bSpaceSkip, bCheckTy
 					if(_.isUndefined(that)){
 						that = thiscol;
 					} else{
+						var isThisMergeByFreeCell = thiscol.getAttribute('mergebyfree-cell') ? true : false;
+						var isThatMergeByFreeCell = that.getAttribute('mergebyfree-cell') ? true : false;
 						var thatRowidx = parseInt($(that).attr('data-rowindex')), thisRowidx = parseInt($(thiscol).attr('data-rowindex'));
 						var thatColidx = parseInt($(that).attr('data-colindex')-bDataMergeFalseSkip), thisColidx = parseInt($(thiscol).attr('data-colindex')-bDataMergeFalseSkip);
 						var thisColnum, thatColnum, thatColElement, thisColElement;
@@ -380,16 +387,15 @@ jQuery.fn.byrestriccol = function (colIdx, tds, nRowHeader, bSpaceSkip, bCheckTy
 							thisColElement  = tds.get(thisRowidx).get(thisColidx);
 							thisColnum = thisColElement.getAttribute('merge-rowindex');
 						}
-						if(((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (parseInt($(that).attr('data-colindex')) - (nRowHeader + bDataMergeFalseSkip) < 0)&& (!bCheckType  && $(thiscol).text() == $(that).text() || bCheckType)){
+						if(((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && (parseInt($(that).attr('data-colindex')) - (nRowHeader + bDataMergeFalseSkip) < 0)&& (!bCheckType  && $(thiscol).text() == $(that).text() || bCheckType) && (!isThisMergeByFreeCell && !isThatMergeByFreeCell)){
 							rowspan = that.getAttribute("rowspan") || 1;
 							rowspan = Number(rowspan) + 1;
-						
 							that.setAttribute("rowspan", rowspan);
 						
 							thiscol.style.display = 'none';
 							thiscol.setAttribute("merge-rowindex", that.getAttribute("data-rowindex"));
 							that.setAttribute("merge-rowindex", that.getAttribute("data-rowindex"));
-						} else if (((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && ((!bCheckType  && $(thiscol).text() == $(that).text()) || bCheckType)){
+						} else if (((!bSpaceSkip && !$(thiscol).text() == '') || bSpaceSkip) && ((!bCheckType  && $(thiscol).text() == $(that).text()) || bCheckType) && (!isThisMergeByFreeCell && !isThatMergeByFreeCell)){
 							if(thisColnum != undefined){
 								if(thatColnum == thisColnum){
 									rowspan = that.getAttribute("rowspan") || 1;
@@ -486,30 +492,31 @@ jQuery.fn.mergecancel = function(colIdx, bClear){
 			var td = tr[i].cells;
 			for(var j = 0, nMergeTds = td.length; j < nMergeTds; j++){
 				var thiscol = td[j];
-				if(j == colIdx && (bClear || (!bClear && td[j].getAttribute('col-hidden') != 'none'))){
-					if(!_.isUndefined(thiscol.getAttribute('rowspan')) || !_.isUndefined(thiscol.getAttribute('colspan'))){
-						if(thiscol.getAttribute('rowspan') != undefined){
-							thiscol.removeAttribute('rowspan');
+				if(j == colIdx && (bClear || (!bClear && thiscol.getAttribute('col-hidden') != 'none'))){
+					if(!thiscol.getAttribute('mergebyfree-cell')){
+						if(!_.isUndefined(thiscol.getAttribute('rowspan')) || !_.isUndefined(thiscol.getAttribute('colspan'))){
+							if(thiscol.getAttribute('rowspan') != undefined){
+								thiscol.removeAttribute('rowspan');
+							}
+							
+							if(thiscol.getAttribute('colspan') != undefined){
+								thiscol.removeAttribute('colspan');
+							}
+							if(thiscol.getAttribute('col-hidden') != 'none'){
+								thiscol.style.display = '';
+							}
 						}
-						
-						if(thiscol.getAttribute('colspan') != undefined){
-							thiscol.removeAttribute('colspan');
-						}
-						if(td[j].getAttribute('col-hidden') != 'none'){
-							thiscol.style.display = '';
-						}
-					}
-					
-					if(!_.isUndefined(thiscol.getAttribute('merge-rowindex')) || !_.isUndefined(thiscol.getAttribute('merge-colindex'))){
-						if(thiscol.getAttribute('merge-rowindex') != undefined){
-							thiscol.removeAttribute('merge-rowindex');
-						}
-						
-						if(thiscol.getAttribute('merge-colindex') != undefined){
-							thiscol.removeAttribute('merge-colindex');
-						}
-						if(td[j].getAttribute('col-hidden') != 'none'){
-							thiscol.style.display = '';
+						if(!_.isUndefined(thiscol.getAttribute('merge-rowindex')) || !_.isUndefined(thiscol.getAttribute('merge-colindex'))){
+							if(thiscol.getAttribute('merge-rowindex') != undefined){
+								thiscol.removeAttribute('merge-rowindex');
+							}
+							
+							if(thiscol.getAttribute('merge-colindex') != undefined){
+								thiscol.removeAttribute('merge-colindex');
+							}
+							if(thiscol.getAttribute('col-hidden') != 'none'){
+								thiscol.style.display = '';
+							}
 						}
 					}
 				}

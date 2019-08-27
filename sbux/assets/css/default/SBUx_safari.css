@@ -9,7 +9,7 @@ ul.sbux-tre-bd li.sbux-tre-item-chl-wrap ul.sbux-tre-item-chl-chl:before {
 /***********************************************************/
 .fa-times, .fa-trash-alt, .fa-angle-left, .fa-angle-double-down, .fa-angle-double-left, .fa-angle-double-right,
 .fa-angle-double-up, .fa-angle-down, .fa-angle-left, .fa-angle-right, .fa-angle-up, .fa-plus,
-.fa-minus, .fa-upload, .fa-copy, .fa-times, .fa-exclamation-circle, .fa-trash-alt {
+.fa-minus, .fa-upload, .fa-copy, .fa-times, .fa-exclamation-circle, .fa-trash-alt, .fa-search {
 	text-rendering: optimizeLegibility;
  }
 

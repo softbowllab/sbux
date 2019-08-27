@@ -1235,7 +1235,6 @@ div.sbux-ddl-spbtn-down-wrap {
   left: 0;
   z-index: 9998;
   display: none;
-  overflow: hidden;
   background: rgba(109, 109, 109, 0);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   -webkit-overflow-scrolling: touch;
