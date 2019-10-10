@@ -4,6 +4,7 @@
         NOT_FOUND_LICENSE: '[SBUx] The license is not registered.',
         INVALID_LICENSE: '[SBUx] The license is invalid.',
         EXPIRED_LICENSE: '[SBUx] Trial version has expired.',
+        UNMATCH_VER_LICENSE: '[SBUx] The license is unmatching product version.',
 
         //COMMON
         NOT_DEV_API: '[SBUx] SBUxMethod.${attr} API is an undeveloped feature.',

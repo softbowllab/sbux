@@ -306,7 +306,6 @@
 	background: white;
 	padding: 0;
 	z-index: 11100;
-	right:2px;
 	font-size: 12px;
 }
 
@@ -783,6 +782,7 @@
 	background-position: center;
 	width: 100%;
 	height: 18px;
+	cursor: pointer;
 }
 
 .sbgrid_status_area_delete{
@@ -790,6 +790,7 @@
 	background-position: center;
 	width: 100%;
 	height: 18px;
+	cursor: pointer;
 }
 
 .sbgrid_status_area_insert{
@@ -797,6 +798,7 @@
 	background-position: center;
 	width: 100%;
 	height: 18px;
+	cursor: pointer;
 }
 
 .sbgrid_status_area_select{

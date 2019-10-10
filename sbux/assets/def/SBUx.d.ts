@@ -1,6 +1,9 @@
 declare namespace SBUxMethod {
     function set(modelName: string, value: string, option?:object): void;
     function get(modelName: string): any;
+    function getValue(modelName: string): any;
+    function getText(modelName: string): any;
+
     function clear(modelName: string): void;
     function attr(modelName: string, attrName: string,attrValue: string|boolean): void;
     function show(modelName: string): void;
@@ -18,6 +21,7 @@ declare namespace SBUxMethod {
     function showGroup(groupId: string): void;
     function hideGroup(groupId: string): void;
     function refreshGroup(groupId: string): void;
+    function refreshMasterDetail(modelName, valueOrOptions?): void
 
     function changeLocaleWithFile(localeName: string, fileUrl?: string, applyAll?: boolean): void;
     function changeLocaleWithJson(localeName: string, jsonData: string, applyAll?: boolean): void;
@@ -88,8 +92,11 @@ declare namespace SBUxMethod {
     function popupWindow(url: string, title: string, width: number|string, height: number|string): void;
     function popupLayer(url: string, title: string, width?: number, height?: number, posX?: number, poxY?: number): void;
 
-    function validateRequired(): void;
+    function getFileUpdateData(modelName:string, options?: any): any;
 
+    function validateRequired(options?: any): boolean;
+
+    function _showTreeVline(modelNm, isValid?): void;
 
 }
 

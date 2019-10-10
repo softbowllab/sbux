@@ -1,9 +1,10 @@
 (function() {
     SBUxG.DEF.MSG = {
         // LICENSE
-        NOT_FOUND_LICENSE: '[SBUx] 라이센스가 등록되지 않았습니다.',
-        INVALID_LICENSE: '[SBUx] 라이센스가 유효하지 않습니다.',
+        NOT_FOUND_LICENSE: '[SBUx] 라이선스가 등록되지 않았습니다.',
+        INVALID_LICENSE: '[SBUx] 라이선스가 유효하지 않습니다.',
         EXPIRED_LICENSE: '[SBUx] 사용기간이 만료되었습니다.',
+        UNMATCH_VER_LICENSE: '[SBUx] 버전이 올바르지 않습니다.',
 
         // COMMON
         NOT_DEV_API: '[SBUx] SBUxMethod.${attr} API 는 미개발된 기능입니다.',

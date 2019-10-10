@@ -1881,3 +1881,111 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   background: #fff;
   color: #000;
 }
+.sbux-pik-time {
+  display: inline-block;
+  padding: 5px 19px;
+  border-top: 1px solid #181a23;
+}
+.sbux-pik-time .sbux-pik-hour-wrap,
+.sbux-pik-time .sbux-pik-minute-wrap {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .plus,
+.sbux-pik-time .sbux-pik-minute-wrap .plus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  background: #dadada;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .plus em,
+.sbux-pik-time .sbux-pik-minute-wrap .plus em {
+  display: inline-block;
+  width: 100%;
+  height: 19px;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 17px;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .plus:hover,
+.sbux-pik-time .sbux-pik-minute-wrap .plus:hover {
+  background: #cdcdcd;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .minus,
+.sbux-pik-time .sbux-pik-minute-wrap .minus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  background: #dadada;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .minus em,
+.sbux-pik-time .sbux-pik-minute-wrap .minus em {
+  display: inline-block;
+  width: 100%;
+  height: 19px;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 17px;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .minus:hover,
+.sbux-pik-time .sbux-pik-minute-wrap .minus:hover {
+  background: #cdcdcd;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap,
+.sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap,
+.sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap,
+.sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 19px;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap input,
+.sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap input,
+.sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap input,
+.sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap input {
+  width: 100%;
+  height: 19px;
+  text-align: center;
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 11px;
+}
+.sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap span,
+.sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap span,
+.sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap span,
+.sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  height: 19px;
+  line-height: 19px;
+  display: inline-block;
+  background: #fff;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.sbux-pik-time .sbux-colon {
+  color: #fff;
+  font-weight: bold;
+}

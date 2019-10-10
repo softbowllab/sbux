@@ -4,6 +4,7 @@
         NOT_FOUND_LICENSE: '[SBUx] 许可证未注册。',
         INVALID_LICENSE: '[SBUx] 许可证无效。',
         EXPIRED_LICENSE: '[SBUx] 此许可证已过期。',
+        UNMATCH_VER_LICENSE: '[SBUx] 许可证是无与伦比的产品版本',
 
         // COMMON
         NOT_DEV_API: '[SBUx] SBUxMethod.${attr} API 是一个未开发的功能。',

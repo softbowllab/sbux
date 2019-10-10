@@ -1246,6 +1246,11 @@ div.sbux-ddl-spbtn-down-wrap {
   position: relative;
   margin: 30px auto 0;
 }
+.sbux-mol-wrap .sbux-mol-sm-dlg.sbux-mol-drag,
+.sbux-mol-wrap .sbux-mol-md-dlg.sbux-mol-drag,
+.sbux-mol-wrap .sbux-mol-lg-dlg.sbux-mol-drag {
+  position: absolute !important;
+}
 .sbux-mol-wrap .sbux-mol-sm-dlg {
   width: 300px;
 }
@@ -1278,6 +1283,7 @@ div.sbux-ddl-spbtn-down-wrap {
   color: #fff;
   line-height: 1.42857143;
   font-size: 18px;
+  cursor: default;
 }
 .sbux-mol-wrap .sbux-mol-cont .sbux-mol-hd .sbux-mol-hd-close {
   position: absolute;
@@ -1600,6 +1606,10 @@ ul.sbux-tre-bd li.sbux-tre-item-chl-wrap ul.sbux-tre-item-chl-chl li.sbux-tre-it
 ul.sbux-tre-bd li.sbux-tre-item-chl-wrap ul.sbux-tre-item-chl-chl li.sbux-tre-item-wrap span.sbux-tre-item-nm i.sbux-tre-item-chk-icon {
   margin-right: 4px !important;
 }
+ul.sbux-tre-bd li.sbux-tre-item-chl-wrap ul.sbux-tre-item-chl-chl li.sbux-tre-item-wrap span.sbux-tre-item-nm i.sbux-tre-item-chk-icon.glyphicon-ok:before {
+  content: "\e013";
+  color: #307ea5;
+}
 ul.sbux-tre-bd li.sbux-tre-item-chl-wrap i.sbux-tre-item-chk-icon {
   width: 13px !important;
   height: 13px !important;
@@ -1617,7 +1627,7 @@ ul.sbux-tre-bd li.sbux-tre-item-chl-wrap i.sbux-tre-item-chk-icon {
 ul.sbux-tre-bd li.sbux-tre-li-selected {
   background-color: #f9f9f9;
   color: #307ea5;
-  font-weight: bold;
+  /*font-weight: bold; */
   cursor: pointer;
 }
 ul.sbux-tre-bd li.sbux-tre-li-selected i.sbux-tre-item-chk-icon {
@@ -1633,15 +1643,14 @@ ul.sbux-tre-bd li.sbux-tre-li-selected i.sbux-tre-item-chk-icon {
   border: 1px solid #bababa;
   vertical-align: top;
 }
-ul.sbux-tre-bd li.sbux-tre-li-selected i.sbux-tre-item-chk-icon:before {
-  content: "\e013";
-  color: #307ea5;
-}
 ul.sbux-tre-bd li.sbux-tre-li-selected .sbux-tre-wrap-selected {
   background-color: #f9f9f9;
 }
 ul.sbux-tre-bd li.sbux-tre-li-selected .sbux-tre-wrap-selected span {
   font-weight: bold;
+}
+ul.sbux-tre-bd li.sbux-tre-li-selected > .sbux-tre-wrap-selected .glyphicon-ok {
+  color: #307ea5;
 }
 @media (max-width: 768px) {
   .sbux-mol-wrap .sbux-mol-lg-dlg {

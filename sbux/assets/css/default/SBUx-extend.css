@@ -2107,6 +2107,22 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   left: 37.2%;
   top: 32%;
 }
+.sbux-prg-loading-txt-static {
+  background: #000;
+  color: #fff;
+  font-family: "Helvetica Neue, " Helvetica ", " "arial";
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 0px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  left: 37.2%;
+  top: 32%;
+}
 .sbux-upl-wrap {
   width: 500px;
 }
@@ -2135,6 +2151,45 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
 .sbux-upl-wrap ul.sbux-upl-topmenu li button:hover {
   background: #f1f1f1;
   color: #000;
+}
+.sbux-upl-wrap ul.sbux-upl-topmenu li button.readonly,
+.sbux-upl-wrap ul.sbux-upl-topmenu li button[readonly] {
+  background: #fbfbfb !important;
+  border: 0 !important;
+  cursor: text !important;
+  color: #555;
+}
+.sbux-upl-wrap ul.sbux-upl-topmenu li button.readonly i,
+.sbux-upl-wrap ul.sbux-upl-topmenu li button[readonly] i {
+  color: #555 !important;
+}
+.sbux-upl-wrap ul.sbux-upl-topmenu li button.readonly:hover,
+.sbux-upl-wrap ul.sbux-upl-topmenu li button[readonly]:hover {
+  background: #fbfbfb !important;
+  color: #555 !important;
+  border: 0 !important;
+  cursor: text !important;
+}
+.sbux-upl-wrap ul.sbux-upl-topmenu li button[disabled],
+.sbux-upl-wrap ul.sbux-upl-topmenu li button.disabled {
+  background: #fbfbfb !important;
+  border: 0 !important;
+  cursor: default !important;
+  color: #999;
+}
+.sbux-upl-wrap ul.sbux-upl-topmenu li button[disabled] i,
+.sbux-upl-wrap ul.sbux-upl-topmenu li button.disabled i {
+  color: #999 !important;
+}
+.sbux-upl-wrap ul.sbux-upl-topmenu li button[disabled]:hover,
+.sbux-upl-wrap ul.sbux-upl-topmenu li button.disabled:hover {
+  background: #fbfbfb !important;
+  color: #999 !important;
+  border: 0 !important;
+  cursor: default !important;
+}
+.sbux-upl-wrap ul.sbux-upl-topmenu li button.hidden {
+  visibility: hidden;
 }
 .sbux-upl-wrap ul.sbux-upl-topmenu li > span {
   display: block;
@@ -2213,6 +2268,29 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   padding: 5px 10px;
   vertical-align: top;
 }
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-header div.sbux-upl-chk-wrap input.disabled,
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-header div.sbux-upl-chk-wrap input[disabled] {
+  display: none;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-header div.sbux-upl-chk-wrap input.disabled + label,
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-header div.sbux-upl-chk-wrap input[disabled] + label {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: #fbfbfb !important;
+  color: #999 !important;
+  border: 0 !important;
+  border: 1px solid #d9d9d9 !important;
+  cursor: default !important;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-header div.sbux-upl-chk-wrap input.hidden {
+  display: none;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-header div.sbux-upl-chk-wrap input.hidden + label {
+  visibility: hidden;
+}
 .sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-header div.sbux-upl-txt {
   display: inline-block;
   padding-top: 9px;
@@ -2256,6 +2334,29 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   width: 17px;
   padding: 0 10px;
   vertical-align: middle;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-chk-wrap input.disabled,
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-chk-wrap input[disabled] {
+  display: none;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-chk-wrap input.disabled + label,
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-chk-wrap input[disabled] + label {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: #fbfbfb !important;
+  color: #999 !important;
+  border: 0 !important;
+  border: 1px solid #d9d9d9 !important;
+  cursor: default !important;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-chk-wrap input.hidden {
+  display: none;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-chk-wrap input.hidden + label {
+  visibility: hidden;
 }
 .sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap {
   display: table-cell;
@@ -2700,6 +2801,222 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   background: url(../images/au.gif) no-repeat;
   vertical-align: top;
 }
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-pptx {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/pptx.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-asa {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/asa.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-asax {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/asax.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-ascx {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/ascx.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-asmx {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/asmx.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-com {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/com.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-config {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/config.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-cs {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/cs.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-css {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/css.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-disco {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/disco.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-inc {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/inc.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-mdb {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/mdb.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-mid {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/mid.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-mov {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/mov.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-move {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/move.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-Move {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/Move.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-vb {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/vb.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-vbs {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/vbs.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-vsdisco {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/vsdisco.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-wri {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/wri.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-arj {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/arj.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-cab {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/cab.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-ini {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/ini.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-sys {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/sys.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-rar {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/rar.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-docx {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/docx.gif) no-repeat;
+  vertical-align: top;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-file-wrap .sbux-upl-ico-xlsx {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 1px;
+  background: url(../images/xlsx.gif) no-repeat;
+  vertical-align: top;
+}
 .sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-btn-wrap {
   display: table-cell;
   width: 80px;
@@ -2729,6 +3046,20 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
 .sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-btn-wrap button.sbux-upl-btn:hover {
   background: #f1f1f1;
   color: #000;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-btn-wrap button.sbux-upl-btn.hidden {
+  visibility: hidden;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-btn-wrap button.sbux-upl-btn.disabled,
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-btn-wrap button.sbux-upl-btn[disabled] {
+  background: #fbfbfb !important;
+  border: 0 !important;
+  /*border:1px solid @default-disabled-border !important;*/
+  cursor: default !important;
+}
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-btn-wrap button.sbux-upl-btn.disabled i,
+.sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li div.sbux-upl-btn-wrap button.sbux-upl-btn[disabled] i {
+  color: #999 !important;
 }
 .sbux-upl-wrap .sbux-upl-con-wrap .sbux-upl-main li .sbux-upl-hidden {
   visibility: hidden;
@@ -2831,7 +3162,26 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   top: 1px;
   right: 0;
 }
-.sbux-upl-single-wrap > button {
+.sbux-upl-single-wrap > div.sbux-upl-input button.sbux-upl-btn-in.disabled,
+.sbux-upl-single-wrap > div.sbux-upl-input button.sbux-upl-btn-in[disabled] {
+  cursor: default;
+}
+.sbux-upl-single-wrap > div.sbux-upl-input button.sbux-upl-btn-in.disabled i,
+.sbux-upl-single-wrap > div.sbux-upl-input button.sbux-upl-btn-in[disabled] i {
+  color: #999;
+  cursor: default;
+  outline-width: 0;
+}
+.sbux-upl-single-wrap > div.sbux-upl-input button.sbux-upl-btn-in.hidden {
+  visibility: hidden;
+}
+.sbux-upl-single-wrap > div.sbux-upl-input span.sbux-upl-input-ellipsis {
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sbux-upl-single-wrap > button.sbux-upl-txt {
   float: left;
   height: 30px;
   padding: 0 10px;
@@ -2842,8 +3192,21 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
-.sbux-upl-single-wrap > button:hover {
+.sbux-upl-single-wrap > button.sbux-upl-txt:hover {
   background: #f1f1f1;
+}
+.sbux-upl-single-wrap > button.sbux-upl-txt.disabled,
+.sbux-upl-single-wrap > button.sbux-upl-txt[disabled] {
+  color: #999;
+  cursor: default;
+  outline-width: 0;
+}
+.sbux-upl-single-wrap > button.sbux-upl-txt.disabled:hover,
+.sbux-upl-single-wrap > button.sbux-upl-txt[disabled]:hover {
+  background: #f1f1f1;
+}
+.sbux-upl-single-wrap > button.sbux-upl-txt.hidden {
+  visibility: hidden;
 }
 .sbux-upl-single-wrap > span.sbux-upl-download {
   float: left;
@@ -2878,6 +3241,19 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   background: none;
   color: #777;
   cursor: pointer;
+}
+.sbux-upl-single-wrap > span.sbux-upl-download button.disabled,
+.sbux-upl-single-wrap > span.sbux-upl-download button[disabled] {
+  cursor: default;
+}
+.sbux-upl-single-wrap > span.sbux-upl-download button.disabled i,
+.sbux-upl-single-wrap > span.sbux-upl-download button[disabled] i {
+  color: #999;
+  cursor: default;
+  outline-width: 0;
+}
+.sbux-upl-single-wrap > span.sbux-upl-download button.hidden {
+  visibility: hidden;
 }
 .sbux-upl-single-wrap > input {
   width: 0px;

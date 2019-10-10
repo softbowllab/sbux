@@ -35,8 +35,7 @@
 	SBUxG.DEF.SET_PERMIT_KEYCODES_SET = {
 		kr : [], // not num and not eng
 		num : [48,49,50,51,52,53,54,55,56,57], // 0 ~ 9
-		en : [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,
-		       97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122], // A~Z , a~z
+		en : [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122], // A~Z , a~z
 		custom : [],
 		customnot : []
 	};
@@ -72,7 +71,9 @@
 	};
 
 	SBUxG.DEF.SET_INPUT = {
-		storageData       : 'value'
+		storageData       : 'value',
+		maskCurrencyUnit  : '$ ', // '￦'
+		gridJit           : true
 	};
 
 	SBUxG.DEF.SET_DATEPICKER = {
@@ -100,7 +101,10 @@
 		closeOnDateSelection : true,
 		placement         : 'bottomLeft',
 		// inputMask         : SBUxG.DEF.MSG.DATEPICKER_INPUTMASK
-		doubleOpen         : false
+		doubleOpen         : false,
+		fromValidateCheck  : true,
+		peroidCloseOnDateSelection : false,
+		showTimeBar : false
 	};
 
 	SBUxG.DEF.SET_RADIO = {
@@ -152,6 +156,8 @@
 		notFoundText      : SBUxG.DEF.MSG.NOT_FOUND_TEXT,
 		noDataText        : SBUxG.DEF.MSG.SELECT_NO_DATA,
 
+		showDownIcon : true,
+
 		storageData       : 'value'
 	};
 
@@ -170,7 +176,8 @@
 		isContentHtml     : false,
 		rows              : 3,
 		cols              : 50,
-		storageData       : 'value'
+		storageData       : 'value',
+		gridJit           : true
 	};
 
 	SBUxG.DEF.SET_LISTBOX = {
@@ -218,6 +225,7 @@
 		footerIsCloseButton   : true   ,
 		footerButtonPlacement : 'right',
 		showWindowScroll : true,
+		isDraggable : false,
 
 		footerCloseText   : SBUxG.DEF.MSG.CLOSE_TEXT,
 		storageData       : 'value'
@@ -400,6 +408,7 @@
 		showTooltipAction : 'hover',
 
 		scrollHeightPerNode : 22,
+		traverseUpCheck : true,
 
 		storageData       : 'text'
 	};

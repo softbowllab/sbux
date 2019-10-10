@@ -1,8 +1,8 @@
 declare namespace _SBGrid {
-    
+
     function create(attribute: gridProperties): instance;
-    function destory():void;
-    function destoryAll():void;
+    function destroy():void;
+    function destroyAll():void;
     function getGrid(gridId: string): instance;
     function getGrids(): string[];
     function getLastFocusGrid() : string;
@@ -23,21 +23,21 @@ declare namespace _SBGrid {
         // button type
         buttonvalue? : number;
         callback? : string|Function;
-        
+
         // checbkox type
         checkedvalue? : string;
         uncheckedvalue? : string;
-        
+
         // combo
         ref? : string;
         label? : string;
         value?: string;
         oneclickedit?: boolean;
         itemcount? : number;
-        displayui? : boolean; 
-        position? : string; 
+        displayui? : boolean;
+        position? : string;
         filtering? : comboFilterInColumnTypeinfo;
-        
+
         // datepicker
         dateformat? : string;
         // oneclickedit? : boolean;
@@ -77,8 +77,8 @@ declare namespace _SBGrid {
         // value?: string;
         // oneclickedit?: boolean;
         // itemcount? : number;
-        // displayui? : boolean; 
-        // position? : string; 
+        // displayui? : boolean;
+        // position? : string;
 
         // inputdate
         // dateformat : string;
@@ -86,7 +86,7 @@ declare namespace _SBGrid {
         // locale? : string;
         // clearbutton? : boolean;
         // multiple? : number;
-        // position? : string; 
+        // position? : string;
         alias? : string;
         // calendartype? : string;
         // yearrange? : number;
@@ -110,7 +110,7 @@ declare namespace _SBGrid {
         // mask? : inputMaskInColumnTypeinfo;
 
     }
-    
+
     interface filterInColumnProperties {
         usemode? : boolean;
         uitype? : string;
@@ -146,7 +146,7 @@ declare namespace _SBGrid {
 
         typeinfo? : typeinfoInColumnProperties;
 
-        calc? : string|calcInColumnProperties;        
+        calc? : string|calcInColumnProperties;
         columngroup? : object;
         columnhint? : string;
 
@@ -155,7 +155,7 @@ declare namespace _SBGrid {
 
         filtering? : filterInColumnProperties;
         fixedstyle? : string;
-        format? : formatInColumnProperties; 
+        format? : formatInColumnProperties;
 
         hidden? : boolean;
 
@@ -182,7 +182,7 @@ declare namespace _SBGrid {
         count : number;
         size : number;
         sorttype? : string;
-        showgoalpageui? : boolean; 
+        showgoalpageui? : boolean;
     }
 
     interface totalProperites {
@@ -244,7 +244,7 @@ declare namespace _SBGrid {
         // personalize
         autosavepsnldata? : boolean;
         psnldataid? : string;
-        
+
         removewhitespace? : boolean;
         resizinginterval? : number;
         rowdatatype? : string;
