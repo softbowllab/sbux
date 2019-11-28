@@ -67,6 +67,9 @@
 .fa-sort-down:before {
   content: "\f0dd";
 }
+.fa-check:before {
+  content: "\f00c";
+}
 .far {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;

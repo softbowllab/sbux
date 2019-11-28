@@ -74,7 +74,7 @@
 	width:95%;
 	height:18px;
 	background:url(../img/grid/cal_button_navy.png) center no-repeat;
-	background-color:none;
+	background-color:transparent;
 	background-position:center;
 	border:0;
 	cursor:Pointer;
@@ -171,7 +171,9 @@
 
 .sbgrid_CPA_st {							/*ControlPanelArea 영역의 스타일 CSS 클래스*/
 	height:30px;
-	border:1px solid #cdcdcd;
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	border-color: #cdcdcd;
 }
 
 .sbgrid_CPA_title_st {							/*ControlPanelArea 영역의 타이틀 스타일 CSS 클래스*/
@@ -413,6 +415,14 @@
 	width: 70px;
 }
 
+.sbgrid_CPA_hint_st {										/*ColumnHintArea 영역의 힌트 스타일 클래스*/
+	border: solid #3f4f90 1px;
+	background:white;
+	padding: 3px;
+	font-size: 12.5px;
+	z-index: 11101;
+}
+
 .sbgrid_GFA_st {									/*패널이나 페이징UI가 아닌 그리드를 표시하는 <DIV>에 적용되는 스타일 CSS 클래스*/
 	width:100% !important;				/*그리드의 width*/
 	border:1px solid !important;		/*그리드 테두리 */
@@ -631,7 +641,7 @@
 
 .sbgrid_CMA_st {									/*컬럼 이동 속성이 활성화되어 있을 때, 헤더 영역 컬럼을 마우스 드래그하면 나타나는 ColumnMoveArea <DIV>에 적용되는 스타일 CSS 클래스*/
 	background: #B2BAD2;
-	filter: alpha(opacity = 60);
+	filter: alpha(opacity=60);
 	opacity: 0.6;
 }
 
@@ -702,7 +712,6 @@
 }
 
 .sbgrid_data_cell_hover_st,.sbgrid_data_row_hover_st td {	/*데이터 영역의 행/셀에 hover 발생 시 TD에 적용되는 스타일*/
-	//border-color: #425f73;
 }
 
 .sbgrid_renderer_span {}
@@ -767,7 +776,7 @@
 	width:95%;
 	height:18px;
 	background:url(../img/grid/cal_button_navy.png) no-repeat;
-	background-color:none;
+	background-color:transparent;
 	background-position:center;
 	border:0;
 	cursor:Pointer;
@@ -782,7 +791,6 @@
 	background-position: center;
 	width: 100%;
 	height: 18px;
-	cursor: pointer;
 }
 
 .sbgrid_status_area_delete{
@@ -790,7 +798,6 @@
 	background-position: center;
 	width: 100%;
 	height: 18px;
-	cursor: pointer;
 }
 
 .sbgrid_status_area_insert{
@@ -798,7 +805,6 @@
 	background-position: center;
 	width: 100%;
 	height: 18px;
-	cursor: pointer;
 }
 
 .sbgrid_status_area_select{

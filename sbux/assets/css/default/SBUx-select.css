@@ -275,9 +275,6 @@ span.sbux-chk-wrap label[disabled],
 span.sbux-chk-wrap label.readonly {
   cursor: default;
 }
-span.sbux-chk-wrap label .sbux-chk-box-checked-readonly {
-  position: relative;
-}
 span.sbux-chk-wrap label span.readonly,
 span.sbux-chk-wrap label span[readonly],
 span.sbux-chk-wrap label span.disabled,
@@ -768,7 +765,6 @@ ul.sbux-sel-chk-wrap {
   display: inline-block;
 }
 .sbux-rdo-wrap label .glyphicon {
-  position: relative;
   width: 16px;
   height: 16px;
   vertical-align: middle;
@@ -788,6 +784,16 @@ ul.sbux-sel-chk-wrap {
 .sbux-rdo-wrap label.readonly,
 .sbux-rdo-wrap label[readonly] {
   cursor: default;
+}
+.sbux-rdo-wrap label span.sbux-rdo-box {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  border: 1px solid #d3d3d3;
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
 }
 .sbux-rdo-wrap label span.disabled,
 .sbux-rdo-wrap label span[disabled],
@@ -1066,6 +1072,15 @@ fieldset.readonly .sbux-lbl-expr {
 .sbux-sel-form[disabled] ul.sbux-sel-form-list,
 .sbux-sel-form.disabled ul.sbux-sel-form-list {
   display: none;
+}
+.sbux-sel-form.sbux-sel-form-up .sbux-sel-form-wrap button.sbux-sel-form-btn i {
+  transform: rotate(180deg) !important;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+.sbux-sel-form.sbux-sel-form-up .sbux-sel-form-list {
+  bottom: 100% !important;
+  top: auto;
 }
 .sbux-sel-form[readonly] .sbux-sel-form-wrap.open + ul.sbux-sel-form-list,
 .sbux-sel-form.readonly .sbux-sel-form-wrap.open + ul.sbux-sel-form-list {

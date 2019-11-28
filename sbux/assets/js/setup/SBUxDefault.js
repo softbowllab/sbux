@@ -33,9 +33,11 @@
 
 
 	SBUxG.DEF.SET_PERMIT_KEYCODES_SET = {
-		kr : [], // not num and not eng
+		kr : [], // not num and not eng,
 		num : [48,49,50,51,52,53,54,55,56,57], // 0 ~ 9
 		en : [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122], // A~Z , a~z
+		shiftSpecial : [126,33,64,35,36,37,94,37,42,40,41,95,43,124,123,125,58,34,60,62,63], // ~!@#$%^&*()_+|{}:"<>?
+		special : [45,61,92,91,93,59,39,44,46,47,42,43], // -=\[];',./*-+
 		custom : [],
 		customnot : []
 	};
@@ -103,8 +105,11 @@
 		// inputMask         : SBUxG.DEF.MSG.DATEPICKER_INPUTMASK
 		doubleOpen         : false,
 		fromValidateCheck  : true,
+		fromDeselectCheck  : false,
 		peroidCloseOnDateSelection : false,
-		showTimeBar : false
+		clearIncomplete : false,
+		showTimeBar : false,
+		showCustomDay : false
 	};
 
 	SBUxG.DEF.SET_RADIO = {
@@ -249,6 +254,7 @@
 
 		showControlPanel : false, // control pannel
 		closeOthersRemainAlert : false, // if close last tab , alert
+		closeOthersRemainDefault : "current|exceptcurrent|all",
 
 		showTooltip : false, // tooltip
 
@@ -363,6 +369,9 @@
 		showMotion : false,
 		isFixed : false,
 		isModal : true,
+		speed : 100,
+		animation : true,
+		animationType : 'fadeOut',
 		storageData       : 'value'
 	};
 
@@ -409,6 +418,7 @@
 
 		scrollHeightPerNode : 22,
 		traverseUpCheck : true,
+		isDraggable: false,
 
 		storageData       : 'text'
 	};
@@ -440,6 +450,7 @@
 		PATH_DELIMITER    : '/',
 		placement         : 'left',   // left, right
 		showSlideButton   : false,
+		slideAnimation    : true,
 		isExpand          : false,
 		isExpandOnlySelect: false,
 		expandType        : 'all',
@@ -487,7 +498,7 @@
 
 		dataType: 'json',
 
-		acceptFileTypes: 'txt|zip|jar|docx?|xls?x|pdf|gif|jpe?g|png|pptx?',
+		acceptFileTypes: 'txt|zip|jar|docx?|xlsx?|pdf|gif|jpe?g|png|pptx?',
 		maxFileSize: 10000000, // 10MB
 
 		uploadButtonText: 'Upload...^Sending...^Sucess...^Failed',
@@ -511,15 +522,17 @@
 		jsondataSize : 'size',
 		jsondataExt  : 'ext',
 
-		storageData       : 'value',
+		storageData  : 'value',
 
 		statusInit : 'init',
 		statusAdd : 'add',
 		statusDelete : 'delete',
 		isMulti : false,
 		multiDelimiter : ',',
+		hideInputBox : false,
 
-		autoUpload: false
+		autoUpload: false,
+		acceptIconTypes : 'html|docx?|xlsx?|pptx?|pdf|txt|hwp|hlp|dat|chm|jpg|gif|bmp|log|jar|zip|rar|cab|js|css|exe|dll|bat|com|cs|sys|ini|config|fla|wvx|wmx|wmv|wmp|wma|wax|wav|vm|tiff|tif|swf|snd|rmi|psd|png|mpv2|mpg|mpeg|mpe|mpa|mp3|mp2v|mp2|midi|avi|au|asa|asax|ascx|asmx|sound|folder|disco|inc|mdb|mid|mov|move|vb|vbs|vsdisco|wri|arj'
 	};
 
 	SBUxG.DEF.SET_GALLERY = {

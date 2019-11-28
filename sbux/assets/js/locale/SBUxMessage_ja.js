@@ -94,6 +94,7 @@
         TAB_DONT_REMOVE : '削除するタブは存在しません。',
         TAB_MENU_LIST_DEL_ALL : '全タブの削除',
         TAB_MENU_LIST_DEL_FOCUS : 'フォーカスタブを削除',
+        TAB_MENU_LIST_DEL_EXCEPT_FOCUS : '固定タブ以外は取り外す',
         TAB_MENU_LIST_DEL_EXCEPT : ',固定タブ以外は取り外す',
         TAB_MENU_DONT_REMOVE : '削除することができません。',
 

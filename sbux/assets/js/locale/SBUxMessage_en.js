@@ -94,6 +94,7 @@
         TAB_DONT_REMOVE : 'The tab to delete does not exist',
         TAB_MENU_LIST_DEL_ALL : 'Close all',
         TAB_MENU_LIST_DEL_FOCUS : 'Close',
+        TAB_MENU_LIST_DEL_EXCEPT_FOCUS : 'Close Others',
         TAB_MENU_LIST_DEL_EXCEPT : ',Close Others',
         TAB_MENU_DONT_REMOVE : 'Can not be deleted',
 

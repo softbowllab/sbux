@@ -1636,9 +1636,6 @@ label.sbux-lbl-nor {
   0% {
     opacity: 0;
   }
-  20% {
-    opacity: 0;
-  }
   50% {
     opacity: 1;
   }
@@ -1648,9 +1645,6 @@ label.sbux-lbl-nor {
 }
 @-moz-keyframes sbux-loading-text-opacity {
   0% {
-    opacity: 0;
-  }
-  20% {
     opacity: 0;
   }
   50% {
@@ -1664,9 +1658,6 @@ label.sbux-lbl-nor {
   0% {
     opacity: 0;
   }
-  20% {
-    opacity: 0;
-  }
   50% {
     opacity: 1;
   }
@@ -1678,14 +1669,55 @@ label.sbux-lbl-nor {
   0% {
     opacity: 0;
   }
-  20% {
-    opacity: 0;
-  }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes sbux-loading-text-opacity2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes sbux-loading-text-opacity2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes sbux-loading-text-opacity2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes sbux-loading-text-opacity2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .sbux-loading-container {
@@ -2087,10 +2119,6 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   text-align: center;
 }
 .sbux-prg-loading-txt-div {
-  -moz-animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
-  -o-animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
-  -webkit-animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
-  animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
   background: #000;
   color: #fff;
   font-family: "Helvetica Neue, " Helvetica ", " "arial";
@@ -2106,6 +2134,18 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
   border-radius: 100px;
   left: 37.2%;
   top: 32%;
+}
+.sbux-prg-loading-txt-div.ani-first {
+  -moz-animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
+  -o-animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
+  -webkit-animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
+  animation: sbux-loading-text-opacity 2s linear 0s infinite normal;
+}
+.sbux-prg-loading-txt-div.ani-last {
+  -moz-animation: sbux-loading-text-opacity2 2s linear 0s infinite normal;
+  -o-animation: sbux-loading-text-opacity2 2s linear 0s infinite normal;
+  -webkit-animation: sbux-loading-text-opacity2 2s linear 0s infinite normal;
+  animation: sbux-loading-text-opacity2 2s linear 0s infinite normal;
 }
 .sbux-prg-loading-txt-static {
   background: #000;
@@ -3207,6 +3247,13 @@ ul.sbux-ctx-meu-list li.sbux-ctx-meu-item > ul.sbux-ctx-meu-list {
 }
 .sbux-upl-single-wrap > button.sbux-upl-txt.hidden {
   visibility: hidden;
+}
+.sbux-upl-single-wrap > button.sbux-upl-txt.sbux-single-btn {
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+.sbux-upl-single-wrap > button.sbux-upl-txt.sbux-single-btn i {
+  padding-left: 3px;
 }
 .sbux-upl-single-wrap > span.sbux-upl-download {
   float: left;

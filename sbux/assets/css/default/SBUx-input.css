@@ -240,6 +240,15 @@ div.sbux-form-group > span button.readonly {
 .sbux-inp-input:hover {
   border: 1px solid #307ea5;
 }
+.sbux-inp-input.priority-ko {
+  ime-mode: active;
+}
+.sbux-inp-input.priority-en {
+  ime-mode: inactive;
+}
+.sbux-inp-input.only-en {
+  ime-mode: disabled;
+}
 .sbux-pik-input.sbux-dirty.sbux-pik-inp-disabled {
   color: #999 !important;
   background: #efefef !important;
@@ -428,6 +437,29 @@ input.sbux-rdo-input {
   border: 4px solid transparent;
   border-top-color: #fff;
   border-bottom: 0;
+}
+@keyframes onSBUxChromeAFSt {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+@keyframes onSBUxChromeAFEd {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+.sbux-inp-input:-webkit-autofill {
+  animation-name: onSBUxChromeAFSt;
+  transition: background-color 50000s ease-in-out 0s;
+}
+.sbux-inp-input:not(:-webkit-autofill) {
+  animation-name: onSBUxChromeAFEd;
 }
 .sbux-tol {
   position: absolute;
@@ -1019,6 +1051,12 @@ table.sbux-pik-pop-day tbody td.sbux-pik-sunday span {
 }
 table.sbux-pik-pop-day tbody td.sbux-pik-sunday button.active span {
   color: #fff;
+}
+table.sbux-pik-pop-day tbody td.sbux-pik-customday {
+  background-color: #494d58;
+}
+table.sbux-pik-pop-day tbody td.sbux-pik-customday button {
+  color: #d4a63f;
 }
 div.sbux-pik-pop-body .btn-default.active,
 div.sbux-pik-pop-body .btn-default.disabled.active,
@@ -1667,6 +1705,18 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   background-repeat: no-repeat;
   background-color: #efefef;
 }
+.sbux-txa.priority-ko,
+.sb-textarea.priority-ko {
+  ime-mode: active;
+}
+.sbux-txa.priority-en,
+.sb-textarea.priority-en {
+  ime-mode: inactive;
+}
+.sbux-txa.only-en,
+.sb-textarea.only-en {
+  ime-mode: disabled;
+}
 .sbux-pop {
   position: absolute;
   top: 0;
@@ -1881,19 +1931,24 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   background: #fff;
   color: #000;
 }
-.sbux-pik-time {
-  display: inline-block;
-  padding: 5px 19px;
+.sbux-pik-time-wrap {
+  text-align: center;
   border-top: 1px solid #181a23;
 }
-.sbux-pik-time .sbux-pik-hour-wrap,
-.sbux-pik-time .sbux-pik-minute-wrap {
+.sbux-pik-time-wrap .sbux-pik-time {
+  display: inline-block;
+  width: 154px;
+  padding: 5px 0px;
+}
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap {
   position: relative;
+  float: left;
   display: inline-block;
   width: 70px;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .plus,
-.sbux-pik-time .sbux-pik-minute-wrap .plus {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .plus,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .plus {
   position: absolute;
   top: 0;
   right: 0;
@@ -1905,8 +1960,8 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   border-radius: 0 3px 3px 0;
   cursor: pointer;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .plus em,
-.sbux-pik-time .sbux-pik-minute-wrap .plus em {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .plus em,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .plus em {
   display: inline-block;
   width: 100%;
   height: 19px;
@@ -1915,12 +1970,12 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   font-style: normal;
   line-height: 17px;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .plus:hover,
-.sbux-pik-time .sbux-pik-minute-wrap .plus:hover {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .plus:hover,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .plus:hover {
   background: #cdcdcd;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .minus,
-.sbux-pik-time .sbux-pik-minute-wrap .minus {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .minus,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .minus {
   position: absolute;
   top: 0;
   left: 0;
@@ -1932,8 +1987,8 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   border-radius: 3px 0 0 3px;
   cursor: pointer;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .minus em,
-.sbux-pik-time .sbux-pik-minute-wrap .minus em {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .minus em,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .minus em {
   display: inline-block;
   width: 100%;
   height: 19px;
@@ -1942,23 +1997,23 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   font-style: normal;
   line-height: 17px;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .minus:hover,
-.sbux-pik-time .sbux-pik-minute-wrap .minus:hover {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .minus:hover,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .minus:hover {
   background: #cdcdcd;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap,
-.sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap,
-.sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap,
-.sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap {
   position: relative;
   display: inline-block;
   width: 100%;
   height: 19px;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap input,
-.sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap input,
-.sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap input,
-.sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap input {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap input,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap input,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap input,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap input {
   width: 100%;
   height: 19px;
   text-align: center;
@@ -1968,10 +2023,10 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   box-sizing: border-box;
   font-size: 11px;
 }
-.sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap span,
-.sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap span,
-.sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap span,
-.sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap span {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .hour-txt-wrap span,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .hour-txt-wrap span,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-hour-wrap .minute-txt-wrap span,
+.sbux-pik-time-wrap .sbux-pik-time .sbux-pik-minute-wrap .minute-txt-wrap span {
   position: absolute;
   top: 0;
   left: 0;
@@ -1985,7 +2040,10 @@ input.sbux-pik-input.sbux-dirty[readonly] + .sbux-pik-icon-span .sbux-pik-icon-b
   border-radius: 3px;
   font-weight: bold;
 }
-.sbux-pik-time .sbux-colon {
+.sbux-pik-time-wrap .sbux-pik-time .sbux-colon {
+  float: left;
+  display: inline-block;
+  padding: 0 5px;
   color: #fff;
   font-weight: bold;
 }

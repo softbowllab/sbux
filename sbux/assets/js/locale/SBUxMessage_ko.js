@@ -94,6 +94,7 @@
         TAB_DONT_REMOVE : '삭제할 탭이 존재하지 않습니다.',
         TAB_MENU_LIST_DEL_ALL : '전체 탭 닫음',
         TAB_MENU_LIST_DEL_FOCUS : '현재 탭 닫음',
+        TAB_MENU_LIST_DEL_EXCEPT_FOCUS : '현재 탭을 제외한 탭 닫음',
         TAB_MENU_LIST_DEL_EXCEPT : '를 제외한 탭 닫음',
         TAB_MENU_DONT_REMOVE : '닫을 수 없는 탭 입니다.',
 

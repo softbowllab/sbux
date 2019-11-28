@@ -40,5 +40,7 @@ this.strScript +=
 '<link href="'  + this.strSBGridPATH + 'css/plugins/' 	+ 'jquery-ui' + this.strSBGridTHEME + '.css'			+ '" rel="stylesheet" type="text/css">' +
 '<link href="'  + this.strSBGridPATH + 'css/plugins/' 	+ 'jquery.contextMenu' + this.strSBGridTHEME + '.css'	+ '" rel="stylesheet" type="text/css">' +
 
-'<script src="' + this.strSBGridPATH + 'js/lib/' 		+ 'deps.js'												+ '" type="text/javascript"></script>';
+'<script src="' + this.strSBGridPATH + 'js/lib/' 		+ 'deps.js'												+ '" type="text/javascript"></script>'  +
+'<script src="' + this.strSBGridPATH + 'js/util/' 		+ 'SBDefault.js'											+ '" type="text/javascript"></script>';
+
 document.write(this.strScript);

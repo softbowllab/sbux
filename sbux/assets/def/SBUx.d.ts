@@ -30,7 +30,7 @@ declare namespace SBUxMethod {
     function clearStructure(option?: object): void;
     function getGridCompsData(gridId: string): any;
     function clearGridCompsData(gridId: string): void;
-    function sendCompsDataToGrid(gridId: string): void;
+    function sendCompsDataToGrid(gridIdOrOptions: any): void;
     function connectGridToComps(gridId: string): void;
     function setGridRowDataToComps(gridId: string, jsonData: object): void;
     function setGridCellDataToComp(gridId: string, gridRef: string, value: string): void;
@@ -98,6 +98,9 @@ declare namespace SBUxMethod {
 
     function _showTreeVline(modelNm, isValid?): void;
 
+    function _setTimerBind(timerId, callbackName): void;
+
+    function _digestBind(timerId, callbackName, arrBindTarget?): void;
 }
 
 declare namespace sb.chart {

@@ -94,6 +94,7 @@
         TAB_DONT_REMOVE : '要删除的选项卡不存在。',
         TAB_MENU_LIST_DEL_ALL : '删除所有标签',
         TAB_MENU_LIST_DEL_FOCUS : '删除焦点标签',
+        TAB_MENU_LIST_DEL_EXCEPT_FOCUS : '除固定标签外，请将其移除',
         TAB_MENU_LIST_DEL_EXCEPT : ',除固定标签外，请将其移除',
         TAB_MENU_DONT_REMOVE : '你无法删除它。',
 
