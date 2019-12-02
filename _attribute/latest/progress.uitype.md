@@ -96,9 +96,9 @@ uitype
 
 {% highlight html %}
 <sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar">
-    <progress-bar>
-       <bar valuenow="0"></bar>
-    </progress-bar>
+    <sbux-progress-bar>
+       <sbux-bar valuenow="0"></sbux-bar>
+    </sbux-progress-bar>
 </sbux-progress>
 {% endhighlight %}
 
@@ -107,9 +107,9 @@ uitype
 ▶ Preview 
 
 <sbux-progress id="sbIdx1_1" name="sbTagNm1_1" uitype="bar">
-    <progress-bar>
-       <bar valuenow="0"></bar>
-    </progress-bar>
+    <sbux-progress-bar>
+       <sbux-bar valuenow="0"></sbux-bar>
+    </sbux-progress-bar>
 </sbux-progress>
 
     </div>
